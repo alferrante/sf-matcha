@@ -82,6 +82,8 @@
       padding: 0 16px 32px !important;
     }
     .map-panel {
+      position: relative !important;
+      top: auto !important;
       min-height: 430px !important;
       aspect-ratio: 1 / 1.08 !important;
       border-radius: 24px !important;
@@ -99,6 +101,8 @@
 <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
 
+<script>window.SF_MATCHA_CONFIG = window.SF_MATCHA_CONFIG || {};</script>
+<script src="config.js"></script>
 <script src="dist/tweaks-panel.js"></script>
 <script src="dist/data.js"></script>
 <script src="dist/map.js"></script>

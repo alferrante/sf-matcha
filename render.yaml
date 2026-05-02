@@ -5,7 +5,8 @@ services:
     repo: https://github.com/alferrante/sf-matcha
     branch: main
     autoDeploy: true
-    buildCommand: echo "Static site is prebuilt"
+    buildCommand: |
+      printf 'window.SF_MATCHA_CONFIG = { googleMapsApiKey: "%s" };\n' "$GOOGLE_MAPS_API_KEY" > config.js
     staticPublishPath: .
     routes:
       - type: rewrite

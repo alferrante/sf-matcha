@@ -1,6 +1,7 @@
-(() => {
-  const { useState, useMemo, useEffect, useRef } = React;
-  const FILTERS = [
+var SFMatchaApp = (() => {
+  // app.jsx
+  var { useState, useMemo, useEffect, useRef } = React;
+  var FILTERS = [
     { id: "all", label: "all spots", emoji: "\u{1F375}" },
     { id: "top", label: "top picks", emoji: "\u2B50" },
     { id: "buzzy", label: "new / buzzy", emoji: "\u2728" },
@@ -9,6 +10,25 @@
     { id: "none", label: "no soy", emoji: "\u2717" },
     { id: "call", label: "call to confirm", emoji: "\u{1F4DE}" }
   ];
+  var GOOGLE_MAP_CENTER = { lat: 37.775, lng: -122.432 };
+  var googleMapsLoadPromise = null;
+  function getMapsApiKey() {
+    return window.SF_MATCHA_CONFIG && window.SF_MATCHA_CONFIG.googleMapsApiKey || "";
+  }
+  function loadGoogleMapsScript(apiKey) {
+    if (window.google && window.google.maps) return Promise.resolve(window.google.maps);
+    if (googleMapsLoadPromise) return googleMapsLoadPromise;
+    googleMapsLoadPromise = new Promise((resolve, reject) => {
+      const script = document.createElement("script");
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(apiKey)}&v=weekly`;
+      script.async = true;
+      script.defer = true;
+      script.onload = () => resolve(window.google.maps);
+      script.onerror = reject;
+      document.head.appendChild(script);
+    });
+    return googleMapsLoadPromise;
+  }
   function App() {
     const [tweaks, setTweak] = useTweaks(
       /*EDITMODE-BEGIN*/
@@ -237,8 +257,11 @@
     return /* @__PURE__ */ React.createElement("div", { style: { display: "flex", alignItems: "baseline", gap: 6 } }, /* @__PURE__ */ React.createElement("span", { style: { fontWeight: 800, fontSize: 32, lineHeight: 1, color: pop, textShadow: "1px 1px 0 var(--ink)" } }, n), /* @__PURE__ */ React.createElement("span", { style: { fontFamily: "'Space Mono', monospace", fontSize: 11, opacity: 0.7, textTransform: "uppercase", letterSpacing: "0.08em" } }, label));
   }
   function MapPanel({ shops, visibleIds, selected, setSelected, hovered, setHovered, C, tweaks }) {
+    const hasGoogleMapsKey = Boolean(getMapsApiKey());
     return /* @__PURE__ */ React.createElement("div", { className: "map-panel", style: {
-      position: "relative",
+      position: "sticky",
+      top: 18,
+      alignSelf: "start",
       borderRadius: 32,
       border: "3px solid var(--ink)",
       boxShadow: "8px 8px 0 var(--ink)",
@@ -246,7 +269,18 @@
       background: "#C9E8FF",
       aspectRatio: "1 / 1",
       minHeight: 560
-    } }, /* @__PURE__ */ React.createElement(SFMapSVG, null), /* @__PURE__ */ React.createElement("div", { style: { position: "absolute", inset: 0 } }, shops.map((s) => {
+    } }, hasGoogleMapsKey ? /* @__PURE__ */ React.createElement(
+      GoogleMapLayer,
+      {
+        shops,
+        visibleIds,
+        selected,
+        setSelected,
+        hovered,
+        setHovered,
+        tweaks
+      }
+    ) : /* @__PURE__ */ React.createElement(SFMapSVG, null), !hasGoogleMapsKey && /* @__PURE__ */ React.createElement("div", { style: { position: "absolute", inset: 0 } }, shops.map((s) => {
       const isVisible = visibleIds.has(s.id);
       const isHover = hovered === s.id;
       const isSelected = selected === s.id;
@@ -306,7 +340,145 @@
       display: "inline-flex",
       alignItems: "center",
       gap: 6
-    } }, "\u{1F5FA}\uFE0F tap a pin"));
+    } }, hasGoogleMapsKey ? "google map + pins" : "\u{1F5FA}\uFE0F tap a pin"));
+  }
+  function GoogleMapLayer({ shops, visibleIds, selected, setSelected, hovered, setHovered, tweaks }) {
+    const mapEl = useRef(null);
+    const mapRef = useRef(null);
+    const overlayRef = useRef(null);
+    const [mapStatus, setMapStatus] = useState("loading");
+    useEffect(() => {
+      let cancelled = false;
+      const apiKey = getMapsApiKey();
+      loadGoogleMapsScript(apiKey).then((maps) => {
+        if (cancelled || !mapEl.current) return;
+        const map = new maps.Map(mapEl.current, {
+          center: GOOGLE_MAP_CENTER,
+          zoom: 12,
+          minZoom: 11,
+          maxZoom: 16,
+          disableDefaultUI: true,
+          zoomControl: true,
+          clickableIcons: false,
+          gestureHandling: "greedy",
+          backgroundColor: "#C9E8FF",
+          styles: [
+            { featureType: "poi.business", elementType: "labels", stylers: [{ visibility: "off" }] },
+            { featureType: "poi.park", elementType: "geometry.fill", stylers: [{ color: "#DDE9C8" }] },
+            { featureType: "water", elementType: "geometry.fill", stylers: [{ color: "#BFE2FF" }] },
+            { featureType: "road", elementType: "geometry", stylers: [{ color: "#FFFFFF" }] },
+            { featureType: "road", elementType: "geometry.stroke", stylers: [{ color: "#D5D1C7" }] },
+            { featureType: "landscape", elementType: "geometry.fill", stylers: [{ color: "#FFF8E7" }] }
+          ]
+        });
+        const layer = document.createElement("div");
+        layer.style.position = "absolute";
+        layer.style.inset = "0";
+        layer.style.pointerEvents = "none";
+        const overlay = new maps.OverlayView();
+        overlay.onAdd = function() {
+          this.getPanes().overlayMouseTarget.appendChild(layer);
+        };
+        overlay.draw = function() {
+          const projection = this.getProjection();
+          if (!projection) return;
+          renderGoogleMapPins(layer, projection, overlay._state);
+        };
+        overlay.onRemove = function() {
+          layer.remove();
+        };
+        overlay._state = { shops, visibleIds, selected, hovered, setSelected, setHovered, tweaks };
+        overlay.setMap(map);
+        mapRef.current = map;
+        overlayRef.current = overlay;
+        setMapStatus("ready");
+      }).catch(() => {
+        if (!cancelled) setMapStatus("error");
+      });
+      return () => {
+        cancelled = true;
+        if (overlayRef.current) overlayRef.current.setMap(null);
+      };
+    }, []);
+    useEffect(() => {
+      if (!overlayRef.current) return;
+      overlayRef.current._state = { shops, visibleIds, selected, hovered, setSelected, setHovered, tweaks };
+      overlayRef.current.draw();
+    }, [shops, visibleIds, selected, hovered, setSelected, setHovered, tweaks]);
+    return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("div", { ref: mapEl, style: { position: "absolute", inset: 0 } }), mapStatus !== "ready" && /* @__PURE__ */ React.createElement("div", { style: {
+      position: "absolute",
+      inset: 0,
+      background: mapStatus === "error" ? "#C9E8FF" : "rgba(255,248,231,0.72)"
+    } }, mapStatus === "error" && /* @__PURE__ */ React.createElement(SFMapSVG, null), /* @__PURE__ */ React.createElement("div", { style: {
+      position: "absolute",
+      left: 18,
+      top: 18,
+      background: "rgba(255,248,231,0.96)",
+      border: "2.5px solid var(--ink)",
+      borderRadius: 16,
+      boxShadow: "4px 4px 0 var(--ink)",
+      padding: "10px 12px",
+      fontFamily: "'Space Mono', monospace",
+      fontWeight: 700,
+      fontSize: 11
+    } }, mapStatus === "error" ? "Google Maps key needs a restriction/API check" : "loading Google map...")));
+  }
+  function renderGoogleMapPins(layer, projection, state) {
+    if (!state) return;
+    const { shops, visibleIds, selected, hovered, setSelected, setHovered, tweaks } = state;
+    layer.innerHTML = "";
+    shops.forEach((shop) => {
+      if (!shop.lat || !shop.lng) return;
+      const point = projection.fromLatLngToDivPixel(new google.maps.LatLng(shop.lat, shop.lng));
+      const meta = STATUS_META[shop.status];
+      const isVisible = visibleIds.has(shop.id);
+      const isHovered = hovered === shop.id;
+      const isSelected = selected === shop.id;
+      const pin = document.createElement("button");
+      pin.type = "button";
+      pin.setAttribute("aria-label", shop.name);
+      pin.style.cssText = [
+        "position:absolute",
+        `left:${point.x}px`,
+        `top:${point.y}px`,
+        "width:50px",
+        "height:50px",
+        "border-radius:999px",
+        "border:3px solid #1a1a1a",
+        `background:${meta.color}`,
+        "box-shadow:3px 3px 0 #1a1a1a",
+        "display:grid",
+        "place-items:center",
+        "font-size:25px",
+        "line-height:1",
+        "cursor:pointer",
+        "pointer-events:auto",
+        "transition:transform .18s cubic-bezier(.34,1.56,.64,1), opacity .18s",
+        `transform:translate(-50%, -50%) ${isHovered || isSelected ? "scale(1.18)" : "scale(1)"}`,
+        `opacity:${isVisible ? 1 : 0.18}`,
+        `z-index:${isSelected ? 100 : isHovered ? 50 : 10}`
+      ].join(";");
+      if (tweaks.wobble && isVisible) {
+        pin.style.animation = `wobble${shop.id.length % 4} ${3 + shop.id.length % 5 * 0.3}s ease-in-out infinite`;
+      }
+      pin.textContent = shop.emoji;
+      pin.addEventListener("mouseenter", () => setHovered(shop.id));
+      pin.addEventListener("mouseleave", () => setHovered(null));
+      pin.addEventListener("click", () => setSelected(shop.id));
+      layer.appendChild(pin);
+      if (shop.topPick) {
+        const star = document.createElement("span");
+        star.textContent = "\u2605";
+        star.style.cssText = "position:absolute;right:-8px;top:-8px;width:22px;height:22px;border-radius:999px;background:var(--pop2);color:#fff;border:2px solid #1a1a1a;display:grid;place-items:center;font-size:12px;font-weight:800;transform:rotate(15deg);pointer-events:none;";
+        pin.appendChild(star);
+      }
+      if (tweaks.showLabels && (isHovered || isSelected)) {
+        const label = document.createElement("div");
+        label.style.cssText = "position:absolute;left:50%;top:100%;transform:translate(-50%,8px);background:#1a1a1a;color:var(--bg);padding:6px 10px;border-radius:8px;white-space:nowrap;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:13px;pointer-events:none;box-shadow:2px 2px 0 var(--pop);";
+        label.innerHTML = `${shop.name}<div style="font-family:'Space Mono',monospace;font-size:10px;opacity:.7;font-weight:400;">${shop.hood} \xB7 ${meta.short}</div>`;
+        pin.appendChild(label);
+      }
+    });
   }
   function Pin({ shop, x, y, dimmed, hovered, selected, onHover, onClick, showLabel, wobble, style }) {
     const meta = STATUS_META[shop.status];
@@ -420,9 +592,8 @@
       display: "flex",
       flexDirection: "column",
       gap: 14,
-      maxHeight: "calc(100vh - 120px)",
-      overflow: "auto",
-      paddingRight: 4
+      paddingRight: 4,
+      paddingBottom: 8
     } }, shops.map(
       (s, i) => /* @__PURE__ */ React.createElement(
         ShopCard,

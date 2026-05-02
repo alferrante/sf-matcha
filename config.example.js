@@ -1,0 +1,3 @@
+window.SF_MATCHA_CONFIG = {
+  googleMapsApiKey: "YOUR_RESTRICTED_BROWSER_KEY"
+};
