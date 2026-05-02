@@ -306,25 +306,6 @@ var SFMatchaData = (() => {
       hours: "Closed"
     },
     {
-      id: "duboce-park-cafe",
-      name: "Duboce Park Cafe",
-      address: "2 Sanchez St",
-      hood: "Duboce Triangle",
-      status: "confirmed",
-      topPick: false,
-      buzzy: false,
-      emoji: "\u{1F333}",
-      note: "Park-adjacent cafe with a solid matcha latte option.",
-      soyNote: "Confirmed: official menu PDF lists soy add/sub.",
-      source: "https://parkcafelife.com/wp-content/uploads/2023/05/Duboce-Park-Cafe-Menu.pdf",
-      lat: 37.7691838,
-      lng: -122.4316009,
-      x: 47.2,
-      y: 48,
-      price: "$",
-      hours: "check hours"
-    },
-    {
       id: "dolores-park-cafe",
       name: "Dolores Park Cafe",
       address: "501 Dolores St",
