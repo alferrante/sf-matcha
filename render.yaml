@@ -2,7 +2,7 @@ services:
   - type: web
     name: sf-matcha
     runtime: static
-    plan: free
+    repo: https://github.com/alferrante/sf-matcha
     branch: main
     autoDeploy: true
     buildCommand: echo "Static site is prebuilt"
