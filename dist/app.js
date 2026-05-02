@@ -499,7 +499,24 @@
         borderRadius: 999,
         border: "1.5px solid var(--ink)",
         whiteSpace: "nowrap"
-      } }, meta.label), /* @__PURE__ */ React.createElement("span", { style: { fontFamily: "'Space Mono', monospace", fontSize: 11, opacity: 0.6 } }, shop.price, " \xB7 ", shop.hours))
+      } }, meta.label), /* @__PURE__ */ React.createElement("span", { style: { fontFamily: "'Space Mono', monospace", fontSize: 11, opacity: 0.6 } }, shop.price, " \xB7 ", shop.hours), /* @__PURE__ */ React.createElement(
+        "a",
+        {
+          href: mapsUrl(shop),
+          target: "_blank",
+          rel: "noreferrer",
+          onClick: (e) => e.stopPropagation(),
+          style: {
+            fontFamily: "'Space Mono', monospace",
+            fontSize: 11,
+            fontWeight: 700,
+            color: "var(--ink)",
+            textDecoration: "none",
+            borderBottom: "1.5px solid var(--ink)"
+          }
+        },
+        "maps \u2197"
+      ))
     );
   }
   function Tag({ children, bg, ink = "var(--ink)" }) {
@@ -596,7 +613,7 @@
       letterSpacing: "0.08em",
       marginBottom: 4,
       color: meta.ink
-    } }, "soy status"), shop.soyNote), /* @__PURE__ */ React.createElement("div", { style: { display: "flex", gap: 10, marginTop: 20, flexWrap: "wrap" } }, /* @__PURE__ */ React.createElement(Btn, { primary: true, href: mapsUrl(shop) }, "\u{1F4CD} directions"), /* @__PURE__ */ React.createElement(Btn, { href: shop.source }, "\u{1F517} source"), /* @__PURE__ */ React.createElement(Btn, null, "\u{1F375} i went here")))));
+    } }, "soy status"), shop.soyNote), /* @__PURE__ */ React.createElement("div", { style: { display: "flex", gap: 10, marginTop: 20, flexWrap: "wrap" } }, /* @__PURE__ */ React.createElement(Btn, { primary: true, href: mapsUrl(shop) }, "\u{1F4CD} directions"), /* @__PURE__ */ React.createElement(Btn, { href: shop.source }, "\u{1F517} source"), /* @__PURE__ */ React.createElement(Btn, { href: mapsUrl(shop) }, "\u{1F5FA}\uFE0F google maps")))));
   }
   function Mini({ label, val }) {
     return /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("div", { style: { fontFamily: "'Space Mono', monospace", fontSize: 10, opacity: 0.6, textTransform: "uppercase", letterSpacing: "0.08em" } }, label), /* @__PURE__ */ React.createElement("div", { style: { fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 18 } }, val));

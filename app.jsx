@@ -541,6 +541,21 @@ function ShopCard({ shop, index, selected, hovered, onHover, onLeave, onClick })
         <span style={{ fontFamily: "'Space Mono', monospace", fontSize: 11, opacity: 0.6 }}>
           {shop.price} · {shop.hours}
         </span>
+        <a
+          href={mapsUrl(shop)}
+          target="_blank"
+          rel="noreferrer"
+          onClick={(e) => e.stopPropagation()}
+          style={{
+            fontFamily: "'Space Mono', monospace",
+            fontSize: 11,
+            fontWeight: 700,
+            color: "var(--ink)",
+            textDecoration: "none",
+            borderBottom: "1.5px solid var(--ink)"
+          }}>
+          maps ↗
+        </a>
       </div>
     </div>);
 
@@ -633,7 +648,7 @@ function ShopDetail({ shop, onClose, C }) {
           <div style={{ display: "flex", gap: 10, marginTop: 20, flexWrap: "wrap" }}>
             <Btn primary href={mapsUrl(shop)}>📍 directions</Btn>
             <Btn href={shop.source}>🔗 source</Btn>
-            <Btn>🍵 i went here</Btn>
+            <Btn href={mapsUrl(shop)}>🗺️ google maps</Btn>
           </div>
         </div>
       </div>
