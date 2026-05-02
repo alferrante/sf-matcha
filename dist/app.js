@@ -10,20 +10,21 @@ var SFMatchaApp = (() => {
     { id: "none", label: "no soy", emoji: "\u2717" },
     { id: "call", label: "call to confirm", emoji: "\u{1F4DE}" }
   ];
-  var GOOGLE_MAP_CENTER = { lat: 37.775, lng: -122.432 };
+  var GOOGLE_MAP_CENTER = { lat: 37.765, lng: -122.436 };
   var googleMapsLoadPromise = null;
   function getMapsApiKey() {
     return window.SF_MATCHA_CONFIG && window.SF_MATCHA_CONFIG.googleMapsApiKey || "";
   }
   function loadGoogleMapsScript(apiKey) {
-    if (window.google && window.google.maps) return Promise.resolve(window.google.maps);
+    if (window.google && window.google.maps && window.google.maps.Map) return Promise.resolve(window.google.maps);
     if (googleMapsLoadPromise) return googleMapsLoadPromise;
     googleMapsLoadPromise = new Promise((resolve, reject) => {
+      const callbackName = "__sfMatchaGoogleMapsReady";
+      window[callbackName] = () => resolve(window.google.maps);
       const script = document.createElement("script");
-      script.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(apiKey)}&v=weekly&loading=async`;
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(apiKey)}&v=weekly&loading=async&callback=${callbackName}`;
       script.async = true;
       script.defer = true;
-      script.onload = () => resolve(window.google.maps);
       script.onerror = reject;
       document.head.appendChild(script);
     });
@@ -354,7 +355,7 @@ var SFMatchaApp = (() => {
         if (cancelled || !mapEl.current) return;
         const map = new maps.Map(mapEl.current, {
           center: GOOGLE_MAP_CENTER,
-          zoom: 12,
+          zoom: 12.45,
           minZoom: 11,
           maxZoom: 16,
           disableDefaultUI: true,
@@ -363,14 +364,26 @@ var SFMatchaApp = (() => {
           gestureHandling: "greedy",
           backgroundColor: "#C9E8FF",
           styles: [
-            { featureType: "poi.business", elementType: "labels", stylers: [{ visibility: "off" }] },
+            { elementType: "geometry", stylers: [{ saturation: -45 }, { lightness: 24 }] },
+            { elementType: "labels.icon", stylers: [{ visibility: "off" }] },
+            { elementType: "labels.text.fill", stylers: [{ color: "#5C624F" }] },
+            { elementType: "labels.text.stroke", stylers: [{ color: "#FFF8E7" }, { weight: 3 }] },
+            { featureType: "administrative", elementType: "geometry.stroke", stylers: [{ color: "#b9c6a7" }, { weight: 0.7 }] },
+            { featureType: "poi", elementType: "labels", stylers: [{ visibility: "off" }] },
             { featureType: "poi.park", elementType: "geometry.fill", stylers: [{ color: "#DDE9C8" }] },
-            { featureType: "water", elementType: "geometry.fill", stylers: [{ color: "#BFE2FF" }] },
-            { featureType: "road", elementType: "geometry", stylers: [{ color: "#FFFFFF" }] },
-            { featureType: "road", elementType: "geometry.stroke", stylers: [{ color: "#D5D1C7" }] },
-            { featureType: "landscape", elementType: "geometry.fill", stylers: [{ color: "#FFF8E7" }] }
+            { featureType: "road", elementType: "geometry", stylers: [{ color: "#FFFFFF" }, { lightness: 12 }] },
+            { featureType: "road", elementType: "geometry.stroke", stylers: [{ color: "#D8D2C4" }] },
+            { featureType: "road.arterial", elementType: "labels", stylers: [{ visibility: "simplified" }] },
+            { featureType: "road.highway", elementType: "geometry", stylers: [{ color: "#F5EACB" }] },
+            { featureType: "transit", elementType: "labels", stylers: [{ visibility: "off" }] },
+            { featureType: "water", elementType: "geometry.fill", stylers: [{ color: "#BFE2FF" }] }
           ]
         });
+        const bounds = new maps.LatLngBounds();
+        shops.forEach((shop) => {
+          if (shop.lat && shop.lng) bounds.extend({ lat: shop.lat, lng: shop.lng });
+        });
+        map.fitBounds(bounds, window.innerWidth < 700 ? 46 : 72);
         const layer = document.createElement("div");
         layer.style.position = "absolute";
         layer.style.inset = "0";
@@ -431,6 +444,8 @@ var SFMatchaApp = (() => {
       if (!shop.lat || !shop.lng) return;
       const point = projection.fromLatLngToDivPixel(new google.maps.LatLng(shop.lat, shop.lng));
       const meta = STATUS_META[shop.status];
+      const pinSize = window.innerWidth < 700 ? 42 : 46;
+      const starSize = window.innerWidth < 700 ? 18 : 20;
       const isVisible = visibleIds.has(shop.id);
       const isHovered = hovered === shop.id;
       const isSelected = selected === shop.id;
@@ -441,15 +456,15 @@ var SFMatchaApp = (() => {
         "position:absolute",
         `left:${point.x}px`,
         `top:${point.y}px`,
-        "width:50px",
-        "height:50px",
+        `width:${pinSize}px`,
+        `height:${pinSize}px`,
         "border-radius:999px",
         "border:3px solid #1a1a1a",
         `background:${meta.color}`,
         "box-shadow:3px 3px 0 #1a1a1a",
         "display:grid",
         "place-items:center",
-        "font-size:25px",
+        `font-size:${window.innerWidth < 700 ? 21 : 23}px`,
         "line-height:1",
         "cursor:pointer",
         "pointer-events:auto",
@@ -469,7 +484,7 @@ var SFMatchaApp = (() => {
       if (shop.topPick) {
         const star = document.createElement("span");
         star.textContent = "\u2605";
-        star.style.cssText = "position:absolute;right:-8px;top:-8px;width:22px;height:22px;border-radius:999px;background:var(--pop2);color:#fff;border:2px solid #1a1a1a;display:grid;place-items:center;font-size:12px;font-weight:800;transform:rotate(15deg);pointer-events:none;";
+        star.style.cssText = `position:absolute;right:-7px;top:-7px;width:${starSize}px;height:${starSize}px;border-radius:999px;background:var(--pop2);color:#fff;border:2px solid #1a1a1a;display:grid;place-items:center;font-size:11px;font-weight:800;transform:rotate(15deg);pointer-events:none;`;
         pin.appendChild(star);
       }
       if (tweaks.showLabels && (isHovered || isSelected)) {
