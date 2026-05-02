@@ -29,7 +29,7 @@ function loadGoogleMapsScript(apiKey) {
   if (googleMapsLoadPromise) return googleMapsLoadPromise;
   googleMapsLoadPromise = new Promise((resolve, reject) => {
     const script = document.createElement("script");
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(apiKey)}&v=weekly`;
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(apiKey)}&v=weekly&loading=async`;
     script.async = true;
     script.defer = true;
     script.onload = () => resolve(window.google.maps);
