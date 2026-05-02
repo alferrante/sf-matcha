@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SF Matcha | San Francisco Matcha Map</title>
+<meta name="description" content="A playful map of the best matcha spots in San Francisco, including soy milk availability, new openings, source links, and directions." />
+<link rel="canonical" href="https://sanfranciscomatcha.com/" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23D9FF3F'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-size='34'%3E%F0%9F%8D%B5%3C/text%3E%3C/svg%3E" />
+<meta property="og:title" content="SF Matcha" />
+<meta property="og:description" content="The only San Francisco matcha map you need, with soy status and source links." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://sanfranciscomatcha.com/" />
+<meta name="twitter:card" content="summary_large_image" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "SF Matcha",
+  "url": "https://sanfranciscomatcha.com/",
+  "description": "A playful map of the best matcha spots in San Francisco, including soy milk availability, new openings, source links, and directions.",
+  "about": {
+    "@type": "Thing",
+    "name": "San Francisco matcha"
+  },
+  "inLanguage": "en-US"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Nunito:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Nunito', system-ui, sans-serif;
+    background: #FFF8E7;
+    color: #1a1a1a;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: #D9FF3F; color: #1a1a1a; }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-33.333%); }
+  }
+  @keyframes wobble0 {
+    0%,100% { transform: translate(-50%, -50%) rotate(0deg); }
+    50% { transform: translate(-50%, -50%) rotate(4deg); }
+  }
+  @keyframes wobble1 {
+    0%,100% { transform: translate(-50%, -50%) rotate(0deg); }
+    50% { transform: translate(-50%, -50%) rotate(-3deg); }
+  }
+  @keyframes wobble2 {
+    0%,100% { transform: translate(-50%, -50%) translateY(0); }
+    50% { transform: translate(-50%, -50%) translateY(-3px); }
+  }
+  @keyframes wobble3 {
+    0%,100% { transform: translate(-50%, -50%) rotate(-2deg); }
+    50% { transform: translate(-50%, -50%) rotate(3deg); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes popIn {
+    from { transform: scale(0.85); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #1a1a1a; border-radius: 999px; }
+
+  input::placeholder { color: #1a1a1a; opacity: 0.4; }
+
+  @media (max-width: 920px) {
+    .main-grid {
+      grid-template-columns: 1fr !important;
+      padding: 0 16px 32px !important;
+    }
+    .map-panel {
+      min-height: 430px !important;
+      aspect-ratio: 1 / 1.08 !important;
+      border-radius: 24px !important;
+    }
+    .shop-list {
+      max-height: none !important;
+      overflow: visible !important;
+    }
+  }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+
+<script src="dist/tweaks-panel.js"></script>
+<script src="dist/data.js"></script>
+<script src="dist/map.js"></script>
+<script src="dist/app.js"></script>
+</body>
+</html>
