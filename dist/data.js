@@ -817,6 +817,44 @@ var SFMatchaData = (() => {
       y: 62.3,
       price: "$",
       hours: "check hours"
+    },
+    {
+      id: "kissakeko",
+      name: "Kissakeko",
+      address: "1327 Mason St",
+      hood: "Nob Hill",
+      status: "call",
+      topPick: false,
+      buzzy: true,
+      emoji: "\u{1F3A7}",
+      note: "Tiny Japanese jazz-kissa and sake bar with daytime cafe service, matcha, pastries, and mocktails.",
+      soyNote: "Call to confirm: current guides and listings confirm matcha service, but no soy milk option was found.",
+      source: "https://www.theinfatuation.com/san-francisco/reviews/kissakeko",
+      lat: 37.7957579,
+      lng: -122.4119215,
+      x: 55.3,
+      y: 33.7,
+      price: "$$",
+      hours: "Mon, Thu-Sat 1-8; closed Sun/Tue/Wed"
+    },
+    {
+      id: "roots-and-craft-tea-roasters",
+      name: "Roots & Craft Tea Roasters",
+      address: "1555 Clement St",
+      hood: "Inner Richmond",
+      status: "call",
+      topPick: false,
+      buzzy: true,
+      emoji: "\u{1F331}",
+      note: "Announced 2026 tea-focused cafe from Maya Mori with cup-by-cup Japanese teas, matcha, hojicha, and CHEN&coffee inside.",
+      soyNote: "Call to confirm: opening coverage confirms planned matcha lattes, but milk options are not yet published.",
+      source: "https://www.sfgate.com/food/article/sf-richmond-district-cafe-boom-21955411.php/",
+      lat: 37.7822997,
+      lng: -122.4761465,
+      x: 28.8,
+      y: 40.9,
+      price: "$$",
+      hours: "opening later 2026"
     }
   ];
   var STATUS_META = {
