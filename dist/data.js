@@ -876,6 +876,25 @@ var SFMatchaData = (() => {
       hours: "daily 11-9"
     },
     {
+      id: "saltwater-bakeshop",
+      name: "Saltwater Bakeshop",
+      address: "1309 Howard St",
+      hood: "SoMa",
+      status: "none",
+      topPick: false,
+      buzzy: true,
+      emoji: "\u{1F950}",
+      note: "Cult-favorite bakery's first cafe soft-opened in SoMa with daily breads, pastries, coffee, and a spring strawberry matcha pound cake with matcha glaze.",
+      soyNote: "No soy found: current official menu confirms a matcha-glazed seasonal cake, but no matcha drink or soy milk option was found.",
+      source: "https://www.saltwaterbakeshop.com/",
+      lat: 37.774689,
+      lng: -122.413303,
+      x: 54.7,
+      y: 45.1,
+      price: "$$",
+      hours: "Tue-Fri 7-3; weekends 8-3; closed Mon"
+    },
+    {
       id: "roots-and-craft-tea-roasters",
       name: "Roots & Craft Tea Roasters",
       address: "1555 Clement St",
