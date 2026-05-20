@@ -33,7 +33,7 @@
       /* @__PURE__ */ React.createElement("circle", { cx: "40", cy: "58", r: "2.2", fill: "#8FBF3F", opacity: "0.55" }),
       /* @__PURE__ */ React.createElement("text", { x: "40", y: "62.5", fontSize: "1.5", fontFamily: "'Space Mono', monospace", fill: "#2F5233", textAnchor: "middle" }, "twin peaks"),
       /* @__PURE__ */ React.createElement("line", { x1: "64", y1: "46", x2: "92", y2: "42", stroke: "#1a1a1a", strokeWidth: "0.4", strokeDasharray: "1 0.8" }),
-      /* @__PURE__ */ React.createElement("line", { x1: "32", y1: "22", x2: "32", y2: "6", stroke: "#FF4FA8", strokeWidth: "0.6", strokeDasharray: "1.5 0.5" }),
+      /* @__PURE__ */ React.createElement("line", { x1: "32", y1: "22", x2: "32", y2: "6", stroke: "#EE6C4D", strokeWidth: "0.6", strokeDasharray: "1.5 0.5" }),
       /* @__PURE__ */ React.createElement("path", { d: "M 0,0 L 100,0 L 100,18 Q 80,16 60,12 Q 40,8 20,12 Q 8,14 0,12 Z", fill: "#E8F0D8", stroke: "#1a1a1a", strokeWidth: "0.4" }),
       /* @__PURE__ */ React.createElement("text", { x: "20", y: "8", fontSize: "2", fontFamily: "'Space Mono', monospace", fill: "#2F5233", fontWeight: "700" }, "MARIN"),
       /* @__PURE__ */ React.createElement(
@@ -67,7 +67,7 @@
       /* @__PURE__ */ React.createElement("text", { x: "28", y: "56", fontSize: "1.4", fontFamily: "'Space Mono', monospace", fill: "#2F5233", opacity: "0.5" }, "sunset"),
       /* @__PURE__ */ React.createElement("text", { x: "56", y: "76", fontSize: "1.4", fontFamily: "'Space Mono', monospace", fill: "#2F5233", opacity: "0.5" }, "bernal"),
       /* @__PURE__ */ React.createElement("text", { x: "16", y: "60", fontSize: "1.4", fontFamily: "'Space Mono', monospace", fill: "#2F5233", opacity: "0.5" }, "outer sunset"),
-      /* @__PURE__ */ React.createElement("g", { transform: "translate(91, 90)" }, /* @__PURE__ */ React.createElement("circle", { r: "4", fill: "#FFF8E7", stroke: "#1a1a1a", strokeWidth: "0.4" }), /* @__PURE__ */ React.createElement("path", { d: "M 0,-3 L 0.6,0 L 0,3 L -0.6,0 Z", fill: "#FF4FA8" }), /* @__PURE__ */ React.createElement("text", { y: "-4.5", fontSize: "1.6", fontFamily: "'Space Mono', monospace", fill: "#1a1a1a", textAnchor: "middle", fontWeight: "700" }, "N")),
+      /* @__PURE__ */ React.createElement("g", { transform: "translate(91, 90)" }, /* @__PURE__ */ React.createElement("circle", { r: "4", fill: "#FFF8E7", stroke: "#1a1a1a", strokeWidth: "0.4" }), /* @__PURE__ */ React.createElement("path", { d: "M 0,-3 L 0.6,0 L 0,3 L -0.6,0 Z", fill: "#EE6C4D" }), /* @__PURE__ */ React.createElement("text", { y: "-4.5", fontSize: "1.6", fontFamily: "'Space Mono', monospace", fill: "#1a1a1a", textAnchor: "middle", fontWeight: "700" }, "N")),
       /* @__PURE__ */ React.createElement("text", { x: "6", y: "40", fontSize: "3.5" }, "\u2726"),
       /* @__PURE__ */ React.createElement("text", { x: "92", y: "20", fontSize: "3.5", transform: "rotate(15 92 20)" }, "\u2726"),
       /* @__PURE__ */ React.createElement("text", { x: "78", y: "72", fontSize: "3.5", transform: "rotate(-10 78 72)" }, "\u273F"),

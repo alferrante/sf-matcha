@@ -54,7 +54,7 @@ function SFMapSVG({ children }) {
       {/* Bay Bridge */}
       <line x1="64" y1="46" x2="92" y2="42" stroke="#1a1a1a" strokeWidth="0.4" strokeDasharray="1 0.8" />
       {/* Golden Gate Bridge */}
-      <line x1="32" y1="22" x2="32" y2="6" stroke="#FF4FA8" strokeWidth="0.6" strokeDasharray="1.5 0.5" />
+      <line x1="32" y1="22" x2="32" y2="6" stroke="#EE6C4D" strokeWidth="0.6" strokeDasharray="1.5 0.5" />
 
       {/* Marin (top) */}
       <path d="M 0,0 L 100,0 L 100,18 Q 80,16 60,12 Q 40,8 20,12 Q 8,14 0,12 Z" fill="#E8F0D8" stroke="#1a1a1a" strokeWidth="0.4" />
@@ -86,7 +86,7 @@ function SFMapSVG({ children }) {
       {/* Compass rose */}
       <g transform="translate(91, 90)">
         <circle r="4" fill="#FFF8E7" stroke="#1a1a1a" strokeWidth="0.4" />
-        <path d="M 0,-3 L 0.6,0 L 0,3 L -0.6,0 Z" fill="#FF4FA8" />
+        <path d="M 0,-3 L 0.6,0 L 0,3 L -0.6,0 Z" fill="#EE6C4D" />
         <text y="-4.5" fontSize="1.6" fontFamily="'Space Mono', monospace" fill="#1a1a1a" textAnchor="middle" fontWeight="700">N</text>
       </g>
 

@@ -48,7 +48,7 @@ var SFMatchaApp = (() => {
     const [selected, setSelected] = useState(null);
     const [hovered, setHovered] = useState(null);
     const palettes = {
-      matcha: { bg: "#FFF8E7", ink: "#1a1a1a", pop: "#8FBF3F", pop2: "#FF4FA8", lime: "#D9FF3F" },
+      matcha: { bg: "#FFF8E7", ink: "#1a1a1a", pop: "#8FBF3F", pop2: "#EE6C4D", lime: "#D9FF3F" },
       sunset: { bg: "#FFEFE0", ink: "#1a1a1a", pop: "#FF7A4D", pop2: "#FFD13D", lime: "#FF4FA8" },
       midnight: { bg: "#0F1A0F", ink: "#F5FFE0", pop: "#D9FF3F", pop2: "#FF4FA8", lime: "#8FBF3F" },
       bubblegum: { bg: "#FFE6F0", ink: "#1a1a1a", pop: "#FF4FA8", pop2: "#7FC4FF", lime: "#D9FF3F" }
