@@ -937,6 +937,23 @@ const SHOPS = [
     x: 54.1, y: 38.0,
     price: "$",
     hours: "Mon-Fri 7am-8pm; Sat-Sun 7am-6pm",
+  },
+  {
+    id: "kamari-coffee",
+    name: "Kamari Coffee",
+    address: "333 Market St",
+    hood: "FiDi",
+    status: "call",
+    topPick: false,
+    buzzy: true,
+    emoji: "☕",
+    note: "Coffee cart turned brick-and-mortar; opened in FiDi around May 2026 and recently added matcha to the menu.",
+    soyNote: "Call to confirm: current evidence confirms matcha service but no soy milk option found.",
+    source: "https://www.kamaricoffee.co/",
+    lat: 37.7906, lng: -122.3990,
+    x: 60.6, y: 36.5,
+    price: "$",
+    hours: "check hours",
   }
 ];
 
