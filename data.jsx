@@ -954,6 +954,23 @@ const SHOPS = [
     x: 60.6, y: 36.5,
     price: "$",
     hours: "check hours",
+  },
+  {
+    id: "double-black-sf",
+    name: "Double Black SF",
+    address: "925 Cole St",
+    hood: "Cole Valley",
+    status: "call",
+    topPick: false,
+    buzzy: true,
+    emoji: "⛷️",
+    note: "Cafe inside the Yardsale outdoor gear shop from former Shark Tank contestants; opened May 2026 with a menu of lattes, matcha, and Saltwater Bakeshop pastries.",
+    soyNote: "Call to confirm: opening coverage confirms matcha on the menu but no soy milk option found.",
+    source: "https://sfstandard.com/2026/01/26/double-black-sf-yardsale-cole-valley/",
+    lat: 37.7659, lng: -122.4487,
+    x: 40.1, y: 49.8,
+    price: "$",
+    hours: "check hours",
   }
 ];
 
