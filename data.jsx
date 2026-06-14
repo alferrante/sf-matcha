@@ -982,7 +982,7 @@ const SHOPS = [
     buzzy: true,
     emoji: "☕",
     note: "Coffee cart turned brick-and-mortar; opened in FiDi around May 2026 and recently added matcha to the menu.",
-    soyNote: "No soy: confirmed oat and almond milk only.",
+    soyNote: "No soy: confirmed whole milk and oat milk only.",
     source: "https://www.kamaricoffee.co/",
     lat: 37.7906, lng: -122.3990,
     x: 60.6, y: 36.5,
