@@ -1140,6 +1140,25 @@ var SFMatchaData = (() => {
       y: 57,
       price: "$",
       hours: "Tue-Thu 10am-2pm; Fri-Sat 10am-4pm"
+    },
+    {
+      id: "binge-coffee-house",
+      name: "Binge Coffee House",
+      address: "530 Valencia St",
+      hood: "Mission",
+      status: "call",
+      topPick: false,
+      buzzy: true,
+      emoji: "\u{1F9CB}",
+      note: "Berkeley-born Vietnamese coffee, boba, and matcha cafe opening its first SF location on Valencia; official menu has a dedicated ceremonial matcha section with Uji, fruit, sesame, ube, banana, and coconut matcha drinks.",
+      soyNote: "Call to confirm: official menu says matcha drinks use milk of choice, but no current source found that names soy milk.",
+      source: "https://missionlocal.org/2026/06/make-out-room-owner-says-hes-leaving-the-biz-with-his-liver-intact/",
+      lat: 37.7643364,
+      lng: -122.4219025,
+      x: 51.2,
+      y: 50.7,
+      price: "$",
+      hours: "Soft opening June 16; Mon-Thu 9am-6pm, Fri-Sun 9am-8pm"
     }
   ];
   var STATUS_META = {
