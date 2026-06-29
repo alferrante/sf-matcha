@@ -956,6 +956,23 @@ const SHOPS = [
     hours: "Daily 9am-4pm (soft opening June 16, 2026)",
   },
   {
+    id: "jandii-cafe-castro",
+    name: "Jandii Cafe - Castro",
+    address: "3499 16th St",
+    hood: "Castro / Mission Dolores",
+    status: "call",
+    topPick: true,
+    buzzy: true,
+    emoji: "🍵",
+    note: "Announced second SF Jandii location from the Sweet Maple/U:Dessert Story owners, planned for late 2026 at the former Kitchen Story space.",
+    soyNote: "Call to confirm: the announced location is not open yet, and no Castro-specific soy milk evidence was found.",
+    source: "https://www.yahoo.com/lifestyle/articles/sweet-maple-owners-open-3-120000794.html",
+    lat: 37.7643202, lng: -122.4308061,
+    x: 47.5, y: 50.7,
+    price: "$$",
+    hours: "Opening planned late 2026; check hours",
+  },
+  {
     id: "always-awake-coffee",
     name: "Always Awake Coffee",
     address: "611 Post St",
@@ -1074,7 +1091,6 @@ const SHOPS = [
     price: "$",
     hours: "check hours",
   },
-  }
 ];
 
 const STATUS_META = {
