@@ -785,40 +785,64 @@ function Tag({ children, bg, ink = "var(--ink)" }) {
 // ===================== DETAIL MODAL =====================
 function ShopDetail({ shop, onClose, C }) {
   const meta = STATUS_META[shop.status];
+
+  useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") onClose();
+    };
+
+    document.body.style.overflow = "hidden";
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [onClose]);
+
   return (
-    <div onClick={onClose} style={{
+    <div className="shop-detail-overlay" onClick={onClose} style={{
       position: "fixed", inset: 0, zIndex: 200,
       background: "rgba(26,26,26,0.5)",
-      display: "grid", placeItems: "center", padding: 24,
+      display: "flex", alignItems: "center", justifyContent: "center", padding: 24,
+      overflowY: "auto", overscrollBehavior: "contain",
       animation: "fadeIn 0.2s"
     }}>
-      <div onClick={(e) => e.stopPropagation()} style={{
+      <div
+        className="shop-detail"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="shop-detail-title"
+        onClick={(e) => e.stopPropagation()}
+        style={{
         background: "var(--bg)", border: "3px solid var(--ink)", borderRadius: 28,
         boxShadow: "10px 10px 0 var(--ink)",
-        maxWidth: 540, width: "100%",
+        maxWidth: 540, width: "100%", maxHeight: "calc(100vh - 48px)",
+        display: "flex", flexDirection: "column",
         animation: "popIn 0.25s cubic-bezier(.34,1.56,.64,1)",
         overflow: "hidden"
       }}>
-        <div style={{
+        <div className="shop-detail-header" style={{
           background: meta.color, padding: "32px 28px",
           borderBottom: "3px solid var(--ink)",
-          position: "relative"
+          position: "relative", flexShrink: 0
         }}>
-          <button onClick={onClose} style={{
+          <button aria-label="Close shop details" onClick={onClose} style={{
             position: "absolute", top: 16, right: 16,
             width: 36, height: 36, borderRadius: "50%",
             border: "2.5px solid var(--ink)", background: "#fff",
             cursor: "pointer", fontSize: 16, fontWeight: 800,
             boxShadow: "2px 2px 0 var(--ink)"
           }}>✕</button>
-          <div style={{
+          <div className="shop-detail-icon" style={{
             width: 84, height: 84, borderRadius: "50%",
             background: "#fff", border: "3px solid var(--ink)",
             boxShadow: "4px 4px 0 var(--ink)",
             display: "grid", placeItems: "center", fontSize: 48,
             marginBottom: 16
           }}>{shop.emoji}</div>
-          <h2 style={{
+          <h2 id="shop-detail-title" className="shop-detail-title" style={{
             fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800,
             fontSize: 38, margin: 0, letterSpacing: "-0.02em", lineHeight: 1
           }}>{shop.name}</h2>
@@ -836,7 +860,10 @@ function ShopDetail({ shop, onClose, C }) {
           </div>
         </div>
 
-        <div style={{ padding: 28, fontFamily: "'Nunito', sans-serif" }}>
+        <div className="shop-detail-body" style={{
+          padding: 28, fontFamily: "'Nunito', sans-serif",
+          overflowY: "auto", overscrollBehavior: "contain", WebkitOverflowScrolling: "touch"
+        }}>
           <div style={{ display: "flex", gap: 16, marginBottom: 20, flexWrap: "wrap" }}>
             <Mini label="hours" val={shop.hours} />
             <Mini label="price" val={shop.price} />

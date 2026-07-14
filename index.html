@@ -95,6 +95,35 @@
       overflow: visible !important;
     }
   }
+
+  @media (max-width: 600px) {
+    .shop-detail-overlay {
+      align-items: flex-end !important;
+      padding: max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left)) !important;
+    }
+    .shop-detail {
+      max-height: calc(100dvh - 32px) !important;
+      border-radius: 22px !important;
+      box-shadow: 6px 6px 0 #1a1a1a !important;
+    }
+    .shop-detail-header {
+      padding: 20px 18px !important;
+    }
+    .shop-detail-icon {
+      width: 56px !important;
+      height: 56px !important;
+      font-size: 34px !important;
+      margin-bottom: 10px !important;
+    }
+    .shop-detail-title {
+      font-size: 30px !important;
+      padding-right: 40px !important;
+    }
+    .shop-detail-body {
+      padding: 18px !important;
+      padding-bottom: max(18px, env(safe-area-inset-bottom)) !important;
+    }
+  }
 </style>
 </head>
 <body>

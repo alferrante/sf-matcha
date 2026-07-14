@@ -721,30 +721,49 @@ var SFMatchaApp = (() => {
   }
   function ShopDetail({ shop, onClose, C }) {
     const meta = STATUS_META[shop.status];
-    return /* @__PURE__ */ React.createElement("div", { onClick: onClose, style: {
+    useEffect(() => {
+      const previousOverflow = document.body.style.overflow;
+      const handleKeyDown = (event) => {
+        if (event.key === "Escape") onClose();
+      };
+      document.body.style.overflow = "hidden";
+      document.addEventListener("keydown", handleKeyDown);
+      return () => {
+        document.body.style.overflow = previousOverflow;
+        document.removeEventListener("keydown", handleKeyDown);
+      };
+    }, [onClose]);
+    return /* @__PURE__ */ React.createElement("div", { className: "shop-detail-overlay", onClick: onClose, style: {
       position: "fixed",
       inset: 0,
       zIndex: 200,
       background: "rgba(26,26,26,0.5)",
-      display: "grid",
-      placeItems: "center",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
       padding: 24,
+      overflowY: "auto",
+      overscrollBehavior: "contain",
       animation: "fadeIn 0.2s"
-    } }, /* @__PURE__ */ React.createElement("div", { onClick: (e) => e.stopPropagation(), style: {
+    } }, /* @__PURE__ */ React.createElement("div", { className: "shop-detail", role: "dialog", "aria-modal": "true", "aria-labelledby": "shop-detail-title", onClick: (e) => e.stopPropagation(), style: {
       background: "var(--bg)",
       border: "3px solid var(--ink)",
       borderRadius: 28,
       boxShadow: "10px 10px 0 var(--ink)",
       maxWidth: 540,
       width: "100%",
+      maxHeight: "calc(100vh - 48px)",
+      display: "flex",
+      flexDirection: "column",
       animation: "popIn 0.25s cubic-bezier(.34,1.56,.64,1)",
       overflow: "hidden"
-    } }, /* @__PURE__ */ React.createElement("div", { style: {
+    } }, /* @__PURE__ */ React.createElement("div", { className: "shop-detail-header", style: {
       background: meta.color,
       padding: "32px 28px",
       borderBottom: "3px solid var(--ink)",
-      position: "relative"
-    } }, /* @__PURE__ */ React.createElement("button", { onClick: onClose, style: {
+      position: "relative",
+      flexShrink: 0
+    } }, /* @__PURE__ */ React.createElement("button", { "aria-label": "Close shop details", onClick: onClose, style: {
       position: "absolute",
       top: 16,
       right: 16,
@@ -757,7 +776,7 @@ var SFMatchaApp = (() => {
       fontSize: 16,
       fontWeight: 800,
       boxShadow: "2px 2px 0 var(--ink)"
-    } }, "\u2715"), /* @__PURE__ */ React.createElement("div", { style: {
+    } }, "\u2715"), /* @__PURE__ */ React.createElement("div", { className: "shop-detail-icon", style: {
       width: 84,
       height: 84,
       borderRadius: "50%",
@@ -768,7 +787,7 @@ var SFMatchaApp = (() => {
       placeItems: "center",
       fontSize: 48,
       marginBottom: 16
-    } }, shop.emoji), /* @__PURE__ */ React.createElement("h2", { style: {
+    } }, shop.emoji), /* @__PURE__ */ React.createElement("h2", { id: "shop-detail-title", className: "shop-detail-title", style: {
       fontFamily: "'Bricolage Grotesque', sans-serif",
       fontWeight: 800,
       fontSize: 38,
@@ -783,7 +802,7 @@ var SFMatchaApp = (() => {
       fontWeight: 700,
       padding: "5px 10px",
       borderRadius: 999
-    } }, meta.label), shop.topPick && /* @__PURE__ */ React.createElement(Tag, { bg: "#fff" }, "\u2605 top pick"), shop.buzzy && /* @__PURE__ */ React.createElement(Tag, { bg: "#fff" }, "\u2726 buzzy"))), /* @__PURE__ */ React.createElement("div", { style: { padding: 28, fontFamily: "'Nunito', sans-serif" } }, /* @__PURE__ */ React.createElement("div", { style: { display: "flex", gap: 16, marginBottom: 20, flexWrap: "wrap" } }, /* @__PURE__ */ React.createElement(Mini, { label: "hours", val: shop.hours }), /* @__PURE__ */ React.createElement(Mini, { label: "price", val: shop.price }), /* @__PURE__ */ React.createElement(Mini, { label: "hood", val: shop.hood })), /* @__PURE__ */ React.createElement("p", { style: { fontSize: 17, lineHeight: 1.5, margin: 0 } }, shop.note), /* @__PURE__ */ React.createElement("div", { style: {
+    } }, meta.label), shop.topPick && /* @__PURE__ */ React.createElement(Tag, { bg: "#fff" }, "\u2605 top pick"), shop.buzzy && /* @__PURE__ */ React.createElement(Tag, { bg: "#fff" }, "\u2726 buzzy"))), /* @__PURE__ */ React.createElement("div", { className: "shop-detail-body", style: { padding: 28, fontFamily: "'Nunito', sans-serif", overflowY: "auto", overscrollBehavior: "contain", WebkitOverflowScrolling: "touch" } }, /* @__PURE__ */ React.createElement("div", { style: { display: "flex", gap: 16, marginBottom: 20, flexWrap: "wrap" } }, /* @__PURE__ */ React.createElement(Mini, { label: "hours", val: shop.hours }), /* @__PURE__ */ React.createElement(Mini, { label: "price", val: shop.price }), /* @__PURE__ */ React.createElement(Mini, { label: "hood", val: shop.hood })), /* @__PURE__ */ React.createElement("p", { style: { fontSize: 17, lineHeight: 1.5, margin: 0 } }, shop.note), /* @__PURE__ */ React.createElement("div", { style: {
       marginTop: 16,
       padding: 14,
       background: "#fff",
