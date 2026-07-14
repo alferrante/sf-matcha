@@ -8,7 +8,7 @@ var SFMatchaApp = (() => {
     { id: "confirmed", label: "soy confirmed", emoji: "\u2713" },
     { id: "reported", label: "soy reported", emoji: "?" },
     { id: "none", label: "no soy", emoji: "\u2717" },
-    { id: "call", label: "call to confirm", emoji: "\u{1F4DE}" }
+    { id: "call", label: "soy TBD", emoji: "\u2026" }
   ];
   var GOOGLE_MAP_CENTER = { lat: 37.765, lng: -122.436 };
   var googleMapsLoadPromise = null;
@@ -183,6 +183,10 @@ var SFMatchaApp = (() => {
   function mapsUrl(shop) {
     return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(`${shop.name} ${shop.address} San Francisco CA`);
   }
+  function displayHours(hours) {
+    if (hours === "check hours") return "hours not listed";
+    return hours.replace(/;\s*check hours$/i, "");
+  }
   function FilterBar({ filter, setFilter, search, setSearch, stats, C }) {
     return /* @__PURE__ */ React.createElement("div", { style: { padding: "16px 32px 24px", maxWidth: 1600, margin: "0 auto" } }, /* @__PURE__ */ React.createElement("div", { style: { display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center", marginBottom: 16 } }, /* @__PURE__ */ React.createElement("div", { style: {
       flex: "1 1 360px",
@@ -201,7 +205,7 @@ var SFMatchaApp = (() => {
       {
         value: search,
         onChange: (e) => setSearch(e.target.value),
-        placeholder: "search by name, hood, vibe\u2026",
+        placeholder: "search by name, neighborhood, vibe\u2026",
         style: {
           border: 0,
           outline: "none",
@@ -685,7 +689,7 @@ var SFMatchaApp = (() => {
         borderRadius: 999,
         border: "1.5px solid var(--ink)",
         whiteSpace: "nowrap"
-      } }, meta.label), /* @__PURE__ */ React.createElement("span", { style: { fontFamily: "'Space Mono', monospace", fontSize: 11, opacity: 0.6 } }, shop.price, " \xB7 ", shop.hours), /* @__PURE__ */ React.createElement(
+      } }, meta.label), /* @__PURE__ */ React.createElement("span", { style: { fontFamily: "'Space Mono', monospace", fontSize: 11, opacity: 0.6 } }, shop.price, " \xB7 ", displayHours(shop.hours)), /* @__PURE__ */ React.createElement(
         "a",
         {
           href: mapsUrl(shop),
@@ -745,80 +749,98 @@ var SFMatchaApp = (() => {
       overflowY: "auto",
       overscrollBehavior: "contain",
       animation: "fadeIn 0.2s"
-    } }, /* @__PURE__ */ React.createElement("div", { className: "shop-detail", role: "dialog", "aria-modal": "true", "aria-labelledby": "shop-detail-title", onClick: (e) => e.stopPropagation(), style: {
-      background: "var(--bg)",
-      border: "3px solid var(--ink)",
-      borderRadius: 28,
-      boxShadow: "10px 10px 0 var(--ink)",
-      maxWidth: 540,
-      width: "100%",
-      maxHeight: "calc(100vh - 48px)",
-      display: "flex",
-      flexDirection: "column",
-      animation: "popIn 0.25s cubic-bezier(.34,1.56,.64,1)",
-      overflow: "hidden"
-    } }, /* @__PURE__ */ React.createElement("div", { className: "shop-detail-header", style: {
-      background: meta.color,
-      padding: "32px 28px",
-      borderBottom: "3px solid var(--ink)",
-      position: "relative",
-      flexShrink: 0
-    } }, /* @__PURE__ */ React.createElement("button", { "aria-label": "Close shop details", onClick: onClose, style: {
-      position: "absolute",
-      top: 16,
-      right: 16,
-      width: 36,
-      height: 36,
-      borderRadius: "50%",
-      border: "2.5px solid var(--ink)",
-      background: "#fff",
-      cursor: "pointer",
-      fontSize: 16,
-      fontWeight: 800,
-      boxShadow: "2px 2px 0 var(--ink)"
-    } }, "\u2715"), /* @__PURE__ */ React.createElement("div", { className: "shop-detail-icon", style: {
-      width: 84,
-      height: 84,
-      borderRadius: "50%",
-      background: "#fff",
-      border: "3px solid var(--ink)",
-      boxShadow: "4px 4px 0 var(--ink)",
-      display: "grid",
-      placeItems: "center",
-      fontSize: 48,
-      marginBottom: 16
-    } }, shop.emoji), /* @__PURE__ */ React.createElement("h2", { id: "shop-detail-title", className: "shop-detail-title", style: {
-      fontFamily: "'Bricolage Grotesque', sans-serif",
-      fontWeight: 800,
-      fontSize: 38,
-      margin: 0,
-      letterSpacing: "-0.02em",
-      lineHeight: 1
-    } }, shop.name), /* @__PURE__ */ React.createElement("div", { style: { fontFamily: "'Space Mono', monospace", fontSize: 13, marginTop: 8 } }, shop.address, " \xB7 ", shop.hood), /* @__PURE__ */ React.createElement("div", { style: { marginTop: 12, display: "flex", gap: 6, flexWrap: "wrap" } }, /* @__PURE__ */ React.createElement("span", { style: {
-      background: "var(--ink)",
-      color: "var(--bg)",
-      fontFamily: "'Space Mono', monospace",
-      fontSize: 11,
-      fontWeight: 700,
-      padding: "5px 10px",
-      borderRadius: 999
-    } }, meta.label), shop.topPick && /* @__PURE__ */ React.createElement(Tag, { bg: "#fff" }, "\u2605 top pick"), shop.buzzy && /* @__PURE__ */ React.createElement(Tag, { bg: "#fff" }, "\u2726 buzzy"))), /* @__PURE__ */ React.createElement("div", { className: "shop-detail-body", style: { padding: 28, fontFamily: "'Nunito', sans-serif", overflowY: "auto", overscrollBehavior: "contain", WebkitOverflowScrolling: "touch" } }, /* @__PURE__ */ React.createElement("div", { style: { display: "flex", gap: 16, marginBottom: 20, flexWrap: "wrap" } }, /* @__PURE__ */ React.createElement(Mini, { label: "hours", val: shop.hours }), /* @__PURE__ */ React.createElement(Mini, { label: "price", val: shop.price }), /* @__PURE__ */ React.createElement(Mini, { label: "hood", val: shop.hood })), /* @__PURE__ */ React.createElement("p", { style: { fontSize: 17, lineHeight: 1.5, margin: 0 } }, shop.note), /* @__PURE__ */ React.createElement("div", { style: {
-      marginTop: 16,
-      padding: 14,
-      background: "#fff",
-      border: "2px solid var(--ink)",
-      borderRadius: 14,
-      fontSize: 14,
-      lineHeight: 1.5
-    } }, /* @__PURE__ */ React.createElement("div", { style: {
-      fontFamily: "'Space Mono', monospace",
-      fontSize: 11,
-      fontWeight: 700,
-      textTransform: "uppercase",
-      letterSpacing: "0.08em",
-      marginBottom: 4,
-      color: meta.ink
-    } }, "soy status"), shop.soyNote), /* @__PURE__ */ React.createElement("div", { style: { display: "flex", gap: 10, marginTop: 20, flexWrap: "wrap" } }, /* @__PURE__ */ React.createElement(Btn, { primary: true, href: mapsUrl(shop) }, "\u{1F4CD} directions"), /* @__PURE__ */ React.createElement(Btn, { href: shop.source }, "\u{1F517} source"), /* @__PURE__ */ React.createElement(Btn, { href: mapsUrl(shop) }, "\u{1F5FA}\uFE0F google maps")))));
+    } }, /* @__PURE__ */ React.createElement(
+      "div",
+      {
+        className: "shop-detail",
+        role: "dialog",
+        "aria-modal": "true",
+        "aria-labelledby": "shop-detail-title",
+        onClick: (e) => e.stopPropagation(),
+        style: {
+          background: "var(--bg)",
+          border: "3px solid var(--ink)",
+          borderRadius: 28,
+          boxShadow: "10px 10px 0 var(--ink)",
+          maxWidth: 540,
+          width: "100%",
+          maxHeight: "calc(100vh - 48px)",
+          display: "flex",
+          flexDirection: "column",
+          animation: "popIn 0.25s cubic-bezier(.34,1.56,.64,1)",
+          overflow: "hidden"
+        }
+      },
+      /* @__PURE__ */ React.createElement("div", { className: "shop-detail-header", style: {
+        background: meta.color,
+        padding: "32px 28px",
+        borderBottom: "3px solid var(--ink)",
+        position: "relative",
+        flexShrink: 0
+      } }, /* @__PURE__ */ React.createElement("button", { "aria-label": "Close shop details", onClick: onClose, style: {
+        position: "absolute",
+        top: 16,
+        right: 16,
+        width: 36,
+        height: 36,
+        borderRadius: "50%",
+        border: "2.5px solid var(--ink)",
+        background: "#fff",
+        cursor: "pointer",
+        fontSize: 16,
+        fontWeight: 800,
+        boxShadow: "2px 2px 0 var(--ink)"
+      } }, "\u2715"), /* @__PURE__ */ React.createElement("div", { className: "shop-detail-icon", style: {
+        width: 84,
+        height: 84,
+        borderRadius: "50%",
+        background: "#fff",
+        border: "3px solid var(--ink)",
+        boxShadow: "4px 4px 0 var(--ink)",
+        display: "grid",
+        placeItems: "center",
+        fontSize: 48,
+        marginBottom: 16
+      } }, shop.emoji), /* @__PURE__ */ React.createElement("h2", { id: "shop-detail-title", className: "shop-detail-title", style: {
+        fontFamily: "'Bricolage Grotesque', sans-serif",
+        fontWeight: 800,
+        fontSize: 38,
+        margin: 0,
+        letterSpacing: "-0.02em",
+        lineHeight: 1
+      } }, shop.name), /* @__PURE__ */ React.createElement("div", { style: { fontFamily: "'Space Mono', monospace", fontSize: 13, marginTop: 8 } }, shop.address, " \xB7 ", shop.hood), /* @__PURE__ */ React.createElement("div", { style: { marginTop: 12, display: "flex", gap: 6, flexWrap: "wrap" } }, /* @__PURE__ */ React.createElement("span", { style: {
+        background: "var(--ink)",
+        color: "var(--bg)",
+        fontFamily: "'Space Mono', monospace",
+        fontSize: 11,
+        fontWeight: 700,
+        padding: "5px 10px",
+        borderRadius: 999
+      } }, meta.label), shop.topPick && /* @__PURE__ */ React.createElement(Tag, { bg: "#fff" }, "\u2605 top pick"), shop.buzzy && /* @__PURE__ */ React.createElement(Tag, { bg: "#fff" }, "\u2726 buzzy"))),
+      /* @__PURE__ */ React.createElement("div", { className: "shop-detail-body", style: {
+        padding: 28,
+        fontFamily: "'Nunito', sans-serif",
+        overflowY: "auto",
+        overscrollBehavior: "contain",
+        WebkitOverflowScrolling: "touch"
+      } }, /* @__PURE__ */ React.createElement("div", { style: { display: "flex", gap: 16, marginBottom: 20, flexWrap: "wrap" } }, /* @__PURE__ */ React.createElement(Mini, { label: "hours", val: displayHours(shop.hours) }), /* @__PURE__ */ React.createElement(Mini, { label: "price", val: shop.price }), /* @__PURE__ */ React.createElement(Mini, { label: "neighborhood", val: shop.hood })), /* @__PURE__ */ React.createElement("p", { style: { fontSize: 17, lineHeight: 1.5, margin: 0 } }, shop.note), /* @__PURE__ */ React.createElement("div", { style: {
+        marginTop: 16,
+        padding: 14,
+        background: "#fff",
+        border: "2px solid var(--ink)",
+        borderRadius: 14,
+        fontSize: 14,
+        lineHeight: 1.5
+      } }, /* @__PURE__ */ React.createElement("div", { style: {
+        fontFamily: "'Space Mono', monospace",
+        fontSize: 11,
+        fontWeight: 700,
+        textTransform: "uppercase",
+        letterSpacing: "0.08em",
+        marginBottom: 4,
+        color: meta.ink
+      } }, "soy status"), shop.soyNote), /* @__PURE__ */ React.createElement("div", { style: { display: "flex", gap: 10, marginTop: 20, flexWrap: "wrap" } }, /* @__PURE__ */ React.createElement(Btn, { primary: true, href: mapsUrl(shop) }, "\u{1F4CD} directions"), /* @__PURE__ */ React.createElement(Btn, { href: shop.source }, "\u{1F517} source"), /* @__PURE__ */ React.createElement(Btn, { href: mapsUrl(shop) }, "\u{1F5FA}\uFE0F google maps")))
+    ));
   }
   function Mini({ label, val }) {
     return /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("div", { style: { fontFamily: "'Space Mono', monospace", fontSize: 10, opacity: 0.6, textTransform: "uppercase", letterSpacing: "0.08em" } }, label), /* @__PURE__ */ React.createElement("div", { style: { fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 18 } }, val));

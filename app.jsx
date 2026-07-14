@@ -9,7 +9,7 @@ const FILTERS = [
 { id: "confirmed", label: "soy confirmed", emoji: "✓" },
 { id: "reported", label: "soy reported", emoji: "?" },
 { id: "none", label: "no soy", emoji: "✗" },
-{ id: "call", label: "call to confirm", emoji: "📞" }];
+{ id: "call", label: "soy TBD", emoji: "…" }];
 
 
 const HOOD_GROUPS = [
@@ -209,6 +209,11 @@ function mapsUrl(shop) {
   return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(`${shop.name} ${shop.address} San Francisco CA`);
 }
 
+function displayHours(hours) {
+  if (hours === "check hours") return "hours not listed";
+  return hours.replace(/;\s*check hours$/i, "");
+}
+
 function Sticker({ children, bg, rotate = 0, ink = "var(--ink)" }) {
   return (
     <div style={{
@@ -240,7 +245,7 @@ function FilterBar({ filter, setFilter, search, setSearch, stats, C }) {
           <input
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            placeholder="search by name, hood, vibe…"
+            placeholder="search by name, neighborhood, vibe…"
             style={{
               border: 0, outline: "none", background: "transparent",
               flex: 1, padding: "12px 0", fontSize: 16,
@@ -749,7 +754,7 @@ function ShopCard({ shop, index, selected, hovered, onHover, onLeave, onClick })
           border: "1.5px solid var(--ink)", whiteSpace: "nowrap"
         }}>{meta.label}</span>
         <span style={{ fontFamily: "'Space Mono', monospace", fontSize: 11, opacity: 0.6 }}>
-          {shop.price} · {shop.hours}
+          {shop.price} · {displayHours(shop.hours)}
         </span>
         <a
           href={mapsUrl(shop)}
@@ -865,9 +870,9 @@ function ShopDetail({ shop, onClose, C }) {
           overflowY: "auto", overscrollBehavior: "contain", WebkitOverflowScrolling: "touch"
         }}>
           <div style={{ display: "flex", gap: 16, marginBottom: 20, flexWrap: "wrap" }}>
-            <Mini label="hours" val={shop.hours} />
+            <Mini label="hours" val={displayHours(shop.hours)} />
             <Mini label="price" val={shop.price} />
-            <Mini label="hood" val={shop.hood} />
+            <Mini label="neighborhood" val={shop.hood} />
           </div>
           <p style={{ fontSize: 17, lineHeight: 1.5, margin: 0 }}>{shop.note}</p>
           <div style={{
