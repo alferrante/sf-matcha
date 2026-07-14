@@ -953,7 +953,7 @@ const SHOPS = [
     lat: 37.743031, lng: -122.477997,
     x: 28.1, y: 62.4,
     price: "$$",
-    hours: "Daily 9am-4pm (soft opening June 16, 2026)",
+    hours: "Daily 9am-4pm",
   },
   {
     id: "always-awake-coffee",
