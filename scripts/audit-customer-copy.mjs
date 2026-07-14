@@ -28,6 +28,7 @@ const rules = [
 
 const failures = [];
 const requiredFields = ["note", "soyNote", "hours"];
+const approvedHoursTbd = new Set(["double-black-sf"]);
 const statusRules = {
   confirmed: /\bsoy(?: milk)?\b.*\b(?:available|listed)\b/i,
   reported: /\b(?:reported|may be available)\b/i,
@@ -47,6 +48,12 @@ for (const shop of shops) {
     }
     if (field === "hours" && /\d(?:am|pm)?-\d/i.test(value)) {
       failures.push(`${shop.id}.hours: use an en dash for time ranges: ${value}`);
+    }
+    if (field === "hours" && /^hours not listed$/i.test(value)) {
+      failures.push(`${shop.id}.hours: research a current schedule before using a fallback`);
+    }
+    if (field === "hours" && /\bTBD\b/i.test(value) && !approvedHoursTbd.has(shop.id)) {
+      failures.push(`${shop.id}.hours: TBD requires explicit review and approval`);
     }
   }
   const statusRule = statusRules[shop.status];

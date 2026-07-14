@@ -18,7 +18,7 @@ var SFMatchaData = (() => {
       x: 58.7,
       y: 37.8,
       price: "$$",
-      hours: "hours not listed"
+      hours: "Mon\u2013Fri 10am\u20136:30pm; Sat 10:30am\u20136:30pm; Sun closed"
     },
     {
       id: "maruwu-seicha",
@@ -37,7 +37,7 @@ var SFMatchaData = (() => {
       x: 47.7,
       y: 39.4,
       price: "$$",
-      hours: "hours not listed"
+      hours: "Sun\u2013Thu 11am\u20139pm; Fri\u2013Sat 11am\u20139:30pm"
     },
     {
       id: "cere-tea",
@@ -56,7 +56,7 @@ var SFMatchaData = (() => {
       x: 51.5,
       y: 56.3,
       price: "$$",
-      hours: "hours not listed"
+      hours: "daily 10am\u20137pm"
     },
     {
       id: "oishii-matcha",
@@ -75,7 +75,7 @@ var SFMatchaData = (() => {
       x: 46.7,
       y: 50.8,
       price: "$$",
-      hours: "hours not listed"
+      hours: "daily 11am\u20138:30pm"
     },
     {
       id: "kiss-of-matcha-clement",
@@ -94,7 +94,7 @@ var SFMatchaData = (() => {
       x: 32.4,
       y: 40.6,
       price: "$$",
-      hours: "hours not listed"
+      hours: "Mon closed; Tue\u2013Thu 10am\u20138pm; Fri\u2013Sat 10am\u201310pm; Sun 10am\u20138pm"
     },
     {
       id: "kiss-of-matcha-broadway",
@@ -113,7 +113,7 @@ var SFMatchaData = (() => {
       x: 57.2,
       y: 32.5,
       price: "$$",
-      hours: "hours not listed"
+      hours: "Mon closed; Tue\u2013Thu 10am\u20138pm; Fri\u2013Sun 10am\u20139pm"
     },
     {
       id: "kiss-of-matcha-irving",
@@ -132,7 +132,7 @@ var SFMatchaData = (() => {
       x: 26.9,
       y: 51.3,
       price: "$$",
-      hours: "hours not listed"
+      hours: "Sun\u2013Thu 11am\u20138pm; Fri\u2013Sat 11am\u201310pm"
     },
     {
       id: "matcha-cafe-maiko-japantown",
@@ -151,7 +151,7 @@ var SFMatchaData = (() => {
       x: 47.1,
       y: 39.5,
       price: "$$",
-      hours: "hours not listed"
+      hours: "Sun\u2013Thu 11am\u20139pm; Fri\u2013Sat 11am\u201310pm"
     },
     {
       id: "matcha-cafe-maiko-stonestown",
@@ -170,7 +170,7 @@ var SFMatchaData = (() => {
       x: 28.5,
       y: 70.4,
       price: "$$",
-      hours: "hours not listed"
+      hours: "Mon\u2013Sat 10am\u20139pm; Sun 11am\u20136pm"
     },
     {
       id: "matcha-cafe-maiko-chinatown",
@@ -189,7 +189,7 @@ var SFMatchaData = (() => {
       x: 57.7,
       y: 34.5,
       price: "$$",
-      hours: "hours not listed"
+      hours: "Mon\u2013Fri 12pm\u20137pm; Sat\u2013Sun 11am\u20137pm"
     },
     {
       id: "il-parco",
@@ -208,7 +208,7 @@ var SFMatchaData = (() => {
       x: 37,
       y: 30.4,
       price: "$",
-      hours: "hours not listed"
+      hours: "daily 8am\u20138pm"
     },
     {
       id: "fueling-station-cafe",
@@ -227,7 +227,7 @@ var SFMatchaData = (() => {
       x: 51,
       y: 31.8,
       price: "$",
-      hours: "hours not listed"
+      hours: "Mon\u2013Sat 7am\u20134pm; Sun 7am\u20133pm"
     },
     {
       id: "lulu-fresh",
@@ -246,7 +246,7 @@ var SFMatchaData = (() => {
       x: 57.7,
       y: 28.1,
       price: "$",
-      hours: "hours not listed"
+      hours: "Mon\u2013Fri 7am\u20134pm; Sat 8am\u20134pm; Sun closed"
     },
     {
       id: "sutter-street-cafe",
@@ -265,7 +265,7 @@ var SFMatchaData = (() => {
       x: 57,
       y: 37,
       price: "$",
-      hours: "hours not listed"
+      hours: "Mon\u2013Fri 8am\u20134pm; Sat\u2013Sun closed"
     },
     {
       id: "home-coffee-roasters-grant",
@@ -284,7 +284,7 @@ var SFMatchaData = (() => {
       x: 57.8,
       y: 36.1,
       price: "$",
-      hours: "hours not listed"
+      hours: "Mon\u2013Fri 7:30am\u20133:30pm; Sat\u2013Sun 8am\u20133:30pm"
     },
     {
       id: "steep-creamery-and-tea",
@@ -322,7 +322,7 @@ var SFMatchaData = (() => {
       x: 49.6,
       y: 52.3,
       price: "$",
-      hours: "hours not listed"
+      hours: "Mon\u2013Sat 7:30am\u20135pm; Sun 8am\u20135pm"
     },
     {
       id: "excelsior-coffee-xlcr",
@@ -341,7 +341,7 @@ var SFMatchaData = (() => {
       x: 46.4,
       y: 71.2,
       price: "$",
-      hours: "hours not listed"
+      hours: "daily 7:30am\u20134pm"
     },
     {
       id: "blue-house-cafe",
@@ -360,7 +360,7 @@ var SFMatchaData = (() => {
       x: 33.2,
       y: 77.6,
       price: "$",
-      hours: "hours not listed"
+      hours: "daily 7:30am\u20135pm"
     },
     {
       id: "best-boy-electric",
@@ -379,7 +379,7 @@ var SFMatchaData = (() => {
       x: 47.6,
       y: 39.1,
       price: "$$",
-      hours: "hours not listed"
+      hours: "Mon\u2013Fri 9am\u20134pm; Sat\u2013Sun 10am\u20135pm"
     },
     {
       id: "junbi-matcha-and-tea",
@@ -398,7 +398,7 @@ var SFMatchaData = (() => {
       x: 59.1,
       y: 38,
       price: "$$",
-      hours: "hours not listed"
+      hours: "Mon\u2013Fri 8:30am\u20135pm; Sat\u2013Sun 10am\u20135pm"
     },
     {
       id: "stonemill-matcha",
@@ -417,7 +417,7 @@ var SFMatchaData = (() => {
       x: 51.3,
       y: 50.9,
       price: "$$",
-      hours: "hours not listed"
+      hours: "Mon\u2013Fri 10am\u20134pm; Sat\u2013Sun 9am\u20137pm"
     },
     {
       id: "shoji",
@@ -436,7 +436,7 @@ var SFMatchaData = (() => {
       x: 60.4,
       y: 38.6,
       price: "$$",
-      hours: "hours not listed"
+      hours: "Mon\u2013Fri 8am\u20132:30pm; Sat\u2013Sun 9am\u20132:30pm"
     },
     {
       id: "nagomi",
@@ -455,7 +455,7 @@ var SFMatchaData = (() => {
       x: 59.8,
       y: 38.1,
       price: "$$",
-      hours: "hours not listed"
+      hours: "Mon\u2013Sat 10:30am\u20135pm; Sun closed"
     },
     {
       id: "tadaima-mission",
@@ -474,7 +474,7 @@ var SFMatchaData = (() => {
       x: 52.2,
       y: 53.8,
       price: "$$",
-      hours: "hours not listed"
+      hours: "Mon\u2013Thu 11am\u20134:30pm; Fri\u2013Sun 10am\u20135:30pm"
     },
     {
       id: "tadaima-marina",
@@ -493,7 +493,7 @@ var SFMatchaData = (() => {
       x: 48,
       y: 32.7,
       price: "$$",
-      hours: "hours not listed"
+      hours: "Mon\u2013Thu 11am\u20135:30pm; Fri\u2013Sun 10:30am\u20135:30pm"
     },
     {
       id: "tadaima-inner-sunset",
@@ -512,7 +512,7 @@ var SFMatchaData = (() => {
       x: 32.9,
       y: 50.3,
       price: "$$",
-      hours: "hours not listed"
+      hours: "daily 11am\u20135:30pm"
     },
     {
       id: "the-wild-fox",
@@ -531,7 +531,7 @@ var SFMatchaData = (() => {
       x: 60.2,
       y: 35.3,
       price: "$",
-      hours: "hours not listed"
+      hours: "Mon\u2013Fri 7am\u20135pm; Sat\u2013Sun 8am\u20132pm"
     },
     {
       id: "marigold-cafe",
@@ -550,7 +550,7 @@ var SFMatchaData = (() => {
       x: 56.5,
       y: 54.3,
       price: "$$",
-      hours: "hours not listed"
+      hours: "daily 8am\u20133pm"
     },
     {
       id: "paper-son-coffee-fidi",
@@ -569,7 +569,7 @@ var SFMatchaData = (() => {
       x: 61.7,
       y: 39.2,
       price: "$$",
-      hours: "hours not listed"
+      hours: "Mon\u2013Fri 8am\u20133:30pm; Sat\u2013Sun closed"
     },
     {
       id: "paper-son-coffee-dogpatch",
@@ -588,7 +588,7 @@ var SFMatchaData = (() => {
       x: 65.1,
       y: 53.2,
       price: "$$",
-      hours: "hours not listed"
+      hours: "Mon\u2013Tue closed; Wed\u2013Sun 8am\u20132pm"
     },
     {
       id: "third-wheel-coffee",
@@ -626,7 +626,7 @@ var SFMatchaData = (() => {
       x: 16.2,
       y: 51.9,
       price: "$$",
-      hours: "hours not listed"
+      hours: "daily 7am\u20136pm"
     },
     {
       id: "outset-coffee-financial-district",
@@ -645,7 +645,7 @@ var SFMatchaData = (() => {
       x: 59.9,
       y: 38.1,
       price: "$$",
-      hours: "hours not listed"
+      hours: "Mon\u2013Fri 7am\u20135pm; Sat\u2013Sun 9am\u20134pm"
     },
     {
       id: "motoring-coffee",
@@ -664,7 +664,7 @@ var SFMatchaData = (() => {
       x: 50.1,
       y: 32.3,
       price: "$",
-      hours: "hours not listed"
+      hours: "daily 7am\u20136pm"
     },
     {
       id: "q-specialty-coffee",
@@ -683,7 +683,7 @@ var SFMatchaData = (() => {
       x: 39,
       y: 38.5,
       price: "$",
-      hours: "hours not listed"
+      hours: "daily 7am\u20135:30pm"
     },
     {
       id: "neighbor-s-corner",
@@ -702,7 +702,7 @@ var SFMatchaData = (() => {
       x: 44.2,
       y: 55.4,
       price: "$$",
-      hours: "hours not listed"
+      hours: "Mon\u2013Fri 7am\u20133pm; Sat\u2013Sun 8am\u20133pm"
     },
     {
       id: "komeya-no-bento",
@@ -721,7 +721,7 @@ var SFMatchaData = (() => {
       x: 47.3,
       y: 31.4,
       price: "$$",
-      hours: "hours not listed"
+      hours: "Mon and Sun closed; Tue\u2013Sat 11am\u20132:30pm and 5pm\u20136:30pm"
     },
     {
       id: "origin-lab-coffee-and-matcha",
@@ -740,7 +740,7 @@ var SFMatchaData = (() => {
       x: 58.6,
       y: 37,
       price: "$",
-      hours: "hours not listed"
+      hours: "daily 6am\u20138pm"
     },
     {
       id: "kissaten-hifi",
@@ -778,7 +778,7 @@ var SFMatchaData = (() => {
       x: 52.1,
       y: 62.5,
       price: "$$",
-      hours: "hours not listed"
+      hours: "Mon\u2013Fri 10am\u20132:30pm; Sat\u2013Sun 9am\u20133pm"
     },
     {
       id: "bageletto-sf",
@@ -797,7 +797,7 @@ var SFMatchaData = (() => {
       x: 53.1,
       y: 48.6,
       price: "$",
-      hours: "hours not listed"
+      hours: "Mon\u2013Fri 7:15am\u20131:45pm; Sat\u2013Sun 8:15am\u20132:45pm"
     },
     {
       id: "moriwa-matcha",
@@ -816,7 +816,7 @@ var SFMatchaData = (() => {
       x: 27.8,
       y: 62.3,
       price: "$",
-      hours: "hours not listed"
+      hours: "Mon closed; Tue\u2013Fri 11:30am\u20135pm; Sat\u2013Sun 11:30am\u20136:30pm"
     },
     {
       id: "kissakeko",
@@ -1101,7 +1101,7 @@ var SFMatchaData = (() => {
       x: 60.6,
       y: 36.5,
       price: "$",
-      hours: "hours not listed"
+      hours: "Mon\u2013Thu 7am\u20133:30pm; Fri\u2013Sun closed"
     },
     {
       id: "double-black-sf",
@@ -1120,7 +1120,7 @@ var SFMatchaData = (() => {
       x: 40.1,
       y: 49.8,
       price: "$",
-      hours: "hours not listed"
+      hours: "hours TBD"
     },
     {
       id: "konbini-sf",
@@ -1196,7 +1196,7 @@ var SFMatchaData = (() => {
       x: 44.7,
       y: 31.1,
       price: "$",
-      hours: "hours not listed"
+      hours: "daily 7am\u20135pm"
     },
     {
       id: "stray-dog",

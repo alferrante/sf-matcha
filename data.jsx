@@ -18,7 +18,7 @@ const SHOPS = [
     lat: 37.7881702, lng: -122.4037073,
     x: 58.7, y: 37.8,
     price: "$$",
-    hours: "hours not listed",
+    hours: "Mon–Fri 10am–6:30pm; Sat 10:30am–6:30pm; Sun closed",
   },
   {
     id: "maruwu-seicha",
@@ -35,7 +35,7 @@ const SHOPS = [
     lat: 37.7851991, lng: -122.4303062,
     x: 47.7, y: 39.4,
     price: "$$",
-    hours: "hours not listed",
+    hours: "Sun–Thu 11am–9pm; Fri–Sat 11am–9:30pm",
   },
   {
     id: "cere-tea",
@@ -52,7 +52,7 @@ const SHOPS = [
     lat: 37.7539712, lng: -122.4210238,
     x: 51.5, y: 56.3,
     price: "$$",
-    hours: "hours not listed",
+    hours: "daily 10am–7pm",
   },
   {
     id: "oishii-matcha",
@@ -69,7 +69,7 @@ const SHOPS = [
     lat: 37.7640737, lng: -122.4328131,
     x: 46.7, y: 50.8,
     price: "$$",
-    hours: "hours not listed",
+    hours: "daily 11am–8:30pm",
   },
   {
     id: "kiss-of-matcha-clement",
@@ -86,7 +86,7 @@ const SHOPS = [
     lat: 37.7829348, lng: -122.4674571,
     x: 32.4, y: 40.6,
     price: "$$",
-    hours: "hours not listed",
+    hours: "Mon closed; Tue–Thu 10am–8pm; Fri–Sat 10am–10pm; Sun 10am–8pm",
   },
   {
     id: "kiss-of-matcha-broadway",
@@ -103,7 +103,7 @@ const SHOPS = [
     lat: 37.797946, lng: -122.407346,
     x: 57.2, y: 32.5,
     price: "$$",
-    hours: "hours not listed",
+    hours: "Mon closed; Tue–Thu 10am–8pm; Fri–Sun 10am–9pm",
   },
   {
     id: "kiss-of-matcha-irving",
@@ -120,7 +120,7 @@ const SHOPS = [
     lat: 37.7631891, lng: -122.4808579,
     x: 26.9, y: 51.3,
     price: "$$",
-    hours: "hours not listed",
+    hours: "Sun–Thu 11am–8pm; Fri–Sat 11am–10pm",
   },
   {
     id: "matcha-cafe-maiko-japantown",
@@ -137,7 +137,7 @@ const SHOPS = [
     lat: 37.7849544, lng: -122.4317274,
     x: 47.1, y: 39.5,
     price: "$$",
-    hours: "hours not listed",
+    hours: "Sun–Thu 11am–9pm; Fri–Sat 11am–10pm",
   },
   {
     id: "matcha-cafe-maiko-stonestown",
@@ -154,7 +154,7 @@ const SHOPS = [
     lat: 37.7277726, lng: -122.4768761,
     x: 28.5, y: 70.4,
     price: "$$",
-    hours: "hours not listed",
+    hours: "Mon–Sat 10am–9pm; Sun 11am–6pm",
   },
   {
     id: "matcha-cafe-maiko-chinatown",
@@ -171,7 +171,7 @@ const SHOPS = [
     lat: 37.7942158, lng: -122.4062082,
     x: 57.7, y: 34.5,
     price: "$$",
-    hours: "hours not listed",
+    hours: "Mon–Fri 12pm–7pm; Sat–Sun 11am–7pm",
   },
   {
     id: "il-parco",
@@ -188,7 +188,7 @@ const SHOPS = [
     lat: 37.8018663, lng: -122.4562556,
     x: 37, y: 30.4,
     price: "$",
-    hours: "hours not listed",
+    hours: "daily 8am–8pm",
   },
   {
     id: "fueling-station-cafe",
@@ -205,7 +205,7 @@ const SHOPS = [
     lat: 37.7993092, lng: -122.4223102,
     x: 51, y: 31.8,
     price: "$",
-    hours: "hours not listed",
+    hours: "Mon–Sat 7am–4pm; Sun 7am–3pm",
   },
   {
     id: "lulu-fresh",
@@ -222,7 +222,7 @@ const SHOPS = [
     lat: 37.8060896, lng: -122.4061407,
     x: 57.7, y: 28.1,
     price: "$",
-    hours: "hours not listed",
+    hours: "Mon–Fri 7am–4pm; Sat 8am–4pm; Sun closed",
   },
   {
     id: "sutter-street-cafe",
@@ -239,7 +239,7 @@ const SHOPS = [
     lat: 37.7896524, lng: -122.4079043,
     x: 57, y: 37,
     price: "$",
-    hours: "hours not listed",
+    hours: "Mon–Fri 8am–4pm; Sat–Sun closed",
   },
   {
     id: "home-coffee-roasters-grant",
@@ -256,7 +256,7 @@ const SHOPS = [
     lat: 37.7912579, lng: -122.4058748,
     x: 57.8, y: 36.1,
     price: "$",
-    hours: "hours not listed",
+    hours: "Mon–Fri 7:30am–3:30pm; Sat–Sun 8am–3:30pm",
   },
   {
     id: "steep-creamery-and-tea",
@@ -290,7 +290,7 @@ const SHOPS = [
     lat: 37.7613386, lng: -122.4257977,
     x: 49.6, y: 52.3,
     price: "$",
-    hours: "hours not listed",
+    hours: "Mon–Sat 7:30am–5pm; Sun 8am–5pm",
   },
   {
     id: "excelsior-coffee-xlcr",
@@ -307,7 +307,7 @@ const SHOPS = [
     lat: 37.7263543, lng: -122.4333723,
     x: 46.4, y: 71.2,
     price: "$",
-    hours: "hours not listed",
+    hours: "daily 7:30am–4pm",
   },
   {
     id: "blue-house-cafe",
@@ -324,7 +324,7 @@ const SHOPS = [
     lat: 37.7144818, lng: -122.4655812,
     x: 33.2, y: 77.6,
     price: "$",
-    hours: "hours not listed",
+    hours: "daily 7:30am–5pm",
   },
   {
     id: "best-boy-electric",
@@ -341,7 +341,7 @@ const SHOPS = [
     lat: 37.7856787, lng: -122.4305775,
     x: 47.6, y: 39.1,
     price: "$$",
-    hours: "hours not listed",
+    hours: "Mon–Fri 9am–4pm; Sat–Sun 10am–5pm",
   },
   {
     id: "junbi-matcha-and-tea",
@@ -358,7 +358,7 @@ const SHOPS = [
     lat: 37.7877269, lng: -122.4026141,
     x: 59.1, y: 38,
     price: "$$",
-    hours: "hours not listed",
+    hours: "Mon–Fri 8:30am–5pm; Sat–Sun 10am–5pm",
   },
   {
     id: "stonemill-matcha",
@@ -375,7 +375,7 @@ const SHOPS = [
     lat: 37.7639681, lng: -122.4216256,
     x: 51.3, y: 50.9,
     price: "$$",
-    hours: "hours not listed",
+    hours: "Mon–Fri 10am–4pm; Sat–Sun 9am–7pm",
   },
   {
     id: "shoji",
@@ -392,7 +392,7 @@ const SHOPS = [
     lat: 37.7866713, lng: -122.399674,
     x: 60.4, y: 38.6,
     price: "$$",
-    hours: "hours not listed",
+    hours: "Mon–Fri 8am–2:30pm; Sat–Sun 9am–2:30pm",
   },
   {
     id: "nagomi",
@@ -409,7 +409,7 @@ const SHOPS = [
     lat: 37.787672, lng: -122.4009555,
     x: 59.8, y: 38.1,
     price: "$$",
-    hours: "hours not listed",
+    hours: "Mon–Sat 10:30am–5pm; Sun closed",
   },
   {
     id: "tadaima-mission",
@@ -426,7 +426,7 @@ const SHOPS = [
     lat: 37.7584516, lng: -122.4195436,
     x: 52.2, y: 53.8,
     price: "$$",
-    hours: "hours not listed",
+    hours: "Mon–Thu 11am–4:30pm; Fri–Sun 10am–5:30pm",
   },
   {
     id: "tadaima-marina",
@@ -443,7 +443,7 @@ const SHOPS = [
     lat: 37.7976647, lng: -122.4297214,
     x: 48, y: 32.7,
     price: "$$",
-    hours: "hours not listed",
+    hours: "Mon–Thu 11am–5:30pm; Fri–Sun 10:30am–5:30pm",
   },
   {
     id: "tadaima-inner-sunset",
@@ -460,7 +460,7 @@ const SHOPS = [
     lat: 37.7650291, lng: -122.4661625,
     x: 32.9, y: 50.3,
     price: "$$",
-    hours: "hours not listed",
+    hours: "daily 11am–5:30pm",
   },
   {
     id: "the-wild-fox",
@@ -477,7 +477,7 @@ const SHOPS = [
     lat: 37.7927162, lng: -122.4000828,
     x: 60.2, y: 35.3,
     price: "$",
-    hours: "hours not listed",
+    hours: "Mon–Fri 7am–5pm; Sat–Sun 8am–2pm",
   },
   {
     id: "marigold-cafe",
@@ -494,7 +494,7 @@ const SHOPS = [
     lat: 37.757563, lng: -122.409059,
     x: 56.5, y: 54.3,
     price: "$$",
-    hours: "hours not listed",
+    hours: "daily 8am–3pm",
   },
   {
     id: "paper-son-coffee-fidi",
@@ -511,7 +511,7 @@ const SHOPS = [
     lat: 37.7856195, lng: -122.3963797,
     x: 61.7, y: 39.2,
     price: "$$",
-    hours: "hours not listed",
+    hours: "Mon–Fri 8am–3:30pm; Sat–Sun closed",
   },
   {
     id: "paper-son-coffee-dogpatch",
@@ -528,7 +528,7 @@ const SHOPS = [
     lat: 37.7596427, lng: -122.3881812,
     x: 65.1, y: 53.2,
     price: "$$",
-    hours: "hours not listed",
+    hours: "Mon–Tue closed; Wed–Sun 8am–2pm",
   },
   {
     id: "third-wheel-coffee",
@@ -562,7 +562,7 @@ const SHOPS = [
     lat: 37.7620739, lng: -122.5067779,
     x: 16.2, y: 51.9,
     price: "$$",
-    hours: "hours not listed",
+    hours: "daily 7am–6pm",
   },
   {
     id: "outset-coffee-financial-district",
@@ -579,7 +579,7 @@ const SHOPS = [
     lat: 37.787522, lng: -122.4008166,
     x: 59.9, y: 38.1,
     price: "$$",
-    hours: "hours not listed",
+    hours: "Mon–Fri 7am–5pm; Sat–Sun 9am–4pm",
   },
   {
     id: "motoring-coffee",
@@ -596,7 +596,7 @@ const SHOPS = [
     lat: 37.7983069, lng: -122.4246085,
     x: 50.1, y: 32.3,
     price: "$",
-    hours: "hours not listed",
+    hours: "daily 7am–6pm",
   },
   {
     id: "q-specialty-coffee",
@@ -613,7 +613,7 @@ const SHOPS = [
     lat: 37.7868563, lng: -122.4515284,
     x: 39, y: 38.5,
     price: "$",
-    hours: "hours not listed",
+    hours: "daily 7am–5:30pm",
   },
   {
     id: "neighbor-s-corner",
@@ -630,7 +630,7 @@ const SHOPS = [
     lat: 37.7555735, lng: -122.4387557,
     x: 44.2, y: 55.4,
     price: "$$",
-    hours: "hours not listed",
+    hours: "Mon–Fri 7am–3pm; Sat–Sun 8am–3pm",
   },
   {
     id: "komeya-no-bento",
@@ -647,7 +647,7 @@ const SHOPS = [
     lat: 37.8000776, lng: -122.4314107,
     x: 47.3, y: 31.4,
     price: "$$",
-    hours: "hours not listed",
+    hours: "Mon and Sun closed; Tue–Sat 11am–2:30pm and 5pm–6:30pm",
   },
   {
     id: "origin-lab-coffee-and-matcha",
@@ -664,7 +664,7 @@ const SHOPS = [
     lat: 37.7896787, lng: -122.404049,
     x: 58.6, y: 37,
     price: "$",
-    hours: "hours not listed",
+    hours: "daily 6am–8pm",
   },
   {
     id: "kissaten-hifi",
@@ -698,7 +698,7 @@ const SHOPS = [
     lat: 37.7444324, lng: -122.4209514,
     x: 52.1, y: 62.5,
     price: "$$",
-    hours: "hours not listed",
+    hours: "Mon–Fri 10am–2:30pm; Sat–Sun 9am–3pm",
   },
   {
     id: "bageletto-sf",
@@ -715,7 +715,7 @@ const SHOPS = [
     lat: 37.7688351, lng: -122.4150418,
     x: 53.1, y: 48.6,
     price: "$",
-    hours: "hours not listed",
+    hours: "Mon–Fri 7:15am–1:45pm; Sat–Sun 8:15am–2:45pm",
   },
   {
     id: "moriwa-matcha",
@@ -732,7 +732,7 @@ const SHOPS = [
     lat: 37.7427951, lng: -122.4786188,
     x: 27.8, y: 62.3,
     price: "$",
-    hours: "hours not listed",
+    hours: "Mon closed; Tue–Fri 11:30am–5pm; Sat–Sun 11:30am–6:30pm",
   },
   {
     id: "kissakeko",
@@ -987,7 +987,7 @@ const SHOPS = [
     lat: 37.7906, lng: -122.3990,
     x: 60.6, y: 36.5,
     price: "$",
-    hours: "hours not listed",
+    hours: "Mon–Thu 7am–3:30pm; Fri–Sun closed",
   },
   {
     id: "double-black-sf",
@@ -1004,7 +1004,7 @@ const SHOPS = [
     lat: 37.7659, lng: -122.4487,
     x: 40.1, y: 49.8,
     price: "$",
-    hours: "hours not listed",
+    hours: "hours TBD",
   },
   {
     id: "konbini-sf",
@@ -1072,7 +1072,7 @@ const SHOPS = [
     lat: 37.8006, lng: -122.4376,
     x: 44.7, y: 31.1,
     price: "$",
-    hours: "hours not listed",
+    hours: "daily 7am–5pm",
   },
   {
     id: "stray-dog",
