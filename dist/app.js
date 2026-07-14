@@ -7,7 +7,7 @@ var SFMatchaApp = (() => {
     { id: "buzzy", label: "new / buzzy", emoji: "\u2728" },
     { id: "confirmed", label: "soy confirmed", emoji: "\u2713" },
     { id: "reported", label: "soy reported", emoji: "?" },
-    { id: "none", label: "no soy", emoji: "\u2717" },
+    { id: "none", label: "no soy listed", emoji: "\u2717" },
     { id: "call", label: "soy TBD", emoji: "\u2026" }
   ];
   var GOOGLE_MAP_CENTER = { lat: 37.765, lng: -122.436 };
@@ -38,7 +38,7 @@ var SFMatchaApp = (() => {
         "pinStyle": "sticker",
         "showLabels": true,
         "marqueeSpeed": 40,
-        "headerCopy": "the only san francisco matcha map you need.",
+        "headerCopy": "san francisco matcha spots, all in one map.",
         "wobble": true
       }
       /*EDITMODE-END*/
@@ -135,12 +135,12 @@ var SFMatchaApp = (() => {
   }
   function Marquee({ speed }) {
     const items = [
-      "\u{1F375} sf's freshest matcha map",
-      "\u2726 updated weekly by real humans",
-      "\u{1F33F} 42 spots scouted",
-      "\u273F soy status verified",
-      "\u2B50 founder & locals approved",
-      "\u{1F380} tap a pin for the goods"
+      "\u{1F375} sf matcha, mapped",
+      "\u2726 updated twice a week",
+      `\u{1F33F} ${SHOPS.length} spots mapped`,
+      "\u273F soy info at a glance",
+      "\u2B50 local favorites highlighted",
+      "\u{1F380} tap a pin for details"
     ];
     const loop = [...items, ...items, ...items];
     return /* @__PURE__ */ React.createElement("div", { style: {
@@ -184,8 +184,7 @@ var SFMatchaApp = (() => {
     return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(`${shop.name} ${shop.address} San Francisco CA`);
   }
   function displayHours(hours) {
-    if (hours === "check hours") return "hours not listed";
-    return hours.replace(/;\s*check hours$/i, "");
+    return hours || "hours not listed";
   }
   function FilterBar({ filter, setFilter, search, setSearch, stats, C }) {
     return /* @__PURE__ */ React.createElement("div", { style: { padding: "16px 32px 24px", maxWidth: 1600, margin: "0 auto" } }, /* @__PURE__ */ React.createElement("div", { style: { display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center", marginBottom: 16 } }, /* @__PURE__ */ React.createElement("div", { style: {
@@ -438,7 +437,7 @@ var SFMatchaApp = (() => {
       fontFamily: "'Space Mono', monospace",
       fontWeight: 700,
       fontSize: 11
-    } }, mapStatus === "error" ? "Google Maps key needs a restriction/API check" : "loading Google map...")));
+    } }, mapStatus === "error" ? "The map is temporarily unavailable. The spot list still works below." : "loading Google map...")));
   }
   function renderGoogleMapPins(layer, projection, state) {
     if (!state) return;

@@ -8,7 +8,7 @@ const FILTERS = [
 { id: "buzzy", label: "new / buzzy", emoji: "✨" },
 { id: "confirmed", label: "soy confirmed", emoji: "✓" },
 { id: "reported", label: "soy reported", emoji: "?" },
-{ id: "none", label: "no soy", emoji: "✗" },
+{ id: "none", label: "no soy listed", emoji: "✗" },
 { id: "call", label: "soy TBD", emoji: "…" }];
 
 
@@ -47,7 +47,7 @@ function App() {
     "pinStyle": "sticker",
     "showLabels": true,
     "marqueeSpeed": 40,
-    "headerCopy": "the only san francisco matcha map you need.",
+    "headerCopy": "san francisco matcha spots, all in one map.",
     "wobble": true
   } /*EDITMODE-END*/);
 
@@ -155,12 +155,12 @@ function App() {
 // ===================== MARQUEE =====================
 function Marquee({ speed }) {
   const items = [
-  "🍵 sf's freshest matcha map",
-  "✦ updated weekly by real humans",
-  "🌿 42 spots scouted",
-  "✿ soy status verified",
-  "⭐ founder & locals approved",
-  "🎀 tap a pin for the goods"];
+  "🍵 sf matcha, mapped",
+  "✦ updated twice a week",
+  `🌿 ${SHOPS.length} spots mapped`,
+  "✿ soy info at a glance",
+  "⭐ local favorites highlighted",
+  "🎀 tap a pin for details"];
 
   const loop = [...items, ...items, ...items];
   return (
@@ -210,8 +210,7 @@ function mapsUrl(shop) {
 }
 
 function displayHours(hours) {
-  if (hours === "check hours") return "hours not listed";
-  return hours.replace(/;\s*check hours$/i, "");
+  return hours || "hours not listed";
 }
 
 function Sticker({ children, bg, rotate = 0, ink = "var(--ink)" }) {
@@ -505,7 +504,7 @@ function GoogleMapLayer({ shops, visibleIds, selected, setSelected, hovered, set
           padding: "10px 12px",
           fontFamily: "'Space Mono', monospace", fontWeight: 700, fontSize: 11
         }}>
-            {mapStatus === "error" ? "Google Maps key needs a restriction/API check" : "loading Google map..."}
+            {mapStatus === "error" ? "The map is temporarily unavailable. The spot list still works below." : "loading Google map..."}
           </div>
         </div>
       }
