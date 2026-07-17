@@ -1033,7 +1033,7 @@ const SHOPS = [
     buzzy: true,
     emoji: "🧋",
     note: "Berkeley-born Vietnamese coffee, boba, and matcha cafe; SF location on Valencia with a dedicated ceremonial matcha section (Uji, fruit, sesame, ube, banana, and coconut matcha drinks).",
-    soyNote: "No soy: confirmed in person — non-dairy options are oat and almond milk only, no soy.",
+    soyNote: "No soy — oat and almond milk only.",
     source: "https://missionlocal.org/2026/06/make-out-room-owner-says-hes-leaving-the-biz-with-his-liver-intact/",
     lat: 37.7643364, lng: -122.4219025,
     x: 51.2, y: 50.7,
