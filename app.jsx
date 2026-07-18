@@ -169,7 +169,7 @@ function Marquee({ speed }) {
       borderBottom: "3px solid var(--ink)", padding: "10px 0", fontFamily: "'Space Mono', monospace",
       fontSize: 14, fontWeight: 700, letterSpacing: "0.04em"
     }}>
-      <div style={{
+      <div className="marquee-track" style={{
         display: "inline-flex", whiteSpace: "nowrap", animation: `marquee ${speed}s linear infinite`,
         gap: 36
       }}>
@@ -232,9 +232,9 @@ function Sticker({ children, bg, rotate = 0, ink = "var(--ink)" }) {
 // ===================== FILTER BAR =====================
 function FilterBar({ filter, setFilter, search, setSearch, stats, C }) {
   return (
-    <div style={{ padding: "16px 32px 24px", maxWidth: 1600, margin: "0 auto" }}>
-      <div style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center", marginBottom: 16 }}>
-        <div style={{
+    <div className="filter-bar" style={{ padding: "16px 32px 24px", maxWidth: 1600, margin: "0 auto" }}>
+      <div className="filter-summary" style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center", marginBottom: 16 }}>
+        <div className="filter-search" style={{
           flex: "1 1 360px", maxWidth: 520, position: "relative",
           background: "#fff", border: "2.5px solid var(--ink)", borderRadius: 999,
           boxShadow: "4px 4px 0 var(--ink)",
@@ -260,7 +260,7 @@ function FilterBar({ filter, setFilter, search, setSearch, stats, C }) {
           }
         </div>
 
-        <div style={{ display: "flex", gap: 24, fontFamily: "'Bricolage Grotesque', sans-serif", flexWrap: "wrap" }}>
+        <div className="filter-stats" style={{ display: "flex", gap: 24, fontFamily: "'Bricolage Grotesque', sans-serif", flexWrap: "wrap" }}>
           <Stat n={stats.shown} label="shown" pop="var(--pop)" />
           <Stat n={stats.confirmed} label="soy ✓" pop="var(--pop)" />
           <Stat n={stats.top} label="top picks" pop="var(--pop2)" />
@@ -268,11 +268,12 @@ function FilterBar({ filter, setFilter, search, setSearch, stats, C }) {
         </div>
       </div>
 
-      <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+      <div className="filter-pills" style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
         {FILTERS.map((f) => {
           const active = filter === f.id;
           return (
             <button
+              className="filter-pill"
               key={f.id}
               onClick={() => setFilter(f.id)}
               style={{
@@ -320,7 +321,9 @@ function MapPanel({ shops, visibleIds, selected, setSelected, hovered, setHovere
       overflow: "hidden",
       background: "#C9E8FF",
       aspectRatio: "1 / 1",
-      minHeight: 560
+      minHeight: 560,
+      minWidth: 0,
+      width: "100%"
     }}>
       {hasGoogleMapsKey ?
       <GoogleMapLayer
@@ -361,7 +364,7 @@ function MapPanel({ shops, visibleIds, selected, setSelected, hovered, setHovere
       }
 
       {/* legend */}
-      <div style={{
+      <div className="map-legend" style={{
         position: "absolute", bottom: 16, left: 16,
         background: "rgba(255,248,231,0.95)",
         border: "2.5px solid var(--ink)", borderRadius: 16,
@@ -370,12 +373,12 @@ function MapPanel({ shops, visibleIds, selected, setSelected, hovered, setHovere
         fontFamily: "'Space Mono', monospace", fontSize: 11, fontWeight: 700,
         backdropFilter: "blur(4px)"
       }}>
-        <div style={{ marginBottom: 6, fontFamily: "'Bricolage Grotesque', sans-serif", fontSize: 13, fontWeight: 800 }}>
+        <div className="map-legend-title" style={{ marginBottom: 6, fontFamily: "'Bricolage Grotesque', sans-serif", fontSize: 13, fontWeight: 800 }}>
           legend
         </div>
         {Object.entries(STATUS_META).map(([k, v]) =>
-        <div key={k} style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 4 }}>
-            <span style={{
+        <div className="map-legend-row" key={k} style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 4 }}>
+            <span className="map-legend-dot" style={{
             width: 14, height: 14, borderRadius: 999, background: v.color,
             border: "1.5px solid var(--ink)", display: "inline-block"
           }} />
@@ -385,7 +388,7 @@ function MapPanel({ shops, visibleIds, selected, setSelected, hovered, setHovere
       </div>
 
       {/* corner badge */}
-      <div style={{
+      <div className="map-corner-badge" style={{
         position: "absolute", top: 16, right: 16,
         background: "var(--pop)", color: "var(--ink)",
         border: "2.5px solid var(--ink)", borderRadius: 999,
@@ -395,7 +398,8 @@ function MapPanel({ shops, visibleIds, selected, setSelected, hovered, setHovere
         transform: "rotate(4deg)",
         display: "inline-flex", alignItems: "center", gap: 6
       }}>
-        {hasGoogleMapsKey ? "google map + pins" : "🗺️ tap a pin"}
+        <span className="map-badge-full">{hasGoogleMapsKey ? "google map + pins" : "🗺️ tap a pin"}</span>
+        <span className="map-badge-compact">{hasGoogleMapsKey ? "map + pins" : "tap a pin"}</span>
       </div>
     </div>);
 
@@ -839,7 +843,7 @@ function ShopDetail({ shop, onClose, C }) {
           borderBottom: "3px solid var(--ink)",
           position: "relative", flexShrink: 0
         }}>
-          <button aria-label="Close shop details" onClick={onClose} style={{
+          <button className="shop-detail-close" aria-label="Close shop details" onClick={onClose} style={{
             position: "absolute", top: 16, right: 16,
             width: 36, height: 36, borderRadius: "50%",
             border: "2.5px solid var(--ink)", background: "#fff",
@@ -857,10 +861,10 @@ function ShopDetail({ shop, onClose, C }) {
             fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800,
             fontSize: 38, margin: 0, letterSpacing: "-0.02em", lineHeight: 1
           }}>{shop.name}</h2>
-          <div style={{ fontFamily: "'Space Mono', monospace", fontSize: 13, marginTop: 8 }}>
+          <div className="shop-detail-address" style={{ fontFamily: "'Space Mono', monospace", fontSize: 13, marginTop: 8 }}>
             {shop.address} · {shop.hood}
           </div>
-          <div style={{ marginTop: 12, display: "flex", gap: 6, flexWrap: "wrap" }}>
+          <div className="shop-detail-tags" style={{ marginTop: 12, display: "flex", gap: 6, flexWrap: "wrap" }}>
             <span style={{
               background: "var(--ink)", color: "var(--bg)",
               fontFamily: "'Space Mono', monospace", fontSize: 11, fontWeight: 700,

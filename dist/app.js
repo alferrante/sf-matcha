@@ -153,7 +153,7 @@ var SFMatchaApp = (() => {
       fontSize: 14,
       fontWeight: 700,
       letterSpacing: "0.04em"
-    } }, /* @__PURE__ */ React.createElement("div", { style: {
+    } }, /* @__PURE__ */ React.createElement("div", { className: "marquee-track", style: {
       display: "inline-flex",
       whiteSpace: "nowrap",
       animation: `marquee ${speed}s linear infinite`,
@@ -187,7 +187,7 @@ var SFMatchaApp = (() => {
     return hours || "hours not listed";
   }
   function FilterBar({ filter, setFilter, search, setSearch, stats, C }) {
-    return /* @__PURE__ */ React.createElement("div", { style: { padding: "16px 32px 24px", maxWidth: 1600, margin: "0 auto" } }, /* @__PURE__ */ React.createElement("div", { style: { display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center", marginBottom: 16 } }, /* @__PURE__ */ React.createElement("div", { style: {
+    return /* @__PURE__ */ React.createElement("div", { className: "filter-bar", style: { padding: "16px 32px 24px", maxWidth: 1600, margin: "0 auto" } }, /* @__PURE__ */ React.createElement("div", { className: "filter-summary", style: { display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center", marginBottom: 16 } }, /* @__PURE__ */ React.createElement("div", { className: "filter-search", style: {
       flex: "1 1 360px",
       maxWidth: 520,
       position: "relative",
@@ -226,11 +226,12 @@ var SFMatchaApp = (() => {
       fontFamily: "'Space Mono', monospace",
       fontSize: 11,
       fontWeight: 700
-    } }, "clear \u2715")), /* @__PURE__ */ React.createElement("div", { style: { display: "flex", gap: 24, fontFamily: "'Bricolage Grotesque', sans-serif", flexWrap: "wrap" } }, /* @__PURE__ */ React.createElement(Stat, { n: stats.shown, label: "shown", pop: "var(--pop)" }), /* @__PURE__ */ React.createElement(Stat, { n: stats.confirmed, label: "soy \u2713", pop: "var(--pop)" }), /* @__PURE__ */ React.createElement(Stat, { n: stats.top, label: "top picks", pop: "var(--pop2)" }), /* @__PURE__ */ React.createElement(Stat, { n: stats.buzzy, label: "buzzy", pop: "var(--lime)" }))), /* @__PURE__ */ React.createElement("div", { style: { display: "flex", gap: 8, flexWrap: "wrap" } }, FILTERS.map((f) => {
+    } }, "clear \u2715")), /* @__PURE__ */ React.createElement("div", { className: "filter-stats", style: { display: "flex", gap: 24, fontFamily: "'Bricolage Grotesque', sans-serif", flexWrap: "wrap" } }, /* @__PURE__ */ React.createElement(Stat, { n: stats.shown, label: "shown", pop: "var(--pop)" }), /* @__PURE__ */ React.createElement(Stat, { n: stats.confirmed, label: "soy \u2713", pop: "var(--pop)" }), /* @__PURE__ */ React.createElement(Stat, { n: stats.top, label: "top picks", pop: "var(--pop2)" }), /* @__PURE__ */ React.createElement(Stat, { n: stats.buzzy, label: "buzzy", pop: "var(--lime)" }))), /* @__PURE__ */ React.createElement("div", { className: "filter-pills", style: { display: "flex", gap: 8, flexWrap: "wrap" } }, FILTERS.map((f) => {
       const active = filter === f.id;
       return /* @__PURE__ */ React.createElement(
         "button",
         {
+          className: "filter-pill",
           key: f.id,
           onClick: () => setFilter(f.id),
           style: {
@@ -272,7 +273,9 @@ var SFMatchaApp = (() => {
       overflow: "hidden",
       background: "#C9E8FF",
       aspectRatio: "1 / 1",
-      minHeight: 560
+      minHeight: 560,
+      minWidth: 0,
+      width: "100%"
     } }, hasGoogleMapsKey ? /* @__PURE__ */ React.createElement(
       GoogleMapLayer,
       {
@@ -305,7 +308,7 @@ var SFMatchaApp = (() => {
           style: tweaks.pinStyle
         }
       );
-    })), /* @__PURE__ */ React.createElement("div", { style: {
+    })), /* @__PURE__ */ React.createElement("div", { className: "map-legend", style: {
       position: "absolute",
       bottom: 16,
       left: 16,
@@ -318,8 +321,8 @@ var SFMatchaApp = (() => {
       fontSize: 11,
       fontWeight: 700,
       backdropFilter: "blur(4px)"
-    } }, /* @__PURE__ */ React.createElement("div", { style: { marginBottom: 6, fontFamily: "'Bricolage Grotesque', sans-serif", fontSize: 13, fontWeight: 800 } }, "legend"), Object.entries(STATUS_META).map(
-      ([k, v]) => /* @__PURE__ */ React.createElement("div", { key: k, style: { display: "flex", alignItems: "center", gap: 8, marginTop: 4 } }, /* @__PURE__ */ React.createElement("span", { style: {
+    } }, /* @__PURE__ */ React.createElement("div", { className: "map-legend-title", style: { marginBottom: 6, fontFamily: "'Bricolage Grotesque', sans-serif", fontSize: 13, fontWeight: 800 } }, "legend"), Object.entries(STATUS_META).map(
+      ([k, v]) => /* @__PURE__ */ React.createElement("div", { className: "map-legend-row", key: k, style: { display: "flex", alignItems: "center", gap: 8, marginTop: 4 } }, /* @__PURE__ */ React.createElement("span", { className: "map-legend-dot", style: {
         width: 14,
         height: 14,
         borderRadius: 999,
@@ -327,7 +330,7 @@ var SFMatchaApp = (() => {
         border: "1.5px solid var(--ink)",
         display: "inline-block"
       } }), /* @__PURE__ */ React.createElement("span", null, v.label))
-    )), /* @__PURE__ */ React.createElement("div", { style: {
+    )), /* @__PURE__ */ React.createElement("div", { className: "map-corner-badge", style: {
       position: "absolute",
       top: 16,
       right: 16,
@@ -344,7 +347,7 @@ var SFMatchaApp = (() => {
       display: "inline-flex",
       alignItems: "center",
       gap: 6
-    } }, hasGoogleMapsKey ? "google map + pins" : "\u{1F5FA}\uFE0F tap a pin"));
+    } }, /* @__PURE__ */ React.createElement("span", { className: "map-badge-full" }, hasGoogleMapsKey ? "google map + pins" : "\u{1F5FA}\uFE0F tap a pin"), /* @__PURE__ */ React.createElement("span", { className: "map-badge-compact" }, hasGoogleMapsKey ? "map + pins" : "tap a pin")));
   }
   function GoogleMapLayer({ shops, visibleIds, selected, setSelected, hovered, setHovered, tweaks }) {
     const mapEl = useRef(null);
@@ -792,7 +795,7 @@ var SFMatchaApp = (() => {
         borderBottom: "3px solid var(--ink)",
         position: "relative",
         flexShrink: 0
-      } }, /* @__PURE__ */ React.createElement("button", { "aria-label": "Close shop details", onClick: onClose, style: {
+      } }, /* @__PURE__ */ React.createElement("button", { className: "shop-detail-close", "aria-label": "Close shop details", onClick: onClose, style: {
         position: "absolute",
         top: 16,
         right: 16,
@@ -823,7 +826,7 @@ var SFMatchaApp = (() => {
         margin: 0,
         letterSpacing: "-0.02em",
         lineHeight: 1
-      } }, shop.name), /* @__PURE__ */ React.createElement("div", { style: { fontFamily: "'Space Mono', monospace", fontSize: 13, marginTop: 8 } }, shop.address, " \xB7 ", shop.hood), /* @__PURE__ */ React.createElement("div", { style: { marginTop: 12, display: "flex", gap: 6, flexWrap: "wrap" } }, /* @__PURE__ */ React.createElement("span", { style: {
+      } }, shop.name), /* @__PURE__ */ React.createElement("div", { className: "shop-detail-address", style: { fontFamily: "'Space Mono', monospace", fontSize: 13, marginTop: 8 } }, shop.address, " \xB7 ", shop.hood), /* @__PURE__ */ React.createElement("div", { className: "shop-detail-tags", style: { marginTop: 12, display: "flex", gap: 6, flexWrap: "wrap" } }, /* @__PURE__ */ React.createElement("span", { style: {
         background: "var(--ink)",
         color: "var(--bg)",
         fontFamily: "'Space Mono', monospace",
