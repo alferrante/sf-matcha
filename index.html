@@ -79,6 +79,13 @@
   .shop-list { container-type: inline-size; }
   .map-badge-compact { display: none; }
 
+  @media (min-width: 1101px) {
+    .map-panel {
+      min-height: 0 !important;
+      max-height: calc(100dvh - 44px);
+    }
+  }
+
   @media (max-width: 1279px) {
     .filter-pills {
       flex-wrap: nowrap !important;
