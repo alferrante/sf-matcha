@@ -76,6 +76,27 @@
 
   input::placeholder { color: #1a1a1a; opacity: 0.4; }
 
+  .shop-list { container-type: inline-size; }
+
+  @container (max-width: 480px) {
+    .shop-card {
+      grid-template-columns: auto minmax(0, 1fr) !important;
+      grid-template-areas:
+        "icon content"
+        "meta meta";
+    }
+    .shop-card-icon { grid-area: icon; }
+    .shop-card-content { grid-area: content; }
+    .shop-card-meta {
+      grid-area: meta;
+      flex-direction: row !important;
+      align-items: center !important;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+    .shop-card-hours { width: auto !important; }
+  }
+
   @media (max-width: 920px) {
     .main-grid {
       grid-template-columns: 1fr !important;

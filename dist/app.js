@@ -635,6 +635,7 @@ var SFMatchaApp = (() => {
     return /* @__PURE__ */ React.createElement(
       "div",
       {
+        className: "shop-card",
         onMouseEnter: onHover,
         onMouseLeave: onLeave,
         onClick,
@@ -648,12 +649,12 @@ var SFMatchaApp = (() => {
           transition: "all 0.18s",
           cursor: "pointer",
           display: "grid",
-          gridTemplateColumns: "auto 1fr auto",
+          gridTemplateColumns: "auto minmax(0, 1fr) minmax(132px, 34%)",
           gap: 14,
           alignItems: "flex-start"
         }
       },
-      /* @__PURE__ */ React.createElement("div", { style: {
+      /* @__PURE__ */ React.createElement("div", { className: "shop-card-icon", style: {
         width: 54,
         height: 54,
         borderRadius: "50%",
@@ -665,7 +666,7 @@ var SFMatchaApp = (() => {
         boxShadow: "2px 2px 0 var(--ink)",
         flexShrink: 0
       } }, shop.emoji),
-      /* @__PURE__ */ React.createElement("div", { style: { minWidth: 0 } }, /* @__PURE__ */ React.createElement("div", { style: { display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" } }, /* @__PURE__ */ React.createElement("h3", { style: {
+      /* @__PURE__ */ React.createElement("div", { className: "shop-card-content", style: { minWidth: 0 } }, /* @__PURE__ */ React.createElement("div", { style: { display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" } }, /* @__PURE__ */ React.createElement("h3", { style: {
         fontFamily: "'Bricolage Grotesque', sans-serif",
         fontWeight: 800,
         fontSize: 20,
@@ -678,7 +679,14 @@ var SFMatchaApp = (() => {
         margin: "10px 0 0",
         color: "#2a2a2a"
       } }, shop.note)),
-      /* @__PURE__ */ React.createElement("div", { style: { display: "flex", flexDirection: "column", gap: 6, alignItems: "flex-end" } }, /* @__PURE__ */ React.createElement("span", { style: {
+      /* @__PURE__ */ React.createElement("div", { className: "shop-card-meta", style: {
+        display: "flex",
+        flexDirection: "column",
+        gap: 6,
+        alignItems: "flex-end",
+        minWidth: 0,
+        width: "100%"
+      } }, /* @__PURE__ */ React.createElement("span", { style: {
         background: meta.color,
         color: meta.ink,
         fontFamily: "'Space Mono', monospace",
@@ -688,7 +696,15 @@ var SFMatchaApp = (() => {
         borderRadius: 999,
         border: "1.5px solid var(--ink)",
         whiteSpace: "nowrap"
-      } }, meta.label), /* @__PURE__ */ React.createElement("span", { style: { fontFamily: "'Space Mono', monospace", fontSize: 11, opacity: 0.6 } }, shop.price, " \xB7 ", displayHours(shop.hours)), /* @__PURE__ */ React.createElement(
+      } }, meta.label), /* @__PURE__ */ React.createElement("span", { className: "shop-card-hours", style: {
+        fontFamily: "'Space Mono', monospace",
+        fontSize: 11,
+        lineHeight: 1.45,
+        opacity: 0.6,
+        maxWidth: "100%",
+        textAlign: "right",
+        overflowWrap: "anywhere"
+      } }, shop.price, " \xB7 ", displayHours(shop.hours)), /* @__PURE__ */ React.createElement(
         "a",
         {
           href: mapsUrl(shop),
