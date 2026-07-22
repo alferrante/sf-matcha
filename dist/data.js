@@ -1146,12 +1146,12 @@ var SFMatchaData = (() => {
       name: "Binge Coffee House",
       address: "530 Valencia St",
       hood: "Mission",
-      status: "call",
+      status: "none",
       topPick: false,
       buzzy: true,
       emoji: "\u{1F9CB}",
-      note: "Berkeley-born Vietnamese coffee, boba, and matcha cafe at its first SF location, with Uji, fruit, sesame, ube, banana, and coconut matcha drinks.",
-      soyNote: "Soy availability is not listed; the menu says matcha drinks use milk of choice.",
+      note: "Berkeley-born Vietnamese coffee, boba, and matcha cafe; SF location on Valencia with a dedicated ceremonial matcha section (Uji, fruit, sesame, ube, banana, and coconut matcha drinks).",
+      soyNote: "Soy is not listed; oat and almond milk are available.",
       source: "https://missionlocal.org/2026/06/make-out-room-owner-says-hes-leaving-the-biz-with-his-liver-intact/",
       lat: 37.7643364,
       lng: -122.4219025,
@@ -1235,6 +1235,25 @@ var SFMatchaData = (() => {
       y: 40.7,
       price: "$$",
       hours: "Daily 11:30am\u20136:30pm"
+    },
+    {
+      id: "the-berrys-boba-matcha",
+      name: "The Berry\u2019s Boba Matcha",
+      address: "Pier 43 1/2",
+      hood: "Fisherman\u2019s Wharf",
+      status: "call",
+      topPick: false,
+      buzzy: true,
+      emoji: "\u{1F9CB}",
+      note: "Waterfront boba-and-matcha kiosk with a dedicated matcha menu: lychee, strawberry, mango, brown sugar, dragon fruit, and Lotus Biscoff matcha drinks.",
+      soyNote: "Soy availability is not listed for the matcha drinks.",
+      source: "https://www.doordash.com/en/store/the-berry%E2%80%99s-boba%26matcha-san-francisco-35242533/",
+      lat: 37.8089029,
+      lng: -122.412996,
+      x: 54.5,
+      y: 26.6,
+      price: "$",
+      hours: "Daily 10am\u20138pm"
     }
   ];
   var STATUS_META = {
