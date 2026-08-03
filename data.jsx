@@ -1193,6 +1193,23 @@ const SHOPS = [
     price: "$$",
     hours: "Mon–Fri 7am–4pm; Sat–Sun 7am–5pm",
   },
+  {
+    id: "ocha-matcha",
+    name: "Ocha Matcha",
+    address: "1934 Union St",
+    hood: "Cow Hollow",
+    status: "call",
+    topPick: true,
+    buzzy: false,
+    emoji: "🍵",
+    note: "Announced matcha-focused cafe promising matcha salt bread and soft serve.",
+    soyNote: "Soy availability is not listed because this location has not opened yet.",
+    source: "https://ochamatcha.us/",
+    lat: 37.79791, lng: -122.43124,
+    x: 47.4, y: 32.6,
+    price: "$",
+    hours: "Coming soon",
+  },
 ];
 
 const STATUS_META = {
