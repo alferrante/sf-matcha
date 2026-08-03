@@ -1176,6 +1176,23 @@ const SHOPS = [
     price: "$$",
     hours: "Coming soon",
   },
+  {
+    id: "pixlcat-coffee",
+    name: "Pixlcat Coffee",
+    address: "519 Clement St",
+    hood: "Inner Richmond",
+    status: "call",
+    topPick: false,
+    buzzy: false,
+    emoji: "🐱",
+    note: "Butter mochi cafe with a hot or iced organic ceremonial-grade Kyoto Uji matcha latte and a matcha butter mochi.",
+    soyNote: "Soy availability for matcha is not listed.",
+    source: "https://www.pixlcatcoffee.com/order-now",
+    lat: 37.7827562, lng: -122.4648451,
+    x: 33.5, y: 40.7,
+    price: "$$",
+    hours: "Mon–Fri 7am–4pm; Sat–Sun 7am–5pm",
+  },
 ];
 
 const STATUS_META = {

@@ -1311,6 +1311,25 @@ var SFMatchaData = (() => {
       y: 34.4,
       price: "$$",
       hours: "Coming soon"
+    },
+    {
+      id: "pixlcat-coffee",
+      name: "Pixlcat Coffee",
+      address: "519 Clement St",
+      hood: "Inner Richmond",
+      status: "call",
+      topPick: false,
+      buzzy: false,
+      emoji: "\u{1F431}",
+      note: "Butter mochi cafe with a hot or iced organic ceremonial-grade Kyoto Uji matcha latte and a matcha butter mochi.",
+      soyNote: "Soy availability for matcha is not listed.",
+      source: "https://www.pixlcatcoffee.com/order-now",
+      lat: 37.7827562,
+      lng: -122.4648451,
+      x: 33.5,
+      y: 40.7,
+      price: "$$",
+      hours: "Mon\u2013Fri 7am\u20134pm; Sat\u2013Sun 7am\u20135pm"
     }
   ];
   var STATUS_META = {
