@@ -1036,15 +1036,15 @@ var SFMatchaData = (() => {
       topPick: false,
       buzzy: true,
       emoji: "\u{1F9CB}",
-      note: "Second SF HEYTEA location planned for Level 1 of Stonestown Galleria.",
-      soyNote: "Soy availability for the planned Stonestown location is not listed.",
-      source: "https://maps.apple.com/place?place-id=IEEA1F36900BEAE7D",
+      note: "Second SF HEYTEA location, opened June 26, 2026 on Level 1 of Stonestown Galleria.",
+      soyNote: "Soy availability is not listed; the matcha drinks use dairy milk and dairy-based cheese foam.",
+      source: "https://www.stonestowngalleria.com/en/directory/?tab=map&unit=383324-250C",
       lat: 37.7277726,
       lng: -122.4768761,
       x: 28.5,
       y: 70.5,
       price: "$$",
-      hours: "Opening expected summer 2026"
+      hours: "Mon\u2013Thu 11am\u20138pm; Fri\u2013Sat 11am\u20139pm; Sun 11am\u20137pm"
     },
     {
       id: "jandii-cafe-taraval",
@@ -1349,6 +1349,44 @@ var SFMatchaData = (() => {
       y: 32.6,
       price: "$",
       hours: "Coming soon"
+    },
+    {
+      id: "kimi-matcha-popup",
+      name: "Kimi Matcha Pop-Up",
+      address: "303 2nd St N102",
+      hood: "East Cut / FiDi",
+      status: "call",
+      topPick: true,
+      buzzy: true,
+      emoji: "\u{1F375}",
+      note: "Recurring specialty-matcha pop-up at Paper Son Coffee with curated single-origin teas, matcha lattes, and rotating collaborations.",
+      soyNote: "Soy availability is not listed; whole and oat milk have been offered.",
+      source: "https://www.instagram.com/kimimatcha/",
+      lat: 37.7856195,
+      lng: -122.3963797,
+      x: 61.7,
+      y: 39.2,
+      price: "$$",
+      hours: "Recurring at Paper Son; Aug 10 9am\u2013sellout; next pop-up Aug 14"
+    },
+    {
+      id: "philz-coffee-russian-hill",
+      name: "Philz Coffee - Russian Hill",
+      address: "2234 Polk St",
+      hood: "Russian Hill",
+      status: "none",
+      topPick: false,
+      buzzy: true,
+      emoji: "\u2615",
+      note: "Representative SF location for Philz's new four-drink Uji matcha program: classic, strawberry, strawberry mint, and salted caramel.",
+      soyNote: "Soy is not listed as a matcha option; oat milk is the default and 2% milk is also available.",
+      source: "https://www.prnewswire.com/news-releases/philz-coffee-is-introducing-a-new-way-to-matcha-302830892.html",
+      lat: 37.7974313,
+      lng: -122.4218249,
+      x: 51.2,
+      y: 32.8,
+      price: "$",
+      hours: "Mon\u2013Sat 5:30am\u20135pm; Sun 6am\u20135pm"
     }
   ];
   var STATUS_META = {
