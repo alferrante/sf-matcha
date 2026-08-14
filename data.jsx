@@ -1244,6 +1244,23 @@ const SHOPS = [
     price: "$",
     hours: "Mon–Sat 5:30am–5pm; Sun 6am–5pm",
   },
+  {
+    id: "wanjai-restaurant-and-bar",
+    name: "Wanjai Restaurant & Bar",
+    address: "678 Geary St",
+    hood: "Lower Nob Hill",
+    status: "confirmed",
+    topPick: false,
+    buzzy: true,
+    emoji: "🍜",
+    note: "Late-night Thai restaurant with a full matcha line: pure matcha, Thai tea matcha, lattes, an Oreo smoothie, and banana matcha.",
+    soyNote: "Soy milk is listed for the Matcha Latte Oreo Smoothie, alongside whole, oat, and almond milk.",
+    source: "https://www.toasttab.com/local/order/wanjaicafe/item-matcha-latte-oreo-smoothie_ba32eea8-8cbe-43b4-b3e6-709344ded726",
+    lat: 37.786698, lng: -122.4144089,
+    x: 54.3, y: 38.5,
+    price: "$$",
+    hours: "Daily 5pm–midnight",
+  },
 ];
 
 const STATUS_META = {
