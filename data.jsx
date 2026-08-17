@@ -1225,7 +1225,7 @@ const SHOPS = [
     lat: 37.7856195, lng: -122.3963797,
     x: 61.7, y: 39.2,
     price: "$$",
-    hours: "Recurring at Paper Son; Aug 10 9am–sellout; next pop-up Aug 14",
+    hours: "Recurring at Paper Son; dates announced on Instagram",
   },
   {
     id: "philz-coffee-russian-hill",
@@ -1260,6 +1260,23 @@ const SHOPS = [
     x: 54.3, y: 38.5,
     price: "$$",
     hours: "Daily 5pm–midnight",
+  },
+  {
+    id: "california-kahve-golden-gate-park",
+    name: "California Kahve - Golden Gate Park",
+    address: "320 Bowling Green Dr",
+    hood: "Golden Gate Park",
+    status: "none",
+    topPick: false,
+    buzzy: false,
+    emoji: "🌿",
+    note: "Park café with a real matcha lineup: classic and lavender-mint lattes plus rotating pear, guava, elderflower, and affogato-style specials.",
+    soyNote: "Soy is not listed; oat milk has been offered.",
+    source: "https://www.californiakahve.com/the-menu",
+    lat: 37.768125, lng: -122.4582583,
+    x: 36.2, y: 48.6,
+    price: "$",
+    hours: "Tue–Sun 9am–5pm; hours subject to change",
   },
 ];
 
