@@ -1425,6 +1425,25 @@ var SFMatchaData = (() => {
       y: 48.6,
       price: "$",
       hours: "Tue\u2013Sun 9am\u20135pm; hours subject to change"
+    },
+    {
+      id: "the-buoy",
+      name: "The Buoy",
+      address: "22 Franklin St",
+      hood: "Civic Center",
+      status: "call",
+      topPick: false,
+      buzzy: true,
+      emoji: "\u{1F370}",
+      note: "Korean cafe with a Matcha Latte, Strawberry Matcha Latte, and Matcha Einspanner.",
+      soyNote: "Soy availability for matcha is unclear.",
+      source: "https://order.online/store/-31567505",
+      lat: 37.774757,
+      lng: -122.4206092,
+      x: 52.1,
+      y: 43.9,
+      price: "$$",
+      hours: "daily 11am\u20133pm"
     }
   ];
   var STATUS_META = {
