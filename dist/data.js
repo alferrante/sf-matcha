@@ -1444,6 +1444,25 @@ var SFMatchaData = (() => {
       y: 43.9,
       price: "$$",
       hours: "daily 11am\u20133pm"
+    },
+    {
+      id: "kumo-matcha-divisadero-market",
+      name: "Kumo Matcha Pop-Up",
+      address: "1377 Fell St",
+      hood: "NoPa / Divisadero",
+      status: "none",
+      topPick: true,
+      buzzy: true,
+      emoji: "\u2601\uFE0F",
+      note: "Sunday matcha pop-up at the Divisadero Farmers' Market with classic, blueberry, cloud-topped, and rotating seasonal drinks.",
+      soyNote: "Soy is not listed; all milk drinks are made with lactose-free milk, and some cloud-topped drinks contain additional dairy.",
+      source: "https://www.kumomatchaca.com/our-menu",
+      lat: 37.7733329,
+      lng: -122.440471,
+      x: 43.5,
+      y: 45.8,
+      price: "$$",
+      hours: "Sun 9am\u20131pm at Divisadero Farmers' Market"
     }
   ];
   var STATUS_META = {
