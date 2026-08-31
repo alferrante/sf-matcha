@@ -1463,6 +1463,44 @@ var SFMatchaData = (() => {
       y: 45.8,
       price: "$$",
       hours: "Sun 9am\u20131pm at Divisadero Farmers' Market"
+    },
+    {
+      id: "le-mils-coffee",
+      name: "Le Mil\u2019s Coffee",
+      address: "1330 Polk St",
+      hood: "Lower Nob Hill",
+      status: "none",
+      topPick: false,
+      buzzy: true,
+      emoji: "\u2615",
+      note: "Indian specialty-coffee cafe opened August 15, 2026 with a hand-whisked Ube Matcha Affogato on its signature launch menu.",
+      soyNote: "Soy milk is not listed for the Ube Matcha Affogato.",
+      source: "https://www.instagram.com/p/DbiyOqHlPwk/",
+      lat: 37.78925,
+      lng: -122.42036,
+      x: 52.2,
+      y: 37.2,
+      price: "$",
+      hours: "Daily 7am\u20133pm"
+    },
+    {
+      id: "la-kalidad-south-beach",
+      name: "La Kalid\xE1d - South Beach",
+      address: "680A 2nd St",
+      hood: "South Beach",
+      status: "call",
+      topPick: false,
+      buzzy: true,
+      emoji: "\u{1F950}",
+      note: "Announced first permanent cafe-bakery for the Filipino-Californian pastry pop-up, with pandan matcha planned for the specialty drink menu.",
+      soyNote: "Soy availability for the planned pandan matcha is not listed.",
+      source: "https://www.sfchronicle.com/food/restaurants/article/la-kalidad-opening-san-francisco-22348710.php",
+      lat: 37.779024,
+      lng: -122.392036,
+      x: 63.5,
+      y: 42.8,
+      price: "$",
+      hours: "Opening fall 2026; planned Wed\u2013Sun schedule"
     }
   ];
   var STATUS_META = {
