@@ -1346,6 +1346,23 @@ const SHOPS = [
     price: "$",
     hours: "Opening fall 2026; planned Wed–Sun schedule",
   },
+  {
+    id: "the-mess-hall-presidio",
+    name: "The Mess Hall - Presidio",
+    address: "201 Halleck St",
+    hood: "Presidio",
+    status: "none",
+    topPick: true,
+    buzzy: true,
+    emoji: "🏞️",
+    note: "New all-day food hall whose Wrecking Ball coffee bar serves Matchaful matcha lattes.",
+    soyNote: "Soy milk is not listed for the Matchaful latte.",
+    source: "https://www.amysuto.com/desk-of-amy-suto/mess-hall-presidio-review",
+    lat: 37.8026073, lng: -122.454658,
+    x: 37.7, y: 30.0,
+    price: "$$",
+    hours: "Mon–Thu 7am–8pm; Fri–Sun 7am–10pm",
+  },
 
 ];
 
