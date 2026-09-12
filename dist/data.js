@@ -40,6 +40,25 @@ var SFMatchaData = (() => {
       hours: "Sun\u2013Thu 11am\u20139pm; Fri\u2013Sat 11am\u20139:30pm"
     },
     {
+      id: "thaicocoa-japantown",
+      name: "Thaicocoa - Japantown",
+      address: "22 Peace Plaza #450",
+      hood: "Japantown",
+      status: "call",
+      topPick: false,
+      buzzy: true,
+      emoji: "\u{1F36B}",
+      note: "Announced Thai cocoa cafe from the Maruwu Seicha matcha operator, taking over the former Glam Up storefront in Japan Center East Mall.",
+      soyNote: "Soy availability for the planned drinks is not listed.",
+      source: "https://www.bizjournals.com/sanfrancisco/news/2026/03/30/japan-center-thaicocoa-maruwu-seicha.html",
+      lat: 37.7852061,
+      lng: -122.4294203,
+      x: 48.1,
+      y: 39.4,
+      price: "$$",
+      hours: "Opening date and hours have not been announced"
+    },
+    {
       id: "cere-tea",
       name: "Cer\xE9 Tea",
       address: "1186 Valencia St",
@@ -1348,7 +1367,7 @@ var SFMatchaData = (() => {
       x: 47.4,
       y: 32.6,
       price: "$",
-      hours: "Coming soon"
+      hours: "Opening winter 2026"
     },
     {
       id: "kimi-matcha-popup",
