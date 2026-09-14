@@ -838,6 +838,25 @@ var SFMatchaData = (() => {
       hours: "Mon closed; Tue\u2013Fri 11:30am\u20135pm; Sat\u2013Sun 11:30am\u20136:30pm"
     },
     {
+      id: "kiyomi-ca-phe-popup",
+      name: "Kiyomi C\xE0 Ph\xEA Pop-Up",
+      address: "1439 Taraval St",
+      hood: "Parkside",
+      status: "call",
+      topPick: false,
+      buzzy: true,
+      emoji: "\u{1F1FB}\u{1F1F3}",
+      note: "Weekday Vietnamese coffee-and-brunch pop-up inside Lost & Found, with ceremonial-grade Japanese matcha lattes, strawberry matcha, and a matcha einsp\xE4nner.",
+      soyNote: "Soy availability is not listed. The matcha einsp\xE4nner contains condensed milk and salted cream foam.",
+      source: "https://www.instagram.com/kiyomi_ca_phe/",
+      lat: 37.7425831,
+      lng: -122.4817475,
+      x: 26.5,
+      y: 62.4,
+      price: "$$",
+      hours: "Mon\u2013Fri 10am\u20134pm"
+    },
+    {
       id: "kissakeko",
       name: "Kissakeko",
       address: "1327 Mason St",
