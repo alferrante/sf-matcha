@@ -1423,7 +1423,7 @@ var SFMatchaData = (() => {
       lng: -122.3916923,
       x: 63.6,
       y: 38.2,
-      price: "$",
+      price: "$$",
       hours: "Recurring SF pop-ups; dates and times announced on Instagram"
     },
     {
