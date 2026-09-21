@@ -1408,6 +1408,25 @@ var SFMatchaData = (() => {
       hours: "Recurring at Paper Son; dates announced on Instagram"
     },
     {
+      id: "chalant-matcha-popup",
+      name: "Chalant Matcha Pop-Up",
+      address: "396 Harrison St",
+      hood: "Rincon Hill / SoMa",
+      status: "none",
+      topPick: true,
+      buzzy: true,
+      emoji: "\u{1F375}",
+      note: "Recurring specialty-matcha pop-up with hand-whisked classic, rose, fruit, and spice-forward seasonal drinks; its latest SF session was hosted at Yuja.",
+      soyNote: "Soy is not listed; oat milk has been offered at Chalant's SF pop-ups.",
+      source: "https://www.instagram.com/p/DdbmZDclvlp/",
+      lat: 37.7871258,
+      lng: -122.3916923,
+      x: 63.6,
+      y: 38.2,
+      price: "$",
+      hours: "Recurring SF pop-ups; dates and times announced on Instagram"
+    },
+    {
       id: "philz-coffee-russian-hill",
       name: "Philz Coffee - Russian Hill",
       address: "2234 Polk St",
