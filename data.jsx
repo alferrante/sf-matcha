@@ -1275,7 +1275,7 @@ const SHOPS = [
     source: "https://www.instagram.com/p/DdbmZDclvlp/",
     lat: 37.7871258, lng: -122.3916923,
     x: 63.6, y: 38.2,
-    price: "$",
+    price: "$$",
     hours: "Recurring SF pop-ups; dates and times announced on Instagram",
   },
   {
