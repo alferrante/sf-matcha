@@ -1577,6 +1577,44 @@ var SFMatchaData = (() => {
       y: 30,
       price: "$$",
       hours: "Mon\u2013Thu 7am\u20138pm; Fri\u2013Sun 7am\u201310pm"
+    },
+    {
+      id: "q-specialty-coffee-downtown",
+      name: "Q Specialty Coffee - Downtown",
+      address: "405 Howard St",
+      hood: "FiDi / East Cut",
+      status: "call",
+      topPick: true,
+      buzzy: true,
+      emoji: "\u2601\uFE0F",
+      note: "Announced tea-focused second Q location with in-house stone mills for freshly ground matcha and the brand's matcha-cloud drinks.",
+      soyNote: "Soy availability for the planned downtown shop is not listed; oat milk is available at Q's original cafe.",
+      source: "https://sfstandard.com/2026/09/18/q-specialty-coffee-tea-downtown/",
+      lat: 37.7891288,
+      lng: -122.3951829,
+      x: 62.2,
+      y: 37.3,
+      price: "$$",
+      hours: "Opening at the end of October 2026; daily hours not announced"
+    },
+    {
+      id: "wrecking-ball-potrero-hill",
+      name: "Wrecking Ball Coffee Roasters - Potrero Hill",
+      address: "1700 20th St",
+      hood: "Potrero Hill",
+      status: "call",
+      topPick: false,
+      buzzy: true,
+      emoji: "\u{1F3B1}",
+      note: "Announced neighborhood cafe with Wrecking Ball coffee, Matchaful matcha, cream-top drinks, evening beer and wine, and private conference rooms.",
+      soyNote: "Soy availability for the planned matcha drinks is not listed; other milk options have not been announced.",
+      source: "https://sfstandard.com/2026/09/24/wrecking-ball-coffee-trish-rothgeb-new-cafe-roastery/",
+      lat: 37.7599618,
+      lng: -122.3982938,
+      x: 60.9,
+      y: 53.1,
+      price: "$$",
+      hours: "Opening December 2026; daily hours not announced"
     }
   ];
   var STATUS_META = {
