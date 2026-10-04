@@ -4,7 +4,7 @@ Static site for sanfranciscomatcha.com.
 
 ## Editorial exclusions
 
-Little Sweet and Avotoasty are excluded from the guide at Angela's request (2026-10-03), across all locations. Do not re-add them during automated scouting unless she explicitly reverses this decision. This is an editorial choice, not a claim that these businesses are closed or do not serve matcha.
+Little Sweet, Avotoasty, and Haraz Coffee House are excluded from the guide at Angela's request (2026-10-03), across all locations. Do not re-add them during automated scouting unless she explicitly reverses this decision. This is an editorial choice, not a claim that these businesses are closed or do not serve matcha.
 
 ## Local Preview
 
