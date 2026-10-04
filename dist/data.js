@@ -1655,44 +1655,6 @@ var SFMatchaData = (() => {
       hours: "Daily 7am\u20139pm"
     },
     {
-      id: "avotoasty-marina",
-      name: "Avotoasty - Marina",
-      address: "1796 Union St",
-      hood: "Cow Hollow / Marina",
-      status: "none",
-      topPick: false,
-      buzzy: false,
-      emoji: "\u{1F951}",
-      note: "Uji ceremonial matcha lattes in plain, lavender, and strawberry varieties alongside avocado toast.",
-      soyNote: "Soy milk is not listed; oat, almond, coconut, and watermelon seed milk are available for matcha.",
-      source: "https://order.toasttab.com/online/avotoastyunion/item-ceremonial-matcha-latte_dcf0407e-32f9-4424-bc77-4d1c30e0e6d0",
-      lat: 37.7981839,
-      lng: -122.428801,
-      x: 48.3,
-      y: 32.4,
-      price: "$$",
-      hours: "Mon\u2013Fri 7am\u20133pm; Sat\u2013Sun 8am\u20133pm"
-    },
-    {
-      id: "avotoasty-fidi",
-      name: "Avotoasty - FiDi",
-      address: "101 California St #125",
-      hood: "FiDi",
-      status: "none",
-      topPick: false,
-      buzzy: false,
-      emoji: "\u{1F951}",
-      note: "Weekday cafe with Uji ceremonial matcha, lavender and strawberry matcha lattes, and avocado toast.",
-      soyNote: "Soy milk is not listed; oat, almond, coconut, and watermelon seed milk are available for matcha.",
-      source: "https://order.toasttab.com/online/avotoasty-nro-fidi-101-california-street/item-ceremonial-matcha-latte_01012601-04a5-4268-b3d0-a07f6ccda2bc",
-      lat: 37.7928678,
-      lng: -122.3978827,
-      x: 61.1,
-      y: 35.2,
-      price: "$$",
-      hours: "Mon\u2013Tue & Thu\u2013Fri 7am\u20135pm; Wed 7am\u20133:30pm; Sat\u2013Sun closed"
-    },
-    {
       id: "urban-ritual-fell",
       name: "Urban Ritual",
       address: "488 Fell St",
@@ -1710,25 +1672,6 @@ var SFMatchaData = (() => {
       y: 44.5,
       price: "$$",
       hours: "Daily noon\u201310pm"
-    },
-    {
-      id: "little-sweet-inner-richmond",
-      name: "Little Sweet - Inner Richmond",
-      address: "3836 Geary Blvd",
-      hood: "Inner Richmond",
-      status: "none",
-      topPick: false,
-      buzzy: false,
-      emoji: "\u{1F9CB}",
-      note: "Tea and boba shop with warm matcha lattes, hojicha lattes, and customizable sweetness and toppings.",
-      soyNote: "Soy milk is not listed for the warm Matcha Latte; whole, oat, and almond milk are available.",
-      source: "https://little-sweet.square.site/s/order?location=7BWFR2D13ZA4D",
-      lat: 37.7813701,
-      lng: -122.4606779,
-      x: 35.2,
-      y: 41.5,
-      price: "$$",
-      hours: "Sun\u2013Thu 11am\u201310pm; Fri\u2013Sat 11am\u201311pm"
     }
   ];
   var STATUS_META = {
