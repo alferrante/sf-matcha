@@ -58,7 +58,7 @@ Live-review correction: official SŌHN hours confirm Tue–Sun 9am–4pm, Monday
 
 ## Dependencies requiring evidence or access
 
-- Dedicated audience, consent fields, private credential and Render backend are established. An SF Matcha sending domain and broadcast unsubscribe still need verification before sending newsletter emails.
+- Dedicated audience, consent fields, private credential and Render backend are established. Dedicated sending domain `updates.sanfranciscomatcha.com` is prepared but unverified. DNS access and broadcast unsubscribe verification are still needed before sending newsletter emails; exact records are in `docs/EMAIL_DNS_SETUP.md`.
 - Analytics data and identified SF Matcha social accounts.
 - Firsthand tasting notes/photos for qualitative rankings and awards.
 - Explicit outreach authorization and merchant acceptance for $1-off offers.
@@ -74,3 +74,6 @@ The growth lead owns writes to this scoreboard and source publication. Other wor
 - Created the dedicated free Render capture service from the current repo/main. Health and CORS verified; new-contact signup persisted in Resend with consent timestamp, current policy version and fixed homepage source. The reserved synthetic test record is excluded from actual subscriber counts. No emails sent.
 - Repeat signup exposed the provider's updated segment response shape; corrected exact contact/segment validation and added regression coverage. All 45 tests and the 89-venue/267-field audit pass. Publishing the real form with the verified capture endpoint, consent and saving state; final public browser and opt-out checks will be recorded after deployment.
 - The static service dashboard is behind a sign-in wall, so its legacy build command was not edited. The compiled client includes a verified public endpoint fallback and retains older hashed assets; the live source-backed build/cache behavior is protected without depending on dashboard changes.
+
+- Live verification of release `47d815b73f8125b3606d12eba0bfe2d39a07e4cf`: Render static and backend deployments report live; canonical homepage, guides hub, methodology, perks, privacy and current app asset match committed bytes. Browser confirms navigation right of logo, no header subtitle, real consent form, required unchecked-consent validation and clear methodology title. Repeat signup still revealed a runtime acknowledgement differing from both documentation shapes; replacing acknowledgement inference with actual membership lookup and bounded provider-rate-limit retries.
+- Prepared branded email sending domain with open/click tracking disabled. Provider DNS records are documented; domain remains unverified because DNS access is missing. Capture is independent of delivery; no emails sent.

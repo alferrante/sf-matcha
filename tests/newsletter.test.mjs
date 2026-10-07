@@ -52,26 +52,68 @@ test('existing opted-out contact returns generic result without any mutation', a
   assert.equal(calls[0].method, 'GET');
 });
 
-test('existing active contact joins this segment without modifying global status', async t => {
-  const { request, calls } = await fixture(t, { queue: [response(200, { id: 'contact-1', unsubscribed: false }), response(200, { id: 'sf-matcha-segment' }), response(200, { id: 'contact-1' })] });
+test('existing active member updates only consent properties without readding or changing status', async t => {
+  const { request, calls } = await fixture(t, { queue: [response(200, { id: 'contact-1', unsubscribed: false }), response(200, { data: [{ id: 'sf-matcha-segment' }], has_more: false }), response(200, { id: 'contact-1' })] });
   assert.equal((await request()).status, 200);
-  assert.equal(calls[1].url, 'https://api.resend.com/contacts/contact-1/segments/sf-matcha-segment');
-  assert.equal(calls[1].body, undefined);
+  assert.equal(calls[1].url, 'https://api.resend.com/contacts/contact-1/segments?limit=100');
+  assert.equal(calls[1].method, 'GET');
   assert.equal(calls[2].method, 'PATCH');
   assert.deepEqual(JSON.parse(calls[2].body), { properties: PROPERTIES });
 });
 
-test('official OpenAPI contact-segment response is accepted only for the matching pair', async t => {
-  for (const membership of [
-    { object: 'contact_segment', contact_id: 'contact-1', segment_id: 'sf-matcha-segment' },
-    { object: 'contact_segment', contact_id: 'another-contact', segment_id: 'sf-matcha-segment' },
-    { object: 'contact_segment', contact_id: 'contact-1', segment_id: 'another-segment' },
-  ]) {
-    const valid = membership.contact_id === 'contact-1' && membership.segment_id === 'sf-matcha-segment';
-    const { request, calls } = await fixture(t, { queue: [response(200, { id: 'contact-1', unsubscribed: false }), response(200, membership), response(200, { id: 'contact-1' })] });
-    assert.equal((await request()).status, valid ? 200 : 503);
-    assert.equal(calls.length, valid ? 3 : 2);
+test('legacy contact-ID acknowledgment requires independently verified segment membership', async t => {
+  for (const confirmed of [true, false]) {
+    const { request, calls } = await fixture(t, { queue: [
+      response(200, { id: 'contact-1', unsubscribed: false }),
+      response(200, { data: [], has_more: false }),
+      response(200, { id: 'contact-1' }),
+      response(200, { data: [{ id: confirmed ? 'sf-matcha-segment' : 'wrong-segment' }], has_more: false }),
+      response(200, { id: 'contact-1' }),
+    ] });
+    assert.equal((await request()).status, confirmed ? 200 : 503);
+    assert.equal(calls[2].url, 'https://api.resend.com/contacts/contact-1/segments/sf-matcha-segment');
+    assert.equal(calls[2].method, 'POST');
+    assert.equal(calls[3].method, 'GET');
+    assert.equal(calls.length, confirmed ? 5 : 4);
   }
+});
+
+test('membership lookup follows cursor pages before deciding whether to add', async t => {
+  const { request, calls } = await fixture(t, { queue: [
+    response(200, { id: 'contact-1', unsubscribed: false }),
+    response(200, { data: [{ id: 'first-segment' }], has_more: true }),
+    response(200, { data: [{ id: 'sf-matcha-segment' }], has_more: false }),
+    response(200, { id: 'contact-1' }),
+  ] });
+  assert.equal((await request()).status, 200);
+  assert.match(calls[2].url, /after=first-segment$/);
+  assert.deepEqual(calls.map(call => call.method), ['GET', 'GET', 'GET', 'PATCH']);
+});
+
+test('rate-limited provider requests wait for Retry-After and retry the same operation', async t => {
+  const waits = [];
+  const limited = { ...response(429, { message: 'rate limited' }), headers: new Headers({ 'Retry-After': '1' }) };
+  const { request, calls } = await fixture(t, {
+    retryWait: async delay => waits.push(delay),
+    queue: [response(200, { id: 'contact-1', unsubscribed: false }), response(200, { data: [{ id: 'sf-matcha-segment' }], has_more: false }), limited, response(200, { id: 'contact-1' })],
+  });
+  assert.equal((await request()).status, 200);
+  assert.deepEqual(waits, [1000]);
+  assert.equal(calls[2].method, 'PATCH');
+  assert.equal(calls[3].method, 'PATCH');
+  assert.equal(calls[2].body, calls[3].body);
+});
+
+test('provider retries are bounded and long quota waits return unavailable', async t => {
+  const waits = [];
+  const limited = { ...response(429, {}), headers: new Headers({ 'Retry-After': '1' }) };
+  const { request, calls } = await fixture(t, { retryWait: async delay => waits.push(delay), queue: [limited, limited, limited] });
+  assert.equal((await request()).status, 503);
+  assert.equal(calls.length, 3);
+  assert.deepEqual(waits, [1000, 1000]);
+  const long = await fixture(t, { retryWait: async () => assert.fail('must not wait indefinitely'), queue: [{ ...response(429, {}), headers: new Headers({ 'Retry-After': '60' }) }] });
+  assert.equal((await long.request()).status, 503);
+  assert.equal(long.calls.length, 1);
 });
 
 test('concurrent-create duplicate is reread and its opt-out preserved', async t => {

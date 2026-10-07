@@ -55,6 +55,7 @@ export function createNewsletterHandler({
   rateLimit = 5,
   rateWindowMs = 600_000,
   providerTimeoutMs = 8_000,
+  retryWait = milliseconds => new Promise(resolve => setTimeout(resolve, milliseconds)),
   trustProxy = process.env.NEWSLETTER_TRUST_PROXY === 'true',
   proxyIpHeader = process.env.NEWSLETTER_CLIENT_IP_HEADER || 'x-forwarded-for',
 } = {}) {
@@ -85,19 +86,33 @@ export function createNewsletterHandler({
   }
 
   async function provider(path, { method = 'GET', body } = {}) {
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), providerTimeoutMs);
-    try {
-      const response = await fetchImpl(`https://api.resend.com${path}`, {
-        method,
-        headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
-        ...(body ? { body: JSON.stringify(body) } : {}),
-        signal: controller.signal,
-      });
-      // Even an HTTP success must be valid JSON with the expected provider shape.
-      const data = await response.json();
-      return { status: response.status, ok: response.ok, data };
-    } finally { clearTimeout(timeout); }
+    for (let attempt = 0; attempt < 3; attempt += 1) {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), providerTimeoutMs);
+      let delay;
+      try {
+        const response = await fetchImpl(`https://api.resend.com${path}`, {
+          method,
+          headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
+          ...(body ? { body: JSON.stringify(body) } : {}),
+          signal: controller.signal,
+        });
+        if (response.status === 429 && attempt < 2) {
+          const header = response.headers?.get('retry-after');
+          const seconds = header == null ? 1 : Number(header);
+          delay = Number.isFinite(seconds) ? Math.max(100, seconds * 1000) : Math.max(100, Date.parse(header) - Date.now());
+          // A long quota wait is unavailable, not an unbounded form submission.
+          if (!Number.isFinite(delay) || delay > 3000) throw new Error('Provider unavailable');
+          await response.body?.cancel();
+        } else {
+          // Even an HTTP success must be valid JSON with the expected provider shape.
+          const data = await response.json();
+          return { status: response.status, ok: response.ok, data };
+        }
+      } finally { clearTimeout(timeout); }
+      await retryWait(delay);
+    }
+    throw new Error('Provider unavailable');
   }
 
   async function lookup(email) {
@@ -110,13 +125,27 @@ export function createNewsletterHandler({
   async function addExisting(contact, properties) {
     // Never reset a global opt-out, including on a repeated signup request.
     if (contact.unsubscribed) return;
-    const result = await provider(`/contacts/${encodeURIComponent(contact.id)}/segments/${encodeURIComponent(segmentId)}`, { method: 'POST' });
-    // The prose API page shows {id}; the official OpenAPI also documents the explicit pair.
-    const membershipMatches = result.data?.id === segmentId
-      || (result.data?.segment_id === segmentId && result.data?.contact_id === contact.id);
-    if (!result.ok || !membershipMatches) throw new Error('Provider unavailable');
+    if (!await isMember(contact.id)) {
+      const result = await provider(`/contacts/${encodeURIComponent(contact.id)}/segments/${encodeURIComponent(segmentId)}`, { method: 'POST' });
+      if (!result.ok) throw new Error('Provider unavailable');
+      // Runtime acknowledgments differ from docs; an acknowledgment alone is not proof.
+      if (!await isMember(contact.id)) throw new Error('Provider unavailable');
+    }
     const updated = await provider(`/contacts/${encodeURIComponent(contact.id)}`, { method: 'PATCH', body: { properties } });
     if (!updated.ok || updated.data?.id !== contact.id) throw new Error('Provider unavailable');
+  }
+
+  async function isMember(contactId) {
+    let after = '';
+    for (let page = 0; page < 3; page += 1) {
+      const result = await provider(`/contacts/${encodeURIComponent(contactId)}/segments?limit=100${after ? `&after=${encodeURIComponent(after)}` : ''}`);
+      if (!result.ok || !Array.isArray(result.data?.data)) throw new Error('Provider unavailable');
+      if (result.data.data.some(segment => segment.id === segmentId)) return true;
+      if (!result.data.has_more) return false;
+      after = result.data.data.at(-1)?.id;
+      if (typeof after !== 'string' || !after) throw new Error('Provider unavailable');
+    }
+    throw new Error('Provider unavailable');
   }
 
   return async function newsletterHandler(req, res) {
