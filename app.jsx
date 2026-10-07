@@ -1,5 +1,5 @@
 import guides from "./content/guides.json";
-import { newsletterEndpoint, subscribe } from "./lib/newsletter-client.mjs";
+import { DEFAULT_NEWSLETTER_ENDPOINT, newsletterEndpoint, subscribe } from "./lib/newsletter-client.mjs";
 
 // Main SF Matcha app
 
@@ -53,7 +53,6 @@ function App() {
     "pinStyle": "sticker",
     "showLabels": true,
     "marqueeSpeed": 40,
-    "headerCopy": "san francisco matcha spots, all in one map.",
     "wobble": true
   } /*EDITMODE-END*/);
 
@@ -98,7 +97,7 @@ function App() {
   return (
     <div style={{ "--bg": C.bg, "--ink": C.ink, "--pop": C.pop, "--pop2": C.pop2, "--lime": C.lime, background: C.bg, color: C.ink, minHeight: "100vh" }}>
       <Marquee speed={tweaks.marqueeSpeed} />
-      <Header copy={tweaks.headerCopy} C={C} />
+      <Header C={C} />
       <NewsletterSignup />
       <div className="guide-discovery"><a href="/guides/"><strong>{guides.length} guides for your next cup →</strong><span>banana · cold foam · soy milk · strawberry · ceremonial · under $7</span></a></div>
       <FilterBar filter={filter} setFilter={setFilter} stats={stats} C={C} />
@@ -152,9 +151,6 @@ function App() {
           <TweakSlider tweakKey="marqueeSpeed" value={tweaks.marqueeSpeed} onChange={setTweak}
           label="marquee speed" min={10} max={120} step={5} />
         </TweakSection>
-        <TweakSection title="Copy">
-          <TweakText tweakKey="headerCopy" value={tweaks.headerCopy} onChange={setTweak} label="hero tagline" />
-        </TweakSection>
       </TweaksPanel>
 
       {selected && <ShopDetail shop={SHOPS.find((s) => s.id === selected)} onClose={() => setSelected(null)} C={C} />}
@@ -194,26 +190,17 @@ function Marquee({ speed }) {
 }
 
 // ===================== HEADER =====================
-function Header({ copy, C }) {
+function Header({ C }) {
   return (
-    <header style={{ padding: "40px 32px 16px", maxWidth: 1600, margin: "0 auto" }}>
-      <nav className="site-nav" aria-label="Main navigation"><a href="/">Map</a><a href="/guides/">Guides</a><a href="/perks/">Perks</a><a href="/methodology/">Our approach</a></nav>
-      <h1 style={{
-        fontFamily: "'Bricolage Grotesque', sans-serif",
-        fontWeight: 800, fontSize: "clamp(64px, 11vw, 160px)", lineHeight: 0.88,
-        margin: 0, letterSpacing: "-0.05em",
-        color: "var(--pop)"
-      }}>
-        sf matcha<span style={{ color: "var(--pop)" }}>.</span>
-      </h1>
-      <p style={{
-        fontFamily: "'Nunito', sans-serif", fontSize: 20, marginTop: 14, maxWidth: 640,
-        lineHeight: 1.4, fontWeight: 500
-      }}>
-        {copy}
-      </p>
-    </header>);
-
+    <header className="site-header" style={{ padding: "40px 32px 24px", maxWidth: 1600, margin: "0 auto" }}>
+      <div className="header-main">
+        <h1 style={{fontFamily:"'Bricolage Grotesque', sans-serif",fontWeight:800,fontSize:"clamp(64px, 11vw, 160px)",lineHeight:0.88,margin:0,letterSpacing:"-0.05em",color:"var(--pop)"}}>
+          sf matcha<span style={{color:"var(--pop)"}}>.</span>
+        </h1>
+        <nav className="site-nav" aria-label="Main navigation"><a href="/">Map</a><a href="/guides/">Guides</a><a href="/perks/">Perks</a></nav>
+      </div>
+    </header>
+  );
 }
 
 // ===================== NEWSLETTER =====================
@@ -223,11 +210,11 @@ function NewsletterSignup() {
   const [website, setWebsite] = useState("");
   const [status, setStatus] = useState("idle");
   const [message, setMessage] = useState("");
-  const endpoint = newsletterEndpoint(window.SF_MATCHA_CONFIG?.newsletterEndpoint, window.location.origin);
+  const endpoint = newsletterEndpoint(window.SF_MATCHA_CONFIG?.newsletterEndpoint ?? DEFAULT_NEWSLETTER_ENDPOINT, window.location.origin);
   async function handleSubmit(event) {
     event.preventDefault();
     if (status === "submitting") return;
-    setStatus("submitting"); setMessage("");
+    setStatus("submitting"); setMessage("Saving your signup… This may take a moment.");
     try {
       setMessage(await subscribe({endpoint,email,consent,website}));
       setStatus("success"); setEmail(""); setConsent(false);
@@ -248,7 +235,7 @@ function NewsletterSignup() {
           <label className="newsletter-consent"><input type="checkbox" required checked={consent} onChange={e=>setConsent(e.target.checked)} disabled={status==="submitting"} /> Send me SF Matcha guides and new-spot emails. Unsubscribe anytime.</label>
           <label className="newsletter-trap" aria-hidden="true">Website<input tabIndex={-1} autoComplete="off" value={website} onChange={e=>setWebsite(e.target.value)} /></label>
           <a className="newsletter-privacy" href="/privacy/">Privacy details</a>
-        </form> : <p className="newsletter-coming">Email alerts are coming soon. <a href="/guides/">Explore the new guides →</a></p>}
+        </form> : <p className="newsletter-coming">Email signup is temporarily unavailable. <a href="/guides/">Explore the new guides →</a></p>}
         <div className={`newsletter-message ${status}`} role={status==="error" ? "alert" : "status"} aria-live="polite">{message}</div>
       </div>
     </div>
@@ -988,7 +975,7 @@ function Footer({ C }) {
         fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800,
         fontSize: 28, marginBottom: 8, color: "var(--lime)"
       }}>made with 🍵 in sf</div>
-      <p><a href="/guides/">guides</a> · <a href="/perks/">café perks</a> · <a href="/methodology/">our approach</a> · <a href="/privacy/">privacy</a></p>
+      <p><a href="/guides/">guides</a> · <a href="/perks/">café perks</a> · <a href="/methodology/">how we verify</a> · <a href="/privacy/">privacy</a></p>
       <div style={{ opacity: 0.7 }}>sanfranciscomatcha.com · est. 2026
 
       </div>

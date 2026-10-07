@@ -4,21 +4,21 @@ The signup service is implemented in `server/newsletter.mjs`. This repository's 
 
 ## Current launch status
 
-Implementation and automated mock-provider tests are complete. Live subscription is not verified: the private full-access API credential and an authorized hosting workspace are not yet configured. The dedicated SF Matcha segment (`81330e1a-e521-40ab-87ed-220feca6e848`) and string consent properties are established. No contacts or emails were created during implementation. An absent key or segment returns HTTP 503; a static HTML page returning HTTP 200 must never count as signup success.
+The backend is deployed on Render as `sfmatcha-newsletter` (`srv-db3aelrbc2fs73d4jj40`) at `https://sfmatcha-newsletter.onrender.com`. October 7 verification: `/health` reports configured; allowed-origin preflight succeeds; wrong origins and missing consent are rejected; a reserved synthetic subscription was persisted with consent time/version/source in the dedicated SF Matcha segment. No email was sent. Repeat-submission integration verification continues before marking the frontend live. The private credential is stored only in the backend environment. An absent key or segment returns HTTP 503; static HTML returning HTTP 200 never counts as signup success.
 
 ## Deploy to Render
 
 Create a Node web service from `alferrante/sf-matcha`, using the approved workspace:
 
-- Build command: `npm ci --include=dev`
+- Build command: `npm ci --omit=dev`
 - Start command: `node server/newsletter.mjs`
 - Health check: `/health`
 - Plan: free is sufficient for initial integration testing; its cold starts can delay signup. Choose a paid plan only with approval.
 - Private environment: `RESEND_API_KEY` with contact-management access, and `RESEND_SEGMENT_ID=81330e1a-e521-40ab-87ed-220feca6e848` for the dedicated SF Matcha newsletter segment. The segment uses established string properties `sfmatcha_consent_at`, `sfmatcha_consent_version`, and `sfmatcha_signup_source`. Do not use an unrelated existing audience or expose the key in `config.js`, the repository, screenshots, or browser code.
 - Optional `NEWSLETTER_ALLOWED_ORIGINS`: comma-separated exact origins for staging or local testing. The production apex and `www` HTTPS origins are already allowed. Remove staging origins after testing.
-- Keep `NEWSLETTER_TRUST_PROXY` unset unless the host's documented proxy behavior guarantees a trustworthy final `X-Forwarded-For` entry. Without it, the rate limiter uses the direct socket IP; a proxy may therefore share a bucket across visitors. Add an edge rate limit for production abuse protection. The in-memory limit is five submissions per ten minutes per source and resets on restart; it is not shared across service instances.
+- For the public Render service, set `NEWSLETTER_TRUST_PROXY=true` and `NEWSLETTER_CLIENT_IP_HEADER=cf-connecting-ip`. Render documents that all public inbound traffic passes through Cloudflare, and Cloudflare recommends its single-IP header for original visitor IPs. This configuration avoids selecting a user-supplied prefix from `X-Forwarded-For` and avoids grouping ordinary visitors under a shared load-balancer IP. Validate at deployment that this header reaches the app and cannot be supplied unchanged by a public client. This is a platform-specific inference from the two providers' documentation, not a guarantee for arbitrary proxies. Do not enable it for a directly reachable server, private callers, or a hosting setup that bypasses Cloudflare. Invalid/missing/multiple IP values fall back to the socket bucket. Without explicit proxy trust, the service always uses the direct socket IP. The alternate `x-forwarded-for` mode trusts only the final valid address and can still group visitors if the final hop is another proxy. Add an edge rate limit for production abuse protection. The in-memory limit is five submissions per ten minutes per source and resets on restart; it is not shared across service instances.
 
-Set the static site's public `NEWSLETTER_ENDPOINT` to `https://<newsletter-service>.onrender.com/api/newsletter/subscribe`, then rebuild its generated config and deploy. Never set it to the static site's nonexistent `/api` route.
+The shipped client defaults to the verified public URL `https://sfmatcha-newsletter.onrender.com/api/newsletter/subscribe`; `NEWSLETTER_ENDPOINT` can override it through generated public config. An explicitly empty value hides the form. No private key is bundled. This fallback also supports the static service's legacy map-only config generator. Never set the endpoint to the static site's nonexistent `/api` route. The client allows up to 60 seconds and displays a saving state to accommodate a free-service cold start; sending to Resend still has an independent short timeout.
 
 ## Browser contract
 
@@ -39,7 +39,7 @@ The service persists the latest accepted consent time (server UTC timestamp), po
 1. `node --test tests/newsletter.test.mjs` passes.
 2. `GET /health` reports `signupConfigured: true` without exposing secrets.
 3. Production CORS preflight returns only the requested allowed origin.
-4. Verify persistence using a clearly labeled synthetic address under the reserved `example.com` domain, only while no email-sending automation targets the segment; inspect segment membership and consent properties, then delete the synthetic contact. Record this as a synthetic persistence test, not delivery verification. Use a real inbox for delivery testing only when that address is explicitly authorized. Never use someone else's address.
+4. Verify persistence using a clearly labeled synthetic address under the reserved `example.com` domain, only while no email-sending automation targets the segment; inspect segment membership and consent properties, then opt the synthetic contact out and exclude it from audience metrics. Permanent deletion needs separate explicit confirmation; never delete a real contact as test cleanup. Record this as a synthetic persistence test, not delivery verification. Use a real inbox for delivery testing only when that address is explicitly authorized. Never use someone else's address.
 5. Check invalid email, unchecked consent, provider failure and duplicate submissions; no false success or provider details should appear.
 6. Confirm frontend HTML fallback, timeout, and missing endpoint produce an honest unavailable state.
 7. Record deployment URL and successful live subscription evidence in `SPRINT_SCOREBOARD.md`. Do not report the milestone as complete based only on mocked provider tests.
@@ -51,4 +51,6 @@ The service persists the latest accepted consent time (server UTC timestamp), po
 - [Update contact properties](https://resend.com/docs/api-reference/contacts/update-contact)
 - [Add existing contact to a segment](https://resend.com/docs/api-reference/contacts/add-contact-to-segment)
 
-The service retrieves existing subscription state before writing; it never uses a global resubscribe update.
+The service retrieves existing subscription state before writing; it never uses a global resubscribe update. Segment membership responses accept the exact segment ID shown in the prose documentation or the exact contact/segment pair declared in the [official Resend OpenAPI](https://github.com/resend/resend-openapi/blob/main/resend.yaml).
+
+Proxy references: [Render public ingress and DDoS guidance](https://render.com/articles/how-render-handles-ddos-attacks), [Cloudflare original-client headers and XFF behavior](https://developers.cloudflare.com/fundamentals/reference/http-headers/).

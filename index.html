@@ -164,7 +164,8 @@
   .newsletter-form input:disabled { cursor: wait; opacity: 0.68; }
   .newsletter-form button .material-symbols-rounded { font-size: 31px; }
 
-  .site-nav { display:flex; gap:22px; flex-wrap:wrap; font-weight:800; margin-bottom:24px; }
+  .header-main { display:flex; align-items:flex-end; justify-content:space-between; gap:24px; }
+  .site-nav { display:flex; justify-content:flex-end; gap:22px; flex-wrap:wrap; flex:none; font-weight:800; padding-bottom:8px; }
   .site-nav a, footer a { color:inherit; text-underline-offset:4px; }
   .guide-discovery { max-width:1600px; margin:18px auto 0; padding:0 32px; }
   .guide-discovery a { display:flex; gap:12px 24px; flex-wrap:wrap; color:var(--ink); text-decoration:none; border-bottom:2px solid var(--ink); padding:12px 0; }
@@ -327,6 +328,10 @@
     .shop-card-hours { width: auto !important; }
   }
 
+  @media (max-width: 800px) {
+    .header-main { align-items:flex-start; flex-direction:column; gap:22px; }
+    .site-nav { align-self:flex-end; padding-bottom:0; }
+  }
   @media (max-width: 1100px) {
     .newsletter-inner {
       grid-template-columns: 1fr;
@@ -360,6 +365,7 @@
   }
 
   @media (max-width: 600px) {
+    .site-header { padding:28px 16px 20px !important; }
     .guide-discovery { padding:0 16px; }
     .newsletter-band { margin-top: 4px; }
     .newsletter-inner { padding: 18px 16px 16px; }
@@ -523,7 +529,7 @@
 <script src="dist/tweaks-panel.cb36cbde7248.js"></script>
 <script src="dist/data.2af73c2d673c.js"></script>
 <script src="dist/map.6efb1ee413ab.js"></script>
-<script src="dist/app.14b1f659a63d.js"></script>
+<script src="dist/app.59641ceb526f.js"></script>
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ca615ca6812e4fb884d8d758c6a5720c"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

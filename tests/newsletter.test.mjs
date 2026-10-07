@@ -61,6 +61,19 @@ test('existing active contact joins this segment without modifying global status
   assert.deepEqual(JSON.parse(calls[2].body), { properties: PROPERTIES });
 });
 
+test('official OpenAPI contact-segment response is accepted only for the matching pair', async t => {
+  for (const membership of [
+    { object: 'contact_segment', contact_id: 'contact-1', segment_id: 'sf-matcha-segment' },
+    { object: 'contact_segment', contact_id: 'another-contact', segment_id: 'sf-matcha-segment' },
+    { object: 'contact_segment', contact_id: 'contact-1', segment_id: 'another-segment' },
+  ]) {
+    const valid = membership.contact_id === 'contact-1' && membership.segment_id === 'sf-matcha-segment';
+    const { request, calls } = await fixture(t, { queue: [response(200, { id: 'contact-1', unsubscribed: false }), response(200, membership), response(200, { id: 'contact-1' })] });
+    assert.equal((await request()).status, valid ? 200 : 503);
+    assert.equal(calls.length, valid ? 3 : 2);
+  }
+});
+
 test('concurrent-create duplicate is reread and its opt-out preserved', async t => {
   const { request, calls } = await fixture(t, { queue: [response(404, {}), response(409, { message: 'duplicate' }), response(200, { id: 'contact-1', unsubscribed: true })] });
   assert.equal((await request()).status, 200);
@@ -133,6 +146,26 @@ test('rate limit cannot be bypassed through a forged proxy header by default', a
   clock = 1001;
   assert.equal((await request({ body: { website: 'bot' } })).status, 200);
   assert.equal(calls.length, 0);
+});
+
+test('explicit Cloudflare ingress mode separates valid client buckets and ignores spoofed XFF', async t => {
+  const { request } = await fixture(t, { rateLimit: 1, trustProxy: true, proxyIpHeader: 'cf-connecting-ip' });
+  const bot = { website: 'bot' };
+  assert.equal((await request({ body: bot, headers: { 'CF-Connecting-IP': '203.0.113.1', 'X-Forwarded-For': '1.2.3.4' } })).status, 200);
+  assert.equal((await request({ body: bot, headers: { 'CF-Connecting-IP': '203.0.113.1', 'X-Forwarded-For': '5.6.7.8' } })).status, 429);
+  assert.equal((await request({ body: bot, headers: { 'CF-Connecting-IP': '203.0.113.2' } })).status, 200);
+});
+
+test('invalid or multiple client-IP header values fall back to the shared socket bucket', async t => {
+  const { request } = await fixture(t, { rateLimit: 1, trustProxy: true, proxyIpHeader: 'cf-connecting-ip' });
+  assert.equal((await request({ body: { website: 'bot' }, headers: { 'CF-Connecting-IP': 'garbage' } })).status, 200);
+  assert.equal((await request({ body: { website: 'bot' }, headers: { 'CF-Connecting-IP': '203.0.113.1,203.0.113.2' } })).status, 429);
+});
+
+test('equivalent IPv6 representations share a rate bucket', async t => {
+  const { request } = await fixture(t, { rateLimit: 1, trustProxy: true, proxyIpHeader: 'cf-connecting-ip' });
+  assert.equal((await request({ body: { website: 'bot' }, headers: { 'CF-Connecting-IP': '2001:db8::1' } })).status, 200);
+  assert.equal((await request({ body: { website: 'bot' }, headers: { 'CF-Connecting-IP': '2001:0db8:0:0:0:0:0:1' } })).status, 429);
 });
 
 test('provider failures and invalid success shapes never leak details or fake success', async t => {

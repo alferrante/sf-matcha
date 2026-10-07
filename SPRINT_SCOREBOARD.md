@@ -35,7 +35,7 @@ Publication: foundation commit `fec2d3005155a1323e2761515f276e0b472ff88d` is ver
 2. **Methodology completed:** public Buzzy reason/source/date/review requirements within 90 days, legacy label review disclosure, separate Top Pick and award standards, firsthand evidence before Best awards, no paid award placement.
 3. **Merchant preparation completed:** $1-off pilot page, local café-specific proposal planner with preview/download, partner kit, confirmed-offer schema and honest empty-offers feed. No merchant outreach, confirmed offers, vouchers or redemptions claimed. A production claim/redemption service and written confirmation remain prerequisites for active offers.
 4. **Newsletter redesign reconciled:** recovered layout, filter tabs, soy selector and map search from the preserved newsletter-redesign worktree. Added primary navigation, guide discovery, dynamic guide/venue counts, explicit consent UI and privacy page. The signup client rejects HTML200 fallbacks and missing success acknowledgement; the form is hidden when no real endpoint is configured.
-5. **Email infrastructure blocker verified:** connected Resend initially had only unrelated verified domains and a General segment. Created a dedicated SF Matcha newsletter audience (`81330e1a-e521-40ab-87ed-220feca6e848`) plus consent timestamp/version/source fields; audience query confirms zero contacts. No hosted signup form exists. No backend/API credentials are present. Connected Supabase contains only an unrelated project, which was not repurposed. Render exposes one workspace, but its tool explicitly requires user-confirmed workspace selection before service operations. The Node newsletter backend and 14 provider-mocked behavioral tests are complete, including consent metadata, exact-origin validation, request limits, timeouts, missing setup, and opt-out preservation. Working public signup is not yet achieved.
+5. **Email infrastructure blocker verified:** connected Resend initially had only unrelated verified domains and a General segment. Created a dedicated SF Matcha newsletter audience (`81330e1a-e521-40ab-87ed-220feca6e848`) plus consent timestamp/version/source fields; audience query confirms zero contacts. No hosted signup form exists. A server-only credential and dedicated free Render backend have now been provisioned. Connected Supabase contains only an unrelated project, which was not repurposed. Read-only lookup identified the actual `sfmatcha` main-branch service in the connected workspace, establishing the project scope without selecting an unrelated service. The Node newsletter backend and 14 provider-mocked behavioral tests are complete, including consent metadata, exact-origin validation, request limits, timeouts, missing setup, and opt-out preservation. Backend new-subscription persistence is verified; final repeat/browser checks are in progress.
 
 6. **Distribution drafts completed:** 24 source-linked text assets across six guide topics, including carousel copy, Instagram captions, short posts and video scripts. Not posted; no social reach/follower gain or finished visual assets claimed.
 
@@ -45,12 +45,12 @@ Validation: all 41 automated tests, source build, copy audit (89 venues/267 fiel
 
 Live URLs: [Guides](https://sanfranciscomatcha.com/guides/), [Buzzy/awards approach](https://sanfranciscomatcha.com/methodology/), [Café pilot planner](https://sanfranciscomatcha.com/perks/), [Privacy](https://sanfranciscomatcha.com/privacy/).
 
-Live-review correction: official SŌHN hours confirm Tue–Sun 9am–4pm, Monday closed; corrected the older Wednesday-start directory hours. Lulu official ordering hours confirm Sunday closed; Nagomi official structured hours confirm Mon–Sat 10:30am–5pm and Sunday closed. Clarified the guides to match. Kumo's milk note now distinguishes soy cloud from an unlisted soy-milk substitution and explicitly says the banana drink contains dairy. All 89 IDs and existing excluded/planned-location rules are preserved. Correction deployment verification pending.
+Live-review correction: official SŌHN hours confirm Tue–Sun 9am–4pm, Monday closed; corrected the older Wednesday-start directory hours. Lulu official ordering hours confirm Sunday closed; Nagomi official structured hours confirm Mon–Sat 10:30am–5pm and Sunday closed. Clarified the guides to match. Kumo's milk note now distinguishes soy cloud from an unlisted soy-milk substitution and explicitly says the banana drink contains dairy. All 89 IDs and existing excluded/planned-location rules are preserved. Correction published as `632d788f7c29a8437851a4265502ec4c4bcfef49`; source changes and regenerated directory/guide assets verified.
 
 ## Next execution queue
 
-1. Confirm the Render workspace (connector requires explicit selection), deploy the prepared newsletter backend, then enable and verify actual public capture.
-2. Deploy the tested newsletter service after confirming the Render workspace; create a server-only contact-management credential, set the public endpoint, verify a saved signup and opt-out handling, then enable the form.
+1. Complete repeat-submission and opt-out integration checks, publish the enabled signup alongside header/navigation corrections, and verify the real browser flow.
+2. Verify an SF Matcha sending domain and broadcast unsubscribe before sending any newsletter. Signup capture does not send email.
 3. Establish analytics baseline and provider/account evidence. Keep unknown metrics explicitly unknown until measured.
 4. Expand the six-guide library with verified neighborhood/seasonal articles and derivative content after launch verification.
 5. Add Buzzy expiry/reason metadata and publish transparent editorial methodology; gather tasting evidence before Best awards.
@@ -58,7 +58,7 @@ Live-review correction: official SŌHN hours confirm Tue–Sun 9am–4pm, Monday
 
 ## Dependencies requiring evidence or access
 
-- Render workspace confirmation required by connector, server-only contact-management credential and live endpoint. A dedicated audience and consent fields are established. Verify an SF Matcha sending domain and broadcast unsubscribe before sending newsletter emails.
+- Dedicated audience, consent fields, private credential and Render backend are established. An SF Matcha sending domain and broadcast unsubscribe still need verification before sending newsletter emails.
 - Analytics data and identified SF Matcha social accounts.
 - Firsthand tasting notes/photos for qualitative rankings and awards.
 - Explicit outreach authorization and merchant acceptance for $1-off offers.
@@ -66,3 +66,11 @@ Live-review correction: official SŌHN hours confirm Tue–Sun 9am–4pm, Monday
 ## Run protocol
 
 The growth lead owns writes to this scoreboard and source publication. Other workstreams provide draft outputs and handoffs. Pull current main, inspect in-progress work, choose unblocked actions, test/audit/build, publish, verify, and log exact evidence. Record attempted paths and specific blockers; continue independent work.
+
+## October 7 user corrections and capture deployment
+
+- Moved Map/Guides/Perks to the right of the logo; removed the subtitle below the logo entirely. Kept verification policy in supporting links.
+- Replaced the confusing “good matcha. clear receipts” methodology headline with “How we verify matcha spots”; simplified its evidence explanation and perk copy.
+- Created the dedicated free Render capture service from the current repo/main. Health and CORS verified; new-contact signup persisted in Resend with consent timestamp, current policy version and fixed homepage source. The reserved synthetic test record is excluded from actual subscriber counts. No emails sent.
+- Repeat signup exposed the provider's updated segment response shape; corrected exact contact/segment validation and added regression coverage. All 45 tests and the 89-venue/267-field audit pass. Publishing the real form with the verified capture endpoint, consent and saving state; final public browser and opt-out checks will be recorded after deployment.
+- The static service dashboard is behind a sign-in wall, so its legacy build command was not edited. The compiled client includes a verified public endpoint fallback and retains older hashed assets; the live source-backed build/cache behavior is protected without depending on dashboard changes.

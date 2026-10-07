@@ -1,6 +1,7 @@
 import { createServer } from 'node:http';
 import { createHash, randomBytes } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
+import { isIP } from 'node:net';
 
 const BODY_LIMIT = 8192;
 const SUCCESS = { success: true, message: 'Thanks. Your signup request has been received.' };
@@ -55,15 +56,22 @@ export function createNewsletterHandler({
   rateWindowMs = 600_000,
   providerTimeoutMs = 8_000,
   trustProxy = process.env.NEWSLETTER_TRUST_PROXY === 'true',
+  proxyIpHeader = process.env.NEWSLETTER_CLIENT_IP_HEADER || 'x-forwarded-for',
 } = {}) {
+  if (!['x-forwarded-for', 'cf-connecting-ip'].includes(proxyIpHeader)) throw new Error('Unsupported newsletter client IP header');
   const allowedOrigins = new Set(origins);
   const buckets = new Map();
   const salt = randomBytes(32);
 
   function consumeRate(req) {
     const forwarded = String(req.headers['x-forwarded-for'] || '').split(',').map(part => part.trim()).filter(Boolean);
-    // Enable only behind a proxy that overwrites/appends its verified client IP.
-    const ip = trustProxy && forwarded.length ? forwarded.at(-1) : req.socket.remoteAddress || 'unknown';
+    // Explicit proxy trust is required; arbitrary public/local clients cannot select their own buckets.
+    // Cloudflare mode is for an ingress that overwrites this single-IP header and cannot be bypassed.
+    const candidate = proxyIpHeader === 'cf-connecting-ip'
+      ? String(req.headers['cf-connecting-ip'] || '').trim()
+      : forwarded.at(-1);
+    let ip = trustProxy && isIP(candidate || '') ? candidate : req.socket.remoteAddress || 'unknown';
+    if (isIP(ip) === 6) ip = new URL(`http://[${ip}]`).hostname.slice(1, -1);
     const key = createHash('sha256').update(salt).update(ip).digest('hex');
     const time = now();
     for (const [k, bucket] of buckets) if (time - bucket.started >= rateWindowMs) buckets.delete(k);
@@ -103,7 +111,10 @@ export function createNewsletterHandler({
     // Never reset a global opt-out, including on a repeated signup request.
     if (contact.unsubscribed) return;
     const result = await provider(`/contacts/${encodeURIComponent(contact.id)}/segments/${encodeURIComponent(segmentId)}`, { method: 'POST' });
-    if (!result.ok || result.data?.id !== segmentId) throw new Error('Provider unavailable');
+    // The prose API page shows {id}; the official OpenAPI also documents the explicit pair.
+    const membershipMatches = result.data?.id === segmentId
+      || (result.data?.segment_id === segmentId && result.data?.contact_id === contact.id);
+    if (!result.ok || !membershipMatches) throw new Error('Provider unavailable');
     const updated = await provider(`/contacts/${encodeURIComponent(contact.id)}`, { method: 'PATCH', body: { properties } });
     if (!updated.ok || updated.data?.id !== contact.id) throw new Error('Provider unavailable');
   }
