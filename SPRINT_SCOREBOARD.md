@@ -27,6 +27,8 @@ Repository baseline: `7d8fb15f21dfec29d65ad063d32b7bffd6ae8fa2` (current main wh
 - Created persistent goal, evidence standards and this scoreboard. Native `/goal` must be activated through the app composer; no goal-control tool was available in this session.
 - Validation passed: 89-shop/267-field copy audit; source-to-bundle data parity; deterministic rebuilds; changed source changes browser asset URL; public-config escaping. Browser smoke test could not run because the installed Playwright package has no browser executable; no app/layout source was changed in this foundation release.
 
+Publication: foundation commit `fec2d3005155a1323e2761515f276e0b472ff88d` is verified on main. Live deployment verified October 7: the homepage references all four hashed bundles; all return HTTP 200 and revalidating browser cache headers (`max-age=0`). Clean `npm ci`, rebuild and tests also passed with no generated diff.
+
 ## Next execution queue
 
 1. Verify published hashes on the live site. Confirm actual Render build/header settings once correct workspace is accessible.
