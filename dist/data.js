@@ -1104,25 +1104,6 @@ var SFMatchaData = (() => {
       hours: "Daily 9am\u20134pm"
     },
     {
-      id: "jandii-cafe-castro",
-      name: "Jandii Cafe - Castro",
-      address: "3499 16th St",
-      hood: "Castro",
-      status: "call",
-      topPick: true,
-      buzzy: true,
-      emoji: "\u{1F375}",
-      note: "Announced second Jandii location with the same focused concept: Japanese matcha, freshly baked scones with butter and jam, and espresso.",
-      soyNote: "Soy availability for the planned Castro location is not listed; oat and almond milk are available at Jandii's Taraval cafe.",
-      source: "https://hoodline.com/2026/10/castro-s-former-kitchen-story-space-set-to-become-jandii-cafe/",
-      lat: 37.764225,
-      lng: -122.4306961,
-      x: 47.6,
-      y: 50.8,
-      price: "$$",
-      hours: "Opening date and daily hours have not been announced"
-    },
-    {
       id: "always-awake-coffee",
       name: "Always Awake Coffee",
       address: "611 Post St",

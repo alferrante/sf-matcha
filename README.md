@@ -6,6 +6,8 @@ Static site for sanfranciscomatcha.com.
 
 Little Sweet, Avotoasty, and Haraz Coffee House are excluded from the guide at Angela's request (2026-10-03), across all locations. Do not re-add them during automated scouting unless she explicitly reverses this decision. This is an editorial choice, not a claim that these businesses are closed or do not serve matcha.
 
+Jandii Cafe is mapped at its operating Taraval location (1100 Taraval St). Keep the announced Castro location (3499 16th St) off the map until it opens as a separate customer-ready location with verified opening status and a current business profile.
+
 ## Local Preview
 
 ```sh
