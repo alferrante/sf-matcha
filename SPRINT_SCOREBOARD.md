@@ -12,7 +12,7 @@ Repository baseline: `7d8fb15f21dfec29d65ad063d32b7bffd6ae8fa2` (current main wh
 | Monthly visits | Unknown; Cloudflare beacon exists, export not accessed | 50,000 |
 | Active email subscribers | 0 in newly created dedicated Resend audience, verified October 7; public signup not yet live | 10,000 |
 | Social followers | Unknown; project accounts not verified | 25,000 |
-| Guides | 6 articles built and tested; publication verification pending | 24 |
+| Guides | 6 published articles / 21 sourced entries, live verified October 7 | 24 |
 | Derivative assets | 24 complete text drafts (6 carousel scripts, 6 captions, 6 short posts, 6 video scripts); 0 published posts or rendered visual assets | 120 |
 | Live confirmed offers | 0 offer records in baseline repository | 20 |
 | Redemptions | Unknown; no verified tracking system | 2,000 |
@@ -41,16 +41,20 @@ Publication: foundation commit `fec2d3005155a1323e2761515f276e0b472ff88d` is ver
 
 7. **Cache continuity fixed:** builds retain previous content-addressed assets so cached older HTML can still load them. A regression test verifies old referenced assets remain after a source change.
 
-Validation: all 41 automated tests, source build, copy audit (89 venues/267 fields), reproducible hashed assets, source-to-built data parity, guide validation/escaping/canonical/schema checks and newsletter client failure/consent handling pass. Browser cannot reach the local preview through the cloud browser; public deployment will be checked in-browser after publication. Publication verification is pending for this launch release.
+Validation: all 41 automated tests, source build, copy audit (89 venues/267 fields), reproducible hashed assets, source-to-built data parity, guide validation/escaping/canonical/schema checks and newsletter client failure/consent handling pass. Browser cannot reach the local preview through the cloud browser; public deployment will be checked in-browser after publication. Launch release `a5c578918663636f9e90193ff88a5d1b8ab58701` published to main and live verified October 7. Canonical homepage/guide hub/methodology/perks return HTTP 200. Browser verifies all six hub links, banana article source/ingredient notes, 89-shop homepage, search returning one SŌHN result, soy filter returning 26 confirmed shops, and café planner creating/downloading a local proposal. No site-origin console errors were observed. Email correctly shows coming soon and does not collect addresses.
+
+Live URLs: [Guides](https://sanfranciscomatcha.com/guides/), [Buzzy/awards approach](https://sanfranciscomatcha.com/methodology/), [Café pilot planner](https://sanfranciscomatcha.com/perks/), [Privacy](https://sanfranciscomatcha.com/privacy/).
+
+Live-review correction: official SŌHN hours confirm Tue–Sun 9am–4pm, Monday closed; corrected the older Wednesday-start directory hours. Lulu official ordering hours confirm Sunday closed; Nagomi official structured hours confirm Mon–Sat 10:30am–5pm and Sunday closed. Clarified the guides to match. Kumo's milk note now distinguishes soy cloud from an unlisted soy-milk substitution and explicitly says the banana drink contains dairy. All 89 IDs and existing excluded/planned-location rules are preserved. Correction deployment verification pending.
 
 ## Next execution queue
 
-1. Publish and verify the six-guide/methodology/perks/homepage release. Confirm actual Render build/header settings once correct workspace is accessible.
+1. Confirm the Render workspace (connector requires explicit selection), deploy the prepared newsletter backend, then enable and verify actual public capture.
 2. Deploy the tested newsletter service after confirming the Render workspace; create a server-only contact-management credential, set the public endpoint, verify a saved signup and opt-out handling, then enable the form.
 3. Establish analytics baseline and provider/account evidence. Keep unknown metrics explicitly unknown until measured.
 4. Expand the six-guide library with verified neighborhood/seasonal articles and derivative content after launch verification.
 5. Add Buzzy expiry/reason metadata and publish transparent editorial methodology; gather tasting evidence before Best awards.
-6. Create merchant-confirmation records, offer schema/UI and outreach-ready café pipeline. Do not activate invented offers.
+6. Obtain explicit outreach authorization and merchant confirmation, then implement and deploy authenticated atomic claim/redemption service before activating the first $1-off pilot. The public proposal planner and validation schema are ready.
 
 ## Dependencies requiring evidence or access
 

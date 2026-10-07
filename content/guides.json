@@ -201,11 +201,15 @@
         "details": "Lulu’s product page lets you choose hot or iced and select soy. The café is at 50 Francisco St, Suite 105.",
         "milkNote": "Soy is listed alongside oat, almond and coconut. Confirm substitutions at checkout.",
         "price": "$7 listed base price; check checkout for modifiers",
-        "availability": "Mon–Fri 7am–4pm; Sat 8am–4pm. Sunday hours are not listed on this page.",
+        "availability": "Mon–Fri 7am–4pm; Sat 8am–4pm; Sunday closed.",
         "sources": [
           {
             "label": "Official menu",
             "url": "https://www.lulufresh.co/products/matcha-latte"
+          },
+          {
+            "label": "Official ordering hours",
+            "url": "https://toast.app/r/lulu-fresh-50-francisco-street/order"
           }
         ]
       },
@@ -368,7 +372,7 @@
         "details": "Nagomi describes hand-whisking Oyaizu Seicha’s Heavenly Sky #65 and #90 matcha at 74 New Montgomery St.",
         "milkNote": "The site names Straus dairy milk. Soy and plant-milk substitutions are not listed there.",
         "price": "Price not published on the official site",
-        "availability": "The site currently shows 10:30am–5pm as temporary hours; check before visiting.",
+        "availability": "Temporary hours: Mon–Sat 10:30am–5pm; Sunday closed. Check before visiting.",
         "sources": [
           {
             "label": "Official menu",

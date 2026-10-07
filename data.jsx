@@ -953,7 +953,7 @@ const SHOPS = [
     lat: 37.7597, lng: -122.3876,
     x: 65.3, y: 53.2,
     price: "$$",
-    hours: "Wed–Sun 9am–4pm; closed Mon–Tue",
+    hours: "Tue–Sun 9am–4pm; Mon closed",
   },
   {
     id: "heytea-stonestown-galleria",
@@ -1356,7 +1356,7 @@ const SHOPS = [
     buzzy: true,
     emoji: "☁️",
     note: "Sunday matcha pop-up at the Divisadero Farmers' Market with classic, blueberry, cloud-topped, and rotating seasonal drinks.",
-    soyNote: "Soy is not listed; all milk drinks are made with lactose-free milk, and some cloud-topped drinks contain additional dairy.",
+    soyNote: "Soy milk is not listed as a substitution. Banana Injeolmi has soy cloud but contains dairy; milk drinks use lactose-free dairy milk.",
     source: "https://www.kumomatchaca.com/our-menu",
     lat: 37.7733329, lng: -122.440471,
     x: 43.5, y: 45.8,
