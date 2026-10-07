@@ -10,6 +10,18 @@ Jandii Cafe is mapped at its operating Taraval location (1100 Taraval St). Keep 
 
 ## Local Preview
 
+Install the locked build tool and rebuild before previewing or publishing source changes:
+
+```sh
+npm ci --include=dev
+npm run build
+npm test
+```
+
+The build compiles all four JSX sources, preserves stable bundles for the scout/audit, and rewrites script URLs to content-hashed assets. Commit source, stable bundles, hashed assets and index.html together. Delete replaced hashed bundles as part of the same commit. No npm packages are loaded by the browser.
+
+See [GOAL.md](GOAL.md) and [SPRINT_SCOREBOARD.md](SPRINT_SCOREBOARD.md) for the growth sprint and verified progress.
+
 ```sh
 python3 -m http.server 8787
 ```
@@ -29,3 +41,5 @@ You can copy `config.example.js` as the starting shape.
 This folder is a clean deploy repo. Push it to GitHub, then use the Render Blueprint in `render.yaml`.
 
 Set `GOOGLE_MAPS_API_KEY` in Render as an environment variable. The build command writes it into `config.js` at deploy time, so the key is not committed to GitHub. Because browser map keys are visible to visitors, restrict the key in Google Cloud to the Maps JavaScript API and the production/local referrers only.
+
+The Blueprint runs `npm ci --include=dev`, `npm run build`, then `npm run config`. Applying edited Blueprint settings to an existing service may require a Blueprint sync; committing render.yaml alone does not prove the live service settings changed. Hashed script filenames work with the existing Git-deploy setup too.

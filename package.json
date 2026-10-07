@@ -1,0 +1,13 @@
+{
+  "name": "sf-matcha",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.mjs && node scripts/audit-customer-copy.mjs",
+    "audit": "node scripts/audit-customer-copy.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "config": "node scripts/write-config.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}
