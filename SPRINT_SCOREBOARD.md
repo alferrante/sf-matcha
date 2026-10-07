@@ -10,7 +10,7 @@ Repository baseline: `7d8fb15f21dfec29d65ad063d32b7bffd6ae8fa2` (current main wh
 | --- | --- | ---: |
 | Directory venues | 89 source/built venues; audit passes 267 fields | Accuracy and freshness |
 | Monthly visits | Unknown; Cloudflare beacon exists, export not accessed | 50,000 |
-| Active email subscribers | 0 in newly created dedicated Resend audience, verified October 7; public signup not yet live | 10,000 |
+| Active email subscribers | 0 active real subscribers, verified October 7; signup live; one opted-out synthetic test excluded | 10,000 |
 | Social followers | Unknown; project accounts not verified | 25,000 |
 | Guides | 6 published articles / 21 sourced entries, live verified October 7 | 24 |
 | Derivative assets | 24 complete text drafts (6 carousel scripts, 6 captions, 6 short posts, 6 video scripts); 0 published posts or rendered visual assets | 120 |
@@ -49,10 +49,10 @@ Live-review correction: official SŌHN hours confirm Tue–Sun 9am–4pm, Monday
 
 ## Next execution queue
 
-1. Complete repeat-submission and opt-out integration checks, publish the enabled signup alongside header/navigation corrections, and verify the real browser flow.
+1. Establish analytics baseline and project social account access, then distribute the completed guide packages.
 2. Verify an SF Matcha sending domain and broadcast unsubscribe before sending any newsletter. Signup capture does not send email.
-3. Establish analytics baseline and provider/account evidence. Keep unknown metrics explicitly unknown until measured.
-4. Expand the six-guide library with verified neighborhood/seasonal articles and derivative content after launch verification.
+3. Publish the next verified neighborhood/seasonal guide package and turn text drafts into finished visual assets; keep unknown metrics explicitly unknown until measured.
+4. Continue the venue/address watch and update articles when menu evidence changes.
 5. Add Buzzy expiry/reason metadata and publish transparent editorial methodology; gather tasting evidence before Best awards.
 6. Obtain explicit outreach authorization and merchant confirmation, then implement and deploy authenticated atomic claim/redemption service before activating the first $1-off pilot. The public proposal planner and validation schema are ready.
 
@@ -77,3 +77,15 @@ The growth lead owns writes to this scoreboard and source publication. Other wor
 
 - Live verification of release `47d815b73f8125b3606d12eba0bfe2d39a07e4cf`: Render static and backend deployments report live; canonical homepage, guides hub, methodology, perks, privacy and current app asset match committed bytes. Browser confirms navigation right of logo, no header subtitle, real consent form, required unchecked-consent validation and clear methodology title. Repeat signup still revealed a runtime acknowledgement differing from both documentation shapes; replacing acknowledgement inference with actual membership lookup and bounded provider-rate-limit retries.
 - Prepared branded email sending domain with open/click tracking disabled. Provider DNS records are documented; domain remains unverified because DNS access is missing. Capture is independent of delivery; no emails sent.
+
+## October 7 launch verification completed
+
+- **Working email signup is live.** Backend release `ea5f6e79a37a40bb2545bfde9c34a4ae6f8a450a` is live on Render. The actual homepage form required unchecked explicit consent, submitted the reserved synthetic record, showed a real success and updated provider consent time to `2026-10-07T20:26:18.287Z`. No duplicates; dedicated segment membership verified.
+- **Opt-out preservation live-tested.** Marked only the owned synthetic test contact globally unsubscribed, submitted it again, received the same generic HTTP 200 response, and confirmed it remained unsubscribed with its consent time unchanged. The test is clearly named, cannot receive broadcasts and is excluded from metrics. Dedicated audience contains one opted-out synthetic record and zero active subscribers.
+- **Six guides, standards and merchant preparation are live.** The guide hub, all six articles, Buzzy/Top Pick/award methodology and $1-off proposal planner were published and verified. The planner previews/downloads local café-specific terms; there are zero merchant-confirmed offers, active coupons, recorded redemptions or award winners. Coupon activation still requires merchant confirmation and authenticated claim/redemption infrastructure.
+- **Latest user corrections verified.** Browser measures navigation to the right of the logo and zero subtitle paragraphs; signup no longer says coming soon; policy page title is “How we verify matcha spots.” Homepage, policy, privacy, perks, guide hub and current app asset matched release `47d815b` bytes. Live screenshot captures header, map and actual signup success.
+- **Rate-limit verification:** automated tests verify proxy-header parsing and equivalent-IP buckets. A live request using forged ingress headers returned HTTP 403; it did not yield a rate-bucket result, so no extra live rate-isolation claim is made. Ordinary browser signup and opt-out API requests succeeded.
+- **Validation:** 48 tests passed, customer-copy audit passed 89 shops/267 fields, source build passed, changed files passed whitespace checks. Older content-addressed assets remain available, unrelated worktrees preserved.
+- **Delivery dependency remains separate:** branded sender `updates.sanfranciscomatcha.com` is prepared, but DNS records in `docs/EMAIL_DNS_SETUP.md` must be configured and verified before subscriber emails are sent. Capture works now; no delivery or confirmed-inbox claim is made.
+
+The initial launch goal is complete for email capture, six factual guides, transparent methodology and merchant preparation. Continue the 90-day growth sprint; the audience, distribution, merchant and awards targets remain outstanding.

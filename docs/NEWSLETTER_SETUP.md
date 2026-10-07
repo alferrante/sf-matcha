@@ -4,7 +4,7 @@ The signup service is implemented in `server/newsletter.mjs`. This repository's 
 
 ## Current launch status
 
-The backend is deployed on Render as `sfmatcha-newsletter` (`srv-db3aelrbc2fs73d4jj40`) at `https://sfmatcha-newsletter.onrender.com`. October 7 verification: `/health` reports configured; allowed-origin preflight succeeds; wrong origins and missing consent are rejected; a reserved synthetic subscription was persisted with consent time/version/source in the dedicated SF Matcha segment. No email was sent. Repeat-submission integration verification continues before marking the frontend live. The private credential is stored only in the backend environment. An absent key or segment returns HTTP 503; static HTML returning HTTP 200 never counts as signup success.
+The backend is deployed on Render as `sfmatcha-newsletter` (`srv-db3aelrbc2fs73d4jj40`) at `https://sfmatcha-newsletter.onrender.com`. October 7 verification: `/health` reports configured; allowed-origin preflight succeeds; wrong origins and missing consent are rejected; a reserved synthetic subscription was persisted with consent time/version/source in the dedicated SF Matcha segment. No email was sent. Release `ea5f6e7` passed live browser repeat submission and persisted its latest consent metadata. The form is live. An opted-out synthetic record stayed opted out after a further submission, without its stored consent time changing. The private credential is stored only in the backend environment. An absent key or segment returns HTTP 503; static HTML returning HTTP 200 never counts as signup success.
 
 ## Deploy to Render
 
@@ -54,3 +54,7 @@ The service persists the latest accepted consent time (server UTC timestamp), po
 The service retrieves existing subscription state before writing; it never uses a global resubscribe update. Existing active contacts are checked using [List Contact Segments](https://resend.com/docs/api-reference/contacts/list-contact-segments), including up to three cursor pages of 100 entries. Existing members are not redundantly readded. After a needed add, membership is independently read back before success; ambiguous runtime acknowledgments never count as membership evidence. API HTTP 429 responses retry the same operation at most twice, honoring `Retry-After` up to three seconds per wait (one second when absent); longer quota waits return unavailable. The [official Resend OpenAPI](https://github.com/resend/resend-openapi/blob/main/resend.yaml) and prose examples differ on membership acknowledgment shape, so the read-back check is authoritative.
 
 Proxy references: [Render public ingress and DDoS guidance](https://render.com/articles/how-render-handles-ddos-attacks), [Cloudflare original-client headers and XFF behavior](https://developers.cloudflare.com/fundamentals/reference/http-headers/).
+
+## Sending-domain handoff
+
+Dedicated sender `updates.sanfranciscomatcha.com` has been created with open/click tracking disabled. It remains unverified; exact public DNS records and the delivery prerequisites are in [EMAIL_DNS_SETUP.md](EMAIL_DNS_SETUP.md). Capture does not depend on this verification and no messages were sent during testing.
