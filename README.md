@@ -43,3 +43,13 @@ This folder is a clean deploy repo. Push it to GitHub, then use the Render Bluep
 Set `GOOGLE_MAPS_API_KEY` in Render as an environment variable. The build command writes it into `config.js` at deploy time, so the key is not committed to GitHub. Because browser map keys are visible to visitors, restrict the key in Google Cloud to the Maps JavaScript API and the production/local referrers only.
 
 The Blueprint runs `npm ci --include=dev`, `npm run build`, then `npm run config`. Applying edited Blueprint settings to an existing service may require a Blueprint sync; committing render.yaml alone does not prove the live service settings changed. Hashed script filenames work with the existing Git-deploy setup too.
+
+## Growth pages and newsletter
+
+`content/guides.json` is the source for the static guides hub and articles. `content/methodology.html` and `content/perks.html` are reviewed standalone pages; `content/offers.json` starts empty and passes strict publication validation. `npm run build` regenerates these pages, the public partner kit/offers feed, sitemap, and browser bundles. Commit source and generated output together. Keep earlier content-addressed bundles so older cached HTML remains usable.
+
+`docs/SOCIAL_LAUNCH.md` contains 24 source-backed text drafts. They have not been posted and are not finished visual assets. Recheck dated menus before distribution.
+
+The newsletter frontend stays unavailable unless `NEWSLETTER_ENDPOINT` points to a verified service. `server/newsletter.mjs` is a separate Node backend; it cannot run on the static site. Read `docs/NEWSLETTER_SETUP.md` before deployment. Keep the private Resend key exclusively in the backend environment. Public config contains only the browser map key and signup URL.
+
+The café pilot planner produces a local proposal and does not enroll merchants. An active offer requires explicit outreach authorization, written merchant confirmation, and a tested server claim/redemption service. A valid JSON record alone is not approval to activate an offer.

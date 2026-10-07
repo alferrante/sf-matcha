@@ -1,0 +1,503 @@
+[
+  {
+    "slug": "banana-matcha-san-francisco",
+    "title": "Where to Get Banana Matcha in San Francisco",
+    "description": "Three SF banana matcha drinks, from oat-milk lattes to seasonal injeolmi foam, with menu prices and milk notes.",
+    "emoji": "🍌",
+    "updatedAt": "2026-10-07",
+    "intro": "Banana matcha comes in a few different forms: banana in the milk, banana in the drink, or banana underneath a cloud of cream. These three San Francisco menus give you distinct versions to try. SŌHN has the oat-milk version, YakiniQ lists a straightforward iced banana matcha, and Kumo has a seasonal banana-and-kinako build. Pick by ingredients and neighborhood before deciding which one is your favorite.",
+    "methodology": "We checked café menus on October 7, 2026. This is an unranked guide to documented drinks, not a tasting-based “best” list. Prices are listed menu prices before tax and extras; a menu listing does not guarantee stock.",
+    "entries": [
+      {
+        "shopId": "sohn",
+        "drink": "Banana Oat Milk Latte with Matcha",
+        "verdict": "For banana oat milk without a cream-top order.",
+        "details": "SŌHN lists matcha as one of the tea or coffee choices for its iced banana oat milk latte. Go to 2535 3rd St in Dogpatch.",
+        "milkNote": "Oat milk is named in this drink; soy is not listed. Confirm any additional ingredients if you avoid dairy.",
+        "price": "$7",
+        "availability": "Tue–Sun 9am–4pm; closed Monday.",
+        "sources": [
+          {
+            "label": "Official menu",
+            "url": "https://www.sohnsf.com/s/Letter_0120_1-1.pdf"
+          },
+          {
+            "label": "Location and hours",
+            "url": "https://www.sohnsf.com/"
+          }
+        ]
+      },
+      {
+        "shopId": "yakiniq-cafe",
+        "drink": "Iced Banana Matcha Latte",
+        "verdict": "A banana matcha stop in Japantown.",
+        "details": "The menu lists a 16-ounce iced banana matcha. Find it at 1640 Post St, first floor.",
+        "milkNote": "The banana drink does not show a plant-milk substitution; ask before assuming it can be dairy-free.",
+        "price": "$8.50",
+        "availability": "Tue–Sat 11am–5pm; closed Sunday and Monday.",
+        "sources": [
+          {
+            "label": "Official menu",
+            "url": "https://toast.app/r/yakiniq-cafe-1640-post-street-fl-1/order"
+          }
+        ]
+      },
+      {
+        "shopId": "kumo-matcha-divisadero-market",
+        "drink": "Banana Injeolmi Matcha Latte",
+        "verdict": "For banana purée, soy cloud and kinako together.",
+        "details": "Banana purée sweetens the latte, topped with soy cloud and kinako. The SF pop-up is at 1377 Fell St.",
+        "milkNote": "Contains dairy. Kumo uses lactose-free dairy milk; soy cloud does not make the drink dairy-free.",
+        "price": "Price not published on the official menu",
+        "availability": "Sundays 9am–1pm; this seasonal drink is listed September 5, 2026–January 3, 2027.",
+        "sources": [
+          {
+            "label": "Official menu",
+            "url": "https://www.kumomatchaca.com/our-menu"
+          },
+          {
+            "label": "SF pop-up location and hours",
+            "url": "https://www.kumomatchaca.com/"
+          }
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Which banana matcha uses oat milk?",
+        "answer": "SŌHN explicitly lists a Banana Oat Milk Latte with a matcha option. If dairy avoidance matters, confirm the full recipe when ordering."
+      },
+      {
+        "question": "Is Kumo’s soy-cloud banana matcha dairy-free?",
+        "answer": "No. Its official menu marks the Banana Injeolmi Matcha Latte as containing dairy and says its milk drinks use lactose-free milk."
+      },
+      {
+        "question": "Are these ranked from best to worst?",
+        "answer": "No. The list helps you compare documented menus. We have not awarded a tasting winner."
+      }
+    ]
+  },
+  {
+    "slug": "matcha-cold-foam-san-francisco",
+    "title": "Matcha Cold Foam, Clouds & Cream Tops in SF",
+    "description": "Four places for matcha clouds and cream tops in San Francisco, with prices, seasonal availability and dairy notes.",
+    "emoji": "☁️",
+    "updatedAt": "2026-10-07",
+    "intro": "The foam is part of the order, not just a garnish. San Francisco cafés offer matcha with flavored cream, matcha-flavored clouds, and fruit-topped lattes. Start with these four documented menus, which span an extra layer of matcha, salted cheese cream, a Korean café cream top and an autumn London Fog twist. If you choose a plant milk underneath, check the topping separately.",
+    "methodology": "Official menus checked October 7, 2026. “Cold foam,” “cloud” and “cream top” are café menu terms, not a claim that every drink uses the same recipe. This guide is unranked and does not award a Best Cold Foam badge.",
+    "entries": [
+      {
+        "shopId": "q-specialty-coffee",
+        "drink": "Velvet Matcha Cloud",
+        "verdict": "For a matcha latte topped with another matcha layer.",
+        "details": "Q lists matcha cloud over a matcha latte at its original 3490 California St café.",
+        "milkNote": "The menu does not spell out cloud ingredients or confirm a dairy-free topping; ask before ordering.",
+        "price": "$8.25",
+        "availability": "Daily 7am–5:30pm.",
+        "sources": [
+          {
+            "label": "Official menu",
+            "url": "https://www.qspecialtycoffee.com/menu"
+          }
+        ]
+      },
+      {
+        "shopId": "tadaima-mission",
+        "drink": "Matcha Latte with Salted Cheese Cream",
+        "verdict": "For the salted-cheese version.",
+        "details": "The Mission drink menu offers this iced latte at 3515 20th St, Suite B. Strawberry and pistachio cream versions are also listed.",
+        "milkNote": "Oat and almond substitutions cost $0.75 for the drink base. Cheese cream is not listed as dairy-free; soy is not listed.",
+        "price": "$7.50 before milk substitutions",
+        "availability": "Listed on the current drink menu; check café hours before visiting.",
+        "sources": [
+          {
+            "label": "Official menu",
+            "url": "https://tadaimasf.com/san-francisco-suite-b-tadaima-sf-drink-menu"
+          }
+        ]
+      },
+      {
+        "shopId": "sohn",
+        "drink": "SŌHN Signature Cream Top with Matcha",
+        "verdict": "For a dedicated café cream-top order.",
+        "details": "Order the matcha option under Signature Cream Top at 2535 3rd St. The menu lists it as iced only.",
+        "milkNote": "Soy is not listed. The menu does not document a dairy-free cream top.",
+        "price": "$7",
+        "availability": "Tue–Sun 9am–4pm; closed Monday.",
+        "sources": [
+          {
+            "label": "Official menu",
+            "url": "https://www.sohnsf.com/s/Letter_0120_1-1.pdf"
+          },
+          {
+            "label": "Location and hours",
+            "url": "https://www.sohnsf.com/"
+          }
+        ]
+      },
+      {
+        "shopId": "kumo-matcha-divisadero-market",
+        "drink": "London Fog Matcha Latte",
+        "verdict": "For Earl Grey syrup and vanilla cloud.",
+        "details": "Kumo’s seasonal latte has Earl Grey syrup, Madagascar vanilla cloud and orange zest. Find the SF pop-up at 1377 Fell St.",
+        "milkNote": "Contains dairy; the base milk is lactose-free dairy milk.",
+        "price": "Price not published on the official menu",
+        "availability": "Listed as currently in season; SF service Sundays 9am–1pm.",
+        "sources": [
+          {
+            "label": "Official menu",
+            "url": "https://www.kumomatchaca.com/our-menu"
+          },
+          {
+            "label": "SF pop-up schedule",
+            "url": "https://www.kumomatchaca.com/"
+          }
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does oat milk make a cloud matcha dairy-free?",
+        "answer": "Only if the topping and other ingredients are dairy-free too. Ask about the foam independently from the milk base."
+      },
+      {
+        "question": "Which menus have published prices?",
+        "answer": "Q, Tadaima and SŌHN publish the prices shown here. Kumo’s official menu describes the drink without a price."
+      },
+      {
+        "question": "Where is the Best Cold Foam winner?",
+        "answer": "This is a menu guide. A tasting-based award will be labeled separately with its judging method."
+      }
+    ]
+  },
+  {
+    "slug": "soy-milk-matcha-san-francisco",
+    "title": "Soy Milk Matcha in SF: Three Menus That List It",
+    "description": "Where to order matcha with soy milk in San Francisco, with verified menu options, prices and dairy-free ordering tips.",
+    "emoji": "🌱",
+    "updatedAt": "2026-10-07",
+    "intro": "Soy can be surprisingly hard to find on matcha menus, even when oat milk is everywhere. These three cafés explicitly list soy with their matcha or drink substitutions. They cover the Presidio, the northern waterfront and Japantown. Start with a plain latte, specify soy as the replacement milk, and ask about any added cream or premixed ingredients if you need the whole drink to be dairy-free.",
+    "methodology": "We checked official menus and merchant ordering pages on October 7, 2026. Inclusion means soy is listed, not that we have independently certified every recipe or allergy practice. This is an unranked ordering guide.",
+    "entries": [
+      {
+        "shopId": "il-parco",
+        "drink": "Matcha Latte with Soy Milk",
+        "verdict": "For a soy matcha before a Presidio walk.",
+        "details": "Il Parco’s menu lists hot and iced matcha lattes and soy among its milk alternatives at 215 Lincoln Blvd.",
+        "milkNote": "Soy, oat or almond adds $0.50. Specify that soy replaces the base milk.",
+        "price": "$6 hot 12 oz; $6.30 iced 12 oz with soy",
+        "availability": "Daily 8am–8pm.",
+        "sources": [
+          {
+            "label": "Official menu",
+            "url": "https://ilparcosf.com/menu/cafe"
+          }
+        ]
+      },
+      {
+        "shopId": "lulu-fresh",
+        "drink": "Matcha Latte with Soy Milk",
+        "verdict": "For an explicitly selectable soy option near the waterfront.",
+        "details": "Lulu’s product page lets you choose hot or iced and select soy. The café is at 50 Francisco St, Suite 105.",
+        "milkNote": "Soy is listed alongside oat, almond and coconut. Confirm substitutions at checkout.",
+        "price": "$7 listed base price; check checkout for modifiers",
+        "availability": "Mon–Fri 7am–4pm; Sat 8am–4pm. Sunday hours are not listed on this page.",
+        "sources": [
+          {
+            "label": "Official menu",
+            "url": "https://www.lulufresh.co/products/matcha-latte"
+          }
+        ]
+      },
+      {
+        "shopId": "yakiniq-cafe",
+        "drink": "Matcha Latte with Soy Milk",
+        "verdict": "For a customizable Japantown latte.",
+        "details": "The Matcha Latte ordering page lists soy in its milk choices at 1640 Post St, first floor.",
+        "milkNote": "The option is labeled “Extra Soy Milk.” Ask the café to replace whole milk with soy if dairy avoidance matters.",
+        "price": "$7 base 12 oz + $0.75 soy; iced adds $0.25",
+        "availability": "Tue–Sat 11am–5pm; closed Sunday and Monday.",
+        "sources": [
+          {
+            "label": "Official menu",
+            "url": "https://toast.app/r/yakiniq-cafe-1640-post-street-fl-1/order/item-matcha-latte_32d7f96b-093a-4e9e-aafa-c78e5fcc1b90"
+          }
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is lactose-free milk dairy-free?",
+        "answer": "No. Lactose-free dairy milk is still dairy milk. Select a plant milk and check toppings and any premixed base."
+      },
+      {
+        "question": "Can I just pick soy online and assume the drink is dairy-free?",
+        "answer": "Check how the modifier is worded. YakiniQ labels it as extra soy, so ask for a replacement rather than an addition."
+      },
+      {
+        "question": "Why are some popular cafés missing?",
+        "answer": "This guide focuses on soy explicitly listed in the menus we checked. A café without listed soy may still offer it, but we do not assume that."
+      }
+    ]
+  },
+  {
+    "slug": "strawberry-matcha-san-francisco",
+    "title": "Strawberry Matcha in SF: Latte, Cloud or Cream?",
+    "description": "Four documented strawberry matcha orders in San Francisco, including classic fruit lattes and strawberry cloud toppings.",
+    "emoji": "🍓",
+    "updatedAt": "2026-10-07",
+    "intro": "Strawberry matcha is not one fixed recipe. Some menus put strawberry in the latte; others put it in a cloud or cream topping. These four stops let you compare the styles without guessing from a drink photo. Choose Stonemill or Four Chairs for a listed strawberry latte, Q for strawberry cloud, or Tadaima for strawberry cream. Each card links to the menu so you can check the latest options.",
+    "methodology": "Official café menus checked on October 7, 2026. Selections reflect named strawberry-and-matcha drinks. They are not ranked, and we do not make firsthand taste or sweetness judgments. Prices exclude tax and add-ons.",
+    "entries": [
+      {
+        "shopId": "stonemill-matcha",
+        "drink": "Cold Strawberry Latte with Matcha",
+        "verdict": "For a strawberry latte with a choice of tea.",
+        "details": "The menu pairs strawberry with matcha or hojicha, milk and cane sugar. Choose matcha at 561 Valencia St.",
+        "milkNote": "Oat substitution is listed; soy is not.",
+        "price": "Price not published on this menu",
+        "availability": "Mon–Fri 10am–4pm; Sat–Sun 9am–7pm.",
+        "sources": [
+          {
+            "label": "Official menu",
+            "url": "https://www.stonemillmatcha-us.com/menu"
+          },
+          {
+            "label": "Official hours",
+            "url": "https://www.stonemillmatcha-us.com/"
+          }
+        ]
+      },
+      {
+        "shopId": "four-chairs",
+        "drink": "Strawberry Matcha",
+        "verdict": "For a matcha order alongside brunch.",
+        "details": "Four Chairs lists Strawberry Matcha at 3282 Mission St.",
+        "milkNote": "Whole milk is listed; Oatly or almond adds $1. Soy is not listed.",
+        "price": "$7; $8 with Oatly or almond",
+        "availability": "Mon–Fri 10am–2:30pm; Sat–Sun 9am–3pm.",
+        "sources": [
+          {
+            "label": "Official menu",
+            "url": "https://www.fourchairssf.com/_files/ugd/84dca7_1ddb14cf73d649339a46b81e3c2a91db.pdf"
+          },
+          {
+            "label": "Official hours",
+            "url": "https://www.fourchairssf.com/"
+          }
+        ]
+      },
+      {
+        "shopId": "q-specialty-coffee",
+        "drink": "Matcha Strawberry Cloud",
+        "verdict": "For strawberry in the topping.",
+        "details": "Q lists an organic matcha latte with house-made strawberry cloud and dried strawberry at 3490 California St.",
+        "milkNote": "Foam ingredients and dairy-free substitutions are not specified on this menu.",
+        "price": "$8.25",
+        "availability": "Daily 7am–5:30pm.",
+        "sources": [
+          {
+            "label": "Official menu",
+            "url": "https://www.qspecialtycoffee.com/menu"
+          }
+        ]
+      },
+      {
+        "shopId": "tadaima-mission",
+        "drink": "Matcha Latte with Strawberry Cream",
+        "verdict": "For an iced strawberry-cream latte.",
+        "details": "The Mission menu lists strawberry cream over matcha at 3515 20th St, Suite B.",
+        "milkNote": "Oat and almond substitutions are listed for $0.75; the cream is not listed as dairy-free. Soy is not listed.",
+        "price": "$7.75 before milk substitutions",
+        "availability": "Listed on the current drink menu; check café hours before visiting.",
+        "sources": [
+          {
+            "label": "Official menu",
+            "url": "https://tadaimasf.com/san-francisco-suite-b-tadaima-sf-drink-menu"
+          }
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the difference between strawberry latte and strawberry cloud?",
+        "answer": "The menu names tell you where to start: a fruit latte and a fruit topping are different builds. Ask how the strawberry is incorporated if you have a preference."
+      },
+      {
+        "question": "Can strawberry cream be made dairy-free?",
+        "answer": "A plant-milk base does not establish that the cream is dairy-free. None of these cream-topping menus confirms that substitution."
+      },
+      {
+        "question": "Which one is the least sweet?",
+        "answer": "We have not tasted them side by side or measured sugar. Ask which components can be reduced; fruit preparations and cream may have fixed sweetness."
+      }
+    ]
+  },
+  {
+    "slug": "ceremonial-hand-whisked-matcha-san-francisco",
+    "title": "Ceremonial & Hand-Whisked Matcha in San Francisco",
+    "description": "Three SF cafés documenting matcha sourcing or hand-whisking, with simple tea orders and latte options.",
+    "emoji": "🍵",
+    "updatedAt": "2026-10-07",
+    "intro": "If the tea itself is what you came for, start with preparation and sourcing details rather than a colorful topping. Stonemill names a hand-whisked order, Nagomi describes hand-whisking Shizuoka matcha, and Pixlcat identifies the Kyoto Uji matcha used for its lattes. These are three different ways to explore the tea. A sourcing description can help you choose an order; it does not replace tasting it yourself.",
+    "methodology": "Official café pages checked October 7, 2026. “Ceremonial” is reported as the café describes its matcha; we do not treat that word alone as an independent quality award. Hand-whisking is identified only where the café explicitly documents it.",
+    "entries": [
+      {
+        "shopId": "stonemill-matcha",
+        "drink": "Hand Whisked Matcha",
+        "verdict": "For a named hand-whisked tea order.",
+        "details": "Stonemill lists First Crop matcha served with small yuzu meringues. Its Matchacano is another water-based order at 561 Valencia St.",
+        "milkNote": "The hand-whisked order is separate from the milk lattes. Ask about the accompanying sweet if you have dietary restrictions.",
+        "price": "Price not published on the official menu",
+        "availability": "Mon–Fri 10am–4pm; Sat–Sun 9am–7pm.",
+        "sources": [
+          {
+            "label": "Official menu",
+            "url": "https://www.stonemillmatcha-us.com/menu"
+          },
+          {
+            "label": "Official hours",
+            "url": "https://www.stonemillmatcha-us.com/"
+          }
+        ]
+      },
+      {
+        "shopId": "nagomi",
+        "drink": "Oyaizu Heavenly Sky Matcha Latte",
+        "verdict": "For a café that names its Shizuoka producer.",
+        "details": "Nagomi describes hand-whisking Oyaizu Seicha’s Heavenly Sky #65 and #90 matcha at 74 New Montgomery St.",
+        "milkNote": "The site names Straus dairy milk. Soy and plant-milk substitutions are not listed there.",
+        "price": "Price not published on the official site",
+        "availability": "The site currently shows 10:30am–5pm as temporary hours; check before visiting.",
+        "sources": [
+          {
+            "label": "Official menu",
+            "url": "https://cafenagomi.com/"
+          }
+        ]
+      },
+      {
+        "shopId": "pixlcat-coffee",
+        "drink": "Organic Matcha Latte",
+        "verdict": "For a Kyoto Uji matcha latte in the Inner Richmond.",
+        "details": "Pixlcat describes hot or iced organic matcha lattes made with ceremonial-grade Kyoto Uji matcha at 519 Clement St.",
+        "milkNote": "Soy and other latte milk choices are not specified on this page.",
+        "price": "Check the linked ordering menu for the current drink price",
+        "availability": "Mon–Fri 7am–4pm; Sat–Sun 7am–5pm.",
+        "sources": [
+          {
+            "label": "Official menu",
+            "url": "https://www.pixlcatcoffee.com/order-now"
+          }
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does ceremonial-grade automatically mean best?",
+        "answer": "No. We report the café’s description and link its source. We have not independently scored the matcha or awarded a winner."
+      },
+      {
+        "question": "Which café explicitly lists hand-whisked matcha?",
+        "answer": "Stonemill names a Hand Whisked Matcha order. Nagomi also describes hand-whisking its matcha on its official site."
+      },
+      {
+        "question": "How can I compare the tea without flavored cream?",
+        "answer": "Ask about a simple water-based matcha order or a plain latte. Use the same milk and sweetness preference when comparing cafés."
+      }
+    ]
+  },
+  {
+    "slug": "matcha-under-seven-dollars-san-francisco",
+    "title": "Matcha Under $7 in San Francisco",
+    "description": "Four SF matcha menus with options below $7 before tax, including plant-milk prices and a matcha soda.",
+    "emoji": "💸",
+    "updatedAt": "2026-10-07",
+    "intro": "A matcha order can stay below $7 if you watch size, temperature and milk surcharges. These four official menus list qualifying drinks without needing a promo code. The prices below are before tax, tip and extras. Paper Son also has a milk-free-style soda build, while Il Parco publishes enough size and milk detail to plan a soy order. Check the checkout total before paying; this guide uses the menu prices available on the update date.",
+    "methodology": "Official menus checked October 7, 2026. Every featured base drink is listed strictly below $7. This is a price guide, not a Best Value taste award. Delivery prices and fees can differ from café prices.",
+    "entries": [
+      {
+        "shopId": "paper-son-coffee-fidi",
+        "drink": "Matcha Latte or Matcha Passionfruit Soda",
+        "verdict": "For two matcha orders listed at the same price.",
+        "details": "Paper Son’s menu lists both at $6. Visit Downtown at 303 2nd St N102.",
+        "milkNote": "Oat or almond adds $0.25 to the latte. Soy is not listed.",
+        "price": "$6; latte with oat or almond $6.25",
+        "availability": "Downtown Mon–Fri 8am–3:30pm; closed weekends.",
+        "sources": [
+          {
+            "label": "Official menu",
+            "url": "https://papersoncoffee.com/menu"
+          },
+          {
+            "label": "Official locations and hours",
+            "url": "https://papersoncoffee.com/locations"
+          }
+        ]
+      },
+      {
+        "shopId": "il-parco",
+        "drink": "12 oz Matcha Latte",
+        "verdict": "For a published soy price that stays under $7.",
+        "details": "At 215 Lincoln Blvd, the 12-ounce latte is $5.50 hot or $5.80 iced.",
+        "milkNote": "Soy, oat and almond add $0.50.",
+        "price": "$5.50 hot / $5.80 iced; with plant milk $6 / $6.30",
+        "availability": "Daily 8am–8pm.",
+        "sources": [
+          {
+            "label": "Official menu",
+            "url": "https://ilparcosf.com/menu/cafe"
+          }
+        ]
+      },
+      {
+        "shopId": "tadaima-mission",
+        "drink": "Classic Matcha Latte",
+        "verdict": "For a hot latte that leaves room for a milk swap.",
+        "details": "The Mission menu at 3515 20th St, Suite B lists its classic latte hot or iced.",
+        "milkNote": "Oat or almond adds $0.75: hot reaches $7, iced reaches $7.50. Soy is not listed.",
+        "price": "$6.25 hot / $6.75 iced before substitutions",
+        "availability": "Listed on the current drink menu; check café hours before visiting.",
+        "sources": [
+          {
+            "label": "Official menu",
+            "url": "https://tadaimasf.com/san-francisco-suite-b-tadaima-sf-drink-menu"
+          }
+        ]
+      },
+      {
+        "shopId": "sohn",
+        "drink": "Matcha Latte or Matchacano",
+        "verdict": "For a $6 matcha order in Dogpatch.",
+        "details": "SŌHN lists both orders at $6 at 2535 3rd St. Its banana and cream-top signatures cost $7 and fall outside this list.",
+        "milkNote": "Oat and almond alternatives are listed without a charge; soy is not listed.",
+        "price": "$6",
+        "availability": "Tue–Sun 9am–4pm; closed Monday.",
+        "sources": [
+          {
+            "label": "Official menu",
+            "url": "https://www.sohnsf.com/s/Letter_0120_1-1.pdf"
+          },
+          {
+            "label": "Official hours",
+            "url": "https://www.sohnsf.com/"
+          }
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Do these prices include tax?",
+        "answer": "No. The guide compares published menu prices before tax, tip, optional extras and delivery fees."
+      },
+      {
+        "question": "Which plant-milk orders stay under $7?",
+        "answer": "The listed Il Parco 12-ounce latte with soy, oat or almond and Paper Son latte with oat or almond stay below $7 before tax. SŌHN lists free oat or almond alternatives."
+      },
+      {
+        "question": "Does a $1-off SF Matcha code already work here?",
+        "answer": "No offer is implied by inclusion. A café discount is valid only when an active offer explicitly lists its participating café and terms."
+      }
+    ]
+  }
+]

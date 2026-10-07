@@ -5,7 +5,8 @@
     "build": "node scripts/build.mjs && node scripts/audit-customer-copy.mjs",
     "audit": "node scripts/audit-customer-copy.mjs",
     "test": "node --test tests/*.test.mjs",
-    "config": "node scripts/write-config.mjs"
+    "config": "node scripts/write-config.mjs",
+    "start:newsletter": "node server/newsletter.mjs"
   },
   "devDependencies": {
     "esbuild": "0.28.2"

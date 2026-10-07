@@ -1,3 +1,6 @@
+import guides from "./content/guides.json";
+import { newsletterEndpoint, subscribe } from "./lib/newsletter-client.mjs";
+
 // Main SF Matcha app
 
 const { useState, useMemo, useEffect, useRef } = React;
@@ -10,6 +13,9 @@ const FILTERS = [
 { id: "reported", label: "soy reported", emoji: "?" },
 { id: "none", label: "no soy listed", emoji: "✗" },
 { id: "call", label: "soy TBD", emoji: "…" }];
+
+const PRIMARY_FILTERS = FILTERS.slice(0, 3);
+const SOY_FILTERS = FILTERS.slice(3);
 
 
 const HOOD_GROUPS = [
@@ -93,7 +99,9 @@ function App() {
     <div style={{ "--bg": C.bg, "--ink": C.ink, "--pop": C.pop, "--pop2": C.pop2, "--lime": C.lime, background: C.bg, color: C.ink, minHeight: "100vh" }}>
       <Marquee speed={tweaks.marqueeSpeed} />
       <Header copy={tweaks.headerCopy} C={C} />
-      <FilterBar filter={filter} setFilter={setFilter} search={search} setSearch={setSearch} stats={stats} C={C} />
+      <NewsletterSignup />
+      <div className="guide-discovery"><a href="/guides/"><strong>{guides.length} guides for your next cup →</strong><span>banana · cold foam · soy milk · strawberry · ceremonial · under $7</span></a></div>
+      <FilterBar filter={filter} setFilter={setFilter} stats={stats} C={C} />
 
       <div className="main-grid" style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 24, padding: "0 32px 48px", maxWidth: 1600, margin: "0 auto" }}>
         <MapPanel
@@ -104,7 +112,9 @@ function App() {
           hovered={hovered}
           setHovered={setHovered}
           C={C}
-          tweaks={tweaks} />
+          tweaks={tweaks}
+          search={search}
+          setSearch={setSearch} />
         
         <ShopList
           shops={filtered}
@@ -156,7 +166,7 @@ function App() {
 function Marquee({ speed }) {
   const items = [
   "🍵 sf matcha, mapped",
-  "✦ updated twice a week",
+  `✦ ${guides.length} menu-backed guides`,
   `🌿 ${SHOPS.length} spots mapped`,
   "✿ soy info at a glance",
   "⭐ local favorites highlighted",
@@ -187,6 +197,7 @@ function Marquee({ speed }) {
 function Header({ copy, C }) {
   return (
     <header style={{ padding: "40px 32px 16px", maxWidth: 1600, margin: "0 auto" }}>
+      <nav className="site-nav" aria-label="Main navigation"><a href="/">Map</a><a href="/guides/">Guides</a><a href="/perks/">Perks</a><a href="/methodology/">Our approach</a></nav>
       <h1 style={{
         fontFamily: "'Bricolage Grotesque', sans-serif",
         fontWeight: 800, fontSize: "clamp(64px, 11vw, 160px)", lineHeight: 0.88,
@@ -203,6 +214,45 @@ function Header({ copy, C }) {
       </p>
     </header>);
 
+}
+
+// ===================== NEWSLETTER =====================
+function NewsletterSignup() {
+  const [email, setEmail] = useState("");
+  const [consent, setConsent] = useState(false);
+  const [website, setWebsite] = useState("");
+  const [status, setStatus] = useState("idle");
+  const [message, setMessage] = useState("");
+  const endpoint = newsletterEndpoint(window.SF_MATCHA_CONFIG?.newsletterEndpoint, window.location.origin);
+  async function handleSubmit(event) {
+    event.preventDefault();
+    if (status === "submitting") return;
+    setStatus("submitting"); setMessage("");
+    try {
+      setMessage(await subscribe({endpoint,email,consent,website}));
+      setStatus("success"); setEmail(""); setConsent(false);
+    } catch {
+      setStatus("error"); setMessage("Signup could not be completed. Please try again later.");
+    }
+  }
+  return <section className="newsletter-band" aria-labelledby="newsletter-heading">
+    <div className="newsletter-inner">
+      <h2 id="newsletter-heading">Want new matcha spots in your inbox?</h2>
+      <div className="newsletter-action">
+        {endpoint ? <form onSubmit={handleSubmit}>
+          <div className="newsletter-form">
+            <label className="sr-only" htmlFor="newsletter-email">Email address</label>
+            <input id="newsletter-email" type="email" inputMode="email" autoComplete="email" required value={email} onChange={e=>setEmail(e.target.value)} placeholder="your email" disabled={status==="submitting"} />
+            <button type="submit" aria-label="Subscribe for new matcha spot alerts" disabled={status==="submitting"}><span className="material-symbols-rounded" aria-hidden="true">arrow_forward</span></button>
+          </div>
+          <label className="newsletter-consent"><input type="checkbox" required checked={consent} onChange={e=>setConsent(e.target.checked)} disabled={status==="submitting"} /> Send me SF Matcha guides and new-spot emails. Unsubscribe anytime.</label>
+          <label className="newsletter-trap" aria-hidden="true">Website<input tabIndex={-1} autoComplete="off" value={website} onChange={e=>setWebsite(e.target.value)} /></label>
+          <a className="newsletter-privacy" href="/privacy/">Privacy details</a>
+        </form> : <p className="newsletter-coming">Email alerts are coming soon. <a href="/guides/">Explore the new guides →</a></p>}
+        <div className={`newsletter-message ${status}`} role={status==="error" ? "alert" : "status"} aria-live="polite">{message}</div>
+      </div>
+    </div>
+  </section>;
 }
 
 function mapsUrl(shop) {
@@ -230,69 +280,45 @@ function Sticker({ children, bg, rotate = 0, ink = "var(--ink)" }) {
 }
 
 // ===================== FILTER BAR =====================
-function FilterBar({ filter, setFilter, search, setSearch, stats, C }) {
+function FilterBar({ filter, setFilter, stats, C }) {
+  const [soyOpen, setSoyOpen] = useState(false);
+  const activeSoy = SOY_FILTERS.find((item) => item.id === filter);
   return (
-    <div className="filter-bar" style={{ padding: "16px 32px 24px", maxWidth: 1600, margin: "0 auto" }}>
-      <div className="filter-summary" style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center", marginBottom: 16 }}>
-        <div className="filter-search" style={{
-          flex: "1 1 360px", maxWidth: 520, position: "relative",
-          background: "#fff", border: "2.5px solid var(--ink)", borderRadius: 999,
-          boxShadow: "4px 4px 0 var(--ink)",
-          display: "flex", alignItems: "center", gap: 8, padding: "4px 8px 4px 20px"
-        }}>
-          <span style={{ fontSize: 18 }}>🔎</span>
-          <input
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            placeholder="search by name, neighborhood, vibe…"
-            style={{
-              border: 0, outline: "none", background: "transparent",
-              flex: 1, padding: "12px 0", fontSize: 16,
-              fontFamily: "'Nunito', sans-serif", fontWeight: 600, color: "var(--ink)"
-            }} />
-          
-          {search &&
-          <button onClick={() => setSearch("")} style={{
-            border: "2px solid var(--ink)", background: "var(--bg)", borderRadius: 999,
-            padding: "4px 10px", cursor: "pointer", fontFamily: "'Space Mono', monospace",
-            fontSize: 11, fontWeight: 700
-          }}>clear ✕</button>
-          }
+    <div className="filter-bar">
+      <div className="filter-tabs" role="group" aria-label="Filter matcha spots">
+        {PRIMARY_FILTERS.map((item) => (
+          <button
+            key={item.id}
+            className={`filter-tab ${filter === item.id ? "active" : ""}`}
+            onClick={() => setFilter(item.id)}>
+            {item.label}
+          </button>
+        ))}
+        <div className="soy-filter">
+          <button
+            className={`filter-tab ${activeSoy ? "active" : ""}`}
+            onClick={() => setSoyOpen((open) => !open)}
+            aria-expanded={soyOpen}
+            aria-haspopup="menu">
+            {activeSoy ? activeSoy.label : "soy options"}
+            <span className="material-symbols-rounded" aria-hidden="true">{soyOpen ? "expand_less" : "expand_more"}</span>
+          </button>
+          {soyOpen &&
+          <div className="soy-menu" role="menu">
+            {SOY_FILTERS.map((item) => (
+              <button key={item.id} role="menuitem" onClick={() => { setFilter(item.id); setSoyOpen(false); }}>
+                {item.label}
+              </button>
+            ))}
+          </div>}
         </div>
+      </div>
 
-        <div className="filter-stats" style={{ display: "flex", gap: 24, fontFamily: "'Bricolage Grotesque', sans-serif", flexWrap: "wrap" }}>
+      <div className="filter-stats" style={{ display: "flex", gap: 24, fontFamily: "'Bricolage Grotesque', sans-serif", flexWrap: "wrap" }}>
           <Stat n={stats.shown} label="shown" pop="var(--pop)" />
           <Stat n={stats.confirmed} label="soy ✓" pop="var(--pop)" />
           <Stat n={stats.top} label="top picks" pop="var(--pop2)" />
           <Stat n={stats.buzzy} label="buzzy" pop="var(--lime)" />
-        </div>
-      </div>
-
-      <div className="filter-pills" style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-        {FILTERS.map((f) => {
-          const active = filter === f.id;
-          return (
-            <button
-              className="filter-pill"
-              key={f.id}
-              onClick={() => setFilter(f.id)}
-              style={{
-                fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 700, fontSize: 15,
-                padding: "10px 18px", borderRadius: 999,
-                border: "2.5px solid var(--ink)",
-                background: active ? "var(--ink)" : "#fff",
-                color: active ? "var(--bg)" : "var(--ink)",
-                boxShadow: active ? "2px 2px 0 var(--pop)" : "3px 3px 0 var(--ink)",
-                cursor: "pointer",
-                transform: active ? "translate(1px, 1px)" : "none",
-                transition: "all 0.12s",
-                display: "inline-flex", alignItems: "center", gap: 8
-              }}>
-              
-              <span>{f.emoji}</span> {f.label}
-            </button>);
-
-        })}
       </div>
     </div>);
 
@@ -308,7 +334,7 @@ function Stat({ n, label, pop }) {
 }
 
 // ===================== MAP =====================
-function MapPanel({ shops, visibleIds, selected, setSelected, hovered, setHovered, C, tweaks }) {
+function MapPanel({ shops, visibleIds, selected, setSelected, hovered, setHovered, C, tweaks, search, setSearch }) {
   const hasGoogleMapsKey = Boolean(getMapsApiKey());
   return (
     <div className="map-panel" style={{
@@ -362,6 +388,20 @@ function MapPanel({ shops, visibleIds, selected, setSelected, hovered, setHovere
         })}
       </div>
       }
+
+      <div className="map-search">
+        <span className="material-symbols-rounded" aria-hidden="true">search</span>
+        <label className="sr-only" htmlFor="map-search-input">Search the map</label>
+        <input
+          id="map-search-input"
+          value={search}
+          onChange={(event) => setSearch(event.target.value)}
+          placeholder="search map" />
+        {search &&
+        <button onClick={() => setSearch("")} aria-label="Clear map search">
+          <span className="material-symbols-rounded" aria-hidden="true">close</span>
+        </button>}
+      </div>
 
       {/* legend */}
       <div className="map-legend" style={{
@@ -948,6 +988,7 @@ function Footer({ C }) {
         fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800,
         fontSize: 28, marginBottom: 8, color: "var(--lime)"
       }}>made with 🍵 in sf</div>
+      <p><a href="/guides/">guides</a> · <a href="/perks/">café perks</a> · <a href="/methodology/">our approach</a> · <a href="/privacy/">privacy</a></p>
       <div style={{ opacity: 0.7 }}>sanfranciscomatcha.com · est. 2026
 
       </div>

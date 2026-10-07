@@ -12,9 +12,10 @@ const run = (script, cwd = root, env = process.env) => execFileSync(process.exec
 function fixture() {
   const dir = mkdtempSync(path.join(os.tmpdir(), "sf-matcha-build-"));
   mkdirSync(path.join(dir, "scripts"));
-  for (const file of ["index.html", "app.jsx", "data.jsx", "map.jsx", "tweaks-panel.jsx", "scripts/build.mjs", "scripts/write-config.mjs"]) {
+  for (const file of ["index.html", "app.jsx", "data.jsx", "map.jsx", "tweaks-panel.jsx", "scripts/build.mjs", "scripts/write-config.mjs", "scripts/build-guides.mjs"]) {
     cpSync(path.join(root, file), path.join(dir, file));
   }
+  for (const directory of ["content", "lib"]) cpSync(path.join(root, directory), path.join(dir, directory), {recursive:true});
   symlinkSync(path.join(root, "node_modules"), path.join(dir, "node_modules"));
   return dir;
 }
@@ -37,6 +38,7 @@ test("source builds preserve venue data and produce reproducible, changing asset
     writeFileSync(path.join(dir, "data.jsx"), readFileSync(path.join(dir, "data.jsx"), "utf8") + '\nwindow.BUILD_TEST = true;\n');
     run("scripts/build.mjs", dir);
     const second = readFileSync(path.join(dir, "index.html"), "utf8");
+    for (const asset of assets) assert.doesNotThrow(() => readFileSync(path.join(dir, asset)));
     assert.notEqual(second.match(/dist\/data\.[a-f0-9]{12}\.js/)[0], first.match(/dist\/data\.[a-f0-9]{12}\.js/)[0]);
     assert.equal(second.match(/dist\/app\.[a-f0-9]{12}\.js/)[0], first.match(/dist\/app\.[a-f0-9]{12}\.js/)[0]);
   } finally { rmSync(dir, { recursive: true, force: true }); }

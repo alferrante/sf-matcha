@@ -1,8 +1,10 @@
 import { build } from "esbuild";
 import { createHash } from "node:crypto";
-import { readFile, writeFile, mkdir, readdir, unlink } from "node:fs/promises";
+import { readFile, writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+
+import { buildGuides } from "./build-guides.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const entries = ["tweaks-panel", "data", "map", "app"];
@@ -27,11 +29,7 @@ for (const name of entries) {
 }
 
 // Content-addressed URLs bypass already-cached stable bundle URLs.
-for (const filename of await readdir(dist)) {
-  if (/^(app|data|map|tweaks-panel)\.[a-f0-9]{12}\.js$/.test(filename)) {
-    await unlink(path.join(dist, filename));
-  }
-}
+// Retain prior content-addressed files so a cached older index can still load.
 let html = await readFile(path.join(root, "index.html"), "utf8");
 for (const name of entries) {
   const contents = await readFile(path.join(dist, `${name}.js`));
@@ -48,3 +46,6 @@ for (const name of entries) {
 }
 await writeFile(path.join(root, "index.html"), html);
 console.log("Built four source bundles and four versioned browser assets.");
+
+const guidesResult = await buildGuides({root});
+console.log(`Built ${guidesResult.guides} guide articles and editorial pages.`);
