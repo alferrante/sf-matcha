@@ -85,6 +85,9 @@ export function validateGuides(guides, shops) {
       if (entryIds.has(entry.shopId)) throw new Error(`Duplicate shopId in ${guide.slug}: ${entry.shopId}`);
       entryIds.add(entry.shopId);
       for (const field of ["drink", "verdict", "details"]) requireText(entry[field], `${guide.slug}.${entry.shopId}.${field}`);
+      for (const field of ["soyNote", "hours"]) {
+        if (entry[field] !== undefined) requireText(entry[field], `${guide.slug}.${entry.shopId}.${field}`);
+      }
       if (!Array.isArray(entry.sources) || !entry.sources.length) throw new Error(`${guide.slug}.${entry.shopId} needs sources`);
       for (const source of entry.sources) {
         requireText(source.label, "Source label");
@@ -107,7 +110,7 @@ function guidePage(guide, shops, origin, newsletterAsset) {
   const entries = guide.entries.map(entry => {
     const shop = shopById.get(entry.shopId);
     const map = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${shop.name}, ${shop.address}, San Francisco, CA`)}`;
-    const rows = [["Milk details", entry.milkNote], ["Soy status", shop.soyNote], ["Price", entry.price], ["Availability", entry.availability], ["Hours", shop.hours]].filter(([, value]) => value);
+    const rows = [["Milk details", entry.milkNote], ["Soy status", entry.soyNote ?? shop.soyNote], ["Price", entry.price], ["Availability", entry.availability], ["Hours", entry.hours ?? shop.hours]].filter(([, value]) => value);
     return `<article class="venue" id="${esc(shop.id)}"><span class="drink">${esc(entry.drink)}</span><h2>${esc(shop.name)}</h2><p class="location">${esc(shop.address)} · ${esc(shop.hood)} · San Francisco</p><p class="verdict">${esc(entry.verdict)}</p>${paragraph(entry.details)}<dl>${rows.map(([label, value]) => `<dt>${esc(label)}</dt><dd>${esc(value)}</dd>`).join("")}</dl><div class="links"><a class="button" href="${esc(map)}" target="_blank" rel="noopener noreferrer">Get directions ↗</a><a href="/">Explore the matcha map</a></div><div class="sources"><strong>Sources</strong><ul>${entry.sources.map(source => `<li><a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.label)} ↗</a></li>`).join("")}</ul></div></article>`;
   }).join("\n");
   const structured = {

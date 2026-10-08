@@ -553,6 +553,8 @@
       },
       {
         "shopId": "matcha-cafe-maiko-japantown",
+        "soyNote": "Current official brand menu does not confirm soy availability at this counter; ask the shop.",
+        "hours": "Call 415-757-0919 for current hours.",
         "drink": "Matcha Latte and Matcha Soft Serve",
         "verdict": "A Japan Center stop for matcha drinks and desserts.",
         "details": "Maiko’s official store page places its Japantown shop at 1581 Webster St, Suite 175. The brand menu lists matcha lattes, matcha soft serve, parfaits and tea floats. Confirm which items this counter is serving before deciding on a specific dessert.",

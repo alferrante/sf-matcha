@@ -12,7 +12,7 @@ Repository baseline for October 8: `4e908193bca7135f5cf8163bd3a5b25ab05cd749` (v
 | Monthly visits | Unknown; Cloudflare beacon exists, export not accessed | 50,000 |
 | Active email subscribers | 0 active real subscribers, audience queried October 8; signup live; owned synthetic tests excluded | 10,000 |
 | Social followers | Unknown; project accounts not verified | 25,000 |
-| Guides | 6 published articles plus 2 built neighborhood articles / 27 sourced entries; deployment verification pending | 24 |
+| Guides | 8 published articles / 27 sourced entries; live verified October 8 | 24 |
 | Derivative assets | 24 complete text drafts; six original carousel drafts now rendered as 6 finished sets / 30 PNG slides; 0 posted. Count sets once, not as 30 independent assets | 120 |
 | Live confirmed offers | 0 offer records in baseline repository | 20 |
 | Redemptions | Unknown; no verified tracking system | 2,000 |
@@ -97,8 +97,8 @@ The initial launch goal is complete for email capture, six factual guides, trans
 - **Guide-page signup:** added real explicit-consent capture to the hub and every article using the verified backend. Standalone versioned ESM avoids loading the map application. Saving state, duplicate-submit protection, retry handling, privacy link and unchecked required consent are covered by behavioral tests. The client and server whitelist homepage/hub/article form contexts; this metadata identifies a form, not independently verified traffic/referrer attribution. Older published versioned bundles remain available.
 - **Distribution production:** six carousel sets / 30 finished 1080-square PNG slides from the original six sourced guides, with sources, check date and guide CTAs. Ready to export, not posted. Kumo dairy caveats remain visible. Original 24 text drafts are retained; the six rendered carousel sets are conversions of those drafts and are not double-counted.
 - **Freshness corrections:** matched directory hours to primary sources for Best Boy Electric, Constance Tea and Kiss of Matcha Clement Sunday closing. All 89 venue IDs, excluded cafés and planned-location rules remain intact. Corrected README’s old instruction to delete published hashed assets.
-- Audience query confirms zero actual active subscribers; the existing owned test is opted out. Sending domain remains `not_started` as of October 8. No newsletter, café outreach, social post, offer activation or award claim was sent/published. DNS verification, analytics export, identified social account access, merchant confirmation and firsthand tasting evidence remain external dependencies.
-- Build and all 56 tests passed, including final gallery and PNG integrity QA; customer-copy audit passed all 89 shops / 267 fields. Publication and public-browser signup verification will be recorded after deployment.
+- Audience query and cleanup confirm zero actual active subscribers; both owned synthetic tests are opted out. Sending domain remains `not_started` as of October 8. No newsletter, café outreach, social post, offer activation or award claim was sent/published. DNS verification, analytics export, identified social account access, merchant confirmation and firsthand tasting evidence remain external dependencies.
+- Build and all 57 tests passed, including final gallery/PNG integrity QA and evidence-override regression coverage; customer-copy audit passed all 89 shops / 267 fields. Release `626556ef095ae8f80f3e73bd204cdca6b70952e8` is on main and both Render deployments report live.
 
 ### Next unblocked queue
 
@@ -106,3 +106,11 @@ The initial launch goal is complete for email capture, six factual guides, trans
 2. Produce the next two sourced guides and their distribution packages; prioritize topics with distinct ordering needs rather than duplicating the map.
 3. Implement the authenticated atomic offer claim/redemption service in a safe inactive state, preserving zero participation claims until merchant confirmation.
 4. Keep venue/address and menu checks current. Posting/broadcasting waits for identified account access and verified sender setup; partner outreach waits for explicit approval.
+
+### October 8 live verification
+
+- Public guide hub shows all eight articles and its initialized signup form. New Japantown and Richmond articles, export gallery, manifest and new browser bundles return HTTP 200 and match committed bytes. Early hub cache propagation showed the previous six-card HTML briefly; canonical `/guides/` now serves the new release. No cache-busting URL is required for users.
+- Actual article form blocked submission without checked consent, then showed saving and genuine success. Provider stored the owned reserved test with source `guide_article`, consent version `2026-10-07`, and server time `2026-10-08T17:58:21.558Z`. Hub submission then updated the same contact to `guides_hub` at `2026-10-08T17:59:30.177Z`, without a duplicate. Dedicated segment membership independently verified. Test globally opted out and named synthetic; zero active real subscribers. No email sent. Screenshot captures actual hub success beside the new guides.
+- New guide refinement: Maiko’s fresh official-page uncertainty now overrides older directory soy/hours claims within that article. Added validated optional evidence overrides and regression coverage; original-guide fallback behavior retained. Publication of this factual refinement is recorded by this commit.
+- Metrics moved: **guides 6 → 8**, **finished visual carousel sets 0 → 6 (30 slides)**. Existing 24 text drafts retained, six carousel drafts now rendered; no double counting. Actual subscribers remain 0, posted assets 0, merchant-confirmed offers 0. Visits/followers/redemptions/votes remain unmeasured.
+- Live delivery: [eight-guide hub](https://sanfranciscomatcha.com/guides/), [Japantown](https://sanfranciscomatcha.com/guides/japantown-matcha-san-francisco/), [Richmond District](https://sanfranciscomatcha.com/guides/richmond-district-matcha-san-francisco/), [six carousel downloads](https://sanfranciscomatcha.com/social/).

@@ -92,6 +92,30 @@ test("offer validation permits a future pilot only with completed merchant confi
   assert.throws(() => validateOffers({ ...emptyOffers, apiKey: "private" }, [shop]), /private offers document field/);
 });
 
+test("fresh guide soy and hours evidence overrides older directory fields and rejects nontext overrides", async () => {
+  const record = guide();
+  record.entries[0].soyNote = "Current menu does not confirm soy; ask the shop.";
+  record.entries[0].hours = "Call for current hours.";
+  const dir = await fixture([record]);
+  try {
+    await buildGuides({ root: dir });
+    const html = await readFile(path.join(dir, "guides/guide-0/index.html"), "utf8");
+    assert.match(html, /Current menu does not confirm soy; ask the shop\./);
+    assert.match(html, /Call for current hours\./);
+    assert.doesNotMatch(html, /Soy is available\./);
+    assert.doesNotMatch(html, /Daily 8am–4pm/);
+    for (const field of ["soyNote", "hours"]) {
+      const badRecord = guide();
+      badRecord.entries[0][field] = { text: "unsafe type" };
+      await writeFile(path.join(dir, "content/guides.json"), JSON.stringify([badRecord]));
+      await assert.rejects(buildGuides({ root: dir }), /must be a nonempty string/);
+      badRecord.entries[0][field] = "   ";
+      await writeFile(path.join(dir, "content/guides.json"), JSON.stringify([badRecord]));
+      await assert.rejects(buildGuides({ root: dir }), /must be a nonempty string/);
+    }
+  } finally { await rm(dir, { recursive: true, force: true }); }
+});
+
 test("unconfirmed offers, unknown cafés and unsafe claims prevent all generated files", async () => {
   const cases = [
     { modify: offer => { offer.shopId = "missing-cafe"; }, error: /Unknown offer shopId/ },
