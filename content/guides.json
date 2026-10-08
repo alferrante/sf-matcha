@@ -530,7 +530,8 @@
             "label": "Café hours at NEW PEOPLE",
             "url": "https://www.newpeopleworld.com/best-boy-electric"
           }
-        ]
+        ],
+        "soyNote": "Specific plant-milk choices are not named on the current public ordering menu; ask about soy."
       },
       {
         "shopId": "yakiniq-cafe",
@@ -618,7 +619,9 @@
             "label": "Official matcha latte menu",
             "url": "https://kissofmatcha.order.tryperdiem.com/menu/matcha-latte"
           }
-        ]
+        ],
+        "soyNote": "The current ordering page offers a choice of milk without naming soy; confirm substitutions and the full topping recipe.",
+        "hours": "Tue–Thu 10am–8pm; Fri–Sat 10am–10pm; Sun 10am–9pm. Monday is not listed; confirm before visiting."
       },
       {
         "shopId": "pixlcat-coffee",
