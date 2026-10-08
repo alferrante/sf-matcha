@@ -103,7 +103,7 @@ const SHOPS = [
     lat: 37.7829348, lng: -122.4674571,
     x: 32.4, y: 40.6,
     price: "$$",
-    hours: "Mon closed; Tue–Thu 10am–8pm; Fri–Sat 10am–10pm; Sun 10am–8pm",
+    hours: "Mon closed; Tue–Thu 10am–8pm; Fri–Sat 10am–10pm; Sun 10am–9pm",
   },
   {
     id: "kiss-of-matcha-broadway",
@@ -358,7 +358,7 @@ const SHOPS = [
     lat: 37.7856787, lng: -122.4305775,
     x: 47.6, y: 39.1,
     price: "$$",
-    hours: "Mon–Fri 9am–4pm; Sat–Sun 10am–5pm",
+    hours: "Mon–Fri 8am–3:30pm; Sat–Sun 9am–5pm",
   },
   {
     id: "junbi-matcha-and-tea",
@@ -919,7 +919,7 @@ const SHOPS = [
     lat: 37.7758347, lng: -122.4965118,
     x: 20.4, y: 44.5,
     price: "$$",
-    hours: "Daily 8am–4pm; closed Tue",
+    hours: "Soft opening: Mon, Wed–Thu 10am–5pm; Fri–Sun 10am–6pm; Tue closed",
   },
   {
     id: "heytea-downtown",

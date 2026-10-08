@@ -11,7 +11,9 @@ test('social launch counts only 24 complete drafts, with four formats per guide'
   assert.equal(launch.assetCount, 24);
   assert.equal(launch.assets.length, 24);
   assert.equal(new Set(launch.assets.map(a => a.id)).size, 24);
-  for (const guide of guides) {
+  for (const slug of new Set(launch.assets.map(a => a.guideSlug))) {
+    const guide = guides.find(g => g.slug === slug);
+    assert.ok(guide, slug);
     const assets = launch.assets.filter(a => a.guideSlug === guide.slug);
     assert.equal(assets.length, 4);
     assert.deepEqual(assets.map(a => a.type).sort(), [...expectedTypes].sort());

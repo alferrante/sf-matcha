@@ -47,5 +47,15 @@ for (const name of entries) {
 await writeFile(path.join(root, "index.html"), html);
 console.log("Built four source bundles and four versioned browser assets.");
 
-const guidesResult = await buildGuides({root});
+// Standalone guide pages share the newsletter client without loading the map app.
+await build({
+  absWorkingDir: root, entryPoints: ["lib/guide-newsletter.mjs"],
+  outfile: "dist/guide-newsletter.js", bundle: true, format: "esm",
+  platform: "browser", target: "es2020", charset: "utf8", logLevel: "warning",
+});
+const newsletterBundle = await readFile(path.join(dist, "guide-newsletter.js"));
+const newsletterHash = createHash("sha256").update(newsletterBundle).digest("hex").slice(0, 12);
+const newsletterFilename = `guide-newsletter.${newsletterHash}.js`;
+await writeFile(path.join(dist, newsletterFilename), newsletterBundle);
+const guidesResult = await buildGuides({ root, newsletterAsset: `/dist/${newsletterFilename}` });
 console.log(`Built ${guidesResult.guides} guide articles and editorial pages.`);

@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>SF Matcha Social Export Gallery</title>
+  <meta name="description" content="Ready-to-export SF Matcha guide carousel assets." />
+  <style>
+    :root { --cream:#FFF8E7; --ink:#1A1A1A; --moss:#2F5233; --lime:#D9FF3F; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:var(--cream); font-family:Arial,Helvetica,sans-serif; }
+    a { color:inherit; }
+    header { padding:52px clamp(20px,5vw,72px) 42px; border-bottom:4px solid var(--ink); background:var(--moss); color:var(--cream); }
+    .brand { display:inline-flex; padding:8px 13px; border:2px solid var(--cream); border-radius:999px; font:700 12px/1 monospace; letter-spacing:.08em; text-transform:uppercase; }
+    h1 { max-width:920px; margin:24px 0 10px; font-size:clamp(48px,8vw,104px); line-height:.91; letter-spacing:-.055em; }
+    .intro { max-width:760px; margin:0; font-size:clamp(18px,2.2vw,25px); line-height:1.45; }
+    .status { display:inline-block; margin-top:24px; padding:10px 16px; border:3px solid var(--ink); border-radius:14px; color:var(--ink); background:var(--lime); box-shadow:4px 4px 0 var(--ink); font:700 14px/1.2 monospace; text-transform:lowercase; }
+    .tools { display:flex; gap:10px; flex-wrap:wrap; margin-top:28px; }
+    .tools a { padding:9px 12px; border:2px solid var(--cream); border-radius:999px; font:700 12px/1 monospace; text-decoration:none; }
+    main { width:min(1540px,100%); margin:0 auto; padding:44px clamp(16px,4vw,60px) 80px; }
+    .summary { display:flex; gap:14px; flex-wrap:wrap; margin-bottom:54px; }
+    .summary span { padding:11px 15px; border:2px solid var(--ink); border-radius:999px; background:#fff; box-shadow:3px 3px 0 var(--ink); font:700 13px/1 monospace; }
+    .carousel-set { margin:0 0 72px; padding:28px; border:4px solid var(--ink); border-radius:28px; background:var(--pale); box-shadow:8px 8px 0 var(--ink); }
+    .set-heading { display:flex; align-items:end; justify-content:space-between; gap:20px; margin-bottom:26px; }
+    .eyebrow { margin:0 0 8px; font:700 12px/1 monospace; letter-spacing:.06em; text-transform:uppercase; }
+    h2 { margin:0; font-size:clamp(34px,4vw,58px); line-height:.95; letter-spacing:-.035em; }
+    .guide-link,.download { display:inline-flex; align-items:center; justify-content:center; border:2px solid var(--ink); background:var(--accent); border-radius:999px; box-shadow:3px 3px 0 var(--ink); padding:11px 15px; font:700 13px/1 monospace; text-decoration:none; }
+    .slide-grid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:18px; align-items:start; }
+    .slide-card { min-width:0; padding:12px; border:3px solid var(--ink); border-radius:18px; background:#fff; box-shadow:4px 4px 0 var(--ink); }
+    .image-link { display:block; overflow:hidden; border:2px solid var(--ink); border-radius:10px; background:var(--cream); }
+    img { display:block; width:100%; height:auto; }
+    .slide-meta { display:flex; justify-content:space-between; gap:8px; margin:10px 2px 0; color:#68685f; font:700 10px/1.2 monospace; text-transform:uppercase; }
+    h3 { min-height:2.4em; margin:8px 2px 12px; font-size:16px; line-height:1.2; }
+    .download { width:100%; background:var(--lime); font-size:11px; }
+    details { margin-top:24px; padding-top:18px; border-top:2px solid var(--ink); }
+    summary { cursor:pointer; font:700 12px/1.2 monospace; text-transform:uppercase; }
+    .source-links { display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; }
+    .source-links a { padding:7px 10px; border:1px solid var(--ink); border-radius:999px; background:#fff; font:12px/1.2 monospace; text-decoration:none; }
+    footer { padding:28px 20px; border-top:4px solid var(--ink); background:var(--ink); color:var(--cream); text-align:center; font:13px/1.5 monospace; }
+    @media (max-width:1100px) { .slide-grid { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+    @media (max-width:700px) { header { padding-top:34px; } main { padding-top:28px; } .carousel-set { padding:18px; border-radius:22px; } .set-heading { align-items:start; flex-direction:column; } .slide-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+    @media (max-width:450px) { .slide-grid { grid-template-columns:1fr; } h3 { min-height:0; } }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="brand">sf matcha · social studio</span>
+    <h1>Guide carousel export gallery.</h1>
+    <p class="intro">Six source-backed carousel sets generated from the current SF Matcha guides. Open any slide at full resolution or download the PNG directly.</p>
+    <span class="status">ready to export; not posted</span>
+    <nav class="tools" aria-label="Asset documentation">
+      <a href="manifest.json">Source manifest</a>
+      <a href="../docs/SOCIAL_ASSETS.md">Asset documentation</a>
+      <a href="../guides/">Published guides</a>
+    </nav>
+  </header>
+  <main>
+    <div class="summary" aria-label="Asset counts">
+      <span>6 carousel sets</span>
+      <span>30 individual slides</span>
+      <span>1080 × 1080 PNG</span>
+      <span>2.23 MB total</span>
+      <span>menus checked Oct 7, 2026</span>
+    </div>
+    
+      <section class="carousel-set" id="banana-matcha-san-francisco" style="--accent:#F2C94C;--pale:#FFF0B8">
+        <div class="set-heading">
+          <div>
+            <p class="eyebrow">Carousel set · 5 slides</p>
+            <h2>Banana Matcha</h2>
+          </div>
+          <a class="guide-link" href="https://sanfranciscomatcha.com/guides/banana-matcha-san-francisco/">Open guide ↗</a>
+        </div>
+        <div class="slide-grid">
+          <article class="slide-card">
+            <a class="image-link" href="banana-matcha-san-francisco/slide-01.png" download>
+              <img src="banana-matcha-san-francisco/slide-01.png" width="1080" height="1080" loading="lazy" alt="Slide 1: SF banana matcha: 3 ways to order it" />
+            </a>
+            <div class="slide-meta">
+              <span>Slide 1 of 5</span>
+              <span>71 KB</span>
+            </div>
+            <h3>SF banana matcha: 3 ways to order it</h3>
+            <a class="download" href="banana-matcha-san-francisco/slide-01.png" download>Download PNG ↓</a>
+          </article>
+          <article class="slide-card">
+            <a class="image-link" href="banana-matcha-san-francisco/slide-02.png" download>
+              <img src="banana-matcha-san-francisco/slide-02.png" width="1080" height="1080" loading="lazy" alt="Slide 2: SŌHN · Dogpatch" />
+            </a>
+            <div class="slide-meta">
+              <span>Slide 2 of 5</span>
+              <span>58 KB</span>
+            </div>
+            <h3>SŌHN · Dogpatch</h3>
+            <a class="download" href="banana-matcha-san-francisco/slide-02.png" download>Download PNG ↓</a>
+          </article>
+          <article class="slide-card">
+            <a class="image-link" href="banana-matcha-san-francisco/slide-03.png" download>
+              <img src="banana-matcha-san-francisco/slide-03.png" width="1080" height="1080" loading="lazy" alt="Slide 3: YakiniQ · Japantown" />
+            </a>
+            <div class="slide-meta">
+              <span>Slide 3 of 5</span>
+              <span>65 KB</span>
+            </div>
+            <h3>YakiniQ · Japantown</h3>
+            <a class="download" href="banana-matcha-san-francisco/slide-03.png" download>Download PNG ↓</a>
+          </article>
+          <article class="slide-card">
+            <a class="image-link" href="banana-matcha-san-francisco/slide-04.png" download>
+              <img src="banana-matcha-san-francisco/slide-04.png" width="1080" height="1080" loading="lazy" alt="Slide 4: Kumo · Sunday pop-up" />
+            </a>
+            <div class="slide-meta">
+              <span>Slide 4 of 5</span>
+              <span>72 KB</span>
+            </div>
+            <h3>Kumo · Sunday pop-up</h3>
+            <a class="download" href="banana-matcha-san-francisco/slide-04.png" download>Download PNG ↓</a>
+          </article>
+          <article class="slide-card">
+            <a class="image-link" href="banana-matcha-san-francisco/slide-05.png" download>
+              <img src="banana-matcha-san-francisco/slide-05.png" width="1080" height="1080" loading="lazy" alt="Slide 5: Soy cloud ≠ dairy-free" />
+            </a>
+            <div class="slide-meta">
+              <span>Slide 5 of 5</span>
+              <span>81 KB</span>
+            </div>
+            <h3>Soy cloud ≠ dairy-free</h3>
+            <a class="download" href="banana-matcha-san-francisco/slide-05.png" download>Download PNG ↓</a>
+          </article>
+        </div>
+        <details>
+          <summary>Official sources used</summary>
+          <div class="source-links"><a href="https://www.sohnsf.com/s/Letter_0120_1-1.pdf" target="_blank" rel="noreferrer">sohnsf.com</a> <a href="https://www.sohnsf.com/" target="_blank" rel="noreferrer">sohnsf.com</a> <a href="https://toast.app/r/yakiniq-cafe-1640-post-street-fl-1/order" target="_blank" rel="noreferrer">toast.app</a> <a href="https://www.kumomatchaca.com/our-menu" target="_blank" rel="noreferrer">kumomatchaca.com</a> <a href="https://www.kumomatchaca.com/" target="_blank" rel="noreferrer">kumomatchaca.com</a></div>
+        </details>
+      </section>
+      <section class="carousel-set" id="matcha-cold-foam-san-francisco" style="--accent:#A8DDF5;--pale:#E5F6FD">
+        <div class="set-heading">
+          <div>
+            <p class="eyebrow">Carousel set · 5 slides</p>
+            <h2>Cold Foam + Clouds</h2>
+          </div>
+          <a class="guide-link" href="https://sanfranciscomatcha.com/guides/matcha-cold-foam-san-francisco/">Open guide ↗</a>
+        </div>
+        <div class="slide-grid">
+          <article class="slide-card">
+            <a class="image-link" href="matcha-cold-foam-san-francisco/slide-01.png" download>
+              <img src="matcha-cold-foam-san-francisco/slide-01.png" width="1080" height="1080" loading="lazy" alt="Slide 1: Matcha clouds: choose your topping" />
+            </a>
+            <div class="slide-meta">
+              <span>Slide 1 of 5</span>
+              <span>69 KB</span>
+            </div>
+            <h3>Matcha clouds: choose your topping</h3>
+            <a class="download" href="matcha-cold-foam-san-francisco/slide-01.png" download>Download PNG ↓</a>
+          </article>
+          <article class="slide-card">
+            <a class="image-link" href="matcha-cold-foam-san-francisco/slide-02.png" download>
+              <img src="matcha-cold-foam-san-francisco/slide-02.png" width="1080" height="1080" loading="lazy" alt="Slide 2: Q · 3490 California St" />
+            </a>
+            <div class="slide-meta">
+              <span>Slide 2 of 5</span>
+              <span>70 KB</span>
+            </div>
+            <h3>Q · 3490 California St</h3>
+            <a class="download" href="matcha-cold-foam-san-francisco/slide-02.png" download>Download PNG ↓</a>
+          </article>
+          <article class="slide-card">
+            <a class="image-link" href="matcha-cold-foam-san-francisco/slide-03.png" download>
+              <img src="matcha-cold-foam-san-francisco/slide-03.png" width="1080" height="1080" loading="lazy" alt="Slide 3: Tadaima · Mission" />
+            </a>
+            <div class="slide-meta">
+              <span>Slide 3 of 5</span>
+              <span>74 KB</span>
+            </div>
+            <h3>Tadaima · Mission</h3>
+            <a class="download" href="matcha-cold-foam-san-francisco/slide-03.png" download>Download PNG ↓</a>
+          </article>
+          <article class="slide-card">
+            <a class="image-link" href="matcha-cold-foam-san-francisco/slide-04.png" download>
+              <img src="matcha-cold-foam-san-francisco/slide-04.png" width="1080" height="1080" loading="lazy" alt="Slide 4: SŌHN or Kumo?" />
+            </a>
+            <div class="slide-meta">
+              <span>Slide 4 of 5</span>
+              <span>74 KB</span>
+            </div>
+            <h3>SŌHN or Kumo?</h3>
+            <a class="download" href="matcha-cold-foam-san-francisco/slide-04.png" download>Download PNG ↓</a>
+          </article>
+          <article class="slide-card">
+            <a class="image-link" href="matcha-cold-foam-san-francisco/slide-05.png" download>
+              <img src="matcha-cold-foam-san-francisco/slide-05.png" width="1080" height="1080" loading="lazy" alt="Slide 5: Check the foam, not just the milk" />
+            </a>
+            <div class="slide-meta">
+              <span>Slide 5 of 5</span>
+              <span>94 KB</span>
+            </div>
+            <h3>Check the foam, not just the milk</h3>
+            <a class="download" href="matcha-cold-foam-san-francisco/slide-05.png" download>Download PNG ↓</a>
+          </article>
+        </div>
+        <details>
+          <summary>Official sources used</summary>
+          <div class="source-links"><a href="https://www.qspecialtycoffee.com/menu" target="_blank" rel="noreferrer">qspecialtycoffee.com</a> <a href="https://tadaimasf.com/san-francisco-suite-b-tadaima-sf-drink-menu" target="_blank" rel="noreferrer">tadaimasf.com</a> <a href="https://www.sohnsf.com/s/Letter_0120_1-1.pdf" target="_blank" rel="noreferrer">sohnsf.com</a> <a href="https://www.sohnsf.com/" target="_blank" rel="noreferrer">sohnsf.com</a> <a href="https://www.kumomatchaca.com/our-menu" target="_blank" rel="noreferrer">kumomatchaca.com</a> <a href="https://www.kumomatchaca.com/" target="_blank" rel="noreferrer">kumomatchaca.com</a></div>
+        </details>
+      </section>
+      <section class="carousel-set" id="soy-milk-matcha-san-francisco" style="--accent:#8FBF3F;--pale:#E7F2D4">
+        <div class="set-heading">
+          <div>
+            <p class="eyebrow">Carousel set · 5 slides</p>
+            <h2>Soy Milk Matcha</h2>
+          </div>
+          <a class="guide-link" href="https://sanfranciscomatcha.com/guides/soy-milk-matcha-san-francisco/">Open guide ↗</a>
+        </div>
+        <div class="slide-grid">
+          <article class="slide-card">
+            <a class="image-link" href="soy-milk-matcha-san-francisco/slide-01.png" download>
+              <img src="soy-milk-matcha-san-francisco/slide-01.png" width="1080" height="1080" loading="lazy" alt="Slide 1: Looking for soy matcha in SF?" />
+            </a>
+            <div class="slide-meta">
+              <span>Slide 1 of 5</span>
+              <span>81 KB</span>
+            </div>
+            <h3>Looking for soy matcha in SF?</h3>
+            <a class="download" href="soy-milk-matcha-san-francisco/slide-01.png" download>Download PNG ↓</a>
+          </article>
+          <article class="slide-card">
+            <a class="image-link" href="soy-milk-matcha-san-francisco/slide-02.png" download>
+              <img src="soy-milk-matcha-san-francisco/slide-02.png" width="1080" height="1080" loading="lazy" alt="Slide 2: Il Parco · Presidio" />
+            </a>
+            <div class="slide-meta">
+              <span>Slide 2 of 5</span>
+              <span>83 KB</span>
+            </div>
+            <h3>Il Parco · Presidio</h3>
+            <a class="download" href="soy-milk-matcha-san-francisco/slide-02.png" download>Download PNG ↓</a>
+          </article>
+          <article class="slide-card">
+            <a class="image-link" href="soy-milk-matcha-san-francisco/slide-03.png" download>
+              <img src="soy-milk-matcha-san-francisco/slide-03.png" width="1080" height="1080" loading="lazy" alt="Slide 3: Lulu Fresh · Waterfront" />
+            </a>
+            <div class="slide-meta">
+              <span>Slide 3 of 5</span>
+              <span>86 KB</span>
+            </div>
+            <h3>Lulu Fresh · Waterfront</h3>
+            <a class="download" href="soy-milk-matcha-san-francisco/slide-03.png" download>Download PNG ↓</a>
+          </article>
+          <article class="slide-card">
+            <a class="image-link" href="soy-milk-matcha-san-francisco/slide-04.png" download>
+              <img src="soy-milk-matcha-san-francisco/slide-04.png" width="1080" height="1080" loading="lazy" alt="Slide 4: YakiniQ · Japantown" />
+            </a>
+            <div class="slide-meta">
+              <span>Slide 4 of 5</span>
+              <span>87 KB</span>
+            </div>
+            <h3>YakiniQ · Japantown</h3>
+            <a class="download" href="soy-milk-matcha-san-francisco/slide-04.png" download>Download PNG ↓</a>
+          </article>
+          <article class="slide-card">
+            <a class="image-link" href="soy-milk-matcha-san-francisco/slide-05.png" download>
+              <img src="soy-milk-matcha-san-francisco/slide-05.png" width="1080" height="1080" loading="lazy" alt="Slide 5: Milk swap is step one" />
+            </a>
+            <div class="slide-meta">
+              <span>Slide 5 of 5</span>
+              <span>93 KB</span>
+            </div>
+            <h3>Milk swap is step one</h3>
+            <a class="download" href="soy-milk-matcha-san-francisco/slide-05.png" download>Download PNG ↓</a>
+          </article>
+        </div>
+        <details>
+          <summary>Official sources used</summary>
+          <div class="source-links"><a href="https://ilparcosf.com/menu/cafe" target="_blank" rel="noreferrer">ilparcosf.com</a> <a href="https://www.lulufresh.co/products/matcha-latte" target="_blank" rel="noreferrer">lulufresh.co</a> <a href="https://toast.app/r/yakiniq-cafe-1640-post-street-fl-1/order/item-matcha-latte_32d7f96b-093a-4e9e-aafa-c78e5fcc1b90" target="_blank" rel="noreferrer">toast.app</a></div>
+        </details>
+      </section>
+      <section class="carousel-set" id="strawberry-matcha-san-francisco" style="--accent:#EE6C6C;--pale:#FFE1DE">
+        <div class="set-heading">
+          <div>
+            <p class="eyebrow">Carousel set · 5 slides</p>
+            <h2>Strawberry Matcha</h2>
+          </div>
+          <a class="guide-link" href="https://sanfranciscomatcha.com/guides/strawberry-matcha-san-francisco/">Open guide ↗</a>
+        </div>
+        <div class="slide-grid">
+          <article class="slide-card">
+            <a class="image-link" href="strawberry-matcha-san-francisco/slide-01.png" download>
+              <img src="strawberry-matcha-san-francisco/slide-01.png" width="1080" height="1080" loading="lazy" alt="Slide 1: Strawberry matcha: latte or topping?" />
+            </a>
+            <div class="slide-meta">
+              <span>Slide 1 of 5</span>
+              <span>80 KB</span>
+            </div>
+            <h3>Strawberry matcha: latte or topping?</h3>
+            <a class="download" href="strawberry-matcha-san-francisco/slide-01.png" download>Download PNG ↓</a>
+          </article>
+          <article class="slide-card">
+            <a class="image-link" href="strawberry-matcha-san-francisco/slide-02.png" download>
+              <img src="strawberry-matcha-san-francisco/slide-02.png" width="1080" height="1080" loading="lazy" alt="Slide 2: Stonemill · Valencia" />
+            </a>
+            <div class="slide-meta">
+              <span>Slide 2 of 5</span>
+              <span>69 KB</span>
+            </div>
+            <h3>Stonemill · Valencia</h3>
+            <a class="download" href="strawberry-matcha-san-francisco/slide-02.png" download>Download PNG ↓</a>
+          </article>
+          <article class="slide-card">
+            <a class="image-link" href="strawberry-matcha-san-francisco/slide-03.png" download>
+              <img src="strawberry-matcha-san-francisco/slide-03.png" width="1080" height="1080" loading="lazy" alt="Slide 3: Four Chairs · Mission St" />
+            </a>
+            <div class="slide-meta">
+              <span>Slide 3 of 5</span>
+              <span>67 KB</span>
+            </div>
+            <h3>Four Chairs · Mission St</h3>
+            <a class="download" href="strawberry-matcha-san-francisco/slide-03.png" download>Download PNG ↓</a>
+          </article>
+          <article class="slide-card">
+            <a class="image-link" href="strawberry-matcha-san-francisco/slide-04.png" download>
+              <img src="strawberry-matcha-san-francisco/slide-04.png" width="1080" height="1080" loading="lazy" alt="Slide 4: Cloud or cream?" />
+            </a>
+            <div class="slide-meta">
+              <span>Slide 4 of 5</span>
+              <span>78 KB</span>
+            </div>
+            <h3>Cloud or cream?</h3>
+            <a class="download" href="strawberry-matcha-san-francisco/slide-04.png" download>Download PNG ↓</a>
+          </article>
+          <article class="slide-card">
+            <a class="image-link" href="strawberry-matcha-san-francisco/slide-05.png" download>
+              <img src="strawberry-matcha-san-francisco/slide-05.png" width="1080" height="1080" loading="lazy" alt="Slide 5: Ask before swapping milk" />
+            </a>
+            <div class="slide-meta">
+              <span>Slide 5 of 5</span>
+              <span>89 KB</span>
+            </div>
+            <h3>Ask before swapping milk</h3>
+            <a class="download" href="strawberry-matcha-san-francisco/slide-05.png" download>Download PNG ↓</a>
+          </article>
+        </div>
+        <details>
+          <summary>Official sources used</summary>
+          <div class="source-links"><a href="https://www.stonemillmatcha-us.com/menu" target="_blank" rel="noreferrer">stonemillmatcha-us.com</a> <a href="https://www.stonemillmatcha-us.com/" target="_blank" rel="noreferrer">stonemillmatcha-us.com</a> <a href="https://www.fourchairssf.com/_files/ugd/84dca7_1ddb14cf73d649339a46b81e3c2a91db.pdf" target="_blank" rel="noreferrer">fourchairssf.com</a> <a href="https://www.fourchairssf.com/" target="_blank" rel="noreferrer">fourchairssf.com</a> <a href="https://www.qspecialtycoffee.com/menu" target="_blank" rel="noreferrer">qspecialtycoffee.com</a> <a href="https://tadaimasf.com/san-francisco-suite-b-tadaima-sf-drink-menu" target="_blank" rel="noreferrer">tadaimasf.com</a></div>
+        </details>
+      </section>
+      <section class="carousel-set" id="ceremonial-hand-whisked-matcha-san-francisco" style="--accent:#AACB73;--pale:#E4EED4">
+        <div class="set-heading">
+          <div>
+            <p class="eyebrow">Carousel set · 5 slides</p>
+            <h2>Tea-First Matcha</h2>
+          </div>
+          <a class="guide-link" href="https://sanfranciscomatcha.com/guides/ceremonial-hand-whisked-matcha-san-francisco/">Open guide ↗</a>
+        </div>
+        <div class="slide-grid">
+          <article class="slide-card">
+            <a class="image-link" href="ceremonial-hand-whisked-matcha-san-francisco/slide-01.png" download>
+              <img src="ceremonial-hand-whisked-matcha-san-francisco/slide-01.png" width="1080" height="1080" loading="lazy" alt="Slide 1: Want the tea to be the focus?" />
+            </a>
+            <div class="slide-meta">
+              <span>Slide 1 of 5</span>
+              <span>67 KB</span>
+            </div>
+            <h3>Want the tea to be the focus?</h3>
+            <a class="download" href="ceremonial-hand-whisked-matcha-san-francisco/slide-01.png" download>Download PNG ↓</a>
+          </article>
+          <article class="slide-card">
+            <a class="image-link" href="ceremonial-hand-whisked-matcha-san-francisco/slide-02.png" download>
+              <img src="ceremonial-hand-whisked-matcha-san-francisco/slide-02.png" width="1080" height="1080" loading="lazy" alt="Slide 2: Stonemill · 561 Valencia St" />
+            </a>
+            <div class="slide-meta">
+              <span>Slide 2 of 5</span>
+              <span>69 KB</span>
+            </div>
+            <h3>Stonemill · 561 Valencia St</h3>
+            <a class="download" href="ceremonial-hand-whisked-matcha-san-francisco/slide-02.png" download>Download PNG ↓</a>
+          </article>
+          <article class="slide-card">
+            <a class="image-link" href="ceremonial-hand-whisked-matcha-san-francisco/slide-03.png" download>
+              <img src="ceremonial-hand-whisked-matcha-san-francisco/slide-03.png" width="1080" height="1080" loading="lazy" alt="Slide 3: Nagomi · 74 New Montgomery St" />
+            </a>
+            <div class="slide-meta">
+              <span>Slide 3 of 5</span>
+              <span>79 KB</span>
+            </div>
+            <h3>Nagomi · 74 New Montgomery St</h3>
+            <a class="download" href="ceremonial-hand-whisked-matcha-san-francisco/slide-03.png" download>Download PNG ↓</a>
+          </article>
+          <article class="slide-card">
+            <a class="image-link" href="ceremonial-hand-whisked-matcha-san-francisco/slide-04.png" download>
+              <img src="ceremonial-hand-whisked-matcha-san-francisco/slide-04.png" width="1080" height="1080" loading="lazy" alt="Slide 4: Pixlcat · 519 Clement St" />
+            </a>
+            <div class="slide-meta">
+              <span>Slide 4 of 5</span>
+              <span>74 KB</span>
+            </div>
+            <h3>Pixlcat · 519 Clement St</h3>
+            <a class="download" href="ceremonial-hand-whisked-matcha-san-francisco/slide-04.png" download>Download PNG ↓</a>
+          </article>
+          <article class="slide-card">
+            <a class="image-link" href="ceremonial-hand-whisked-matcha-san-francisco/slide-05.png" download>
+              <img src="ceremonial-hand-whisked-matcha-san-francisco/slide-05.png" width="1080" height="1080" loading="lazy" alt="Slide 5: Sourcing is a starting point" />
+            </a>
+            <div class="slide-meta">
+              <span>Slide 5 of 5</span>
+              <span>88 KB</span>
+            </div>
+            <h3>Sourcing is a starting point</h3>
+            <a class="download" href="ceremonial-hand-whisked-matcha-san-francisco/slide-05.png" download>Download PNG ↓</a>
+          </article>
+        </div>
+        <details>
+          <summary>Official sources used</summary>
+          <div class="source-links"><a href="https://www.stonemillmatcha-us.com/menu" target="_blank" rel="noreferrer">stonemillmatcha-us.com</a> <a href="https://www.stonemillmatcha-us.com/" target="_blank" rel="noreferrer">stonemillmatcha-us.com</a> <a href="https://cafenagomi.com/" target="_blank" rel="noreferrer">cafenagomi.com</a> <a href="https://www.pixlcatcoffee.com/order-now" target="_blank" rel="noreferrer">pixlcatcoffee.com</a></div>
+        </details>
+      </section>
+      <section class="carousel-set" id="matcha-under-seven-dollars-san-francisco" style="--accent:#D9FF3F;--pale:#F0FFB7">
+        <div class="set-heading">
+          <div>
+            <p class="eyebrow">Carousel set · 5 slides</p>
+            <h2>Matcha Under $7</h2>
+          </div>
+          <a class="guide-link" href="https://sanfranciscomatcha.com/guides/matcha-under-seven-dollars-san-francisco/">Open guide ↗</a>
+        </div>
+        <div class="slide-grid">
+          <article class="slide-card">
+            <a class="image-link" href="matcha-under-seven-dollars-san-francisco/slide-01.png" download>
+              <img src="matcha-under-seven-dollars-san-francisco/slide-01.png" width="1080" height="1080" loading="lazy" alt="Slide 1: SF matcha under $7" />
+            </a>
+            <div class="slide-meta">
+              <span>Slide 1 of 5</span>
+              <span>64 KB</span>
+            </div>
+            <h3>SF matcha under $7</h3>
+            <a class="download" href="matcha-under-seven-dollars-san-francisco/slide-01.png" download>Download PNG ↓</a>
+          </article>
+          <article class="slide-card">
+            <a class="image-link" href="matcha-under-seven-dollars-san-francisco/slide-02.png" download>
+              <img src="matcha-under-seven-dollars-san-francisco/slide-02.png" width="1080" height="1080" loading="lazy" alt="Slide 2: Paper Son · Downtown" />
+            </a>
+            <div class="slide-meta">
+              <span>Slide 2 of 5</span>
+              <span>70 KB</span>
+            </div>
+            <h3>Paper Son · Downtown</h3>
+            <a class="download" href="matcha-under-seven-dollars-san-francisco/slide-02.png" download>Download PNG ↓</a>
+          </article>
+          <article class="slide-card">
+            <a class="image-link" href="matcha-under-seven-dollars-san-francisco/slide-03.png" download>
+              <img src="matcha-under-seven-dollars-san-francisco/slide-03.png" width="1080" height="1080" loading="lazy" alt="Slide 3: Il Parco · Presidio" />
+            </a>
+            <div class="slide-meta">
+              <span>Slide 3 of 5</span>
+              <span>70 KB</span>
+            </div>
+            <h3>Il Parco · Presidio</h3>
+            <a class="download" href="matcha-under-seven-dollars-san-francisco/slide-03.png" download>Download PNG ↓</a>
+          </article>
+          <article class="slide-card">
+            <a class="image-link" href="matcha-under-seven-dollars-san-francisco/slide-04.png" download>
+              <img src="matcha-under-seven-dollars-san-francisco/slide-04.png" width="1080" height="1080" loading="lazy" alt="Slide 4: Tadaima or SŌHN?" />
+            </a>
+            <div class="slide-meta">
+              <span>Slide 4 of 5</span>
+              <span>77 KB</span>
+            </div>
+            <h3>Tadaima or SŌHN?</h3>
+            <a class="download" href="matcha-under-seven-dollars-san-francisco/slide-04.png" download>Download PNG ↓</a>
+          </article>
+          <article class="slide-card">
+            <a class="image-link" href="matcha-under-seven-dollars-san-francisco/slide-05.png" download>
+              <img src="matcha-under-seven-dollars-san-francisco/slide-05.png" width="1080" height="1080" loading="lazy" alt="Slide 5: Watch the modifiers" />
+            </a>
+            <div class="slide-meta">
+              <span>Slide 5 of 5</span>
+              <span>84 KB</span>
+            </div>
+            <h3>Watch the modifiers</h3>
+            <a class="download" href="matcha-under-seven-dollars-san-francisco/slide-05.png" download>Download PNG ↓</a>
+          </article>
+        </div>
+        <details>
+          <summary>Official sources used</summary>
+          <div class="source-links"><a href="https://papersoncoffee.com/menu" target="_blank" rel="noreferrer">papersoncoffee.com</a> <a href="https://papersoncoffee.com/locations" target="_blank" rel="noreferrer">papersoncoffee.com</a> <a href="https://ilparcosf.com/menu/cafe" target="_blank" rel="noreferrer">ilparcosf.com</a> <a href="https://tadaimasf.com/san-francisco-suite-b-tadaima-sf-drink-menu" target="_blank" rel="noreferrer">tadaimasf.com</a> <a href="https://www.sohnsf.com/s/Letter_0120_1-1.pdf" target="_blank" rel="noreferrer">sohnsf.com</a> <a href="https://www.sohnsf.com/" target="_blank" rel="noreferrer">sohnsf.com</a></div>
+        </details>
+      </section>
+  </main>
+  <footer>SF Matcha menu evidence · Recheck linked café sources before posting · No publishing or reach claims</footer>
+</body>
+</html>

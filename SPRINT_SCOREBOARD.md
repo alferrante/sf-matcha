@@ -1,19 +1,19 @@
 # SF Matcha sprint scoreboard
 
-Last updated: October 7, 2026. Goal: `GOAL.md`.
+Last updated: October 8, 2026. Goal: `GOAL.md`.
 
 ## Verified baseline
 
-Repository baseline: `7d8fb15f21dfec29d65ad063d32b7bffd6ae8fa2` (current main when this run began).
+Repository baseline for October 8: `4e908193bca7135f5cf8163bd3a5b25ab05cd749` (verified current main before work; October 7 history is retained below).
 
 | Metric | Current verified state | Target |
 | --- | --- | ---: |
 | Directory venues | 89 source/built venues; audit passes 267 fields | Accuracy and freshness |
 | Monthly visits | Unknown; Cloudflare beacon exists, export not accessed | 50,000 |
-| Active email subscribers | 0 active real subscribers, verified October 7; signup live; one opted-out synthetic test excluded | 10,000 |
+| Active email subscribers | 0 active real subscribers, audience queried October 8; signup live; owned synthetic tests excluded | 10,000 |
 | Social followers | Unknown; project accounts not verified | 25,000 |
-| Guides | 6 published articles / 21 sourced entries, live verified October 7 | 24 |
-| Derivative assets | 24 complete text drafts (6 carousel scripts, 6 captions, 6 short posts, 6 video scripts); 0 published posts or rendered visual assets | 120 |
+| Guides | 6 published articles plus 2 built neighborhood articles / 27 sourced entries; deployment verification pending | 24 |
+| Derivative assets | 24 complete text drafts; six original carousel drafts now rendered as 6 finished sets / 30 PNG slides; 0 posted. Count sets once, not as 30 independent assets | 120 |
 | Live confirmed offers | 0 offer records in baseline repository | 20 |
 | Redemptions | Unknown; no verified tracking system | 2,000 |
 | Awards votes | Unknown; no verified voting system | 1,000 |
@@ -89,3 +89,20 @@ The growth lead owns writes to this scoreboard and source publication. Other wor
 - **Delivery dependency remains separate:** branded sender `updates.sanfranciscomatcha.com` is prepared, but DNS records in `docs/EMAIL_DNS_SETUP.md` must be configured and verified before subscriber emails are sent. Capture works now; no delivery or confirmed-inbox claim is made.
 
 The initial launch goal is complete for email capture, six factual guides, transparent methodology and merchant preparation. Continue the 90-day growth sprint; the audience, distribution, merchant and awards targets remain outstanding.
+
+## October 8 growth delivery
+
+- Started an isolated checkout from verified current main `4e908193bca7135f5cf8163bd3a5b25ab05cd749`; preserved all dirty/stale worktrees. Inspected live homepage, guide hub, methodology, perks, newsletter health and the latest repository editorial/partner/badge outputs. Existing public pages returned HTTP 200.
+- **Two more evidence-backed guides:** Japantown (Best Boy, YakiniQ, Maiko) and Richmond District (Kiss Clement, Pixlcat, Constance), each with three existing venues. Eight guides / 27 entries total; no new venue, tasting ranking, invented price or milk option. Primary-source limitations and October 8 checks are recorded in `docs/EDITORIAL_OCT8.md`.
+- **Guide-page signup:** added real explicit-consent capture to the hub and every article using the verified backend. Standalone versioned ESM avoids loading the map application. Saving state, duplicate-submit protection, retry handling, privacy link and unchecked required consent are covered by behavioral tests. The client and server whitelist homepage/hub/article form contexts; this metadata identifies a form, not independently verified traffic/referrer attribution. Older published versioned bundles remain available.
+- **Distribution production:** six carousel sets / 30 finished 1080-square PNG slides from the original six sourced guides, with sources, check date and guide CTAs. Ready to export, not posted. Kumo dairy caveats remain visible. Original 24 text drafts are retained; the six rendered carousel sets are conversions of those drafts and are not double-counted.
+- **Freshness corrections:** matched directory hours to primary sources for Best Boy Electric, Constance Tea and Kiss of Matcha Clement Sunday closing. All 89 venue IDs, excluded cafés and planned-location rules remain intact. Corrected README’s old instruction to delete published hashed assets.
+- Audience query confirms zero actual active subscribers; the existing owned test is opted out. Sending domain remains `not_started` as of October 8. No newsletter, café outreach, social post, offer activation or award claim was sent/published. DNS verification, analytics export, identified social account access, merchant confirmation and firsthand tasting evidence remain external dependencies.
+- Build and all 56 tests passed, including final gallery and PNG integrity QA; customer-copy audit passed all 89 shops / 267 fields. Publication and public-browser signup verification will be recorded after deployment.
+
+### Next unblocked queue
+
+1. Add dated reason/source/review-expiry metadata for legacy Buzzy labels and remove unsupported active labels.
+2. Produce the next two sourced guides and their distribution packages; prioritize topics with distinct ordering needs rather than duplicating the map.
+3. Implement the authenticated atomic offer claim/redemption service in a safe inactive state, preserving zero participation claims until merchant confirmation.
+4. Keep venue/address and menu checks current. Posting/broadcasting waits for identified account access and verified sender setup; partner outreach waits for explicit approval.

@@ -99,7 +99,7 @@ function App() {
       <Marquee speed={tweaks.marqueeSpeed} />
       <Header C={C} />
       <NewsletterSignup />
-      <div className="guide-discovery"><a href="/guides/"><strong>{guides.length} guides for your next cup →</strong><span>banana · cold foam · soy milk · strawberry · ceremonial · under $7</span></a></div>
+      <div className="guide-discovery"><a href="/guides/"><strong>{guides.length} guides for your next cup →</strong><span>banana · cold foam · milk options · neighborhood guides</span></a></div>
       <FilterBar filter={filter} setFilter={setFilter} stats={stats} C={C} />
 
       <div className="main-grid" style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 24, padding: "0 32px 48px", maxWidth: 1600, margin: "0 auto" }}>

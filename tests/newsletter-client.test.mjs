@@ -26,3 +26,11 @@ test('newsletter sends explicit consent and only acknowledges a real success',as
   assert.equal(body.consentVersion,'2026-10-07');
   assert.match(message,/received/);
 });
+
+test('signup attribution accepts only known form contexts', async () => {
+  for (const source of ['homepage', 'guides_hub', 'guide_article', 'https://untrusted.example', null]) {
+    let body;
+    await subscribe({ endpoint: 'https://example.com/api', email: 'reader@example.com', consent: true, source, fetchImpl: async (_, options) => { body = JSON.parse(options.body); return Response.json({success:true}); } });
+    assert.equal(body.source, ['homepage', 'guides_hub', 'guide_article'].includes(source) ? source : 'homepage');
+  }
+});

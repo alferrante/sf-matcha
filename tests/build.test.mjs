@@ -33,6 +33,9 @@ test("source builds preserve venue data and produce reproducible, changing asset
     const assets = [...first.matchAll(/src="(dist\/[a-z-]+\.[a-f0-9]{12}\.js)"/g)].map(m => m[1]);
     assert.equal(assets.length, 4);
     for (const asset of assets) new vm.Script(readFileSync(path.join(dir, asset), "utf8"));
+    const firstGuides = readFileSync(path.join(dir, "guides/index.html"), "utf8");
+    const firstNewsletter = firstGuides.match(/src="(\/dist\/guide-newsletter\.[a-f0-9]{12}\.js)"/)[1];
+    assert.match(readFileSync(path.join(dir, firstNewsletter.slice(1)), "utf8"), /initializeGuideNewsletter/);
     run("scripts/build.mjs", dir);
     assert.equal(readFileSync(path.join(dir, "index.html"), "utf8"), first);
     writeFileSync(path.join(dir, "data.jsx"), readFileSync(path.join(dir, "data.jsx"), "utf8") + '\nwindow.BUILD_TEST = true;\n');
@@ -41,6 +44,12 @@ test("source builds preserve venue data and produce reproducible, changing asset
     for (const asset of assets) assert.doesNotThrow(() => readFileSync(path.join(dir, asset)));
     assert.notEqual(second.match(/dist\/data\.[a-f0-9]{12}\.js/)[0], first.match(/dist\/data\.[a-f0-9]{12}\.js/)[0]);
     assert.equal(second.match(/dist\/app\.[a-f0-9]{12}\.js/)[0], first.match(/dist\/app\.[a-f0-9]{12}\.js/)[0]);
+    writeFileSync(path.join(dir, "lib/guide-newsletter.mjs"), readFileSync(path.join(dir, "lib/guide-newsletter.mjs"), "utf8") + '\nexport const guideBuildTest = true;\n');
+    run("scripts/build.mjs", dir);
+    const nextNewsletter = readFileSync(path.join(dir, "guides/index.html"), "utf8").match(/src="(\/dist\/guide-newsletter\.[a-f0-9]{12}\.js)"/)[1];
+    assert.notEqual(nextNewsletter, firstNewsletter);
+    assert.doesNotThrow(() => readFileSync(path.join(dir, firstNewsletter.slice(1))));
+    assert.doesNotThrow(() => readFileSync(path.join(dir, nextNewsletter.slice(1))));
   } finally { rmSync(dir, { recursive: true, force: true }); }
 });
 

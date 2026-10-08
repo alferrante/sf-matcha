@@ -503,5 +503,173 @@
         "answer": "No offer is implied by inclusion. A café discount is valid only when an active offer explicitly lists its participating café and terms."
       }
     ]
+  },
+  {
+    "slug": "japantown-matcha-san-francisco",
+    "title": "Where to Get Matcha in San Francisco Japantown",
+    "description": "Three Japantown matcha stops for hand-whisked tea, fruit lattes and soft serve, with addresses, menu prices and milk caveats.",
+    "emoji": "🏮",
+    "updatedAt": "2026-10-08",
+    "intro": "Japantown gives you several ways to order matcha within a small area. Best Boy Electric lists unsweetened hand-whisked lattes and usucha on Post Street. YakiniQ adds banana, strawberry, red bean and yuzu to its matcha menu. Maiko’s Japan Center shop is a stop for a latte or matcha dessert. Use the menu styles below to plan your visit; these cafés are listed without a tasting ranking.",
+    "methodology": "We checked official café menus, ordering pages and location pages on October 8, 2026. NEW PEOPLE, Best Boy Electric’s host, supplies its posted café hours. Maiko’s brand menu varies by location, so confirm the local selection and hours before going. Prices are published menu prices before tax and extras; menu listings do not guarantee stock.",
+    "entries": [
+      {
+        "shopId": "best-boy-electric",
+        "drink": "Usucha or Matcha Latte",
+        "verdict": "For traditional hand-whisked tea or an unsweetened latte.",
+        "details": "At 1746 Post St, inside NEW PEOPLE, the menu lists single-origin usucha with a small snack and a steamed-milk matcha latte made unsweetened by default. There is also a hand-whisked matcha americano with hot or iced water.",
+        "milkNote": "The latte uses steamed milk; specific plant-milk choices are not shown on the current public menu. The americano is described as matcha and water. Check the accompanying snack’s ingredients if ordering usucha.",
+        "price": "Usucha $6; Matcha Latte $6.50; Matcha Americano $6",
+        "availability": "NEW PEOPLE posts Mon–Fri 8am–3:30pm and Sat–Sun 9am–5pm. The ordering menu marked drinks unavailable when checked; confirm in-person availability.",
+        "sources": [
+          {
+            "label": "Official drinks menu",
+            "url": "https://best-boy-electric.square.site/"
+          },
+          {
+            "label": "Café hours at NEW PEOPLE",
+            "url": "https://www.newpeopleworld.com/best-boy-electric"
+          }
+        ]
+      },
+      {
+        "shopId": "yakiniq-cafe",
+        "drink": "Matcha Latte or Iced Banana Matcha Latte",
+        "verdict": "For a classic latte with milk options or a fruit-matcha menu.",
+        "details": "Find YakiniQ at 1640 Post St, first floor. Its menu lists a classic matcha latte alongside iced banana, strawberry, red bean and lavender versions. Matcha Tea and Matcha Fizz are also listed.",
+        "milkNote": "The classic latte’s customization panel lists oat, almond and soy at +$0.75, labelled “Extra” milk. Ask for a replacement of dairy rather than an addition. Do not assume the banana or cream drinks use the same recipe or substitutions.",
+        "price": "Matcha Latte from $7; Iced Banana Matcha Latte $8.50",
+        "availability": "Tue–Sat 11am–5pm; closed Sunday and Monday.",
+        "sources": [
+          {
+            "label": "Official full menu",
+            "url": "https://toast.app/r/yakiniq-cafe-1640-post-street-fl-1/order"
+          },
+          {
+            "label": "Matcha Latte milk options and hours",
+            "url": "https://toast.app/r/yakiniq-cafe-1640-post-street-fl-1/order/item-matcha-latte_32d7f96b-093a-4e9e-aafa-c78e5fcc1b90"
+          }
+        ]
+      },
+      {
+        "shopId": "matcha-cafe-maiko-japantown",
+        "drink": "Matcha Latte and Matcha Soft Serve",
+        "verdict": "A Japan Center stop for matcha drinks and desserts.",
+        "details": "Maiko’s official store page places its Japantown shop at 1581 Webster St, Suite 175. The brand menu lists matcha lattes, matcha soft serve, parfaits and tea floats. Confirm which items this counter is serving before deciding on a specific dessert.",
+        "milkNote": "The current brand menu does not publish latte milk substitutions or full allergens. Cream-topped floats and soft serve should not be assumed dairy-free; ask the shop about soy availability and the complete recipe.",
+        "price": "Local prices are not published on the official brand menu",
+        "availability": "The official San Francisco store page asks customers to call 415-757-0919 for current hours. The brand notes that menu items vary by store.",
+        "sources": [
+          {
+            "label": "Official San Francisco locations",
+            "url": "https://www.matchacafe-maiko.com/eng/store/index.html?country=usa&region=ca&target=ca-sanfran"
+          },
+          {
+            "label": "Official brand menu",
+            "url": "https://www.matchacafe-maiko.com/eng/menu/"
+          }
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Where can I order matcha without milk in Japantown?",
+        "answer": "Best Boy Electric’s menu describes a Matcha Americano made with hot or iced water, and lists usucha separately from its milk lattes. YakiniQ also lists Matcha Tea; check sweeteners and the complete recipe when ordering."
+      },
+      {
+        "question": "Which Japantown matcha café lists soy?",
+        "answer": "YakiniQ’s classic Matcha Latte ordering panel lists soy at +$0.75. It is labelled “Extra Soy Milk,” so confirm that dairy will be replaced rather than added to. We could not freshly confirm soy choices on Best Boy’s or Maiko’s current public menu."
+      },
+      {
+        "question": "Can I visit these cafés on Sunday?",
+        "answer": "YakiniQ’s ordering page says it is closed Sunday. NEW PEOPLE lists Best Boy Electric’s Sunday hours as 9am–5pm. Maiko asks visitors to call its Japantown store for current hours."
+      }
+    ]
+  },
+  {
+    "slug": "richmond-district-matcha-san-francisco",
+    "title": "Matcha in SF’s Richmond District: Clement and Balboa Stops",
+    "description": "Compare three Inner and Outer Richmond matcha cafés, from Clement Street lattes to Constance’s freshly milled matcha on Balboa.",
+    "emoji": "🌁",
+    "updatedAt": "2026-10-08",
+    "intro": "The Richmond’s matcha options run from Clement Street coffee shops to a tea studio farther west on Balboa. Kiss of Matcha lists a hand-whisked latte and a large flavored-matcha menu. Pixlcat pairs an Uji matcha program with its butter mochi. Constance mills tencha leaves into matcha in house. These three stops cover both Inner and Outer Richmond; choose by drink style and location, rather than treating them as a ranking.",
+    "methodology": "We checked official websites and café ordering menus on October 8, 2026. Prices are published menu prices before tax, sizes and extras. Kiss of Matcha’s weekly schedule comes from its ordering page’s published location data. Constance has limited public menu detail, so its prices and milk choices remain unconfirmed here. Menu listings do not guarantee stock.",
+    "entries": [
+      {
+        "shopId": "kiss-of-matcha-clement",
+        "drink": "Matcha Latte",
+        "verdict": "For hand-whisked matcha with an optional cream layer.",
+        "details": "The Clement shop is at 750 Clement St. Its latte description lists six grams of hand-whisked matcha over whole milk or a choice of milk. The wider menu also includes strawberry, mango, ube, azuki and jasmine matcha lattes.",
+        "milkNote": "Whole milk is the named base. Other milk choices are offered but not named on the public product page, so ask specifically about soy. The optional matcha cream is explicitly dairy.",
+        "price": "Matcha Latte $7.47 on the ordering menu",
+        "availability": "Published location data lists Tue–Thu 10am–8pm, Fri–Sat 10am–10pm and Sun 10am–9pm, with no Monday hours. Check the current ordering page before visiting.",
+        "sources": [
+          {
+            "label": "Official Matcha Latte ingredients and price",
+            "url": "https://kissofmatcha.order.tryperdiem.com/products/matcha-latte"
+          },
+          {
+            "label": "Clement location and hours",
+            "url": "https://kissofmatcha.order.tryperdiem.com/locations/san-francisco-clement"
+          },
+          {
+            "label": "Official matcha latte menu",
+            "url": "https://kissofmatcha.order.tryperdiem.com/menu/matcha-latte"
+          }
+        ]
+      },
+      {
+        "shopId": "pixlcat-coffee",
+        "drink": "Matcha Latte or Iced Strawberry Matcha",
+        "verdict": "For an unsweetened base latte with confirmed oat and almond options.",
+        "details": "Pixlcat’s 519 Clement St menu identifies its matcha as organic ceremonial Uji matcha. The classic latte is unsweetened by default; the fruit menu includes strawberry and guava. Matcha Green Tea Mochi is listed separately at $5.25 on the ordering menu.",
+        "milkNote": "The classic latte panel lists oat substitution and almond substitution (+$1). Soy is not listed. The Matcha Dopo Panna includes whipped cream even when a plant milk is chosen; ask about dairy in mochi and flavored additions separately.",
+        "price": "Matcha Latte $7; Iced Strawberry Matcha $8.50",
+        "availability": "Official website hours: Mon–Fri 7am–4pm; Sat–Sun 7am–5pm.",
+        "sources": [
+          {
+            "label": "Official drinks and food menu",
+            "url": "https://order.toasttab.com/online/pixlcat-coffee-519-clement-st"
+          },
+          {
+            "label": "Matcha Latte milk substitutions",
+            "url": "https://order.toasttab.com/online/pixlcat-coffee-519-clement-st/item-matcha-latte_f76b3ffb-006b-409b-8792-8c83357e48ba"
+          },
+          {
+            "label": "Official address and hours",
+            "url": "https://www.pixlcatcoffee.com/order-now"
+          }
+        ]
+      },
+      {
+        "shopId": "constance-tea",
+        "drink": "Freshly Milled Matcha and Matcha Lattes",
+        "verdict": "For an Outer Richmond tea studio that mills matcha in house.",
+        "details": "Constance’s official website identifies matcha lattes and freshly milled matcha at 3512 Balboa St. It describes grinding tencha leaves in house with Japanese stone mills. Its public site does not provide a detailed drinks menu, so check the current selection at the counter.",
+        "milkNote": "Milk types, soy availability and cream ingredients are not published on the current official site. Ask about the full recipe before ordering a latte or a topped drink.",
+        "price": "Prices are not published on the current official site",
+        "availability": "Posted soft-opening hours: Mon, Wed and Thu 10am–5pm; Fri–Sun 10am–6pm; closed Tuesday.",
+        "sources": [
+          {
+            "label": "Official matcha program, address and soft-opening hours",
+            "url": "https://www.constancetea.com/"
+          }
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Which Richmond matcha latte has confirmed plant-milk options?",
+        "answer": "Pixlcat’s classic Matcha Latte ordering panel explicitly lists oat and almond substitutions. Kiss of Matcha mentions a choice of milk without naming those options on its public product page; Constance does not publish milk choices on its current website."
+      },
+      {
+        "question": "Does choosing oat milk make a cream-topped drink dairy-free?",
+        "answer": "Check the topping as well as the base. Kiss of Matcha labels its optional matcha cream as dairy, and Pixlcat’s Matcha Dopo Panna description includes whipped cream. A plant-milk substitution alone does not remove those ingredients."
+      },
+      {
+        "question": "Are all three Richmond stops in the same area?",
+        "answer": "Pixlcat and Kiss of Matcha are on Clement Street in the Inner Richmond. Constance is farther west on Balboa Street in the Outer Richmond. Use each listing’s map pin to plan travel between them."
+      }
+    ]
   }
 ]

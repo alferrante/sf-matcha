@@ -28,10 +28,13 @@ async function fixture(guides = [guide()]) {
 test("six guides have canonical URLs, source links, current venue facts and structured data", async () => {
   const dir = await fixture(Array.from({ length: 6 }, (_, i) => guide(i)));
   try {
-    const result = await buildGuides({ root: dir });
+    const newsletterAsset = "/dist/guide-newsletter.123456abcdef.js";
+    const result = await buildGuides({ root: dir, newsletterAsset });
     assert.equal(result.guides, 6);
     const index = await readFile(path.join(dir, "guides/index.html"), "utf8");
     assert.equal((index.match(/class="card"/g) ?? []).length, 6);
+    assert.match(index, /data-newsletter-source="guides_hub"/);
+    assert.equal((index.match(/data-guide-newsletter /g) ?? []).length, 1);
     const sitemap = await readFile(path.join(dir, "sitemap.xml"), "utf8");
     assert.match(sitemap, /<loc>https:\/\/sanfranciscomatcha\.com\/<\/loc>/);
     assert.equal((sitemap.match(/<url>/g) ?? []).length, 11);
@@ -42,6 +45,13 @@ test("six guides have canonical URLs, source links, current venue facts and stru
       assert.match(html, /1 Main St/);
       assert.match(html, /Daily 8am–4pm/);
       assert.match(html, /Soy is available/);
+      assert.equal((html.match(/data-guide-newsletter /g) ?? []).length, 1);
+      assert.match(html, /data-newsletter-source="guide_article"/);
+      assert.match(html, /<script type="module" src="\/dist\/guide-newsletter\.123456abcdef\.js">/);
+      assert.match(html, /name="consent" type="checkbox" required>/);
+      assert.doesNotMatch(html, /name="consent"[^>]*checked/);
+      assert.match(html, /href="\/privacy\/"/);
+      assert.match(html, /name="website" tabindex="-1" autocomplete="off"/);
       assert.match(html, /google.com\/maps\/search\/\?api=1&amp;query=/);
       const structured = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
       assert.equal(structured["@graph"][0]["@type"], "Article");
@@ -116,7 +126,7 @@ test("guide text is escaped in HTML, attributes and JSON-LD without ending its s
     assert.doesNotMatch(html, /<script>alert/);
     assert.match(html, /&lt;\/script&gt;&lt;script&gt;alert\(&quot;x&quot;\)/);
     assert.match(html, /href="https:\/\/example.com\/\?x=1&amp;y=2"/);
-    assert.equal((html.match(/<script/g) ?? []).length, 1);
+    assert.equal((html.match(/<script/g) ?? []).length, 3);
     const raw = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1];
     assert.match(raw, /\\u003c\/script\\u003e/);
     assert.equal(JSON.parse(raw)["@graph"][0].headline, value);

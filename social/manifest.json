@@ -1,0 +1,504 @@
+{
+  "generatedFrom": "content/social-launch.json",
+  "sourceUpdatedAt": "2026-10-07",
+  "status": "ready-to-export; not posted",
+  "carouselSetCount": 6,
+  "individualSlideCount": 30,
+  "format": "PNG",
+  "dimensions": {
+    "width": 1080,
+    "height": 1080
+  },
+  "totalBytes": 2337271,
+  "qa": {
+    "allSlidesVerifiedAsPng": true,
+    "allSlides1080Square": true,
+    "kumoDairyCaveatPresent": true,
+    "renderingMode": "deterministic text and geometric illustration; no cafe photography"
+  },
+  "sets": [
+    {
+      "guideSlug": "banana-matcha-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/banana-matcha-san-francisco/",
+      "verifiedAt": "2026-10-07",
+      "sourceUrls": [
+        "https://www.sohnsf.com/s/Letter_0120_1-1.pdf",
+        "https://www.sohnsf.com/",
+        "https://toast.app/r/yakiniq-cafe-1640-post-street-fl-1/order",
+        "https://www.kumomatchaca.com/our-menu",
+        "https://www.kumomatchaca.com/"
+      ],
+      "slideCount": 5,
+      "slides": [
+        {
+          "file": "social/banana-matcha-san-francisco/slide-01.png",
+          "slide": 1,
+          "headline": "SF banana matcha: 3 ways to order it",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 72652,
+          "sha256": "de3dffdb874f2c875d5e9333950c82aa58f826565faeba66da23bed92c6c1562",
+          "sourceDomains": [
+            "sohnsf.com",
+            "toast.app",
+            "kumomatchaca.com"
+          ]
+        },
+        {
+          "file": "social/banana-matcha-san-francisco/slide-02.png",
+          "slide": 2,
+          "headline": "SŌHN · Dogpatch",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 59846,
+          "sha256": "8d14800412e81d71c8ad7214d67719b3113e2d11ce941f2ae46fd29e50f247cb",
+          "sourceDomains": [
+            "sohnsf.com"
+          ]
+        },
+        {
+          "file": "social/banana-matcha-san-francisco/slide-03.png",
+          "slide": 3,
+          "headline": "YakiniQ · Japantown",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 66107,
+          "sha256": "14c2f30a41e05699a9c8a29c3d7f2f62b30ed8e61cfdcd14cc12ce0d13a8aed7",
+          "sourceDomains": [
+            "toast.app"
+          ]
+        },
+        {
+          "file": "social/banana-matcha-san-francisco/slide-04.png",
+          "slide": 4,
+          "headline": "Kumo · Sunday pop-up",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 73425,
+          "sha256": "3278e40701e9410eee685fb9bb8877fbc02746f43a9704c830a641da2841b077",
+          "sourceDomains": [
+            "kumomatchaca.com"
+          ]
+        },
+        {
+          "file": "social/banana-matcha-san-francisco/slide-05.png",
+          "slide": 5,
+          "headline": "Soy cloud ≠ dairy-free",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 82728,
+          "sha256": "19915aee6975ec8af6027b1cfb3255592f0468bc8a3985e05155304997d06cf5",
+          "sourceDomains": [
+            "sohnsf.com",
+            "toast.app",
+            "kumomatchaca.com"
+          ]
+        }
+      ]
+    },
+    {
+      "guideSlug": "matcha-cold-foam-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/matcha-cold-foam-san-francisco/",
+      "verifiedAt": "2026-10-07",
+      "sourceUrls": [
+        "https://www.qspecialtycoffee.com/menu",
+        "https://tadaimasf.com/san-francisco-suite-b-tadaima-sf-drink-menu",
+        "https://www.sohnsf.com/s/Letter_0120_1-1.pdf",
+        "https://www.sohnsf.com/",
+        "https://www.kumomatchaca.com/our-menu",
+        "https://www.kumomatchaca.com/"
+      ],
+      "slideCount": 5,
+      "slides": [
+        {
+          "file": "social/matcha-cold-foam-san-francisco/slide-01.png",
+          "slide": 1,
+          "headline": "Matcha clouds: choose your topping",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 70665,
+          "sha256": "0449da85efbbf5acab4ab7e2f573422b6f782fd911122d23d965abb664ff6363",
+          "sourceDomains": [
+            "qspecialtycoffee.com",
+            "tadaimasf.com",
+            "sohnsf.com",
+            "kumomatchaca.com"
+          ]
+        },
+        {
+          "file": "social/matcha-cold-foam-san-francisco/slide-02.png",
+          "slide": 2,
+          "headline": "Q · 3490 California St",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 71957,
+          "sha256": "ae5554d1eaa6b5fa64246c68f612b02350144ec2ce8cd3323ae071b260713d29",
+          "sourceDomains": [
+            "qspecialtycoffee.com"
+          ]
+        },
+        {
+          "file": "social/matcha-cold-foam-san-francisco/slide-03.png",
+          "slide": 3,
+          "headline": "Tadaima · Mission",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 76101,
+          "sha256": "1518d9779822f9c771fac6897a01ea082d4de9e888ae21dc1130a12998b835c2",
+          "sourceDomains": [
+            "tadaimasf.com"
+          ]
+        },
+        {
+          "file": "social/matcha-cold-foam-san-francisco/slide-04.png",
+          "slide": 4,
+          "headline": "SŌHN or Kumo?",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 75795,
+          "sha256": "5a9d96b9a7da981750df1de99102828fffaf0276384a27f257d530fc34dbfed3",
+          "sourceDomains": [
+            "sohnsf.com",
+            "kumomatchaca.com"
+          ]
+        },
+        {
+          "file": "social/matcha-cold-foam-san-francisco/slide-05.png",
+          "slide": 5,
+          "headline": "Check the foam, not just the milk",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 96218,
+          "sha256": "e70d94eaca3be50deff074176b2c2c5b1700eba854a712e5722d57fdb0672e68",
+          "sourceDomains": [
+            "qspecialtycoffee.com",
+            "tadaimasf.com",
+            "sohnsf.com",
+            "kumomatchaca.com"
+          ]
+        }
+      ]
+    },
+    {
+      "guideSlug": "soy-milk-matcha-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/soy-milk-matcha-san-francisco/",
+      "verifiedAt": "2026-10-07",
+      "sourceUrls": [
+        "https://ilparcosf.com/menu/cafe",
+        "https://www.lulufresh.co/products/matcha-latte",
+        "https://toast.app/r/yakiniq-cafe-1640-post-street-fl-1/order/item-matcha-latte_32d7f96b-093a-4e9e-aafa-c78e5fcc1b90"
+      ],
+      "slideCount": 5,
+      "slides": [
+        {
+          "file": "social/soy-milk-matcha-san-francisco/slide-01.png",
+          "slide": 1,
+          "headline": "Looking for soy matcha in SF?",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 82845,
+          "sha256": "d1b2f88b2eeb356e7482437921a3ebf4a1bf6613baed3a1ec417bdc9dce59c7d",
+          "sourceDomains": [
+            "ilparcosf.com",
+            "lulufresh.co",
+            "toast.app"
+          ]
+        },
+        {
+          "file": "social/soy-milk-matcha-san-francisco/slide-02.png",
+          "slide": 2,
+          "headline": "Il Parco · Presidio",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 84702,
+          "sha256": "9a50dae9170b6a68a711500b957021bed9f46deffc53fc5a1f0d556162f3de68",
+          "sourceDomains": [
+            "ilparcosf.com"
+          ]
+        },
+        {
+          "file": "social/soy-milk-matcha-san-francisco/slide-03.png",
+          "slide": 3,
+          "headline": "Lulu Fresh · Waterfront",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 87859,
+          "sha256": "b1eeceff493ca9c4442d04c9c977a78f6ec8801c57cdbc509c1c8b010a7e147a",
+          "sourceDomains": [
+            "lulufresh.co"
+          ]
+        },
+        {
+          "file": "social/soy-milk-matcha-san-francisco/slide-04.png",
+          "slide": 4,
+          "headline": "YakiniQ · Japantown",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 88843,
+          "sha256": "f597db9d8dc3500c74cc7111ea4a5e3292109b67ad52c4aba71084cdf51a339c",
+          "sourceDomains": [
+            "toast.app"
+          ]
+        },
+        {
+          "file": "social/soy-milk-matcha-san-francisco/slide-05.png",
+          "slide": 5,
+          "headline": "Milk swap is step one",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 95387,
+          "sha256": "89a857d8e1b52ff4ea6455ddff7670fe42d25158b599988730299993452abbdc",
+          "sourceDomains": [
+            "ilparcosf.com",
+            "lulufresh.co",
+            "toast.app"
+          ]
+        }
+      ]
+    },
+    {
+      "guideSlug": "strawberry-matcha-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/strawberry-matcha-san-francisco/",
+      "verifiedAt": "2026-10-07",
+      "sourceUrls": [
+        "https://www.stonemillmatcha-us.com/menu",
+        "https://www.stonemillmatcha-us.com/",
+        "https://www.fourchairssf.com/_files/ugd/84dca7_1ddb14cf73d649339a46b81e3c2a91db.pdf",
+        "https://www.fourchairssf.com/",
+        "https://www.qspecialtycoffee.com/menu",
+        "https://tadaimasf.com/san-francisco-suite-b-tadaima-sf-drink-menu"
+      ],
+      "slideCount": 5,
+      "slides": [
+        {
+          "file": "social/strawberry-matcha-san-francisco/slide-01.png",
+          "slide": 1,
+          "headline": "Strawberry matcha: latte or topping?",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 81807,
+          "sha256": "1641c9b5effd3357a4210ffce530b4b4bcd74fac1e139bd6c29a5094e27c2b6b",
+          "sourceDomains": [
+            "stonemillmatcha-us.com",
+            "fourchairssf.com",
+            "qspecialtycoffee.com",
+            "tadaimasf.com"
+          ]
+        },
+        {
+          "file": "social/strawberry-matcha-san-francisco/slide-02.png",
+          "slide": 2,
+          "headline": "Stonemill · Valencia",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 70480,
+          "sha256": "5e6d9e5c2150d6f9c90e6294e01544c487a0586fd4080d45126148194df627f1",
+          "sourceDomains": [
+            "stonemillmatcha-us.com"
+          ]
+        },
+        {
+          "file": "social/strawberry-matcha-san-francisco/slide-03.png",
+          "slide": 3,
+          "headline": "Four Chairs · Mission St",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 68922,
+          "sha256": "c791bcfc05df7b7b83e4ca37f402b523c789596805ab5af9e5621f7be088fe81",
+          "sourceDomains": [
+            "fourchairssf.com"
+          ]
+        },
+        {
+          "file": "social/strawberry-matcha-san-francisco/slide-04.png",
+          "slide": 4,
+          "headline": "Cloud or cream?",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 80096,
+          "sha256": "b5bd89d87949c89424ba10a95e5941fe56bc742ed57640bf4d5890845cbb2056",
+          "sourceDomains": [
+            "qspecialtycoffee.com",
+            "tadaimasf.com"
+          ]
+        },
+        {
+          "file": "social/strawberry-matcha-san-francisco/slide-05.png",
+          "slide": 5,
+          "headline": "Ask before swapping milk",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 90826,
+          "sha256": "184a663a7271f2ff5c0e0e09e23c8f36413ec37f8164d32c4f06b22563025b7f",
+          "sourceDomains": [
+            "stonemillmatcha-us.com",
+            "fourchairssf.com",
+            "qspecialtycoffee.com",
+            "tadaimasf.com"
+          ]
+        }
+      ]
+    },
+    {
+      "guideSlug": "ceremonial-hand-whisked-matcha-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/ceremonial-hand-whisked-matcha-san-francisco/",
+      "verifiedAt": "2026-10-07",
+      "sourceUrls": [
+        "https://www.stonemillmatcha-us.com/menu",
+        "https://www.stonemillmatcha-us.com/",
+        "https://cafenagomi.com/",
+        "https://www.pixlcatcoffee.com/order-now"
+      ],
+      "slideCount": 5,
+      "slides": [
+        {
+          "file": "social/ceremonial-hand-whisked-matcha-san-francisco/slide-01.png",
+          "slide": 1,
+          "headline": "Want the tea to be the focus?",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 68253,
+          "sha256": "8ad0b7d90b8b7fdaf146f34464e39339787331de188f3b004fcfee81cd93546e",
+          "sourceDomains": [
+            "stonemillmatcha-us.com",
+            "cafenagomi.com",
+            "pixlcatcoffee.com"
+          ]
+        },
+        {
+          "file": "social/ceremonial-hand-whisked-matcha-san-francisco/slide-02.png",
+          "slide": 2,
+          "headline": "Stonemill · 561 Valencia St",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 70709,
+          "sha256": "93797a24a16db52aa48f797bcbee048b69fe19bf16b8a9ecd4b83a3e35731f72",
+          "sourceDomains": [
+            "stonemillmatcha-us.com"
+          ]
+        },
+        {
+          "file": "social/ceremonial-hand-whisked-matcha-san-francisco/slide-03.png",
+          "slide": 3,
+          "headline": "Nagomi · 74 New Montgomery St",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 81018,
+          "sha256": "b3d1a09b3f01b2803b8851c2e2a64cfe885306397ddc2718cd30de46b5d48696",
+          "sourceDomains": [
+            "cafenagomi.com"
+          ]
+        },
+        {
+          "file": "social/ceremonial-hand-whisked-matcha-san-francisco/slide-04.png",
+          "slide": 4,
+          "headline": "Pixlcat · 519 Clement St",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 76012,
+          "sha256": "2b48d18946796f9c5e32d26d31cc68d56a6c1ceac14e5a93e7c9f309ec94bb94",
+          "sourceDomains": [
+            "pixlcatcoffee.com"
+          ]
+        },
+        {
+          "file": "social/ceremonial-hand-whisked-matcha-san-francisco/slide-05.png",
+          "slide": 5,
+          "headline": "Sourcing is a starting point",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 89814,
+          "sha256": "a4cef2f6cd601eef30a68df2893d77a9f543d2071ad0fb9d68e74517026fcafb",
+          "sourceDomains": [
+            "stonemillmatcha-us.com",
+            "cafenagomi.com",
+            "pixlcatcoffee.com"
+          ]
+        }
+      ]
+    },
+    {
+      "guideSlug": "matcha-under-seven-dollars-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/matcha-under-seven-dollars-san-francisco/",
+      "verifiedAt": "2026-10-07",
+      "sourceUrls": [
+        "https://papersoncoffee.com/menu",
+        "https://papersoncoffee.com/locations",
+        "https://ilparcosf.com/menu/cafe",
+        "https://tadaimasf.com/san-francisco-suite-b-tadaima-sf-drink-menu",
+        "https://www.sohnsf.com/s/Letter_0120_1-1.pdf",
+        "https://www.sohnsf.com/"
+      ],
+      "slideCount": 5,
+      "slides": [
+        {
+          "file": "social/matcha-under-seven-dollars-san-francisco/slide-01.png",
+          "slide": 1,
+          "headline": "SF matcha under $7",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 65571,
+          "sha256": "4280231963986ebac1f726da654161ecfa47275a6d9f4be42fee8fa07d396011",
+          "sourceDomains": [
+            "papersoncoffee.com",
+            "ilparcosf.com",
+            "tadaimasf.com",
+            "sohnsf.com"
+          ]
+        },
+        {
+          "file": "social/matcha-under-seven-dollars-san-francisco/slide-02.png",
+          "slide": 2,
+          "headline": "Paper Son · Downtown",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 71975,
+          "sha256": "9957186bc55d43b9a8028abb3af12e66df74eb4e08c7382cc82b9b538b483f75",
+          "sourceDomains": [
+            "papersoncoffee.com"
+          ]
+        },
+        {
+          "file": "social/matcha-under-seven-dollars-san-francisco/slide-03.png",
+          "slide": 3,
+          "headline": "Il Parco · Presidio",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 72015,
+          "sha256": "090d1cbd5ef87f35098e9e1af29a8d117dd222cfc42bc7bc91637fea64ac85a0",
+          "sourceDomains": [
+            "ilparcosf.com"
+          ]
+        },
+        {
+          "file": "social/matcha-under-seven-dollars-san-francisco/slide-04.png",
+          "slide": 4,
+          "headline": "Tadaima or SŌHN?",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 79011,
+          "sha256": "1fdac030fe16373c02d0dc00dd569fb71039eb29534629ce25921e60f0cd507c",
+          "sourceDomains": [
+            "sohnsf.com",
+            "tadaimasf.com"
+          ]
+        },
+        {
+          "file": "social/matcha-under-seven-dollars-san-francisco/slide-05.png",
+          "slide": 5,
+          "headline": "Watch the modifiers",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 85632,
+          "sha256": "007701f5d8c835240495dfdf7cbc334031ed45ea45049061a593f21b96c394dd",
+          "sourceDomains": [
+            "papersoncoffee.com",
+            "ilparcosf.com",
+            "tadaimasf.com",
+            "sohnsf.com"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -2,6 +2,7 @@ import { createServer } from 'node:http';
 import { createHash, randomBytes } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
 import { isIP } from 'node:net';
+import { signupSource } from '../lib/newsletter-client.mjs';
 
 const BODY_LIMIT = 8192;
 const SUCCESS = { success: true, message: 'Thanks. Your signup request has been received.' };
@@ -178,7 +179,7 @@ export function createNewsletterHandler({
       const properties = {
         sfmatcha_consent_at: new Date(now()).toISOString(),
         sfmatcha_consent_version: CONSENT_VERSION,
-        sfmatcha_signup_source: 'homepage',
+        sfmatcha_signup_source: signupSource(body.source),
       };
       const contact = await lookup(email);
       if (contact) await addExisting(contact, properties);

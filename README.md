@@ -18,7 +18,7 @@ npm run build
 npm test
 ```
 
-The build compiles all four JSX sources, preserves stable bundles for the scout/audit, and rewrites script URLs to content-hashed assets. Commit source, stable bundles, hashed assets and index.html together. Delete replaced hashed bundles as part of the same commit. No npm packages are loaded by the browser.
+The build compiles all four JSX sources, preserves stable bundles for the scout/audit, and rewrites script URLs to content-hashed assets. Commit source, stable bundles, hashed assets and index.html together. Retain previously published hashed bundles so cached HTML can still load its versioned assets. No npm packages are loaded by the browser.
 
 See [GOAL.md](GOAL.md) and [SPRINT_SCOREBOARD.md](SPRINT_SCOREBOARD.md) for the growth sprint and verified progress.
 

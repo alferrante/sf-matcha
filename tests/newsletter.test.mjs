@@ -233,3 +233,11 @@ test('email validation rejects header injection, malformed local parts and exces
   for (const value of ['a@example.com\r\nBcc:evil@example.com', '.a@example.com', 'a..b@example.com', 'a.@example.com', 'a@-example.com', 'x'.repeat(65) + '@example.com', 'a@example', null]) assert.equal(validEmail(value), false);
   assert.equal(validEmail('reader+sf@example.com'), true);
 });
+
+test('guide form context is persisted while consent time remains server-owned', async t => {
+  for (const source of ['guides_hub', 'guide_article']) {
+    const { request, calls } = await fixture(t);
+    assert.equal((await request({body:{email:EMAIL,...CONSENT,source,consentAt:'2000-01-01'}})).status,200);
+    assert.deepEqual(JSON.parse(calls[1].body).properties, {...PROPERTIES,sfmatcha_signup_source:source});
+  }
+});
