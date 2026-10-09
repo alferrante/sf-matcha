@@ -136,6 +136,8 @@ Follow-up verification release `64c303bcbea5718a1c8336a7c6d4ba6b9757fb61` record
 
 Live targets after publication: [guide hub](https://sanfranciscomatcha.com/guides/), [Mission District guide](https://sanfranciscomatcha.com/guides/mission-district-matcha-san-francisco/), [ube matcha guide](https://sanfranciscomatcha.com/guides/ube-matcha-san-francisco/), [Buzzy methodology](https://sanfranciscomatcha.com/methodology/).
 
+Publication: release `d029c38ff6fb6badf52568cede217cc76510e534` is on main and verified live October 9. Browser verification shows 10 guides, 12 visible Buzzy labels, corrected Binge hours and the dated Best Boy evidence receipt. All 16 public HTML surfaces returned HTTP 200 with exactly one approved analytics beacon; deployed app/data assets matched committed SHA-256 bytes.
+
 ### Next unblocked queue
 
 1. Render distribution carousel sets for the Mission and ube guides, then prepare the next two source-backed guide packages toward 24.
