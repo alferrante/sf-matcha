@@ -12,7 +12,7 @@ Repository baseline for October 8: `4e908193bca7135f5cf8163bd3a5b25ab05cd749` (v
 | Monthly visits | Unknown; Cloudflare beacon exists, export not accessed | 50,000 |
 | Active email subscribers | 0 active real subscribers, audience queried October 8; signup live; owned synthetic tests excluded | 10,000 |
 | Social followers | Unknown; project accounts not verified | 25,000 |
-| Guides | 8 published articles / 27 sourced entries; live verified October 8 | 24 |
+| Guides | 10 published articles / 36 sourced entries prepared October 9 | 24 |
 | Derivative assets | 24 complete text drafts; six original carousel drafts now rendered as 6 finished sets / 30 PNG slides; 0 posted. Count sets once, not as 30 independent assets | 120 |
 | Live confirmed offers | 0 offer records in baseline repository | 20 |
 | Redemptions | Unknown; no verified tracking system | 2,000 |
@@ -125,3 +125,19 @@ Follow-up verification release `64c303bcbea5718a1c8336a7c6d4ba6b9757fb61` record
 - Verified SŌHN’s leadership, public inbox, address, hours and official $6 Matcha Latte / $7 Banana Oat Milk Matcha menu. Verified California Kahve’s founder first name, public inbox, address, daily hours and always-on Matcha Latte / Lavender Mint Matcha; current prices remain unverified and must be confirmed by the merchant.
 - Corrected California Kahve’s directory hours from Tuesday–Sunday to the official current daily 9am–5pm schedule. No offer record was added to `offers.json`; live confirmed offers remain **0**.
 - Next action requiring Angela: explicit authorization to send either draft. Until then, keep advancing evidence and the inactive claim/redemption architecture without contacting cafés.
+
+## October 9 Friday growth release
+
+- **Measurement coverage:** extended the existing, privacy-disclosed Cloudflare Web Analytics beacon from the homepage to all 16 public HTML surfaces: the homepage, guide hub, 10 articles, methodology, perks, privacy and social gallery. Build-time injection is idempotent and uses one validated public token; tests prevent missing, duplicate or alternate-host beacons. This enables a future dashboard export to include editorial traffic but does not create or claim a traffic baseline without analytics access.
+- **Two new evidence-backed guides:** published an unranked five-stop Mission District route and a four-menu ube matcha guide. Both use existing directory venues and official/current merchant evidence, distinguish incomplete dairy and soy disclosures, and avoid tasting or popularity claims. The directory bundle remains 89 venues. Corrected Binge Coffee House’s current merchant hours to Mon–Fri 9am–6pm and Sat–Sun 9am–7pm.
+- **Buzzy receipts enforced:** audited 58 legacy `buzzy: true` flags. All lacked the reason/source/date/review metadata required by the public methodology. The live product now displays only 12 freshly checked labels with a specific reason, HTTPS source, October 9 verification date and review deadline no more than 90 days away; the other 46 legacy flags are suppressed until rechecked. Every active shop detail exposes the receipt and dates. Kumo’s recurring pop-up receives a shorter November 8 review.
+- **Metric movement:** guides **8 → 10** and sourced guide entries **27 → 36**. Measured public HTML surfaces **1 → 16**. Visible policy-compliant Buzzy labels are now **12**; this is a credibility correction, not an audience-growth claim. Finished visual sets remain 6/30 slides, actual active subscribers 0, posted assets 0, merchant-confirmed offers 0. Visits, followers, redemptions and votes remain unknown.
+- **Validation:** source build produced 10 articles and 16 measured HTML pages; all 65 automated tests passed; customer-copy audit passed 89 shops / 267 fields; changed files passed whitespace checks. No café was contacted and no offer, award, post or email was activated.
+
+Live targets after publication: [guide hub](https://sanfranciscomatcha.com/guides/), [Mission District guide](https://sanfranciscomatcha.com/guides/mission-district-matcha-san-francisco/), [ube matcha guide](https://sanfranciscomatcha.com/guides/ube-matcha-san-francisco/), [Buzzy methodology](https://sanfranciscomatcha.com/methodology/).
+
+### Next unblocked queue
+
+1. Render distribution carousel sets for the Mission and ube guides, then prepare the next two source-backed guide packages toward 24.
+2. Recheck the next highest-value legacy Buzzy candidates and migrate only those with current official evidence; expire Kumo’s label if its recurring schedule changes.
+3. Implement the authenticated atomic claim/redemption service in an inactive state while merchant outreach remains unapproved.

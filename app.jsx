@@ -1,9 +1,13 @@
 import guides from "./content/guides.json";
+import buzzyEvidence from "./content/buzzy-evidence.json";
+import { isBuzzyCurrent, validateBuzzyEvidence } from "./lib/buzzy-evidence.mjs";
 import { DEFAULT_NEWSLETTER_ENDPOINT, newsletterEndpoint, subscribe } from "./lib/newsletter-client.mjs";
 
 // Main SF Matcha app
 
 const { useState, useMemo, useEffect, useRef } = React;
+const BUZZY_BY_SHOP = validateBuzzyEvidence(buzzyEvidence, SHOPS);
+const activeBuzzy = shop => isBuzzyCurrent(shop, BUZZY_BY_SHOP);
 
 const FILTERS = [
 { id: "all", label: "all spots", emoji: "🍵" },
@@ -72,7 +76,7 @@ function App() {
   const filtered = useMemo(() => {
     return SHOPS.filter((s) => {
       if (filter === "top" && !s.topPick) return false;
-      if (filter === "buzzy" && !s.buzzy) return false;
+      if (filter === "buzzy" && !activeBuzzy(s)) return false;
       if (["confirmed", "reported", "none", "call"].includes(filter) && s.status !== filter) return false;
       if (search) {
         const q = search.toLowerCase();
@@ -90,7 +94,7 @@ function App() {
   const stats = useMemo(() => ({
     shown: filtered.length,
     confirmed: filtered.filter((s) => s.status === "confirmed").length,
-    buzzy: filtered.filter((s) => s.buzzy).length,
+    buzzy: filtered.filter(activeBuzzy).length,
     top: filtered.filter((s) => s.topPick).length
   }), [filtered]);
 
@@ -767,7 +771,7 @@ function ShopCard({ shop, index, selected, hovered, onHover, onLeave, onClick })
             fontSize: 20, margin: 0, letterSpacing: "-0.01em"
           }}>{shop.name}</h3>
           {shop.topPick && <Tag bg="var(--pop2)" ink="#fff">★ top pick</Tag>}
-          {shop.buzzy && <Tag bg="var(--lime)">✦ buzzy</Tag>}
+          {activeBuzzy(shop) && <Tag bg="var(--lime)" title={BUZZY_BY_SHOP.get(shop.id).reason}>✦ buzzy</Tag>}
         </div>
         <div style={{ fontFamily: "'Space Mono', monospace", fontSize: 12, marginTop: 4, opacity: 0.7 }}>
           {shop.address} · <span style={{ fontWeight: 700 }}>{shop.hood}</span>
@@ -813,14 +817,14 @@ function ShopCard({ shop, index, selected, hovered, onHover, onLeave, onClick })
 
 }
 
-function Tag({ children, bg, ink = "var(--ink)" }) {
+function Tag({ children, bg, ink = "var(--ink)", title }) {
   return (
     <span style={{
       background: bg, color: ink,
       fontFamily: "'Space Mono', monospace", fontSize: 10, fontWeight: 700,
       padding: "3px 8px", borderRadius: 999,
       border: "1.5px solid var(--ink)", textTransform: "uppercase", letterSpacing: "0.04em"
-    }}>{children}</span>);
+    }} title={title}>{children}</span>);
 
 }
 
@@ -898,7 +902,7 @@ function ShopDetail({ shop, onClose, C }) {
               padding: "5px 10px", borderRadius: 999
             }}>{meta.label}</span>
             {shop.topPick && <Tag bg="#fff">★ top pick</Tag>}
-            {shop.buzzy && <Tag bg="#fff">✦ buzzy</Tag>}
+            {activeBuzzy(shop) && <Tag bg="#fff" title={BUZZY_BY_SHOP.get(shop.id).reason}>✦ buzzy</Tag>}
           </div>
         </div>
 
@@ -912,6 +916,23 @@ function ShopDetail({ shop, onClose, C }) {
             <Mini label="neighborhood" val={shop.hood} />
           </div>
           <p style={{ fontSize: 17, lineHeight: 1.5, margin: 0 }}>{shop.note}</p>
+          {activeBuzzy(shop) && <div style={{
+            marginTop: 16, padding: 14, background: "var(--lime)",
+            border: "2px solid var(--ink)", borderRadius: 14,
+            fontSize: 14, lineHeight: 1.5
+          }}>
+            <div style={{
+              fontFamily: "'Space Mono', monospace", fontSize: 11, fontWeight: 700,
+              textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 4
+            }}>why it’s buzzy</div>
+            <div>{BUZZY_BY_SHOP.get(shop.id).reason}</div>
+            <a href={BUZZY_BY_SHOP.get(shop.id).source} target="_blank" rel="noreferrer" style={{ display: "inline-block", marginTop: 6 }}>
+              source ↗
+            </a>
+            <div style={{ fontSize: 12, marginTop: 4 }}>
+              checked {BUZZY_BY_SHOP.get(shop.id).verifiedAt} · review by {BUZZY_BY_SHOP.get(shop.id).reviewBy}
+            </div>
+          </div>}
           <div style={{
             marginTop: 16, padding: 14, background: "#fff",
             border: "2px solid var(--ink)", borderRadius: 14,

@@ -5,6 +5,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 import { buildGuides } from "./build-guides.mjs";
+import { injectSiteAnalytics } from "../lib/site-analytics.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const entries = ["tweaks-panel", "data", "map", "app"];
@@ -59,3 +60,18 @@ const newsletterFilename = `guide-newsletter.${newsletterHash}.js`;
 await writeFile(path.join(dist, newsletterFilename), newsletterBundle);
 const guidesResult = await buildGuides({ root, newsletterAsset: `/dist/${newsletterFilename}` });
 console.log(`Built ${guidesResult.guides} guide articles and editorial pages.`);
+
+// Measure every public HTML surface with the same existing privacy-disclosed
+// Cloudflare beacon. Rewriting is idempotent, so repeated builds never duplicate it.
+const publicHtml = new Set([
+  "index.html",
+  ...guidesResult.pages.filter(file => file.endsWith(".html")),
+  "privacy/index.html",
+  "social/index.html",
+]);
+for (const file of publicHtml) {
+  const absolute = path.join(root, file);
+  const document = await readFile(absolute, "utf8");
+  await writeFile(absolute, injectSiteAnalytics(document));
+}
+console.log(`Injected site analytics into ${publicHtml.size} public HTML pages.`);

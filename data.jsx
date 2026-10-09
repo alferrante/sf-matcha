@@ -1072,7 +1072,7 @@ const SHOPS = [
     lat: 37.7643364, lng: -122.4219025,
     x: 51.2, y: 50.7,
     price: "$",
-    hours: "Mon–Thu 9am–6pm; Fri–Sun 9am–8pm",
+    hours: "Mon–Fri 9am–6pm; Sat–Sun 9am–7pm",
   },
   {
     id: "telescope-coffee",

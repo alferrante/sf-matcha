@@ -16,6 +16,10 @@ function fixture() {
     cpSync(path.join(root, file), path.join(dir, file));
   }
   for (const directory of ["content", "lib"]) cpSync(path.join(root, directory), path.join(dir, directory), {recursive:true});
+  for (const directory of ["privacy", "social"]) {
+    mkdirSync(path.join(dir, directory));
+    cpSync(path.join(root, directory, "index.html"), path.join(dir, directory, "index.html"));
+  }
   symlinkSync(path.join(root, "node_modules"), path.join(dir, "node_modules"));
   return dir;
 }

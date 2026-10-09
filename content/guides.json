@@ -676,5 +676,142 @@
         "answer": "Pixlcat and Kiss of Matcha are on Clement Street in the Inner Richmond. Constance is farther west on Balboa Street in the Outer Richmond. Use each listing’s map pin to plan travel between them."
       }
     ]
+  },
+  {
+    "slug": "mission-district-matcha-san-francisco",
+    "title": "Matcha in San Francisco’s Mission District: Five Valencia & 20th Street Stops",
+    "description": "Five documented Mission matcha menus, from traditional and floral lattes to fruit and cream-top builds.",
+    "emoji": "🌴",
+    "updatedAt": "2026-10-09",
+    "intro": "The Mission has a compact run of matcha menus along Valencia Street and nearby 20th and 21st Streets. Stonemill focuses on Japanese tea and café food; Binge and Ceré stretch into fruit, ube and cream-top drinks; Tadaima pairs matcha with sandos; and Marigold lists a floral lavender latte. This is an unranked route organized by menu style and location.",
+    "methodology": "We checked official café sites, menus, location pages and current merchant ordering pages on October 9, 2026. Published prices can differ from in-store prices or include delivery markup. Menu listings do not guarantee stock, and a plant-milk choice does not establish that a foam or topping is dairy-free.",
+    "entries": [
+      {
+        "shopId": "stonemill-matcha",
+        "drink": "Matcha, Ginger Matcha or Rose Matcha Latte",
+        "verdict": "For a Japanese matcha café with both plain and flavored formats.",
+        "details": "Stonemill’s 561 Valencia St menu lists matcha alongside ginger, rose and strawberry variations, plus Japanese café food.",
+        "milkNote": "The menu lists oat as the milk substitute. Soy is not listed; check individual toppings and sweets separately.",
+        "availability": "Official hours: Mon–Fri 10am–4pm; Sat–Sun 9am–7pm.",
+        "sources": [
+          {"label":"Official menu","url":"https://www.stonemillmatcha-us.com/menu"},
+          {"label":"Official location and hours","url":"https://www.stonemillmatcha-us.com/"}
+        ]
+      },
+      {
+        "shopId": "binge-coffee-house",
+        "drink": "Uji, Fruit, Sesame, Ube, Banana or Coconut Matcha",
+        "verdict": "For the widest documented matcha flavor range on this route.",
+        "details": "The Valencia location at 530 Valencia St serves Binge’s ceremonial-matcha menu, spanning Uji, fruit, sesame, ube, banana and coconut builds.",
+        "milkNote": "Oat and almond are listed; soy is not. Some cold foams contain dairy, so ask about the complete build.",
+        "availability": "Current merchant hours: Mon–Fri 9am–6pm; Sat–Sun 9am–7pm.",
+        "sources": [
+          {"label":"Official menu","url":"https://www.bingecoffeehouse.com/menu"},
+          {"label":"Current Valencia menu and hours","url":"https://postmates.com/store/binge-coffee-house-valencia/21Sjn46UVgWQG8Ib9fijLA"}
+        ]
+      },
+      {
+        "shopId": "cere-tea",
+        "drink": "Classic, Fruit, Cream-Top or Sparkling Matcha",
+        "verdict": "For a large menu that moves from lattes to sparkling matcha.",
+        "details": "Ceré’s official menu at 1186 Valencia St lists classic and fruit matcha alongside cream-top and sparkling formats.",
+        "milkNote": "Soy is listed for matcha drinks. Cream-top recipes can still contain dairy; confirm the specific build.",
+        "availability": "Current ordering hours: daily 10am–7pm.",
+        "sources": [
+          {"label":"Official menu and location","url":"https://www.ceretea.com/"},
+          {"label":"Current ordering and hours","url":"https://postmates.com/store/cere-tea/JK83sjtJUt6687g5r9EWzg"}
+        ]
+      },
+      {
+        "shopId": "tadaima-mission",
+        "drink": "Matcha Latte or Salted-Cheese, Strawberry and Pistachio Cream Matcha",
+        "verdict": "For classic matcha plus several cream-topped variations.",
+        "details": "The 3515 20th St, Suite B drink menu lists a classic latte and salted-cheese, strawberry and pistachio cream versions.",
+        "milkNote": "Oat and almond substitutions are listed. Soy is not listed, and cream toppings should not be assumed dairy-free.",
+        "availability": "Official hours: Mon–Thu 11am–4:30pm; Fri–Sun 10am–5:30pm.",
+        "sources": [
+          {"label":"Official drink menu","url":"https://tadaimasf.com/san-francisco-suite-b-tadaima-sf-drink-menu"},
+          {"label":"Official location and hours","url":"https://tadaimasf.com/san-francisco-suite-b-tadaima-sf-locations"}
+        ]
+      },
+      {
+        "shopId": "marigold-cafe",
+        "drink": "Lavender Matcha",
+        "verdict": "For a floral matcha stop east of the Valencia corridor.",
+        "details": "Marigold’s café menu lists a $7.50 lavender matcha at 2681 21st St.",
+        "milkNote": "Oat milk is listed at +$0.50. Soy is not listed; ask about the full recipe.",
+        "price": "$7.50 before substitutions",
+        "availability": "Official hours: daily 8am–3pm.",
+        "sources": [{"label":"Official café menu, address and hours","url":"https://marigoldsf.com/pages/cafe"}]
+      }
+    ],
+    "faqs": [
+      {"question":"Is this a ranking of the Mission’s matcha cafés?","answer":"No. The stops are grouped as an unranked route using current menu evidence, location and ordering details rather than firsthand taste scores."},
+      {"question":"Which Mission stop lists soy milk?","answer":"Ceré lists soy for matcha drinks. The other current menus in this guide list oat and/or almond, or do not name soy; confirm the full drink and topping recipe."},
+      {"question":"Can plant milk still come with dairy foam?","answer":"Yes. A base-milk substitution does not change every topping. Ask separately about cream, cheese foam and cold foam before ordering."}
+    ]
+  },
+  {
+    "slug": "ube-matcha-san-francisco",
+    "title": "Ube Matcha in San Francisco: Four Menus That List It",
+    "description": "Four documented ube-matcha drinks compared by format: cold foam, latte, snow top and affogato.",
+    "emoji": "💜",
+    "updatedAt": "2026-10-09",
+    "intro": "Ube matcha is not one standard drink. In San Francisco, current menus use purple yam in cold foam, layered lattes, snow tops and an affogato. These four documented options are organized by format, not ranked by taste.",
+    "methodology": "We checked official menus, official social posts and current merchant pages on October 9, 2026. Delivery prices may include markup. Where a menu does not disclose soy or dairy details, the guide says so rather than inferring ingredients.",
+    "entries": [
+      {
+        "shopId": "cere-tea",
+        "drink": "Snowy Ube Matcha",
+        "verdict": "An ube-and-matcha build presented as a snow-top drink.",
+        "details": "Ceré’s current official menu lists Snowy Ube Matcha at its 1186 Valencia St café.",
+        "milkNote": "The public item listing does not provide a complete dairy or topping disclosure. Ask about soy and every layer before ordering.",
+        "price": "$8.50 on the official menu",
+        "availability": "Current menu item; daily ordering hours are 10am–7pm.",
+        "sources": [{"label":"Official menu and location","url":"https://www.ceretea.com/"}]
+      },
+      {
+        "shopId": "binge-coffee-house",
+        "drink": "Ube Matcha",
+        "verdict": "A matcha latte finished with coconut-ube cold foam.",
+        "details": "Binge’s current Valencia merchant menu lists Ube Matcha with coconut-ube cold foam.",
+        "milkNote": "The current item description says the ube foam contains dairy even after a base-milk substitution. Oat and almond are listed; soy is not.",
+        "price": "$9 on the current merchant menu; delivery markup may apply",
+        "availability": "Current Valencia menu; Mon–Fri 9am–6pm and Sat–Sun 9am–7pm.",
+        "sources": [
+          {"label":"Official menu","url":"https://www.bingecoffeehouse.com/menu"},
+          {"label":"Current Valencia item and hours","url":"https://postmates.com/store/binge-coffee-house-valencia/21Sjn46UVgWQG8Ib9fijLA"}
+        ]
+      },
+      {
+        "shopId": "maruwu-seicha",
+        "drink": "Ube Matcha Latte or Ube Matcha Latte Max + Snow Top",
+        "verdict": "A choice between a layered latte and a snow-top version.",
+        "details": "Maruwu’s current Japantown merchant menu lists both Ube Matcha Latte and a Max + Snow Top variation at 1737 Post St #368.",
+        "milkNote": "Maruwu lists soy, whole, oat and almond for matcha lattes, but the complete snow-top ingredients are not disclosed. Confirm the selected build.",
+        "availability": "Current Japantown merchant menu; Sun–Thu 11am–9pm and Fri–Sat 11am–9:30pm.",
+        "sources": [
+          {"label":"Current Japantown menu","url":"https://postmates.com/store/maruwu-seicha-japantown/gRIVlsHiVbC8QNCX5VX02g"},
+          {"label":"Official location page","url":"https://www.maruwuseicha.us/pages/menu"}
+        ]
+      },
+      {
+        "shopId": "le-mils-coffee",
+        "drink": "Ube Matcha Affogato",
+        "verdict": "A hand-whisked matcha-and-ube affogato format.",
+        "details": "Le Mil’s official launch menu lists a hand-whisked Ube Matcha Affogato at 1330 Polk St.",
+        "milkNote": "Soy and a complete dairy disclosure are not published for this item. Ask the café about the affogato base and toppings.",
+        "availability": "Listed on the official launch menu; café hours are daily 7am–3pm.",
+        "sources": [
+          {"label":"Official menu post","url":"https://www.instagram.com/p/DbiyOqHlPwk/"},
+          {"label":"Official location and hours","url":"https://lemils.com/pages/find-us"}
+        ]
+      }
+    ],
+    "faqs": [
+      {"question":"Is ube matcha always dairy-free?","answer":"No. Binge’s current menu explicitly says its coconut-ube cold foam contains dairy. The other menus do not publish complete ingredient details, so ask about every layer."},
+      {"question":"Which ube matcha listing names soy milk?","answer":"Maruwu lists soy among latte milk choices, but the snow-top recipe still needs a separate ingredient check. The other three item listings do not confirm soy."},
+      {"question":"Are these the best ube matchas in San Francisco?","answer":"This is a source-backed list of documented menu options, not a firsthand tasting ranking or award."}
+    ]
   }
 ]

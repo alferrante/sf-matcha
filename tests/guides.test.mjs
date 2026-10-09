@@ -25,7 +25,7 @@ async function fixture(guides = [guide()]) {
   return dir;
 }
 
-test("six guides have canonical URLs, source links, current venue facts and structured data", async () => {
+test("all guides have canonical URLs, source links, current venue facts and structured data", async () => {
   const dir = await fixture(Array.from({ length: 6 }, (_, i) => guide(i)));
   try {
     const newsletterAsset = "/dist/guide-newsletter.123456abcdef.js";
