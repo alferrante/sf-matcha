@@ -1327,7 +1327,7 @@ const SHOPS = [
     lat: 37.768125, lng: -122.4582583,
     x: 36.2, y: 48.6,
     price: "$",
-    hours: "Tue–Sun 9am–5pm; hours subject to change",
+    hours: "Daily 9am–5pm; hours subject to change",
   },
   {
     id: "the-buoy",

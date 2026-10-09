@@ -1,6 +1,6 @@
 # SF Matcha sprint scoreboard
 
-Last updated: October 8, 2026. Goal: `GOAL.md`.
+Last updated: October 9, 2026. Goal: `GOAL.md`.
 
 ## Verified baseline
 
@@ -116,3 +116,12 @@ The initial launch goal is complete for email capture, six factual guides, trans
 - Live delivery: [eight-guide hub](https://sanfranciscomatcha.com/guides/), [Japantown](https://sanfranciscomatcha.com/guides/japantown-matcha-san-francisco/), [Richmond District](https://sanfranciscomatcha.com/guides/richmond-district-matcha-san-francisco/), [six carousel downloads](https://sanfranciscomatcha.com/social/).
 
 Follow-up verification release `64c303bcbea5718a1c8336a7c6d4ba6b9757fb61` recorded working article/hub signup. All 30 public PNG downloads returned HTTP 200 and independently matched committed SHA-256 bytes after retrying the incomplete initial check. Final neighborhood evidence clarification retains earlier directory records and uses current article-specific source details.
+
+## October 9 partner pipeline
+
+- Established the durable partner ledger and stage model in `content/partner-pipeline.json`, with a readable report in `docs/PARTNER_PIPELINE.md`. The no-duplicates ledger matches directory IDs, names, addresses and aliases and preserves the three standing business exclusions.
+- Added two verified independent prospects: **SŌHN — Dogpatch** and **California Kahve — Golden Gate Park**. Both are `ready_for_outreach` and explicitly `not_contacted`; no merchant interest or participation is claimed.
+- Prepared unsent, location-specific drafts and proposed six-week terms: $1 off two named matcha drinks, one redemption per customer, 100 successful-redemption cap, $100 maximum proposed merchant discount cost, pause option and written confirmation required. Editorial awards remain separate.
+- Verified SŌHN’s leadership, public inbox, address, hours and official $6 Matcha Latte / $7 Banana Oat Milk Matcha menu. Verified California Kahve’s founder first name, public inbox, address, daily hours and always-on Matcha Latte / Lavender Mint Matcha; current prices remain unverified and must be confirmed by the merchant.
+- Corrected California Kahve’s directory hours from Tuesday–Sunday to the official current daily 9am–5pm schedule. No offer record was added to `offers.json`; live confirmed offers remain **0**.
+- Next action requiring Angela: explicit authorization to send either draft. Until then, keep advancing evidence and the inactive claim/redemption architecture without contacting cafés.

@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-09",
+  "stages": [
+    "candidate",
+    "researched",
+    "ready_for_outreach",
+    "contacted",
+    "interested",
+    "negotiating",
+    "confirmed",
+    "paused",
+    "declined"
+  ],
+  "rules": {
+    "outreachRequiresExplicitApproval": true,
+    "publicationRequiresMerchantConfirmation": true,
+    "defaultDiscountCents": 100,
+    "defaultRedemptionCap": 100,
+    "defaultPilotDays": 42
+  },
+  "prospects": [
+    {
+      "id": "sohn-dogpatch",
+      "shopId": "sohn",
+      "merchantName": "SŌHN",
+      "stage": "ready_for_outreach",
+      "contactStatus": "not_contacted",
+      "priority": 1,
+      "independent": true,
+      "location": {
+        "address": "2535 3rd St, San Francisco, CA 94107",
+        "hours": "Tue–Sun 9am–4pm; Monday closed"
+      },
+      "leadership": "Official site names Chef Deuki Hong as co-founder and Janet Lee as managing partner.",
+      "publicContact": {
+        "channel": "email",
+        "value": "hello@sohnsf.com",
+        "source": "https://www.sohnsf.com/"
+      },
+      "fit": "Independent community-oriented café with an official matcha program and an existing relationship context outside this public file.",
+      "menuEvidence": [
+        {
+          "item": "Matcha Latte",
+          "price": "$6.00",
+          "source": "https://static1.squarespace.com/static/684047fe6e7f3956c21a071e/t/691660f7a92f14502a586845/1763074295323/Beverage%2BMenu_1112.pdf"
+        },
+        {
+          "item": "Banana Oat Milk Matcha",
+          "price": "$7.00",
+          "source": "https://static1.squarespace.com/static/684047fe6e7f3956c21a071e/t/691660f7a92f14502a586845/1763074295323/Beverage%2BMenu_1112.pdf"
+        }
+      ],
+      "proposedTerms": {
+        "eligibleDrinks": [
+          "Matcha Latte",
+          "Banana Oat Milk Matcha"
+        ],
+        "proposedStart": "2026-10-19",
+        "proposedEnd": "2026-11-29",
+        "discountCents": 100,
+        "redemptionCap": 100,
+        "perCustomerLimit": 1,
+        "merchantMaximumDiscountCostUsd": 100,
+        "exclusions": [
+          "Signature Cream Top",
+          "other add-ons",
+          "tax",
+          "delivery orders",
+          "discount stacking"
+        ],
+        "needsMerchantConfirmation": true
+      },
+      "outreachDraft": "Subject: A small SŌHN × SF Matcha pilot\n\nHi SŌHN team — I run sanfranciscomatcha.com, the independent map and guide to matcha around San Francisco. SŌHN is already featured for its Matcha Latte and Banana Oat Milk Matcha. I’d love to explore a simple six-week perk at the Dogpatch café: $1 off one of those two drinks, one use per customer, capped at 100 successful redemptions. There is no participation fee; SŌHN would fund only redeemed $1 discounts, for a maximum proposed cost of $100, and could pause the pilot.\n\nIf the idea is interesting, I can send the one-page terms and voucher flow for review. Nothing would be published until your team confirms the exact drinks, dates, exclusions, staff process and cap in writing. Editorial badges and awards stay completely separate.\n\nBest,\nAngela\nSF Matcha",
+      "nextAction": "Await Angela's explicit approval before using the existing relationship or public contact route. Recheck the linked menu immediately before any approved send.",
+      "verifiedAt": "2026-10-09",
+      "evidence": [
+        "https://www.sohnsf.com/",
+        "https://www.sohnsf.com/about",
+        "https://static1.squarespace.com/static/684047fe6e7f3956c21a071e/t/691660f7a92f14502a586845/1763074295323/Beverage%2BMenu_1112.pdf"
+      ]
+    },
+    {
+      "id": "california-kahve-golden-gate-park",
+      "shopId": "california-kahve-golden-gate-park",
+      "merchantName": "California Kahve — Golden Gate Park",
+      "stage": "ready_for_outreach",
+      "contactStatus": "not_contacted",
+      "priority": 2,
+      "independent": true,
+      "location": {
+        "address": "320 Bowling Green Dr, San Francisco, CA 94122",
+        "hours": "Daily 9am–5pm"
+      },
+      "leadership": "Official team page identifies founder Molly; it does not publish a surname.",
+      "publicContact": {
+        "channel": "email",
+        "value": "californiakahve@gmail.com",
+        "source": "https://www.californiakahve.com/contact"
+      },
+      "fit": "Independent SF business with a permanent park café, community positioning and two always-on matcha drinks on its official menu.",
+      "menuEvidence": [
+        {
+          "item": "Matcha Latte",
+          "price": "Not published on the official menu",
+          "source": "https://www.californiakahve.com/the-menu"
+        },
+        {
+          "item": "Lavender Mint Matcha",
+          "price": "Not published on the official menu",
+          "source": "https://www.californiakahve.com/the-menu"
+        }
+      ],
+      "proposedTerms": {
+        "eligibleDrinks": [
+          "Matcha Latte",
+          "Lavender Mint Matcha"
+        ],
+        "proposedStart": "2026-10-19",
+        "proposedEnd": "2026-11-29",
+        "discountCents": 100,
+        "redemptionCap": 100,
+        "perCustomerLimit": 1,
+        "merchantMaximumDiscountCostUsd": 100,
+        "exclusions": [
+          "seasonal drinks unless added in writing",
+          "Matchagatto",
+          "other add-ons",
+          "tax",
+          "delivery orders",
+          "discount stacking"
+        ],
+        "needsMerchantConfirmation": true
+      },
+      "outreachDraft": "Subject: A Golden Gate Park matcha perk\n\nHi California Kahve team — I run sanfranciscomatcha.com, the independent map and guide to matcha around San Francisco. I’ve featured the Golden Gate Park café for its classic Matcha Latte, Lavender Mint Matcha and rotating seasonal drinks.\n\nI’d love to explore a simple six-week perk at 320 Bowling Green Dr: $1 off the Matcha Latte or Lavender Mint Matcha, one use per customer, capped at 100 successful redemptions. There is no participation fee; California Kahve would fund only redeemed $1 discounts, for a maximum proposed cost of $100, and could pause the pilot.\n\nIf this sounds interesting, I can send the one-page terms and voucher flow. Nothing would be published until you confirm current prices, eligible drinks, dates, exclusions, staff process and cap in writing. Editorial badges and awards stay completely separate.\n\nBest,\nAngela\nSF Matcha",
+      "nextAction": "Await Angela's explicit approval before contacting the official public inbox. Confirm current counter prices and POS handling during merchant review; do not infer prices from third parties.",
+      "verifiedAt": "2026-10-09",
+      "evidence": [
+        "https://www.californiakahve.com/contact",
+        "https://www.californiakahve.com/the-menu",
+        "https://www.californiakahve.com/locations",
+        "https://www.californiakahve.com/the-crew"
+      ]
+    }
+  ],
+  "noDuplicates": [
+    {
+      "canonicalId": "sohn-dogpatch",
+      "aliases": [
+        "SŌHN",
+        "SOHN",
+        "Sohn SF",
+        "2535 3rd St"
+      ]
+    },
+    {
+      "canonicalId": "california-kahve-golden-gate-park",
+      "aliases": [
+        "California Kahve",
+        "California Kahve Golden Gate Park",
+        "California Kahve — Golden Gate Park",
+        "320 Bowling Green Dr"
+      ]
+    }
+  ],
+  "doNotAdd": [
+    "Little Sweet",
+    "Avotoasty",
+    "Haraz Coffee House"
+  ]
+}
