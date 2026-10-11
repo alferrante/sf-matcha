@@ -3,19 +3,19 @@
   var guides_default = [
     {
       slug: "banana-matcha-san-francisco",
-      title: "Where to Get Banana Matcha in San Francisco",
-      description: "Three SF banana matcha drinks, from oat-milk lattes to seasonal injeolmi foam, with menu prices and milk notes.",
+      title: "3 places to get banana matcha in SF",
+      description: "Three places to get banana matcha in San Francisco.",
       emoji: "🍌",
       updatedAt: "2026-10-07",
-      intro: "Banana matcha comes in a few different forms: banana in the milk, banana in the drink, or banana underneath a cloud of cream. These three San Francisco menus give you distinct versions to try. SŌHN has the oat-milk version, YakiniQ lists a straightforward iced banana matcha, and Kumo has a seasonal banana-and-kinako build. Pick by ingredients and neighborhood before deciding which one is your favorite.",
+      intro: "Three spots, from a banana oat-milk latte to a seasonal soy-cloud drink.",
       methodology: "We checked café menus on October 7, 2026. This is an unranked guide to documented drinks, not a tasting-based “best” list. Prices are listed menu prices before tax and extras; a menu listing does not guarantee stock.",
       entries: [
         {
           shopId: "sohn",
           drink: "Banana Oat Milk Latte with Matcha",
           verdict: "For banana oat milk without a cream-top order.",
-          details: "SŌHN lists matcha as one of the tea or coffee choices for its iced banana oat milk latte. Go to 2535 3rd St in Dogpatch.",
-          milkNote: "Oat milk is named in this drink; soy is not listed. Confirm any additional ingredients if you avoid dairy.",
+          details: "Iced, with banana oat milk.",
+          milkNote: "Oat milk; soy not listed.",
           price: "$7",
           availability: "Tue–Sun 9am–4pm; closed Monday.",
           sources: [
@@ -33,8 +33,8 @@
           shopId: "yakiniq-cafe",
           drink: "Iced Banana Matcha Latte",
           verdict: "A banana matcha stop in Japantown.",
-          details: "The menu lists a 16-ounce iced banana matcha. Find it at 1640 Post St, first floor.",
-          milkNote: "The banana drink does not show a plant-milk substitution; ask before assuming it can be dairy-free.",
+          details: "Served iced in a 16-ounce cup.",
+          milkNote: "Plant-milk options aren’t listed for this drink. Ask the café.",
           price: "$8.50",
           availability: "Tue–Sat 11am–5pm; closed Sunday and Monday.",
           sources: [
@@ -48,8 +48,8 @@
           shopId: "kumo-matcha-divisadero-market",
           drink: "Banana Injeolmi Matcha Latte",
           verdict: "For banana purée, soy cloud and kinako together.",
-          details: "Banana purée sweetens the latte, topped with soy cloud and kinako. The SF pop-up is at 1377 Fell St.",
-          milkNote: "Contains dairy. Kumo uses lactose-free dairy milk; soy cloud does not make the drink dairy-free.",
+          details: "Banana purée, soy cloud and kinako.",
+          milkNote: "Contains dairy. Made with lactose-free dairy milk, even with the soy cloud.",
           price: "Price not published on the official menu",
           availability: "Sundays 9am–1pm; this seasonal drink is listed September 5, 2026–January 3, 2027.",
           sources: [
@@ -77,23 +77,25 @@
           question: "Are these ranked from best to worst?",
           answer: "No. The list helps you compare documented menus. We have not awarded a tasting winner."
         }
-      ]
+      ],
+      cardTitle: "3 places to get banana matcha in SF",
+      compactLayout: true
     },
     {
       slug: "matcha-cold-foam-san-francisco",
-      title: "Matcha Cold Foam, Clouds & Cream Tops in SF",
+      title: "Cold foam matcha: 4 SF spots to try",
       description: "Four places for matcha clouds and cream tops in San Francisco, with prices, seasonal availability and dairy notes.",
       emoji: "☁️",
       updatedAt: "2026-10-07",
-      intro: "The foam is part of the order, not just a garnish. San Francisco cafés offer matcha with flavored cream, matcha-flavored clouds, and fruit-topped lattes. Start with these four documented menus, which span an extra layer of matcha, salted cheese cream, a Korean café cream top and an autumn London Fog twist. If you choose a plant milk underneath, check the topping separately.",
+      intro: "Four matcha drinks topped with clouds, cream or salted cheese.",
       methodology: "Official menus checked October 7, 2026. “Cold foam,” “cloud” and “cream top” are café menu terms, not a claim that every drink uses the same recipe. This guide is unranked and does not award a Best Cold Foam badge.",
       entries: [
         {
           shopId: "q-specialty-coffee",
           drink: "Velvet Matcha Cloud",
           verdict: "For a matcha latte topped with another matcha layer.",
-          details: "Q lists matcha cloud over a matcha latte at its original 3490 California St café.",
-          milkNote: "The menu does not spell out cloud ingredients or confirm a dairy-free topping; ask before ordering.",
+          details: "Matcha cloud over a matcha latte.",
+          milkNote: "Cloud ingredients aren’t listed; ask about dairy.",
           price: "$8.25",
           availability: "Daily 7am–5:30pm.",
           sources: [
@@ -107,10 +109,10 @@
           shopId: "tadaima-mission",
           drink: "Matcha Latte with Salted Cheese Cream",
           verdict: "For the salted-cheese version.",
-          details: "The Mission drink menu offers this iced latte at 3515 20th St, Suite B. Strawberry and pistachio cream versions are also listed.",
-          milkNote: "Oat and almond substitutions cost $0.75 for the drink base. Cheese cream is not listed as dairy-free; soy is not listed.",
+          details: "Iced matcha with salted cheese cream; strawberry and pistachio cream versions also available.",
+          milkNote: "Oat or almond +$0.75 for the base. Cream isn’t confirmed dairy-free; soy not listed.",
           price: "$7.50 before milk substitutions",
-          availability: "Listed on the current drink menu; check café hours before visiting.",
+          availability: "Hours not listed on this menu; check before visiting.",
           sources: [
             {
               label: "Official menu",
@@ -122,8 +124,8 @@
           shopId: "sohn",
           drink: "SŌHN Signature Cream Top with Matcha",
           verdict: "For a dedicated café cream-top order.",
-          details: "Order the matcha option under Signature Cream Top at 2535 3rd St. The menu lists it as iced only.",
-          milkNote: "Soy is not listed. The menu does not document a dairy-free cream top.",
+          details: "Choose matcha under Signature Cream Top. Iced only.",
+          milkNote: "Soy not listed; dairy-free cream top not confirmed.",
           price: "$7",
           availability: "Tue–Sun 9am–4pm; closed Monday.",
           sources: [
@@ -141,10 +143,10 @@
           shopId: "kumo-matcha-divisadero-market",
           drink: "London Fog Matcha Latte",
           verdict: "For Earl Grey syrup and vanilla cloud.",
-          details: "Kumo’s seasonal latte has Earl Grey syrup, Madagascar vanilla cloud and orange zest. Find the SF pop-up at 1377 Fell St.",
-          milkNote: "Contains dairy; the base milk is lactose-free dairy milk.",
-          price: "Price not published on the official menu",
-          availability: "Listed as currently in season; SF service Sundays 9am–1pm.",
+          details: "Earl Grey syrup, Madagascar vanilla cloud and orange zest. Seasonal.",
+          milkNote: "Contains dairy, including lactose-free dairy milk.",
+          price: "Price not published",
+          availability: "In season; Sundays 9am–1pm.",
           sources: [
             {
               label: "Official menu",
@@ -170,24 +172,26 @@
           question: "Where is the Best Cold Foam winner?",
           answer: "This is a menu guide. A tasting-based award will be labeled separately with its judging method."
         }
-      ]
+      ],
+      cardTitle: "Cold foam matcha: 4 SF spots to try",
+      compactLayout: true
     },
     {
       slug: "soy-milk-matcha-san-francisco",
-      title: "Soy Milk Matcha in SF: Three Menus That List It",
+      title: "SF matcha spots with soy milk",
       description: "Where to order matcha with soy milk in San Francisco, with verified menu options, prices and dairy-free ordering tips.",
       emoji: "🌱",
       updatedAt: "2026-10-07",
-      intro: "Soy can be surprisingly hard to find on matcha menus, even when oat milk is everywhere. These three cafés explicitly list soy with their matcha or drink substitutions. They cover the Presidio, the northern waterfront and Japantown. Start with a plain latte, specify soy as the replacement milk, and ask about any added cream or premixed ingredients if you need the whole drink to be dairy-free.",
+      intro: "Three cafés that list soy milk for matcha.",
       methodology: "We checked official menus and merchant ordering pages on October 7, 2026. Inclusion means soy is listed, not that we have independently certified every recipe or allergy practice. This is an unranked ordering guide.",
       entries: [
         {
           shopId: "il-parco",
           drink: "Matcha Latte with Soy Milk",
           verdict: "For a soy matcha before a Presidio walk.",
-          details: "Il Parco’s menu lists hot and iced matcha lattes and soy among its milk alternatives at 215 Lincoln Blvd.",
-          milkNote: "Soy, oat or almond adds $0.50. Specify that soy replaces the base milk.",
-          price: "$6 hot 12 oz; $6.30 iced 12 oz with soy",
+          details: "Hot or iced, with soy as the milk replacement.",
+          milkNote: "Soy, oat or almond +$0.50.",
+          price: "With soy: $6 hot / $6.30 iced, 12 oz",
           availability: "Daily 8am–8pm.",
           sources: [
             {
@@ -200,9 +204,9 @@
           shopId: "lulu-fresh",
           drink: "Matcha Latte with Soy Milk",
           verdict: "For an explicitly selectable soy option near the waterfront.",
-          details: "Lulu’s product page lets you choose hot or iced and select soy. The café is at 50 Francisco St, Suite 105.",
-          milkNote: "Soy is listed alongside oat, almond and coconut. Confirm substitutions at checkout.",
-          price: "$7 listed base price; check checkout for modifiers",
+          details: "Choose hot or iced, then soy.",
+          milkNote: "Soy, oat, almond and coconut listed; confirm your choice at checkout.",
+          price: "$7 base; check checkout for milk charges",
           availability: "Mon–Fri 7am–4pm; Sat 8am–4pm; Sunday closed.",
           sources: [
             {
@@ -219,9 +223,9 @@
           shopId: "yakiniq-cafe",
           drink: "Matcha Latte with Soy Milk",
           verdict: "For a customizable Japantown latte.",
-          details: "The Matcha Latte ordering page lists soy in its milk choices at 1640 Post St, first floor.",
-          milkNote: "The option is labeled “Extra Soy Milk.” Ask the café to replace whole milk with soy if dairy avoidance matters.",
-          price: "$7 base 12 oz + $0.75 soy; iced adds $0.25",
+          details: "Soy is an option on the classic Matcha Latte.",
+          milkNote: "Listed as “Extra Soy Milk.” Ask to replace whole milk, rather than add soy.",
+          price: "$7 for 12 oz + $0.75 soy; iced +$0.25",
           availability: "Tue–Sat 11am–5pm; closed Sunday and Monday.",
           sources: [
             {
@@ -244,24 +248,26 @@
           question: "Why are some popular cafés missing?",
           answer: "This guide focuses on soy explicitly listed in the menus we checked. A café without listed soy may still offer it, but we do not assume that."
         }
-      ]
+      ],
+      cardTitle: "SF matcha spots with soy milk",
+      compactLayout: true
     },
     {
       slug: "strawberry-matcha-san-francisco",
-      title: "Strawberry Matcha in SF: Latte, Cloud or Cream?",
+      title: "Where to get strawberry matcha in SF",
       description: "Four documented strawberry matcha orders in San Francisco, including classic fruit lattes and strawberry cloud toppings.",
       emoji: "🍓",
       updatedAt: "2026-10-07",
-      intro: "Strawberry matcha is not one fixed recipe. Some menus put strawberry in the latte; others put it in a cloud or cream topping. These four stops let you compare the styles without guessing from a drink photo. Choose Stonemill or Four Chairs for a listed strawberry latte, Q for strawberry cloud, or Tadaima for strawberry cream. Each card links to the menu so you can check the latest options.",
+      intro: "Four strawberry matchas, from fruit lattes to cloud and cream toppings.",
       methodology: "Official café menus checked on October 7, 2026. Selections reflect named strawberry-and-matcha drinks. They are not ranked, and we do not make firsthand taste or sweetness judgments. Prices exclude tax and add-ons.",
       entries: [
         {
           shopId: "stonemill-matcha",
           drink: "Cold Strawberry Latte with Matcha",
           verdict: "For a strawberry latte with a choice of tea.",
-          details: "The menu pairs strawberry with matcha or hojicha, milk and cane sugar. Choose matcha at 561 Valencia St.",
-          milkNote: "Oat substitution is listed; soy is not.",
-          price: "Price not published on this menu",
+          details: "Strawberry, milk and cane sugar. Choose matcha rather than hojicha.",
+          milkNote: "Oat substitution listed; soy not listed.",
+          price: "Price not published",
           availability: "Mon–Fri 10am–4pm; Sat–Sun 9am–7pm.",
           sources: [
             {
@@ -278,8 +284,8 @@
           shopId: "four-chairs",
           drink: "Strawberry Matcha",
           verdict: "For a matcha order alongside brunch.",
-          details: "Four Chairs lists Strawberry Matcha at 3282 Mission St.",
-          milkNote: "Whole milk is listed; Oatly or almond adds $1. Soy is not listed.",
+          details: "Strawberry matcha with a choice of milk.",
+          milkNote: "Whole milk; Oatly or almond +$1. Soy not listed.",
           price: "$7; $8 with Oatly or almond",
           availability: "Mon–Fri 10am–2:30pm; Sat–Sun 9am–3pm.",
           sources: [
@@ -297,8 +303,8 @@
           shopId: "q-specialty-coffee",
           drink: "Matcha Strawberry Cloud",
           verdict: "For strawberry in the topping.",
-          details: "Q lists an organic matcha latte with house-made strawberry cloud and dried strawberry at 3490 California St.",
-          milkNote: "Foam ingredients and dairy-free substitutions are not specified on this menu.",
+          details: "Organic matcha latte with house-made strawberry cloud and dried strawberry.",
+          milkNote: "Foam ingredients and dairy-free substitutions aren’t listed.",
           price: "$8.25",
           availability: "Daily 7am–5:30pm.",
           sources: [
@@ -312,10 +318,10 @@
           shopId: "tadaima-mission",
           drink: "Matcha Latte with Strawberry Cream",
           verdict: "For an iced strawberry-cream latte.",
-          details: "The Mission menu lists strawberry cream over matcha at 3515 20th St, Suite B.",
-          milkNote: "Oat and almond substitutions are listed for $0.75; the cream is not listed as dairy-free. Soy is not listed.",
+          details: "Iced matcha topped with strawberry cream.",
+          milkNote: "Oat or almond +$0.75 for the base. Cream isn’t confirmed dairy-free; soy not listed.",
           price: "$7.75 before milk substitutions",
-          availability: "Listed on the current drink menu; check café hours before visiting.",
+          availability: "Hours not listed on this menu; check before visiting.",
           sources: [
             {
               label: "Official menu",
@@ -337,24 +343,26 @@
           question: "Which one is the least sweet?",
           answer: "We have not tasted them side by side or measured sugar. Ask which components can be reduced; fruit preparations and cream may have fixed sweetness."
         }
-      ]
+      ],
+      cardTitle: "Where to get strawberry matcha in SF",
+      compactLayout: true
     },
     {
       slug: "ceremonial-hand-whisked-matcha-san-francisco",
-      title: "Ceremonial & Hand-Whisked Matcha in San Francisco",
+      title: "3 SF cafés for ceremonial and hand-whisked matcha",
       description: "Three SF cafés documenting matcha sourcing or hand-whisking, with simple tea orders and latte options.",
       emoji: "🍵",
       updatedAt: "2026-10-07",
-      intro: "If the tea itself is what you came for, start with preparation and sourcing details rather than a colorful topping. Stonemill names a hand-whisked order, Nagomi describes hand-whisking Shizuoka matcha, and Pixlcat identifies the Kyoto Uji matcha used for its lattes. These are three different ways to explore the tea. A sourcing description can help you choose an order; it does not replace tasting it yourself.",
+      intro: "Three cafés with hand-whisked matcha or named Japanese tea sources.",
       methodology: "Official café pages checked October 7, 2026. “Ceremonial” is reported as the café describes its matcha; we do not treat that word alone as an independent quality award. Hand-whisking is identified only where the café explicitly documents it.",
       entries: [
         {
           shopId: "stonemill-matcha",
           drink: "Hand Whisked Matcha",
           verdict: "For a named hand-whisked tea order.",
-          details: "Stonemill lists First Crop matcha served with small yuzu meringues. Its Matchacano is another water-based order at 561 Valencia St.",
-          milkNote: "The hand-whisked order is separate from the milk lattes. Ask about the accompanying sweet if you have dietary restrictions.",
-          price: "Price not published on the official menu",
+          details: "First Crop matcha with small yuzu meringues. Matchacano is another water-based option.",
+          milkNote: "Separate from the milk lattes; check the accompanying sweet’s ingredients.",
+          price: "Price not published",
           availability: "Mon–Fri 10am–4pm; Sat–Sun 9am–7pm.",
           sources: [
             {
@@ -371,10 +379,10 @@
           shopId: "nagomi",
           drink: "Oyaizu Heavenly Sky Matcha Latte",
           verdict: "For a café that names its Shizuoka producer.",
-          details: "Nagomi describes hand-whisking Oyaizu Seicha’s Heavenly Sky #65 and #90 matcha at 74 New Montgomery St.",
-          milkNote: "The site names Straus dairy milk. Soy and plant-milk substitutions are not listed there.",
-          price: "Price not published on the official site",
-          availability: "Temporary hours: Mon–Sat 10:30am–5pm; Sunday closed. Check before visiting.",
+          details: "Hand-whisked Oyaizu Seicha Heavenly Sky #65 and #90 matcha from Shizuoka.",
+          milkNote: "Straus dairy milk; soy and plant-milk substitutions not listed.",
+          price: "Price not published",
+          availability: "Temporary: Mon–Sat 10:30am–5pm; closed Sunday. Confirm before visiting.",
           sources: [
             {
               label: "Official menu",
@@ -386,9 +394,9 @@
           shopId: "pixlcat-coffee",
           drink: "Organic Matcha Latte",
           verdict: "For a Kyoto Uji matcha latte in the Inner Richmond.",
-          details: "Pixlcat describes hot or iced organic matcha lattes made with ceremonial-grade Kyoto Uji matcha at 519 Clement St.",
-          milkNote: "Soy and other latte milk choices are not specified on this page.",
-          price: "Check the linked ordering menu for the current drink price",
+          details: "Hot or iced latte with organic ceremonial-grade Kyoto Uji matcha.",
+          milkNote: "Milk choices, including soy, aren’t listed on this page.",
+          price: "Check the ordering menu",
           availability: "Mon–Fri 7am–4pm; Sat–Sun 7am–5pm.",
           sources: [
             {
@@ -411,25 +419,27 @@
           question: "How can I compare the tea without flavored cream?",
           answer: "Ask about a simple water-based matcha order or a plain latte. Use the same milk and sweetness preference when comparing cafés."
         }
-      ]
+      ],
+      cardTitle: "3 SF cafés for ceremonial and hand-whisked matcha",
+      compactLayout: true
     },
     {
       slug: "matcha-under-seven-dollars-san-francisco",
-      title: "Matcha Under $7 in San Francisco",
+      title: "Matcha under $7 in SF",
       description: "Four SF matcha menus with options below $7 before tax, including plant-milk prices and a matcha soda.",
       emoji: "💸",
       updatedAt: "2026-10-07",
-      intro: "A matcha order can stay below $7 if you watch size, temperature and milk surcharges. These four official menus list qualifying drinks without needing a promo code. The prices below are before tax, tip and extras. Paper Son also has a milk-free-style soda build, while Il Parco publishes enough size and milk detail to plan a soy order. Check the checkout total before paying; this guide uses the menu prices available on the update date.",
+      intro: "Four matcha options under $7 before tax, tip and extras.",
       methodology: "Official menus checked October 7, 2026. Every featured base drink is listed strictly below $7. This is a price guide, not a Best Value taste award. Delivery prices and fees can differ from café prices.",
       entries: [
         {
           shopId: "paper-son-coffee-fidi",
           drink: "Matcha Latte or Matcha Passionfruit Soda",
           verdict: "For two matcha orders listed at the same price.",
-          details: "Paper Son’s menu lists both at $6. Visit Downtown at 303 2nd St N102.",
-          milkNote: "Oat or almond adds $0.25 to the latte. Soy is not listed.",
+          details: "A latte or passionfruit soda, each $6.",
+          milkNote: "Latte: oat or almond +$0.25; soy not listed.",
           price: "$6; latte with oat or almond $6.25",
-          availability: "Downtown Mon–Fri 8am–3:30pm; closed weekends.",
+          availability: "Mon–Fri 8am–3:30pm; closed weekends.",
           sources: [
             {
               label: "Official menu",
@@ -445,8 +455,8 @@
           shopId: "il-parco",
           drink: "12 oz Matcha Latte",
           verdict: "For a published soy price that stays under $7.",
-          details: "At 215 Lincoln Blvd, the 12-ounce latte is $5.50 hot or $5.80 iced.",
-          milkNote: "Soy, oat and almond add $0.50.",
+          details: "Hot or iced in a 12-ounce cup.",
+          milkNote: "Soy, oat or almond +$0.50.",
           price: "$5.50 hot / $5.80 iced; with plant milk $6 / $6.30",
           availability: "Daily 8am–8pm.",
           sources: [
@@ -460,10 +470,10 @@
           shopId: "tadaima-mission",
           drink: "Classic Matcha Latte",
           verdict: "For a hot latte that leaves room for a milk swap.",
-          details: "The Mission menu at 3515 20th St, Suite B lists its classic latte hot or iced.",
-          milkNote: "Oat or almond adds $0.75: hot reaches $7, iced reaches $7.50. Soy is not listed.",
+          details: "Classic matcha, hot or iced.",
+          milkNote: "Oat or almond +$0.75: $7 hot / $7.50 iced. Soy not listed.",
           price: "$6.25 hot / $6.75 iced before substitutions",
-          availability: "Listed on the current drink menu; check café hours before visiting.",
+          availability: "Hours not listed on this menu; check before visiting.",
           sources: [
             {
               label: "Official menu",
@@ -475,8 +485,8 @@
           shopId: "sohn",
           drink: "Matcha Latte or Matchacano",
           verdict: "For a $6 matcha order in Dogpatch.",
-          details: "SŌHN lists both orders at $6 at 2535 3rd St. Its banana and cream-top signatures cost $7 and fall outside this list.",
-          milkNote: "Oat and almond alternatives are listed without a charge; soy is not listed.",
+          details: "Latte or Matchacano, each $6. Banana and cream-top drinks are $7.",
+          milkNote: "Oat and almond listed without a charge; soy not listed.",
           price: "$6",
           availability: "Tue–Sun 9am–4pm; closed Monday.",
           sources: [
@@ -504,25 +514,27 @@
           question: "Does a $1-off SF Matcha code already work here?",
           answer: "No offer is implied by inclusion. A café discount is valid only when an active offer explicitly lists its participating café and terms."
         }
-      ]
+      ],
+      cardTitle: "Matcha under $7 in SF",
+      compactLayout: true
     },
     {
       slug: "japantown-matcha-san-francisco",
-      title: "Where to Get Matcha in San Francisco Japantown",
+      title: "Where to get matcha in Japantown",
       description: "Three Japantown matcha stops for hand-whisked tea, fruit lattes and soft serve, with addresses, menu prices and milk caveats.",
       emoji: "🏮",
       updatedAt: "2026-10-08",
-      intro: "Japantown gives you several ways to order matcha within a small area. Best Boy Electric lists unsweetened hand-whisked lattes and usucha on Post Street. YakiniQ adds banana, strawberry, red bean and yuzu to its matcha menu. Maiko’s Japan Center shop is a stop for a latte or matcha dessert. Use the menu styles below to plan your visit; these cafés are listed without a tasting ranking.",
+      intro: "Three stops for hand-whisked tea, fruit lattes and matcha soft serve.",
       methodology: "We checked official café menus, ordering pages and location pages on October 8, 2026. NEW PEOPLE, Best Boy Electric’s host, supplies its posted café hours. Maiko’s brand menu varies by location, so confirm the local selection and hours before going. Prices are published menu prices before tax and extras; menu listings do not guarantee stock.",
       entries: [
         {
           shopId: "best-boy-electric",
           drink: "Usucha or Matcha Latte",
           verdict: "For traditional hand-whisked tea or an unsweetened latte.",
-          details: "At 1746 Post St, inside NEW PEOPLE, the menu lists single-origin usucha with a small snack and a steamed-milk matcha latte made unsweetened by default. There is also a hand-whisked matcha americano with hot or iced water.",
-          milkNote: "The latte uses steamed milk; specific plant-milk choices are not shown on the current public menu. The americano is described as matcha and water. Check the accompanying snack’s ingredients if ordering usucha.",
-          price: "Usucha $6; Matcha Latte $6.50; Matcha Americano $6",
-          availability: "NEW PEOPLE posts Mon–Fri 8am–3:30pm and Sat–Sun 9am–5pm. The ordering menu marked drinks unavailable when checked; confirm in-person availability.",
+          details: "Inside NEW PEOPLE. Single-origin usucha with a snack, an unsweetened steamed-milk latte, or a hand-whisked Matcha Americano.",
+          milkNote: "Latte milk choices aren’t listed. Americano uses water; check the usucha snack’s ingredients.",
+          price: "Usucha $6; latte $6.50; americano $6",
+          availability: "Mon–Fri 8am–3:30pm; Sat–Sun 9am–5pm. Drinks marked unavailable online when checked; confirm in-person availability.",
           sources: [
             {
               label: "Official drinks menu",
@@ -533,14 +545,14 @@
               url: "https://www.newpeopleworld.com/best-boy-electric"
             }
           ],
-          soyNote: "Specific plant-milk choices are not named on the current public ordering menu; ask about soy."
+          soyNote: "Soy not confirmed; ask the café."
         },
         {
           shopId: "yakiniq-cafe",
           drink: "Matcha Latte or Iced Banana Matcha Latte",
           verdict: "For a classic latte with milk options or a fruit-matcha menu.",
-          details: "Find YakiniQ at 1640 Post St, first floor. Its menu lists a classic matcha latte alongside iced banana, strawberry, red bean and lavender versions. Matcha Tea and Matcha Fizz are also listed.",
-          milkNote: "The classic latte’s customization panel lists oat, almond and soy at +$0.75, labelled “Extra” milk. Ask for a replacement of dairy rather than an addition. Do not assume the banana or cream drinks use the same recipe or substitutions.",
+          details: "Classic latte plus iced banana, strawberry, red bean and lavender versions. Matcha Tea and Matcha Fizz also listed.",
+          milkNote: "Classic latte: oat, almond or soy +$0.75, labelled “Extra.” Ask to replace dairy. Banana and cream drinks may differ.",
           price: "Matcha Latte from $7; Iced Banana Matcha Latte $8.50",
           availability: "Tue–Sat 11am–5pm; closed Sunday and Monday.",
           sources: [
@@ -556,14 +568,14 @@
         },
         {
           shopId: "matcha-cafe-maiko-japantown",
-          soyNote: "Current official brand menu does not confirm soy availability at this counter; ask the shop.",
+          soyNote: "Soy not confirmed at this counter; ask the shop.",
           hours: "Call 415-757-0919 for current hours.",
           drink: "Matcha Latte and Matcha Soft Serve",
           verdict: "A Japan Center stop for matcha drinks and desserts.",
-          details: "Maiko’s official store page places its Japantown shop at 1581 Webster St, Suite 175. The brand menu lists matcha lattes, matcha soft serve, parfaits and tea floats. Confirm which items this counter is serving before deciding on a specific dessert.",
-          milkNote: "The current brand menu does not publish latte milk substitutions or full allergens. Cream-topped floats and soft serve should not be assumed dairy-free; ask the shop about soy availability and the complete recipe.",
-          price: "Local prices are not published on the official brand menu",
-          availability: "The official San Francisco store page asks customers to call 415-757-0919 for current hours. The brand notes that menu items vary by store.",
+          details: "Lattes, soft serve, parfaits and tea floats. Menu varies by store; confirm this counter’s selection.",
+          milkNote: "Milk substitutions and full allergens aren’t listed. Don’t assume soft serve or cream-topped floats are dairy-free.",
+          price: "Local prices not published",
+          availability: "Call 415-757-0919 for current hours; menu varies by store.",
           sources: [
             {
               label: "Official San Francisco locations",
@@ -589,25 +601,27 @@
           question: "Can I visit these cafés on Sunday?",
           answer: "YakiniQ’s ordering page says it is closed Sunday. NEW PEOPLE lists Best Boy Electric’s Sunday hours as 9am–5pm. Maiko asks visitors to call its Japantown store for current hours."
         }
-      ]
+      ],
+      cardTitle: "Where to get matcha in Japantown",
+      compactLayout: true
     },
     {
       slug: "richmond-district-matcha-san-francisco",
-      title: "Matcha in SF’s Richmond District: Clement and Balboa Stops",
+      title: "Where to get matcha in the Richmond",
       description: "Compare three Inner and Outer Richmond matcha cafés, from Clement Street lattes to Constance’s freshly milled matcha on Balboa.",
       emoji: "🌁",
       updatedAt: "2026-10-08",
-      intro: "The Richmond’s matcha options run from Clement Street coffee shops to a tea studio farther west on Balboa. Kiss of Matcha lists a hand-whisked latte and a large flavored-matcha menu. Pixlcat pairs an Uji matcha program with its butter mochi. Constance mills tencha leaves into matcha in house. These three stops cover both Inner and Outer Richmond; choose by drink style and location, rather than treating them as a ranking.",
+      intro: "Three Clement and Balboa stops for lattes and freshly milled matcha.",
       methodology: "We checked official websites and café ordering menus on October 8, 2026. Prices are published menu prices before tax, sizes and extras. Kiss of Matcha’s weekly schedule comes from its ordering page’s published location data. Constance has limited public menu detail, so its prices and milk choices remain unconfirmed here. Menu listings do not guarantee stock.",
       entries: [
         {
           shopId: "kiss-of-matcha-clement",
           drink: "Matcha Latte",
           verdict: "For hand-whisked matcha with an optional cream layer.",
-          details: "The Clement shop is at 750 Clement St. Its latte description lists six grams of hand-whisked matcha over whole milk or a choice of milk. The wider menu also includes strawberry, mango, ube, azuki and jasmine matcha lattes.",
-          milkNote: "Whole milk is the named base. Other milk choices are offered but not named on the public product page, so ask specifically about soy. The optional matcha cream is explicitly dairy.",
-          price: "Matcha Latte $7.47 on the ordering menu",
-          availability: "Published location data lists Tue–Thu 10am–8pm, Fri–Sat 10am–10pm and Sun 10am–9pm, with no Monday hours. Check the current ordering page before visiting.",
+          details: "Six grams of hand-whisked matcha. Flavors include strawberry, mango, ube, azuki and jasmine.",
+          milkNote: "Whole-milk base; optional matcha cream contains dairy. Other milk choices aren’t named.",
+          price: "$7.47 on the ordering menu",
+          availability: "Tue–Thu 10am–8pm; Fri–Sat 10am–10pm; Sun 10am–9pm. Monday not listed; confirm before visiting.",
           sources: [
             {
               label: "Official Matcha Latte ingredients and price",
@@ -622,17 +636,17 @@
               url: "https://kissofmatcha.order.tryperdiem.com/menu/matcha-latte"
             }
           ],
-          soyNote: "The current ordering page offers a choice of milk without naming soy; confirm substitutions and the full topping recipe.",
-          hours: "Tue–Thu 10am–8pm; Fri–Sat 10am–10pm; Sun 10am–9pm. Monday is not listed; confirm before visiting."
+          soyNote: "Soy not confirmed; ask the café.",
+          hours: "Tue–Thu 10am–8pm; Fri–Sat 10am–10pm; Sun 10am–9pm. Monday not listed; confirm before visiting."
         },
         {
           shopId: "pixlcat-coffee",
           drink: "Matcha Latte or Iced Strawberry Matcha",
           verdict: "For an unsweetened base latte with confirmed oat and almond options.",
-          details: "Pixlcat’s 519 Clement St menu identifies its matcha as organic ceremonial Uji matcha. The classic latte is unsweetened by default; the fruit menu includes strawberry and guava. Matcha Green Tea Mochi is listed separately at $5.25 on the ordering menu.",
-          milkNote: "The classic latte panel lists oat substitution and almond substitution (+$1). Soy is not listed. The Matcha Dopo Panna includes whipped cream even when a plant milk is chosen; ask about dairy in mochi and flavored additions separately.",
+          details: "Organic ceremonial Uji matcha, unsweetened by default. Strawberry and guava versions; Matcha Green Tea Mochi $5.25.",
+          milkNote: "Oat substitution listed; almond +$1. Soy not listed. Dopo Panna includes whipped cream with plant milk too; check mochi and flavored additions for dairy.",
           price: "Matcha Latte $7; Iced Strawberry Matcha $8.50",
-          availability: "Official website hours: Mon–Fri 7am–4pm; Sat–Sun 7am–5pm.",
+          availability: "Mon–Fri 7am–4pm; Sat–Sun 7am–5pm.",
           sources: [
             {
               label: "Official drinks and food menu",
@@ -652,10 +666,10 @@
           shopId: "constance-tea",
           drink: "Freshly Milled Matcha and Matcha Lattes",
           verdict: "For an Outer Richmond tea studio that mills matcha in house.",
-          details: "Constance’s official website identifies matcha lattes and freshly milled matcha at 3512 Balboa St. It describes grinding tencha leaves in house with Japanese stone mills. Its public site does not provide a detailed drinks menu, so check the current selection at the counter.",
-          milkNote: "Milk types, soy availability and cream ingredients are not published on the current official site. Ask about the full recipe before ordering a latte or a topped drink.",
-          price: "Prices are not published on the current official site",
-          availability: "Posted soft-opening hours: Mon, Wed and Thu 10am–5pm; Fri–Sun 10am–6pm; closed Tuesday.",
+          details: "Tencha ground in house with Japanese stone mills. Detailed drinks menu isn’t published; check the counter’s selection.",
+          milkNote: "Milk choices, soy and cream ingredients aren’t published; ask about the full recipe.",
+          price: "Prices not published",
+          availability: "Soft opening: Mon, Wed–Thu 10am–5pm; Fri–Sun 10am–6pm; closed Tuesday.",
           sources: [
             {
               label: "Official matcha program, address and soft-opening hours",
@@ -677,144 +691,220 @@
           question: "Are all three Richmond stops in the same area?",
           answer: "Pixlcat and Kiss of Matcha are on Clement Street in the Inner Richmond. Constance is farther west on Balboa Street in the Outer Richmond. Use each listing’s map pin to plan travel between them."
         }
-      ]
+      ],
+      cardTitle: "Where to get matcha in the Richmond",
+      compactLayout: true
     },
     {
       slug: "mission-district-matcha-san-francisco",
-      title: "Matcha in San Francisco’s Mission District: Five Valencia & 20th Street Stops",
+      title: "5 matcha stops in the Mission",
       description: "Five documented Mission matcha menus, from traditional and floral lattes to fruit and cream-top builds.",
       emoji: "🌴",
       updatedAt: "2026-10-09",
-      intro: "The Mission has a compact run of matcha menus along Valencia Street and nearby 20th and 21st Streets. Stonemill focuses on Japanese tea and café food; Binge and Ceré stretch into fruit, ube and cream-top drinks; Tadaima pairs matcha with sandos; and Marigold lists a floral lavender latte. This is an unranked route organized by menu style and location.",
+      intro: "Five stops on and near Valencia for plain, fruit and cream-topped matcha.",
       methodology: "We checked official café sites, menus, location pages and current merchant ordering pages on October 9, 2026. Published prices can differ from in-store prices or include delivery markup. Menu listings do not guarantee stock, and a plant-milk choice does not establish that a foam or topping is dairy-free.",
       entries: [
         {
           shopId: "stonemill-matcha",
           drink: "Matcha, Ginger Matcha or Rose Matcha Latte",
           verdict: "For a Japanese matcha café with both plain and flavored formats.",
-          details: "Stonemill’s 561 Valencia St menu lists matcha alongside ginger, rose and strawberry variations, plus Japanese café food.",
-          milkNote: "The menu lists oat as the milk substitute. Soy is not listed; check individual toppings and sweets separately.",
-          availability: "Official hours: Mon–Fri 10am–4pm; Sat–Sun 9am–7pm.",
+          details: "Plain matcha plus ginger, rose and strawberry versions; Japanese café food.",
+          milkNote: "Oat substitution listed; soy not listed. Check toppings and sweets for dairy.",
+          availability: "Mon–Fri 10am–4pm; Sat–Sun 9am–7pm.",
           sources: [
-            { label: "Official menu", url: "https://www.stonemillmatcha-us.com/menu" },
-            { label: "Official location and hours", url: "https://www.stonemillmatcha-us.com/" }
+            {
+              label: "Official menu",
+              url: "https://www.stonemillmatcha-us.com/menu"
+            },
+            {
+              label: "Official location and hours",
+              url: "https://www.stonemillmatcha-us.com/"
+            }
           ]
         },
         {
           shopId: "binge-coffee-house",
           drink: "Uji, Fruit, Sesame, Ube, Banana or Coconut Matcha",
           verdict: "For the widest documented matcha flavor range on this route.",
-          details: "The Valencia location at 530 Valencia St serves Binge’s ceremonial-matcha menu, spanning Uji, fruit, sesame, ube, banana and coconut builds.",
-          milkNote: "Oat and almond are listed; soy is not. Some cold foams contain dairy, so ask about the complete build.",
-          availability: "Current merchant hours: Mon–Fri 9am–6pm; Sat–Sun 9am–7pm.",
+          details: "Ceremonial matcha in Uji, fruit, sesame, ube, banana and coconut drinks.",
+          milkNote: "Oat and almond listed; soy not listed. Some cold foams contain dairy.",
+          availability: "Mon–Fri 9am–6pm; Sat–Sun 9am–7pm.",
           sources: [
-            { label: "Official menu", url: "https://www.bingecoffeehouse.com/menu" },
-            { label: "Current Valencia menu and hours", url: "https://postmates.com/store/binge-coffee-house-valencia/21Sjn46UVgWQG8Ib9fijLA" }
+            {
+              label: "Official menu",
+              url: "https://www.bingecoffeehouse.com/menu"
+            },
+            {
+              label: "Current Valencia menu and hours",
+              url: "https://postmates.com/store/binge-coffee-house-valencia/21Sjn46UVgWQG8Ib9fijLA"
+            }
           ]
         },
         {
           shopId: "cere-tea",
           drink: "Classic, Fruit, Cream-Top or Sparkling Matcha",
           verdict: "For a large menu that moves from lattes to sparkling matcha.",
-          details: "Ceré’s official menu at 1186 Valencia St lists classic and fruit matcha alongside cream-top and sparkling formats.",
-          milkNote: "Soy is listed for matcha drinks. Cream-top recipes can still contain dairy; confirm the specific build.",
-          availability: "Current ordering hours: daily 10am–7pm.",
+          details: "Classic and fruit matcha, plus cream-top and sparkling drinks.",
+          milkNote: "Soy listed for matcha. Cream tops may contain dairy; check your drink.",
+          availability: "Daily 10am–7pm.",
           sources: [
-            { label: "Official menu and location", url: "https://www.ceretea.com/" },
-            { label: "Current ordering and hours", url: "https://postmates.com/store/cere-tea/JK83sjtJUt6687g5r9EWzg" }
+            {
+              label: "Official menu and location",
+              url: "https://www.ceretea.com/"
+            },
+            {
+              label: "Current ordering and hours",
+              url: "https://postmates.com/store/cere-tea/JK83sjtJUt6687g5r9EWzg"
+            }
           ]
         },
         {
           shopId: "tadaima-mission",
           drink: "Matcha Latte or Salted-Cheese, Strawberry and Pistachio Cream Matcha",
           verdict: "For classic matcha plus several cream-topped variations.",
-          details: "The 3515 20th St, Suite B drink menu lists a classic latte and salted-cheese, strawberry and pistachio cream versions.",
-          milkNote: "Oat and almond substitutions are listed. Soy is not listed, and cream toppings should not be assumed dairy-free.",
-          availability: "Official hours: Mon–Thu 11am–4:30pm; Fri–Sun 10am–5:30pm.",
+          details: "Classic latte or salted-cheese, strawberry and pistachio cream versions.",
+          milkNote: "Oat and almond listed; soy not listed. Cream toppings aren’t confirmed dairy-free.",
+          availability: "Mon–Thu 11am–4:30pm; Fri–Sun 10am–5:30pm.",
           sources: [
-            { label: "Official drink menu", url: "https://tadaimasf.com/san-francisco-suite-b-tadaima-sf-drink-menu" },
-            { label: "Official location and hours", url: "https://tadaimasf.com/san-francisco-suite-b-tadaima-sf-locations" }
+            {
+              label: "Official drink menu",
+              url: "https://tadaimasf.com/san-francisco-suite-b-tadaima-sf-drink-menu"
+            },
+            {
+              label: "Official location and hours",
+              url: "https://tadaimasf.com/san-francisco-suite-b-tadaima-sf-locations"
+            }
           ]
         },
         {
           shopId: "marigold-cafe",
           drink: "Lavender Matcha",
           verdict: "For a floral matcha stop east of the Valencia corridor.",
-          details: "Marigold’s café menu lists a $7.50 lavender matcha at 2681 21st St.",
-          milkNote: "Oat milk is listed at +$0.50. Soy is not listed; ask about the full recipe.",
+          details: "Lavender matcha.",
+          milkNote: "Oat +$0.50; soy not listed. Check the full recipe.",
           price: "$7.50 before substitutions",
-          availability: "Official hours: daily 8am–3pm.",
-          sources: [{ label: "Official café menu, address and hours", url: "https://marigoldsf.com/pages/cafe" }]
+          availability: "Daily 8am–3pm.",
+          sources: [
+            {
+              label: "Official café menu, address and hours",
+              url: "https://marigoldsf.com/pages/cafe"
+            }
+          ]
         }
       ],
       faqs: [
-        { question: "Is this a ranking of the Mission’s matcha cafés?", answer: "No. The stops are grouped as an unranked route using current menu evidence, location and ordering details rather than firsthand taste scores." },
-        { question: "Which Mission stop lists soy milk?", answer: "Ceré lists soy for matcha drinks. The other current menus in this guide list oat and/or almond, or do not name soy; confirm the full drink and topping recipe." },
-        { question: "Can plant milk still come with dairy foam?", answer: "Yes. A base-milk substitution does not change every topping. Ask separately about cream, cheese foam and cold foam before ordering." }
-      ]
+        {
+          question: "Is this a ranking of the Mission’s matcha cafés?",
+          answer: "No. The stops are grouped as an unranked route using current menu evidence, location and ordering details rather than firsthand taste scores."
+        },
+        {
+          question: "Which Mission stop lists soy milk?",
+          answer: "Ceré lists soy for matcha drinks. The other current menus in this guide list oat and/or almond, or do not name soy; confirm the full drink and topping recipe."
+        },
+        {
+          question: "Can plant milk still come with dairy foam?",
+          answer: "Yes. A base-milk substitution does not change every topping. Ask separately about cream, cheese foam and cold foam before ordering."
+        }
+      ],
+      cardTitle: "5 matcha stops in the Mission",
+      compactLayout: true
     },
     {
       slug: "ube-matcha-san-francisco",
-      title: "Ube Matcha in San Francisco: Four Menus That List It",
+      title: "Ube matcha: 4 SF spots to try",
       description: "Four documented ube-matcha drinks compared by format: cold foam, latte, snow top and affogato.",
       emoji: "💜",
       updatedAt: "2026-10-09",
-      intro: "Ube matcha is not one standard drink. In San Francisco, current menus use purple yam in cold foam, layered lattes, snow tops and an affogato. These four documented options are organized by format, not ranked by taste.",
+      intro: "Four ube matchas, from cold foam and snow tops to an affogato.",
       methodology: "We checked official menus, official social posts and current merchant pages on October 9, 2026. Delivery prices may include markup. Where a menu does not disclose soy or dairy details, the guide says so rather than inferring ingredients.",
       entries: [
         {
           shopId: "cere-tea",
           drink: "Snowy Ube Matcha",
           verdict: "An ube-and-matcha build presented as a snow-top drink.",
-          details: "Ceré’s current official menu lists Snowy Ube Matcha at its 1186 Valencia St café.",
-          milkNote: "The public item listing does not provide a complete dairy or topping disclosure. Ask about soy and every layer before ordering.",
+          details: "Ube and matcha.",
+          milkNote: "Full dairy and topping ingredients aren’t listed. Ask about soy and each layer.",
           price: "$8.50 on the official menu",
-          availability: "Current menu item; daily ordering hours are 10am–7pm.",
-          sources: [{ label: "Official menu and location", url: "https://www.ceretea.com/" }]
+          availability: "Daily 10am–7pm.",
+          sources: [
+            {
+              label: "Official menu and location",
+              url: "https://www.ceretea.com/"
+            }
+          ]
         },
         {
           shopId: "binge-coffee-house",
           drink: "Ube Matcha",
           verdict: "A matcha latte finished with coconut-ube cold foam.",
-          details: "Binge’s current Valencia merchant menu lists Ube Matcha with coconut-ube cold foam.",
-          milkNote: "The current item description says the ube foam contains dairy even after a base-milk substitution. Oat and almond are listed; soy is not.",
-          price: "$9 on the current merchant menu; delivery markup may apply",
-          availability: "Current Valencia menu; Mon–Fri 9am–6pm and Sat–Sun 9am–7pm.",
+          details: "Matcha latte with coconut-ube cold foam.",
+          milkNote: "Foam contains dairy, even with a milk swap. Oat and almond listed; soy not listed.",
+          price: "$9 on the merchant menu; delivery markup may apply",
+          availability: "Mon–Fri 9am–6pm; Sat–Sun 9am–7pm.",
           sources: [
-            { label: "Official menu", url: "https://www.bingecoffeehouse.com/menu" },
-            { label: "Current Valencia item and hours", url: "https://postmates.com/store/binge-coffee-house-valencia/21Sjn46UVgWQG8Ib9fijLA" }
+            {
+              label: "Official menu",
+              url: "https://www.bingecoffeehouse.com/menu"
+            },
+            {
+              label: "Current Valencia item and hours",
+              url: "https://postmates.com/store/binge-coffee-house-valencia/21Sjn46UVgWQG8Ib9fijLA"
+            }
           ]
         },
         {
           shopId: "maruwu-seicha",
           drink: "Ube Matcha Latte or Ube Matcha Latte Max + Snow Top",
           verdict: "A choice between a layered latte and a snow-top version.",
-          details: "Maruwu’s current Japantown merchant menu lists both Ube Matcha Latte and a Max + Snow Top variation at 1737 Post St #368.",
-          milkNote: "Maruwu lists soy, whole, oat and almond for matcha lattes, but the complete snow-top ingredients are not disclosed. Confirm the selected build.",
-          availability: "Current Japantown merchant menu; Sun–Thu 11am–9pm and Fri–Sat 11am–9:30pm.",
+          details: "Layered ube latte, with a Max + Snow Top version.",
+          milkNote: "Soy, whole, oat and almond listed for lattes. Snow-top ingredients aren’t disclosed; check your drink.",
+          availability: "Sun–Thu 11am–9pm; Fri–Sat 11am–9:30pm.",
           sources: [
-            { label: "Current Japantown menu", url: "https://postmates.com/store/maruwu-seicha-japantown/gRIVlsHiVbC8QNCX5VX02g" },
-            { label: "Official location page", url: "https://www.maruwuseicha.us/pages/menu" }
+            {
+              label: "Current Japantown menu",
+              url: "https://postmates.com/store/maruwu-seicha-japantown/gRIVlsHiVbC8QNCX5VX02g"
+            },
+            {
+              label: "Official location page",
+              url: "https://www.maruwuseicha.us/pages/menu"
+            }
           ]
         },
         {
           shopId: "le-mils-coffee",
           drink: "Ube Matcha Affogato",
           verdict: "A hand-whisked matcha-and-ube affogato format.",
-          details: "Le Mil’s official launch menu lists a hand-whisked Ube Matcha Affogato at 1330 Polk St.",
-          milkNote: "Soy and a complete dairy disclosure are not published for this item. Ask the café about the affogato base and toppings.",
-          availability: "Listed on the official launch menu; café hours are daily 7am–3pm.",
+          details: "Hand-whisked matcha and ube affogato, listed on the launch menu.",
+          milkNote: "Soy and full dairy ingredients aren’t published. Ask about the affogato base and toppings.",
+          availability: "Daily 7am–3pm; check that the launch-menu drink is still available.",
           sources: [
-            { label: "Official menu post", url: "https://www.instagram.com/p/DbiyOqHlPwk/" },
-            { label: "Official location and hours", url: "https://lemils.com/pages/find-us" }
+            {
+              label: "Official menu post",
+              url: "https://www.instagram.com/p/DbiyOqHlPwk/"
+            },
+            {
+              label: "Official location and hours",
+              url: "https://lemils.com/pages/find-us"
+            }
           ]
         }
       ],
       faqs: [
-        { question: "Is ube matcha always dairy-free?", answer: "No. Binge’s current menu explicitly says its coconut-ube cold foam contains dairy. The other menus do not publish complete ingredient details, so ask about every layer." },
-        { question: "Which ube matcha listing names soy milk?", answer: "Maruwu lists soy among latte milk choices, but the snow-top recipe still needs a separate ingredient check. The other three item listings do not confirm soy." },
-        { question: "Are these the best ube matchas in San Francisco?", answer: "This is a source-backed list of documented menu options, not a firsthand tasting ranking or award." }
-      ]
+        {
+          question: "Is ube matcha always dairy-free?",
+          answer: "No. Binge’s current menu explicitly says its coconut-ube cold foam contains dairy. The other menus do not publish complete ingredient details, so ask about every layer."
+        },
+        {
+          question: "Which ube matcha listing names soy milk?",
+          answer: "Maruwu lists soy among latte milk choices, but the snow-top recipe still needs a separate ingredient check. The other three item listings do not confirm soy."
+        },
+        {
+          question: "Are these the best ube matchas in San Francisco?",
+          answer: "This is a source-backed list of documented menu options, not a firsthand tasting ranking or award."
+        }
+      ],
+      cardTitle: "Ube matcha: 4 SF spots to try",
+      compactLayout: true
     }
   ];
 
@@ -908,7 +998,7 @@
       throw new Error("Signup could not be completed. Please try again later.");
     }
     if (!response.ok || result?.success !== true) throw new Error("Signup could not be completed. Please try again later.");
-    return "Thanks! Your signup has been received. You can unsubscribe from any email.";
+    return "Signup received. Unsubscribe anytime.";
   }
 
   // app.jsx
@@ -988,7 +1078,7 @@
       buzzy: filtered.filter(activeBuzzy).length,
       top: filtered.filter((s) => s.topPick).length
     }), [filtered]);
-    return /* @__PURE__ */ React.createElement("div", { style: { "--bg": C.bg, "--ink": C.ink, "--pop": C.pop, "--pop2": C.pop2, "--lime": C.lime, background: C.bg, color: C.ink, minHeight: "100vh" } }, /* @__PURE__ */ React.createElement(Marquee, { speed: tweaks.marqueeSpeed }), /* @__PURE__ */ React.createElement(Header, { C }), /* @__PURE__ */ React.createElement(NewsletterSignup, null), /* @__PURE__ */ React.createElement("div", { className: "guide-discovery" }, /* @__PURE__ */ React.createElement("a", { href: "/guides/" }, /* @__PURE__ */ React.createElement("strong", null, guides_default.length, " guides for your next cup →"), /* @__PURE__ */ React.createElement("span", null, "banana · cold foam · milk options · neighborhood guides"))), /* @__PURE__ */ React.createElement(FilterBar, { filter, setFilter, stats, C }), /* @__PURE__ */ React.createElement("div", { className: "main-grid", style: { display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 24, padding: "0 32px 48px", maxWidth: 1600, margin: "0 auto" } }, /* @__PURE__ */ React.createElement(
+    return /* @__PURE__ */ React.createElement("div", { style: { "--bg": C.bg, "--ink": C.ink, "--pop": C.pop, "--pop2": C.pop2, "--lime": C.lime, background: C.bg, color: C.ink, minHeight: "100vh" } }, /* @__PURE__ */ React.createElement(Marquee, { speed: tweaks.marqueeSpeed }), /* @__PURE__ */ React.createElement(Header, { C }), /* @__PURE__ */ React.createElement(NewsletterSignup, null), /* @__PURE__ */ React.createElement("div", { className: "guide-discovery" }, /* @__PURE__ */ React.createElement("a", { href: "/guides/" }, /* @__PURE__ */ React.createElement("strong", null, guides_default.length, " matcha guides →"), /* @__PURE__ */ React.createElement("span", null, "banana · cold foam · soy milk · neighborhoods"))), /* @__PURE__ */ React.createElement(FilterBar, { filter, setFilter, stats, C }), /* @__PURE__ */ React.createElement("div", { className: "main-grid", style: { display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 24, padding: "0 32px 48px", maxWidth: 1600, margin: "0 auto" } }, /* @__PURE__ */ React.createElement(
       MapPanel,
       {
         shops: SHOPS,
@@ -1053,10 +1143,10 @@
   function Marquee({ speed }) {
     const items = [
       "🍵 sf matcha, mapped",
-      `✦ ${guides_default.length} menu-backed guides`,
+      `✦ ${guides_default.length} matcha guides`,
       `🌿 ${SHOPS.length} spots mapped`,
-      "✿ soy info at a glance",
-      "⭐ local favorites highlighted",
+      "✿ soy milk options",
+      "⭐ top picks",
       "🎀 tap a pin for details"
     ];
     const loop = [...items, ...items, ...items];
@@ -1093,7 +1183,7 @@
       event.preventDefault();
       if (status === "submitting") return;
       setStatus("submitting");
-      setMessage("Saving your signup… This may take a moment.");
+      setMessage("Signing you up…");
       try {
         setMessage(await subscribe({ endpoint, email, consent, website }));
         setStatus("success");
@@ -1101,10 +1191,10 @@
         setConsent(false);
       } catch {
         setStatus("error");
-        setMessage("Signup could not be completed. Please try again later.");
+        setMessage("Couldn’t sign you up. Please try again.");
       }
     }
-    return /* @__PURE__ */ React.createElement("section", { className: "newsletter-band", "aria-labelledby": "newsletter-heading" }, /* @__PURE__ */ React.createElement("div", { className: "newsletter-inner" }, /* @__PURE__ */ React.createElement("h2", { id: "newsletter-heading" }, "Want new matcha spots in your inbox?"), /* @__PURE__ */ React.createElement("div", { className: "newsletter-action" }, endpoint ? /* @__PURE__ */ React.createElement("form", { onSubmit: handleSubmit }, /* @__PURE__ */ React.createElement("div", { className: "newsletter-form" }, /* @__PURE__ */ React.createElement("label", { className: "sr-only", htmlFor: "newsletter-email" }, "Email address"), /* @__PURE__ */ React.createElement("input", { id: "newsletter-email", type: "email", inputMode: "email", autoComplete: "email", required: true, value: email, onChange: (e) => setEmail(e.target.value), placeholder: "your email", disabled: status === "submitting" }), /* @__PURE__ */ React.createElement("button", { type: "submit", "aria-label": "Subscribe for new matcha spot alerts", disabled: status === "submitting" }, /* @__PURE__ */ React.createElement("span", { className: "material-symbols-rounded", "aria-hidden": "true" }, "arrow_forward"))), /* @__PURE__ */ React.createElement("label", { className: "newsletter-consent" }, /* @__PURE__ */ React.createElement("input", { type: "checkbox", required: true, checked: consent, onChange: (e) => setConsent(e.target.checked), disabled: status === "submitting" }), " Send me SF Matcha guides and new-spot emails. Unsubscribe anytime."), /* @__PURE__ */ React.createElement("label", { className: "newsletter-trap", "aria-hidden": "true" }, "Website", /* @__PURE__ */ React.createElement("input", { tabIndex: -1, autoComplete: "off", value: website, onChange: (e) => setWebsite(e.target.value) })), /* @__PURE__ */ React.createElement("a", { className: "newsletter-privacy", href: "/privacy/" }, "Privacy details")) : /* @__PURE__ */ React.createElement("p", { className: "newsletter-coming" }, "Email signup is temporarily unavailable. ", /* @__PURE__ */ React.createElement("a", { href: "/guides/" }, "Explore the new guides →")), /* @__PURE__ */ React.createElement("div", { className: `newsletter-message ${status}`, role: status === "error" ? "alert" : "status", "aria-live": "polite" }, message))));
+    return /* @__PURE__ */ React.createElement("section", { className: "newsletter-band", "aria-labelledby": "newsletter-heading" }, /* @__PURE__ */ React.createElement("div", { className: "newsletter-inner" }, /* @__PURE__ */ React.createElement("h2", { id: "newsletter-heading" }, "Get new matcha spots by email"), /* @__PURE__ */ React.createElement("div", { className: "newsletter-action" }, endpoint ? /* @__PURE__ */ React.createElement("form", { onSubmit: handleSubmit }, /* @__PURE__ */ React.createElement("div", { className: "newsletter-form" }, /* @__PURE__ */ React.createElement("label", { className: "sr-only", htmlFor: "newsletter-email" }, "Email address"), /* @__PURE__ */ React.createElement("input", { id: "newsletter-email", type: "email", inputMode: "email", autoComplete: "email", required: true, value: email, onChange: (e) => setEmail(e.target.value), placeholder: "your email", disabled: status === "submitting" }), /* @__PURE__ */ React.createElement("button", { type: "submit", "aria-label": "Sign up for matcha emails", disabled: status === "submitting" }, /* @__PURE__ */ React.createElement("span", { className: "material-symbols-rounded", "aria-hidden": "true" }, "arrow_forward"))), /* @__PURE__ */ React.createElement("label", { className: "newsletter-consent" }, /* @__PURE__ */ React.createElement("input", { type: "checkbox", required: true, checked: consent, onChange: (e) => setConsent(e.target.checked), disabled: status === "submitting" }), " Send me SF Matcha guides and new-spot emails. Unsubscribe anytime."), /* @__PURE__ */ React.createElement("label", { className: "newsletter-trap", "aria-hidden": "true" }, "Website", /* @__PURE__ */ React.createElement("input", { tabIndex: -1, autoComplete: "off", value: website, onChange: (e) => setWebsite(e.target.value) })), /* @__PURE__ */ React.createElement("a", { className: "newsletter-privacy", href: "/privacy/" }, "Privacy")) : /* @__PURE__ */ React.createElement("p", { className: "newsletter-coming" }, "Email signup is unavailable. ", /* @__PURE__ */ React.createElement("a", { href: "/guides/" }, "Read the guides →")), /* @__PURE__ */ React.createElement("div", { className: `newsletter-message ${status}`, role: status === "error" ? "alert" : "status", "aria-live": "polite" }, message))));
   }
   function mapsUrl(shop) {
     return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(`${shop.name} ${shop.address} San Francisco CA`);
@@ -1744,7 +1834,7 @@
         textTransform: "uppercase",
         letterSpacing: "0.08em",
         marginBottom: 4
-      } }, "why it’s buzzy"), /* @__PURE__ */ React.createElement("div", null, BUZZY_BY_SHOP.get(shop.id).reason), /* @__PURE__ */ React.createElement("a", { href: BUZZY_BY_SHOP.get(shop.id).source, target: "_blank", rel: "noreferrer", style: { display: "inline-block", marginTop: 6 } }, "source ↗"), /* @__PURE__ */ React.createElement("div", { style: { fontSize: 12, marginTop: 4 } }, "checked ", BUZZY_BY_SHOP.get(shop.id).verifiedAt, " · review by ", BUZZY_BY_SHOP.get(shop.id).reviewBy)), /* @__PURE__ */ React.createElement("div", { style: {
+      } }, "why it’s buzzy"), /* @__PURE__ */ React.createElement("div", null, BUZZY_BY_SHOP.get(shop.id).reason), /* @__PURE__ */ React.createElement("a", { href: BUZZY_BY_SHOP.get(shop.id).source, target: "_blank", rel: "noreferrer", style: { display: "inline-block", marginTop: 6 } }, "source ↗"), /* @__PURE__ */ React.createElement("div", { style: { fontSize: 12, marginTop: 4 } }, "checked ", BUZZY_BY_SHOP.get(shop.id).verifiedAt, " · next review ", BUZZY_BY_SHOP.get(shop.id).reviewBy)), /* @__PURE__ */ React.createElement("div", { style: {
         marginTop: 16,
         padding: 14,
         background: "#fff",
@@ -1760,7 +1850,7 @@
         letterSpacing: "0.08em",
         marginBottom: 4,
         color: meta.ink
-      } }, "soy status"), shop.soyNote), /* @__PURE__ */ React.createElement("div", { style: { display: "flex", gap: 10, marginTop: 20, flexWrap: "wrap" } }, /* @__PURE__ */ React.createElement(Btn, { primary: true, href: mapsUrl(shop) }, "📍 directions"), /* @__PURE__ */ React.createElement(Btn, { href: shop.source }, "🔗 source"), /* @__PURE__ */ React.createElement(Btn, { href: mapsUrl(shop) }, "🗺️ google maps")))
+      } }, "soy milk"), shop.soyNote), /* @__PURE__ */ React.createElement("div", { style: { display: "flex", gap: 10, marginTop: 20, flexWrap: "wrap" } }, /* @__PURE__ */ React.createElement(Btn, { primary: true, href: mapsUrl(shop) }, "📍 directions"), /* @__PURE__ */ React.createElement(Btn, { href: shop.source }, "🔗 source"), /* @__PURE__ */ React.createElement(Btn, { href: mapsUrl(shop) }, "🗺️ google maps")))
     ));
   }
   function Mini({ label, val }) {
@@ -1802,7 +1892,7 @@
       fontSize: 28,
       marginBottom: 8,
       color: "var(--lime)"
-    } }, "made with 🍵 in sf"), /* @__PURE__ */ React.createElement("p", null, /* @__PURE__ */ React.createElement("a", { href: "/guides/" }, "guides"), " · ", /* @__PURE__ */ React.createElement("a", { href: "/perks/" }, "café perks"), " · ", /* @__PURE__ */ React.createElement("a", { href: "/methodology/" }, "how we verify"), " · ", /* @__PURE__ */ React.createElement("a", { href: "/privacy/" }, "privacy")), /* @__PURE__ */ React.createElement("div", { style: { opacity: 0.7 } }, "sanfranciscomatcha.com · est. 2026"));
+    } }, "made with 🍵 in sf"), /* @__PURE__ */ React.createElement("p", null, /* @__PURE__ */ React.createElement("a", { href: "/guides/" }, "guides"), " · ", /* @__PURE__ */ React.createElement("a", { href: "/perks/" }, "perks"), " · ", /* @__PURE__ */ React.createElement("a", { href: "/methodology/" }, "how we choose"), " · ", /* @__PURE__ */ React.createElement("a", { href: "/privacy/" }, "privacy")), /* @__PURE__ */ React.createElement("div", { style: { opacity: 0.7 } }, "sanfranciscomatcha.com · est. 2026"));
   }
   ReactDOM.createRoot(document.getElementById("root")).render(/* @__PURE__ */ React.createElement(App, null));
 })();

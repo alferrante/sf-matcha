@@ -143,3 +143,12 @@ Publication: release `d029c38ff6fb6badf52568cede217cc76510e534` is on main and v
 1. Render distribution carousel sets for the Mission and ube guides, then prepare the next two source-backed guide packages toward 24.
 2. Recheck the next highest-value legacy Buzzy candidates and migrate only those with current official evidence; expire Kumo’s label if its recurring schedule changes.
 3. Implement the authenticated atomic claim/redemption service in an inactive state while merchant outreach remains unapproved.
+
+## October 11 approved copy rollout
+
+- Angela approved the concise guide/perks draft and requested publication. Started a clean checkout at verified current main `16a16d7228fa3b4fb46d71acf69de2376a8e60d1`; preserved the local review branch and other worktrees.
+- Updated all ten guide-card/article headlines and switched all articles to the compact layout. Removed the hub subtitle. Article copy is 58–65% shorter against the previously visible main content; the hub is 68% shorter. Each article keeps drink names, prices or explicit unknown-price wording, milk/soy caveats, hours, directions and original source links.
+- Perks now opens with the honest zero-offers status and puts the local merchant planner in a closed “For café owners” disclosure. Shortened homepage discovery/signup copy, badge/award explanations, privacy text and the social gallery heading. Consent, opt-out behavior, local-only proposal generation and offer-confirmation safeguards are unchanged.
+- All 36 guide entries retain their venue IDs, drink names, sources and original October 7–9 verification dates. No new menu-verification claim, venue, ranking, winner, merchant participation, email or social post. Directory remains 89 venues; guides remain 10. This release improves clarity; no audience-growth claim.
+- Validation: `npm ci --include=dev`, source build, all 65 tests, customer-copy audit (89 shops / 267 fields), source/date preservation checks and whitespace checks passed. Extended compact-layout regression coverage for fresh soy/hours overrides, unknown prices and HTML escaping. Published hashes will be retained alongside the stable bundles for cached-page compatibility.
+- Publication and live verification: pending below; verify the canonical homepage, hub, every article, perks, methodology, privacy, social gallery and current hashed app/newsletter assets after pushing this release.

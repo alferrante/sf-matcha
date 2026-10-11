@@ -94,12 +94,15 @@ test("offer validation permits a future pilot only with completed merchant confi
 
 test("fresh guide soy and hours evidence overrides older directory fields and rejects nontext overrides", async () => {
   const record = guide();
+  record.compactLayout = true;
+  delete record.entries[0].price;
   record.entries[0].soyNote = "Current menu does not confirm soy; ask the shop.";
   record.entries[0].hours = "Call for current hours.";
   const dir = await fixture([record]);
   try {
     await buildGuides({ root: dir });
     const html = await readFile(path.join(dir, "guides/guide-0/index.html"), "utf8");
+    assert.match(html, /Ask the café/);
     assert.match(html, /Current menu does not confirm soy; ask the shop\./);
     assert.match(html, /Call for current hours\./);
     assert.doesNotMatch(html, /Soy is available\./);
@@ -143,18 +146,22 @@ test("guide text is escaped in HTML, attributes and JSON-LD without ending its s
   record.entries[0].drink = value;
   record.entries[0].sources[0] = { label: value, url: "https://example.com/?x=1&y=2" };
   record.faqs[0].answer = value;
-  const dir = await fixture([record]);
-  try {
-    await buildGuides({ root: dir });
-    const html = await readFile(path.join(dir, "guides/guide-0/index.html"), "utf8");
-    assert.doesNotMatch(html, /<script>alert/);
-    assert.match(html, /&lt;\/script&gt;&lt;script&gt;alert\(&quot;x&quot;\)/);
-    assert.match(html, /href="https:\/\/example.com\/\?x=1&amp;y=2"/);
-    assert.equal((html.match(/<script/g) ?? []).length, 3);
-    const raw = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1];
-    assert.match(raw, /\\u003c\/script\\u003e/);
-    assert.equal(JSON.parse(raw)["@graph"][0].headline, value);
-  } finally { await rm(dir, { recursive: true, force: true }); }
+  for (const compactLayout of [false, true]) {
+    record.compactLayout = compactLayout;
+    record.cardTitle = value;
+    const dir = await fixture([record]);
+    try {
+      await buildGuides({ root: dir });
+      const html = await readFile(path.join(dir, "guides/guide-0/index.html"), "utf8");
+      assert.doesNotMatch(html, /<script>alert/);
+      assert.match(html, /&lt;\/script&gt;&lt;script&gt;alert\(&quot;x&quot;\)/);
+      assert.match(html, /href="https:\/\/example.com\/\?x=1&amp;y=2"/);
+      assert.equal((html.match(/<script/g) ?? []).length, 3);
+      const raw = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1];
+      assert.match(raw, /\\u003c\/script\\u003e/);
+      assert.equal(JSON.parse(raw)["@graph"][0].headline, value);
+    } finally { await rm(dir, { recursive: true, force: true }); }
+  }
 });
 
 test("bad venue IDs, duplicate slugs, impossible dates and unsafe sources fail before files are written", async () => {

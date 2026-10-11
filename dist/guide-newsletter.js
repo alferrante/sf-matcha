@@ -30,7 +30,7 @@ async function subscribe({ endpoint, email, consent, source = "homepage", websit
     throw new Error("Signup could not be completed. Please try again later.");
   }
   if (!response.ok || result?.success !== true) throw new Error("Signup could not be completed. Please try again later.");
-  return "Thanks! Your signup has been received. You can unsubscribe from any email.";
+  return "Signup received. Unsubscribe anytime.";
 }
 
 // lib/guide-newsletter.mjs
@@ -80,7 +80,7 @@ function initializeGuideNewsletter({ doc = document, config = globalThis.window?
       const label = button.textContent;
       button.textContent = "Saving…";
       form.setAttribute("aria-busy", "true");
-      show("Saving your signup… This may take a moment.", "saving");
+      show("Signing you up…", "saving");
       try {
         const result = await subscribeImpl({ endpoint, email: email.value, consent: consent.checked, website: website.value, source });
         show(result, "success");
@@ -88,7 +88,7 @@ function initializeGuideNewsletter({ doc = document, config = globalThis.window?
         consent.checked = false;
         website.value = "";
       } catch {
-        show("Signup could not be completed. Please try again later.", "error");
+        show("Couldn’t sign you up. Please try again.", "error");
       } finally {
         controls.forEach((control, index) => {
           control.disabled = disabled[index];

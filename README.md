@@ -53,3 +53,7 @@ The Blueprint runs `npm ci --include=dev`, `npm run build`, then `npm run config
 The newsletter frontend uses the verified public capture service at `https://sfmatcha-newsletter.onrender.com/api/newsletter/subscribe`. A public `NEWSLETTER_ENDPOINT` configuration can override it; an explicit empty value hides the form. `server/newsletter.mjs` is a separate Node backend; it cannot run on the static site. Read `docs/NEWSLETTER_SETUP.md` before deployment. Keep the private Resend key exclusively in the backend environment. Public config contains only the browser map key and signup URL.
 
 The café pilot planner produces a local proposal and does not enroll merchants. An active offer requires explicit outreach authorization, written merchant confirmation, and a tested server claim/redemption service. A valid JSON record alone is not approval to activate an offer.
+
+## Public copy
+
+Use direct article headlines on both guide cards and article pages. Keep public copy short: one-line introductions, drink names, prices, milk details, hours, directions and menu links. New guides must set `compactLayout: true`. Do not repeat ordering advice, FAQs or editorial-process explanations around every listing. Keep source links, original menu-check dates and material dietary/availability uncertainty. Use “best” or “tastiest” only with recorded firsthand evidence. Merchant proposal tools belong in the closed café-owner section of perks, away from the customer offer status.

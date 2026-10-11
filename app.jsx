@@ -103,7 +103,7 @@ function App() {
       <Marquee speed={tweaks.marqueeSpeed} />
       <Header C={C} />
       <NewsletterSignup />
-      <div className="guide-discovery"><a href="/guides/"><strong>{guides.length} guides for your next cup →</strong><span>banana · cold foam · milk options · neighborhood guides</span></a></div>
+      <div className="guide-discovery"><a href="/guides/"><strong>{guides.length} matcha guides →</strong><span>banana · cold foam · soy milk · neighborhoods</span></a></div>
       <FilterBar filter={filter} setFilter={setFilter} stats={stats} C={C} />
 
       <div className="main-grid" style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 24, padding: "0 32px 48px", maxWidth: 1600, margin: "0 auto" }}>
@@ -166,10 +166,10 @@ function App() {
 function Marquee({ speed }) {
   const items = [
   "🍵 sf matcha, mapped",
-  `✦ ${guides.length} menu-backed guides`,
+  `✦ ${guides.length} matcha guides`,
   `🌿 ${SHOPS.length} spots mapped`,
-  "✿ soy info at a glance",
-  "⭐ local favorites highlighted",
+  "✿ soy milk options",
+  "⭐ top picks",
   "🎀 tap a pin for details"];
 
   const loop = [...items, ...items, ...items];
@@ -218,28 +218,28 @@ function NewsletterSignup() {
   async function handleSubmit(event) {
     event.preventDefault();
     if (status === "submitting") return;
-    setStatus("submitting"); setMessage("Saving your signup… This may take a moment.");
+    setStatus("submitting"); setMessage("Signing you up…");
     try {
       setMessage(await subscribe({endpoint,email,consent,website}));
       setStatus("success"); setEmail(""); setConsent(false);
     } catch {
-      setStatus("error"); setMessage("Signup could not be completed. Please try again later.");
+      setStatus("error"); setMessage("Couldn’t sign you up. Please try again.");
     }
   }
   return <section className="newsletter-band" aria-labelledby="newsletter-heading">
     <div className="newsletter-inner">
-      <h2 id="newsletter-heading">Want new matcha spots in your inbox?</h2>
+      <h2 id="newsletter-heading">Get new matcha spots by email</h2>
       <div className="newsletter-action">
         {endpoint ? <form onSubmit={handleSubmit}>
           <div className="newsletter-form">
             <label className="sr-only" htmlFor="newsletter-email">Email address</label>
             <input id="newsletter-email" type="email" inputMode="email" autoComplete="email" required value={email} onChange={e=>setEmail(e.target.value)} placeholder="your email" disabled={status==="submitting"} />
-            <button type="submit" aria-label="Subscribe for new matcha spot alerts" disabled={status==="submitting"}><span className="material-symbols-rounded" aria-hidden="true">arrow_forward</span></button>
+            <button type="submit" aria-label="Sign up for matcha emails" disabled={status==="submitting"}><span className="material-symbols-rounded" aria-hidden="true">arrow_forward</span></button>
           </div>
           <label className="newsletter-consent"><input type="checkbox" required checked={consent} onChange={e=>setConsent(e.target.checked)} disabled={status==="submitting"} /> Send me SF Matcha guides and new-spot emails. Unsubscribe anytime.</label>
           <label className="newsletter-trap" aria-hidden="true">Website<input tabIndex={-1} autoComplete="off" value={website} onChange={e=>setWebsite(e.target.value)} /></label>
-          <a className="newsletter-privacy" href="/privacy/">Privacy details</a>
-        </form> : <p className="newsletter-coming">Email signup is temporarily unavailable. <a href="/guides/">Explore the new guides →</a></p>}
+          <a className="newsletter-privacy" href="/privacy/">Privacy</a>
+        </form> : <p className="newsletter-coming">Email signup is unavailable. <a href="/guides/">Read the guides →</a></p>}
         <div className={`newsletter-message ${status}`} role={status==="error" ? "alert" : "status"} aria-live="polite">{message}</div>
       </div>
     </div>
@@ -930,7 +930,7 @@ function ShopDetail({ shop, onClose, C }) {
               source ↗
             </a>
             <div style={{ fontSize: 12, marginTop: 4 }}>
-              checked {BUZZY_BY_SHOP.get(shop.id).verifiedAt} · review by {BUZZY_BY_SHOP.get(shop.id).reviewBy}
+              checked {BUZZY_BY_SHOP.get(shop.id).verifiedAt} · next review {BUZZY_BY_SHOP.get(shop.id).reviewBy}
             </div>
           </div>}
           <div style={{
@@ -942,7 +942,7 @@ function ShopDetail({ shop, onClose, C }) {
               fontFamily: "'Space Mono', monospace", fontSize: 11, fontWeight: 700,
               textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 4,
               color: meta.ink
-            }}>soy status</div>
+            }}>soy milk</div>
             {shop.soyNote}
           </div>
           <div style={{ display: "flex", gap: 10, marginTop: 20, flexWrap: "wrap" }}>
@@ -996,7 +996,7 @@ function Footer({ C }) {
         fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800,
         fontSize: 28, marginBottom: 8, color: "var(--lime)"
       }}>made with 🍵 in sf</div>
-      <p><a href="/guides/">guides</a> · <a href="/perks/">café perks</a> · <a href="/methodology/">how we verify</a> · <a href="/privacy/">privacy</a></p>
+      <p><a href="/guides/">guides</a> · <a href="/perks/">perks</a> · <a href="/methodology/">how we choose</a> · <a href="/privacy/">privacy</a></p>
       <div style={{ opacity: 0.7 }}>sanfranciscomatcha.com · est. 2026
 
       </div>
