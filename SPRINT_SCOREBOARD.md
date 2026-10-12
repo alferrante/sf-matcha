@@ -1,6 +1,6 @@
 # SF Matcha sprint scoreboard
 
-Last updated: October 9, 2026. Goal: `GOAL.md`.
+Last updated: October 12, 2026. Goal: `GOAL.md`.
 
 ## Verified baseline
 
@@ -8,7 +8,7 @@ Repository baseline for October 8: `4e908193bca7135f5cf8163bd3a5b25ab05cd749` (v
 
 | Metric | Current verified state | Target |
 | --- | --- | ---: |
-| Directory venues | 89 source/built venues; audit passes 267 fields | Accuracy and freshness |
+| Directory venues | 94 source/built venues; audit passes 282 fields | Accuracy and freshness |
 | Monthly visits | Unknown; Cloudflare beacon exists, export not accessed | 50,000 |
 | Active email subscribers | 0 active real subscribers, audience queried October 8; signup live; owned synthetic tests excluded | 10,000 |
 | Social followers | Unknown; project accounts not verified | 25,000 |
@@ -155,3 +155,11 @@ Publication: release `d029c38ff6fb6badf52568cede217cc76510e534` is on main and v
 - Live verification completed October 11: all 16 canonical public HTML pages and five current hashed browser assets returned HTTP 200 and matched committed bytes. Six cached pages initially showed the previous release; their five-minute cache expired, and all 21 checks then passed without cache-busting URLs.
 - Browser verification confirms the new hub/headlines, compact banana article, shorter badge page, homepage with no header subtitle, initialized signup controls with required unchecked consent, and perks with its merchant tools collapsed by default and opening correctly. No live signup was submitted during this copy-only release.
 - Live URLs: [guides](https://sanfranciscomatcha.com/guides/), [perks](https://sanfranciscomatcha.com/perks/), [badge methodology](https://sanfranciscomatcha.com/methodology/), [homepage](https://sanfranciscomatcha.com/). The new README copy rules guide future editorial runs.
+
+## October 12 venue watch
+
+- Added five verified, nonduplicate locations: operating Florecita Panadería (3349 23rd St, tres-leches cold-foam matcha) and Adan Cafe (120 Mason St, banana-pudding matcha); planned California Kahve — Sutter (2108 Sutter St), CHAGEE — City Center (2675 Geary Blvd, C-2), and CHAGEE — Stonestown (3251 20th Ave). The CHAGEE branches are expected in 2027; planned-location cards explicitly leave branch menus, dates and hours unannounced.
+- Verified address/status/menu evidence, checked milk disclosures and hours, and documented uncertainty in `docs/VENUE_WATCH_2026-10-12.md`. No new soy confirmation, subjective ranking or Buzzy label. Urban Matcha and Elsewhere remain on address watch. Held Avocado Green because fresh local reporting says temporarily closed for permitting. Preserved README exclusions and Jandii Castro's opening restriction.
+- Metrics: directory **89 → 94**. All original 89 venue records and the October 11 concise guide/perks copy are preserved. Guides remain **10**, confirmed offers **0**; no new subscriber, traffic, follower, redemption or vote measurement is claimed.
+- Validation: clean dependency install, source build, **65 passing tests**, customer-copy audit **94 shops / 282 fields**, source/bundle parity and whitespace checks. Commit includes source, stable data bundle, current hashed data bundle and index reference together; previously published hashes retained.
+- Publication and live verification: pending canonical homepage/current hashed-bundle check.
