@@ -903,5 +903,145 @@
     ],
     "cardTitle": "Ube matcha: 4 SF spots to try",
     "compactLayout": true
+  },
+  {
+    "slug": "coconut-water-matcha-san-francisco",
+    "title": "Coconut water matcha: 3 SF spots to try",
+    "cardTitle": "Coconut water matcha: 3 SF spots to try",
+    "description": "Three coconut-water matchas with foam or cream on top.",
+    "emoji": "🥥",
+    "updatedAt": "2026-10-12",
+    "intro": "Three coconut-water matchas with foam or cream on top.",
+    "methodology": "Official menus and location pages checked October 12, 2026. Unranked menu guide; prices before tax and extras.",
+    "entries": [
+      {
+        "shopId": "bageletto-sf",
+        "drink": "Coconut Cloud Matcha",
+        "verdict": "Coconut water topped with whipped matcha foam.",
+        "details": "Coconut water topped with whipped matcha foam.",
+        "milkNote": "Oat option +$1; soy not listed. Confirm whether the foam can be made dairy-free.",
+        "price": "$8",
+        "availability": "Pickup: Mon–Fri 7:15am–1:45pm; Sat–Sun 8:15am–2:45pm.",
+        "sources": [
+          {
+            "label": "Drink menu",
+            "url": "https://bageletto.com/order/bageletto-14th/item-coconut-cloud-matcha_abf996bf-b849-4090-af66-3cd16a8dc0d1"
+          },
+          {
+            "label": "Pickup hours",
+            "url": "https://toast.app/r/bageletto-14th/order"
+          }
+        ]
+      },
+      {
+        "shopId": "kiss-of-matcha-clement",
+        "drink": "Matcha Cloud Coconut",
+        "verdict": "Matcha cream over coconut water. Listed under seasonal specials.",
+        "details": "Matcha cream over coconut water. Listed under seasonal specials.",
+        "milkNote": "Soy not listed. Dairy-free cream not confirmed.",
+        "price": "$7.47",
+        "availability": "Tue–Thu 10am–8pm; Fri–Sat 10am–10pm; Sun 10am–9pm; Monday closed.",
+        "sources": [
+          {
+            "label": "Drink menu",
+            "url": "https://kissofmatcha.order.tryperdiem.com/products/matcha-cloud-coconut"
+          },
+          {
+            "label": "Clement menu and hours",
+            "url": "https://kissofmatcha.order.tryperdiem.com/locations/san-francisco-clement"
+          }
+        ]
+      },
+      {
+        "shopId": "origin-lab-coffee-and-matcha",
+        "drink": "Coconut Wave Matcha Cloud",
+        "verdict": "Coconut water topped with matcha foam.",
+        "details": "Coconut water topped with matcha foam.",
+        "milkNote": "Foam contains dairy and honey. Soy is listed for lattes; a dairy-free cloud is not confirmed.",
+        "price": "$7.75",
+        "availability": "Daily 6am–8pm on the official site; ordering hours differ.",
+        "sources": [
+          {
+            "label": "Drink menu",
+            "url": "https://originlabcoffeematcha.toast.site/order/origin-lab-matcha-cafe-211-sutter-st/item-coconut-wave-matcha-cloud_f6e0d614-aaf2-460f-9405-d0f1fa710b4c"
+          },
+          {
+            "label": "Foam ingredients and hours",
+            "url": "https://originlabcoffee.com/"
+          }
+        ]
+      }
+    ],
+    "compactLayout": true
+  },
+  {
+    "slug": "matcha-without-milk-san-francisco",
+    "title": "Where to get matcha without milk in SF",
+    "cardTitle": "Where to get matcha without milk in SF",
+    "description": "Three plain matcha orders, without a latte or cream topping.",
+    "emoji": "🍵",
+    "updatedAt": "2026-10-12",
+    "intro": "Three plain matcha orders, without a latte or cream topping.",
+    "methodology": "Official menus and location pages checked October 12, 2026. Unranked menu guide; prices before tax and extras.",
+    "entries": [
+      {
+        "shopId": "stonemill-matcha",
+        "drink": "Hot Matchacano",
+        "verdict": "Matcha and hot water; unsweetened.",
+        "details": "Matcha and hot water; unsweetened.",
+        "milkNote": "No milk in the listed recipe.",
+        "price": "$5.75",
+        "availability": "Mon–Fri 10am–4pm; Sat–Sun 9am–7pm. Online pickup ends earlier.",
+        "sources": [
+          {
+            "label": "Drink menu",
+            "url": "https://toast.app/r/stonemill-matcha/order/item-to-hot-matchacano_f0ff8882-9b39-41b8-b6d4-7c57757cdbb6"
+          },
+          {
+            "label": "Café hours",
+            "url": "https://www.stonemillmatcha-us.com/"
+          }
+        ]
+      },
+      {
+        "shopId": "best-boy-electric",
+        "drink": "Matcha Americano",
+        "verdict": "Matcha poured over hot or iced water.",
+        "details": "Matcha poured over hot or iced water.",
+        "milkNote": "Water base; milk options are not listed.",
+        "price": "$6",
+        "availability": "Mon–Fri 8am–3:30pm; Sat–Sun 9am–5pm. Listed online but unavailable to order; confirm at the counter.",
+        "sources": [
+          {
+            "label": "Drink menu",
+            "url": "https://best-boy-electric.square.site/"
+          },
+          {
+            "label": "Café hours",
+            "url": "https://www.newpeopleworld.com/best-boy-electric"
+          }
+        ]
+      },
+      {
+        "shopId": "bageletto-sf",
+        "drink": "Matcha Tea (no milk)",
+        "verdict": "Plain matcha tea, listed separately from the latte.",
+        "details": "Plain matcha tea, listed separately from the latte.",
+        "milkNote": "Menu explicitly says no milk.",
+        "price": "$6",
+        "availability": "Pickup: Mon–Fri 7:15am–1:45pm; Sat–Sun 8:15am–2:45pm.",
+        "sources": [
+          {
+            "label": "Drink menu",
+            "url": "https://bageletto.com/order/bageletto-14th/item-matcha-tea-no-milk_f30ec349-6f30-4c3c-86ac-d93df0852611"
+          },
+          {
+            "label": "Pickup hours",
+            "url": "https://toast.app/r/bageletto-14th/order"
+          }
+        ]
+      }
+    ],
+    "compactLayout": true
   }
 ]

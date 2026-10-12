@@ -6,11 +6,11 @@ const guides = JSON.parse(await readFile(new URL('../content/guides.json', impor
 const launch = JSON.parse(await readFile(new URL('../content/social-launch.json', import.meta.url), 'utf8'));
 const expectedTypes = ['carousel', 'instagram-caption', 'short-post', 'video-script'];
 
-test('social launch counts only 24 complete drafts, with four formats per guide', () => {
+test('social launch counts only 32 complete drafts, with four formats per guide', () => {
   assert.equal(launch.status, 'draft');
-  assert.equal(launch.assetCount, 24);
-  assert.equal(launch.assets.length, 24);
-  assert.equal(new Set(launch.assets.map(a => a.id)).size, 24);
+  assert.equal(launch.assetCount, 32);
+  assert.equal(launch.assets.length, 32);
+  assert.equal(new Set(launch.assets.map(a => a.id)).size, 32);
   for (const slug of new Set(launch.assets.map(a => a.guideSlug))) {
     const guide = guides.find(g => g.slug === slug);
     assert.ok(guide, slug);
@@ -43,7 +43,8 @@ test('short posts fit 280 characters including their guide URL', () => {
 test('carousel and video drafts contain actual copy with evidence instructions', () => {
   for (const asset of launch.assets) {
     if (asset.type === 'carousel') {
-      assert.equal(asset.slides.length, 5);
+      assert.ok(asset.slides.length >= 3);
+      assert.equal(asset.slides[0].headline, guides.find(g => g.slug === asset.guideSlug).title);
       for (const [i, slide] of asset.slides.entries()) {
         assert.equal(slide.number, i + 1);
         assert.ok(slide.headline.trim().length > 0);

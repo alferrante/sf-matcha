@@ -1,0 +1,172 @@
+// lib/newsletter-client.mjs
+var DEFAULT_NEWSLETTER_ENDPOINT = "https://sfmatcha-newsletter.onrender.com/api/newsletter/subscribe";
+function newsletterEndpoint(value, origin = "https://sanfranciscomatcha.com") {
+  if (typeof value !== "string" || !value.trim()) return "";
+  try {
+    const url = new URL(value, origin);
+    if (url.username || url.password || url.hash) return "";
+    if (url.protocol !== "https:" && !(["localhost", "127.0.0.1"].includes(url.hostname) && url.protocol === "http:")) return "";
+    return url.href;
+  } catch {
+    return "";
+  }
+}
+function signupSource(value) {
+  return ["homepage", "guides_hub", "guide_article"].includes(value) ? value : "homepage";
+}
+async function subscribe({ endpoint, email, consent, source = "homepage", website = "", fetchImpl = fetch }) {
+  if (!newsletterEndpoint(endpoint)) throw new Error("Signup is not available yet.");
+  if (consent !== true) throw new Error("Please agree to receive SF Matcha emails.");
+  const response = await fetchImpl(endpoint, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email: email.trim(), consent: true, website, source: signupSource(source), consentVersion: "2026-10-07" }),
+    signal: AbortSignal.timeout(6e4)
+  });
+  let result;
+  try {
+    result = await response.json();
+  } catch {
+    throw new Error("Signup could not be completed. Please try again later.");
+  }
+  if (!response.ok || result?.success !== true) throw new Error("Signup could not be completed. Please try again later.");
+  return "Signup received. Unsubscribe anytime.";
+}
+
+// lib/guide-sharing.mjs
+function initializeGuideSharing({ doc = document, nav = globalThis.navigator } = {}) {
+  const canonical = doc.querySelector('link[rel="canonical"]')?.href;
+  let url;
+  try {
+    url = new URL(canonical);
+  } catch {
+    return [];
+  }
+  if (url.origin !== "https://sanfranciscomatcha.com" || url.username || url.password || url.search || url.hash || !/^\/guides\/[a-z0-9]+(?:-[a-z0-9]+)*\/$/.test(url.pathname)) return [];
+  const title = doc.querySelector("h1")?.textContent || "SF Matcha";
+  const handlers = [];
+  for (const section of doc.querySelectorAll("[data-guide-sharing]")) {
+    const button = section.querySelector("button");
+    const message = section.querySelector("[data-share-message]");
+    const fallback = section.querySelector("input");
+    if (!button || !message || !fallback || button.dataset.initialized === "true") continue;
+    button.dataset.initialized = "true";
+    button.hidden = false;
+    fallback.value = url.href;
+    fallback.readOnly = true;
+    let pending = false;
+    const onShare = async () => {
+      if (pending) return;
+      pending = true;
+      button.disabled = true;
+      message.textContent = "";
+      fallback.hidden = true;
+      try {
+        const payload = { title, url: url.href };
+        if (typeof nav?.share === "function" && (!nav.canShare || nav.canShare(payload))) {
+          try {
+            await nav.share(payload);
+            return;
+          } catch (error) {
+            if (error?.name === "AbortError") return;
+          }
+        }
+        if (typeof nav?.clipboard?.writeText === "function") {
+          await nav.clipboard.writeText(url.href);
+          message.textContent = "Link copied";
+        } else {
+          throw new Error("Clipboard unavailable");
+        }
+      } catch {
+        fallback.hidden = false;
+        fallback.focus?.();
+        fallback.select?.();
+        message.textContent = "Copy this link";
+      } finally {
+        button.disabled = false;
+        pending = false;
+      }
+    };
+    button.addEventListener("click", onShare);
+    handlers.push(onShare);
+  }
+  return handlers;
+}
+
+// lib/guide-newsletter.mjs
+function initializeGuideNewsletter({ doc = document, config = globalThis.window?.SF_MATCHA_CONFIG, origin = globalThis.location?.origin, subscribeImpl = subscribe } = {}) {
+  const endpoint = newsletterEndpoint(config?.newsletterEndpoint ?? DEFAULT_NEWSLETTER_ENDPOINT, origin);
+  const subscriptions = [];
+  for (const section of doc.querySelectorAll("[data-guide-newsletter]")) {
+    const form = section.querySelector("form");
+    if (!form || form.dataset.initialized === "true") continue;
+    const email = form.querySelector('[name="email"]');
+    const consent = form.querySelector('[name="consent"]');
+    const website = form.querySelector('[name="website"]');
+    const button = form.querySelector('button[type="submit"]');
+    const message = section.querySelector("[data-signup-message]");
+    const source = section.dataset.newsletterSource;
+    if (!email || !consent || !website || !button || !message || !["guides_hub", "guide_article"].includes(source)) continue;
+    form.dataset.initialized = "true";
+    let pending = false;
+    const show = (text, status) => {
+      message.textContent = text;
+      message.dataset.status = status;
+      message.setAttribute("role", status === "error" ? "alert" : "status");
+    };
+    if (!endpoint) {
+      form.hidden = true;
+      show("Email signup is temporarily unavailable. Please try again later.", "error");
+      continue;
+    }
+    button.disabled = false;
+    const onSubmit = async (event) => {
+      event.preventDefault();
+      if (pending) return;
+      if (form.checkValidity && !form.checkValidity()) {
+        form.reportValidity?.();
+        return;
+      }
+      if (!consent.checked) {
+        show("Please agree to receive SF Matcha emails.", "error");
+        return;
+      }
+      pending = true;
+      const controls = [...form.querySelectorAll("input, button")];
+      const disabled = controls.map((control) => control.disabled);
+      controls.forEach((control) => {
+        control.disabled = true;
+      });
+      const label = button.textContent;
+      button.textContent = "Saving…";
+      form.setAttribute("aria-busy", "true");
+      show("Signing you up…", "saving");
+      try {
+        const result = await subscribeImpl({ endpoint, email: email.value, consent: consent.checked, website: website.value, source });
+        show(result, "success");
+        email.value = "";
+        consent.checked = false;
+        website.value = "";
+      } catch {
+        show("Couldn’t sign you up. Please try again.", "error");
+      } finally {
+        controls.forEach((control, index) => {
+          control.disabled = disabled[index];
+        });
+        button.textContent = label;
+        form.setAttribute("aria-busy", "false");
+        pending = false;
+      }
+    };
+    form.addEventListener("submit", onSubmit);
+    subscriptions.push(onSubmit);
+  }
+  return subscriptions;
+}
+if (typeof document !== "undefined") {
+  initializeGuideNewsletter();
+  initializeGuideSharing();
+}
+export {
+  initializeGuideNewsletter
+};

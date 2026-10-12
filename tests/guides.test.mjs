@@ -47,6 +47,8 @@ test("all guides have canonical URLs, source links, current venue facts and stru
       assert.match(html, /Soy is available/);
       assert.equal((html.match(/data-guide-newsletter /g) ?? []).length, 1);
       assert.match(html, /data-newsletter-source="guide_article"/);
+      assert.equal((html.match(/data-guide-sharing/g) ?? []).length, 1);
+      assert.match(html, /type="button" hidden>Share guide/);
       assert.match(html, /<script type="module" src="\/dist\/guide-newsletter\.123456abcdef\.js">/);
       assert.match(html, /name="consent" type="checkbox" required>/);
       assert.doesNotMatch(html, /name="consent"[^>]*checked/);

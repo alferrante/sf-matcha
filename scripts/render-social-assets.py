@@ -12,7 +12,6 @@ import html
 import json
 import math
 import os
-import shutil
 import unicodedata
 from datetime import datetime
 from pathlib import Path
@@ -69,6 +68,12 @@ GUIDE_STYLE = {
         "pale": "#E4EED4",
         "motif": "bowl",
     },
+    "mission-district-matcha-san-francisco": {
+        "label": "MISSION MATCHA", "accent": "#E8A46C", "pale": "#FFEBD7", "motif": "bowl",
+    },
+    "ube-matcha-san-francisco": {
+        "label": "UBE MATCHA", "accent": "#BCA0DF", "pale": "#EFE3FF", "motif": "cloud",
+    },
     "matcha-under-seven-dollars-san-francisco": {
         "label": "MATCHA UNDER $7",
         "accent": LIME,
@@ -91,6 +96,11 @@ DOMAIN_KEYS = {
     "nagomi": "cafenagomi.com",
     "pixlcat": "pixlcatcoffee.com",
     "paper son": "papersoncoffee.com",
+    "binge": "bingecoffeehouse.com",
+    "cere": "ceretea.com",
+    "marigold": "marigoldsf.com",
+    "maruwu": "maruwuseicha.us",
+    "le mil": "lemils.com",
 }
 
 
@@ -134,8 +144,7 @@ def fit_text(
         box = draw.multiline_textbbox((0, 0), wrapped, font=face, spacing=spacing)
         if box[2] - box[0] <= max_width and box[3] - box[1] <= max_height:
             return wrapped, face
-    face = font(font_path, min_size)
-    return wrap_by_width(draw, text, face, max_width), face
+    raise ValueError(f"Text exceeds {max_width}×{max_height} safe area: {text!r}")
 
 
 def unique_domains(urls: list[str]) -> list[str]:
@@ -157,7 +166,7 @@ def slide_domains(slide: dict, all_domains: list[str]) -> list[str]:
     for key, domain in DOMAIN_KEYS.items():
         if key in haystack and domain in all_domains and domain not in matches:
             matches.append(domain)
-    if slide["number"] in (1, 5) or not matches:
+    if slide["number"] == 1 or not matches:
         return all_domains
     return matches
 
@@ -223,7 +232,7 @@ def draw_source_footer(draw: ImageDraw.ImageDraw, domains: list[str], verified_a
     draw.multiline_text((58, 932), wrapped, font=face, fill=MUTED, spacing=4)
     draw.rounded_rectangle((795, 929, 1022, 970), radius=18, fill=accent, outline=INK, width=2)
     draw.text((908, 950), f"CHECKED {date}", font=font(FONT_MONO_BOLD, 16), fill=INK, anchor="mm")
-    draw.text((58, 1008), "sf matcha.  •  menu evidence, not a tasting ranking", font=font(FONT_MONO, 17), fill=MOSS)
+    draw.text((58, 1008), "sf matcha.  •  café menus + addresses", font=font(FONT_MONO, 17), fill=MOSS)
 
 
 def render_slide(asset: dict, slide: dict, style: dict, output_path: Path) -> dict:
@@ -265,7 +274,7 @@ def render_slide(asset: dict, slide: dict, style: dict, output_path: Path) -> di
     short_path = asset["guideUrl"].replace("https://sanfranciscomatcha.com", "")
     if slide["number"] == len(asset["slides"]):
         draw.rounded_rectangle((68, 796, 1012, 878), radius=28, fill=LIME, outline=INK, width=4)
-        draw.text((96, 817), "READ + SAVE THE SOURCE-BACKED GUIDE", font=font(FONT_MONO_BOLD, 21), fill=INK)
+        draw.text((96, 817), "SAVE THE GUIDE", font=font(FONT_MONO_BOLD, 21), fill=INK)
         path_text, path_face = fit_text(draw, f"sanfranciscomatcha.com{short_path}", FONT_MONO, 20, 16, 860, 30, 2)
         draw.text((96, 849), path_text, font=path_face, fill=MOSS)
     else:
@@ -384,7 +393,7 @@ def render_gallery(manifest: dict) -> str:
   <header>
     <span class="brand">sf matcha · social studio</span>
     <h1>Guide carousel export gallery.</h1>
-    <p class="intro">Six source-backed carousel sets generated from the current SF Matcha guides. Open any slide at full resolution or download the PNG directly.</p>
+    <p class="intro">{manifest["carouselSetCount"]} guide carousels. Open a slide or download the PNG.</p>
     <span class="status">ready to export; not posted</span>
     <nav class="tools" aria-label="Asset documentation">
       <a href="manifest.json">Source manifest</a>
@@ -398,7 +407,7 @@ def render_gallery(manifest: dict) -> str:
       <span>{manifest['individualSlideCount']} individual slides</span>
       <span>1080 × 1080 PNG</span>
       <span>{manifest['totalBytes'] / 1024 / 1024:.2f} MB total</span>
-      <span>menus checked Oct 7, 2026</span>
+      <span>menu dates on each slide</span>
     </div>
     {''.join(sections)}
   </main>
@@ -411,8 +420,9 @@ def render_gallery(manifest: dict) -> str:
 def main() -> None:
     payload = json.loads(SOURCE_PATH.read_text())
     carousels = [asset for asset in payload["assets"] if asset.get("type") == "carousel"]
-    if len(carousels) != 6:
-        raise SystemExit(f"Expected 6 carousel sets, found {len(carousels)}")
+    slugs = [asset["guideSlug"] for asset in carousels]
+    if not carousels or len(slugs) != len(set(slugs)):
+        raise SystemExit("Expected at least one unique carousel per guide")
 
     kumo_copy = " ".join(
         f"{slide['headline']} {slide['body']}"
@@ -427,9 +437,7 @@ def main() -> None:
         if required_phrase not in kumo_copy:
             raise SystemExit(f"Required Kumo dairy caveat missing: {required_phrase}")
 
-    if OUTPUT_DIR.exists():
-        shutil.rmtree(OUTPUT_DIR)
-    OUTPUT_DIR.mkdir(parents=True)
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     (OUTPUT_DIR / ".gitignore").write_text("*.tmp\n")
 
     manifest_sets = []
@@ -440,6 +448,12 @@ def main() -> None:
             raise SystemExit(f"Missing style for {slug}")
         if len(asset["slides"]) < 3:
             raise SystemExit(f"{slug} has fewer than 3 slides")
+        if [s["number"] for s in asset["slides"]] != list(range(1, len(asset["slides"]) + 1)):
+            raise SystemExit(f"{slug} slide numbers are not consecutive")
+        expected_names = {f"slide-{s["number"]:02d}.png" for s in asset["slides"]}
+        for old in (OUTPUT_DIR / slug).glob("slide-*.png"):
+            if old.name not in expected_names:
+                old.unlink()
         files = []
         for slide in asset["slides"]:
             name = f"slide-{slide['number']:02d}.png"
@@ -457,8 +471,9 @@ def main() -> None:
 
     # Re-open every completed file so a successful run is also an export check.
     rendered_paths = sorted(OUTPUT_DIR.glob("*/slide-*.png"))
-    if len(rendered_paths) != 30:
-        raise SystemExit(f"Expected 30 rendered slides, found {len(rendered_paths)}")
+    expected_count = sum(len(asset["slides"]) for asset in carousels)
+    if len(rendered_paths) != expected_count:
+        raise SystemExit(f"Expected {expected_count} rendered slides, found {len(rendered_paths)}")
     for rendered_path in rendered_paths:
         with Image.open(rendered_path) as rendered:
             rendered.verify()

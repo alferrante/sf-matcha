@@ -10,10 +10,10 @@ Repository baseline for October 8: `4e908193bca7135f5cf8163bd3a5b25ab05cd749` (v
 | --- | --- | ---: |
 | Directory venues | 94 source/built venues; audit passes 282 fields | Accuracy and freshness |
 | Monthly visits | Unknown; Cloudflare beacon exists, export not accessed | 50,000 |
-| Active email subscribers | 0 active real subscribers, audience queried October 8; signup live; owned synthetic tests excluded | 10,000 |
+| Active email subscribers | 0 active real subscribers, audience queried October 12; signup live; two opted-out synthetic tests excluded | 10,000 |
 | Social followers | Unknown; project accounts not verified | 25,000 |
-| Guides | 10 published articles / 36 sourced entries prepared October 9 | 24 |
-| Derivative assets | 24 complete text drafts; six original carousel drafts now rendered as 6 finished sets / 30 PNG slides; 0 posted. Count sets once, not as 30 independent assets | 120 |
+| Guides | 12 published articles / 42 sourced entries prepared October 12 | 24 |
+| Derivative assets | 32 complete drafts across eight topics; eight carousel drafts rendered as 8 finished sets / 43 PNG slides; 0 posted. Count each carousel once, not each slide | 120 |
 | Live confirmed offers | 0 offer records in baseline repository | 20 |
 | Redemptions | Unknown; no verified tracking system | 2,000 |
 | Awards votes | Unknown; no verified voting system | 1,000 |
@@ -174,3 +174,19 @@ Publication: release `d029c38ff6fb6badf52568cede217cc76510e534` is on main and v
 - Confirmed offers remain **0**. No café contacted; no replies, redemptions or audience growth claimed. Explicit send approval, merchant confirmation and a tested claim/redemption service remain prerequisites.
 - Validation: clean install, reproducible build with no generated/public-page changes, **65 passing tests**, customer-copy audit **94 shops / 282 fields**, and whitespace checks. Strengthened existing pipeline checks for growing unique locations, inclusive 42-day windows, cap/cost consistency and unresolved research blockers.
 - Published partner release `5df9b6dc6263fcfbde55bb99ac74f01fc51fadc3` to main without force under an expected-head lease. Fetched main and verified its entire tree equals the tested local tree. Public page/build outputs were unchanged; canonical `/offers.json` returned HTTP 200 with **0 offers**.
+
+## October 12 growth release
+
+- Started from current main `b8716923a9c7012bc6c209764f45bc68c09b4c33`. Inspected canonical live map, hub, perks, methodology, social gallery, offers feed and newsletter health; all returned HTTP 200 and matched the current repository where applicable. Preserved today's 94 venues and four-prospect partner ledger, all exclusions, planned-location constraints and October 11 concise-copy changes.
+- **Two new compact guides:** coconut-water matcha (Bageletto, Kiss Clement, Origin Lab) and matcha without milk (Stonemill, Best Boy, Bageletto), three documented orders each. Fresh primary menu prices, location hours and recipe/foam uncertainty are linked. Origin's foam contains dairy and honey; no coconut-base-to-dairy-free inference. Best Boy's online ordering unavailability is explicit. All original ten guide records and dates are unchanged. Evidence is in `docs/EDITORIAL_OCT12.md`.
+- **Reader sharing:** all twelve articles now have a short Share guide control. Native sharing where supported; otherwise copy the canonical article URL. Cancellation does not unexpectedly write the clipboard. Clipboard failure provides a selectable read-only link. Unsafe/nonarticle/tracking canonicals never enable sharing. No contact, post, subscriber email or tracking event was sent by this work.
+- **Distribution assets:** completed Mission and ube text packages and carousel renders. Drafts **24 → 32** across eight topics; finished carousel sets **6 → 8**, PNG slides **30 → 43**. Original six sets refreshed to the approved concise headlines/copy; menu dates remain October 7, with Mission/ube October 9. All 43 slides visually checked. Renderer rejects overflow and repeated render hashes match. Carousel sets count once as conversions of their corresponding drafts, not 43 extra growth assets. None posted.
+- **Current metrics:** guides **10 → 12**, sourced entries **36 → 42**, analytics-covered public HTML surfaces **16 → 18**. Dedicated audience query October 12 found **0 active real subscribers**; two opted-out synthetic tests excluded. Newsletter health reports signup configured. Sender verification is now **failed** (DKIM and SPF records), with CNAME `not_started`; exact unchanged setup records remain in `docs/EMAIL_DNS_SETUP.md`. Actual monthly visits and project social follower counts remain unknown because no analytics export or identified social account access is available. Offers remain **0**, redemptions/votes unmeasured. These deliveries are not evidence of audience growth.
+- **Validation:** `npm ci --include=dev`, build, all **69 tests**, copy audit **94 venues / 282 fields**, source/date preservation, PNG dimensions/bytes/hashes, deterministic rendering and whitespace checks passed. The release includes source, stable and changed hashed app/newsletter bundles, synchronized homepage index, all regenerated pages, sitemap, manifest and binary social files; previously published browser hashes are retained. The homepage guide count is built from guide metadata and now reads 12; its changed app hash and index reference are committed together. The 94-venue data hash remains unchanged.
+- Publication and canonical live-byte/browser verification: pending.
+
+### Next actions
+
+1. Build the inactive authenticated atomic offer claim/redemption service; activate only after written merchant confirmation and approved outreach.
+2. Keep producing distinct menu-backed guides toward 24 and distribution formats toward 120.
+3. Distribution needs identified project social account access; traffic reporting needs a Cloudflare analytics export; newsletter delivery needs the documented sender DNS records and verified unsubscribe setup. Café outreach remains unsent pending explicit approval.

@@ -1,15 +1,15 @@
 {
   "generatedFrom": "content/social-launch.json",
-  "sourceUpdatedAt": "2026-10-07",
+  "sourceUpdatedAt": "2026-10-12",
   "status": "ready-to-export; not posted",
-  "carouselSetCount": 6,
-  "individualSlideCount": 30,
+  "carouselSetCount": 8,
+  "individualSlideCount": 43,
   "format": "PNG",
   "dimensions": {
     "width": 1080,
     "height": 1080
   },
-  "totalBytes": 2337271,
+  "totalBytes": 2816861,
   "qa": {
     "allSlidesVerifiedAsPng": true,
     "allSlides1080Square": true,
@@ -33,11 +33,11 @@
         {
           "file": "social/banana-matcha-san-francisco/slide-01.png",
           "slide": 1,
-          "headline": "SF banana matcha: 3 ways to order it",
+          "headline": "3 places to get banana matcha in SF",
           "width": 1080,
           "height": 1080,
-          "bytes": 72652,
-          "sha256": "de3dffdb874f2c875d5e9333950c82aa58f826565faeba66da23bed92c6c1562",
+          "bytes": 61498,
+          "sha256": "ce8eb6bfb0d1280ba50a3fbf0d76b87430412303d410940be44e34d4cfcedb16",
           "sourceDomains": [
             "sohnsf.com",
             "toast.app",
@@ -50,8 +50,8 @@
           "headline": "SŌHN · Dogpatch",
           "width": 1080,
           "height": 1080,
-          "bytes": 59846,
-          "sha256": "8d14800412e81d71c8ad7214d67719b3113e2d11ce941f2ae46fd29e50f247cb",
+          "bytes": 55902,
+          "sha256": "15f15e86f548c7e33124ce29575291b627fae99a16cfcc75568e39bbd77aadff",
           "sourceDomains": [
             "sohnsf.com"
           ]
@@ -62,8 +62,8 @@
           "headline": "YakiniQ · Japantown",
           "width": 1080,
           "height": 1080,
-          "bytes": 66107,
-          "sha256": "14c2f30a41e05699a9c8a29c3d7f2f62b30ed8e61cfdcd14cc12ce0d13a8aed7",
+          "bytes": 61958,
+          "sha256": "9e4d51be2e032b65d6c6df2a8d0f2a7d0bc19787ae0fb6839edfbc6abde318f8",
           "sourceDomains": [
             "toast.app"
           ]
@@ -74,8 +74,8 @@
           "headline": "Kumo · Sunday pop-up",
           "width": 1080,
           "height": 1080,
-          "bytes": 73425,
-          "sha256": "3278e40701e9410eee685fb9bb8877fbc02746f43a9704c830a641da2841b077",
+          "bytes": 65959,
+          "sha256": "25691105d1fb122e11198757938762f1165c5d93d2d18099bd667130ef94fd86",
           "sourceDomains": [
             "kumomatchaca.com"
           ]
@@ -86,11 +86,10 @@
           "headline": "Soy cloud ≠ dairy-free",
           "width": 1080,
           "height": 1080,
-          "bytes": 82728,
-          "sha256": "19915aee6975ec8af6027b1cfb3255592f0468bc8a3985e05155304997d06cf5",
+          "bytes": 63822,
+          "sha256": "7e3d47bdbe5074213e2f1243f8b17c78da376c99ffe62479bbfad8f1650cab9c",
           "sourceDomains": [
             "sohnsf.com",
-            "toast.app",
             "kumomatchaca.com"
           ]
         }
@@ -113,11 +112,11 @@
         {
           "file": "social/matcha-cold-foam-san-francisco/slide-01.png",
           "slide": 1,
-          "headline": "Matcha clouds: choose your topping",
+          "headline": "Cold foam matcha: 4 SF spots to try",
           "width": 1080,
           "height": 1080,
-          "bytes": 70665,
-          "sha256": "0449da85efbbf5acab4ab7e2f573422b6f782fd911122d23d965abb664ff6363",
+          "bytes": 66573,
+          "sha256": "a937038d48f1fccaaaf7ac6ecef5a30cfc9908495c5ca34e662f38e8975d88d2",
           "sourceDomains": [
             "qspecialtycoffee.com",
             "tadaimasf.com",
@@ -131,8 +130,8 @@
           "headline": "Q · 3490 California St",
           "width": 1080,
           "height": 1080,
-          "bytes": 71957,
-          "sha256": "ae5554d1eaa6b5fa64246c68f612b02350144ec2ce8cd3323ae071b260713d29",
+          "bytes": 60752,
+          "sha256": "ae007be34aa169736c044b76fea939fba84a6505f8c6cf760bae077946457bbb",
           "sourceDomains": [
             "qspecialtycoffee.com"
           ]
@@ -143,8 +142,8 @@
           "headline": "Tadaima · Mission",
           "width": 1080,
           "height": 1080,
-          "bytes": 76101,
-          "sha256": "1518d9779822f9c771fac6897a01ea082d4de9e888ae21dc1130a12998b835c2",
+          "bytes": 62367,
+          "sha256": "19781d7af15d9222743a6cd86900d4d58bbebfefd3f459d2f96b27923ee5d7ef",
           "sourceDomains": [
             "tadaimasf.com"
           ]
@@ -155,8 +154,8 @@
           "headline": "SŌHN or Kumo?",
           "width": 1080,
           "height": 1080,
-          "bytes": 75795,
-          "sha256": "5a9d96b9a7da981750df1de99102828fffaf0276384a27f257d530fc34dbfed3",
+          "bytes": 63535,
+          "sha256": "59bd5b4254d79afe3f7b09ef4e727b211d1bec7da73474ec1b1b3b9be6671253",
           "sourceDomains": [
             "sohnsf.com",
             "kumomatchaca.com"
@@ -168,12 +167,9 @@
           "headline": "Check the foam, not just the milk",
           "width": 1080,
           "height": 1080,
-          "bytes": 96218,
-          "sha256": "e70d94eaca3be50deff074176b2c2c5b1700eba854a712e5722d57fdb0672e68",
+          "bytes": 69066,
+          "sha256": "14d36f29c8e9764b8fe666135dc192c9583f13c3c112aea9257eb958a7a66ab3",
           "sourceDomains": [
-            "qspecialtycoffee.com",
-            "tadaimasf.com",
-            "sohnsf.com",
             "kumomatchaca.com"
           ]
         }
@@ -193,11 +189,11 @@
         {
           "file": "social/soy-milk-matcha-san-francisco/slide-01.png",
           "slide": 1,
-          "headline": "Looking for soy matcha in SF?",
+          "headline": "SF matcha spots with soy milk",
           "width": 1080,
           "height": 1080,
-          "bytes": 82845,
-          "sha256": "d1b2f88b2eeb356e7482437921a3ebf4a1bf6613baed3a1ec417bdc9dce59c7d",
+          "bytes": 70731,
+          "sha256": "12a96d2bba608182d74916482961d9d517bd395976b53f44416543b6659972cd",
           "sourceDomains": [
             "ilparcosf.com",
             "lulufresh.co",
@@ -210,8 +206,8 @@
           "headline": "Il Parco · Presidio",
           "width": 1080,
           "height": 1080,
-          "bytes": 84702,
-          "sha256": "9a50dae9170b6a68a711500b957021bed9f46deffc53fc5a1f0d556162f3de68",
+          "bytes": 71623,
+          "sha256": "f13d7946e2efe34b72700dd5977d78e03e19ab30dd9a0b9a3c1b6f1fa4f3f43f",
           "sourceDomains": [
             "ilparcosf.com"
           ]
@@ -222,8 +218,8 @@
           "headline": "Lulu Fresh · Waterfront",
           "width": 1080,
           "height": 1080,
-          "bytes": 87859,
-          "sha256": "b1eeceff493ca9c4442d04c9c977a78f6ec8801c57cdbc509c1c8b010a7e147a",
+          "bytes": 74453,
+          "sha256": "2dcd388d91ef36d6395650fc7b659d52a5475abde2cea73ac49c088f17dee8f8",
           "sourceDomains": [
             "lulufresh.co"
           ]
@@ -234,8 +230,8 @@
           "headline": "YakiniQ · Japantown",
           "width": 1080,
           "height": 1080,
-          "bytes": 88843,
-          "sha256": "f597db9d8dc3500c74cc7111ea4a5e3292109b67ad52c4aba71084cdf51a339c",
+          "bytes": 82823,
+          "sha256": "16347eff07f501b1d2816e247f6b3e0e43fcf6598ddbf9c1ca3d2e1c3de838dc",
           "sourceDomains": [
             "toast.app"
           ]
@@ -246,8 +242,8 @@
           "headline": "Milk swap is step one",
           "width": 1080,
           "height": 1080,
-          "bytes": 95387,
-          "sha256": "89a857d8e1b52ff4ea6455ddff7670fe42d25158b599988730299993452abbdc",
+          "bytes": 77422,
+          "sha256": "6e8a26c07168a077ef111eaf913f675b77418646296b02be804862ac2de81c95",
           "sourceDomains": [
             "ilparcosf.com",
             "lulufresh.co",
@@ -273,11 +269,11 @@
         {
           "file": "social/strawberry-matcha-san-francisco/slide-01.png",
           "slide": 1,
-          "headline": "Strawberry matcha: latte or topping?",
+          "headline": "Where to get strawberry matcha in SF",
           "width": 1080,
           "height": 1080,
-          "bytes": 81807,
-          "sha256": "1641c9b5effd3357a4210ffce530b4b4bcd74fac1e139bd6c29a5094e27c2b6b",
+          "bytes": 71007,
+          "sha256": "a718b2f9ac0dc45d2140bb0ed14f029c9b1194a7946a71d4fc1ea289ae5fb7ac",
           "sourceDomains": [
             "stonemillmatcha-us.com",
             "fourchairssf.com",
@@ -291,8 +287,8 @@
           "headline": "Stonemill · Valencia",
           "width": 1080,
           "height": 1080,
-          "bytes": 70480,
-          "sha256": "5e6d9e5c2150d6f9c90e6294e01544c487a0586fd4080d45126148194df627f1",
+          "bytes": 62168,
+          "sha256": "0651576a0504133cee6fa269c1eb1035b0dc8b0ca4c2d6f3ce8984d2530aa71a",
           "sourceDomains": [
             "stonemillmatcha-us.com"
           ]
@@ -303,8 +299,8 @@
           "headline": "Four Chairs · Mission St",
           "width": 1080,
           "height": 1080,
-          "bytes": 68922,
-          "sha256": "c791bcfc05df7b7b83e4ca37f402b523c789596805ab5af9e5621f7be088fe81",
+          "bytes": 65186,
+          "sha256": "a896d7527d8448ff1e6da07043bcb2dd6312a548ef0a281138f0947c5f38d4e4",
           "sourceDomains": [
             "fourchairssf.com"
           ]
@@ -315,10 +311,9 @@
           "headline": "Cloud or cream?",
           "width": 1080,
           "height": 1080,
-          "bytes": 80096,
-          "sha256": "b5bd89d87949c89424ba10a95e5941fe56bc742ed57640bf4d5890845cbb2056",
+          "bytes": 67976,
+          "sha256": "def9018e49a9825a52681a7030ac01d34e4ff5fdafe891e996e0aba0f73d4b5a",
           "sourceDomains": [
-            "qspecialtycoffee.com",
             "tadaimasf.com"
           ]
         },
@@ -328,12 +323,9 @@
           "headline": "Ask before swapping milk",
           "width": 1080,
           "height": 1080,
-          "bytes": 90826,
-          "sha256": "184a663a7271f2ff5c0e0e09e23c8f36413ec37f8164d32c4f06b22563025b7f",
+          "bytes": 65425,
+          "sha256": "5e4f94b74a448c981f83de119be4d8c1a99bb4ec38ea6103a4d9dc161e0c6f36",
           "sourceDomains": [
-            "stonemillmatcha-us.com",
-            "fourchairssf.com",
-            "qspecialtycoffee.com",
             "tadaimasf.com"
           ]
         }
@@ -354,11 +346,11 @@
         {
           "file": "social/ceremonial-hand-whisked-matcha-san-francisco/slide-01.png",
           "slide": 1,
-          "headline": "Want the tea to be the focus?",
+          "headline": "3 SF cafés for ceremonial and hand-whisked matcha",
           "width": 1080,
           "height": 1080,
-          "bytes": 68253,
-          "sha256": "8ad0b7d90b8b7fdaf146f34464e39339787331de188f3b004fcfee81cd93546e",
+          "bytes": 72134,
+          "sha256": "d3dc268b81e730b081b2c0c2d7bc10d537face9e403ed112df3690db49facf37",
           "sourceDomains": [
             "stonemillmatcha-us.com",
             "cafenagomi.com",
@@ -371,8 +363,8 @@
           "headline": "Stonemill · 561 Valencia St",
           "width": 1080,
           "height": 1080,
-          "bytes": 70709,
-          "sha256": "93797a24a16db52aa48f797bcbee048b69fe19bf16b8a9ecd4b83a3e35731f72",
+          "bytes": 68659,
+          "sha256": "70ca650b3b4c57c257fff031b9b6328d91f2e8021ad6114b0a67d4dac989a499",
           "sourceDomains": [
             "stonemillmatcha-us.com"
           ]
@@ -383,8 +375,8 @@
           "headline": "Nagomi · 74 New Montgomery St",
           "width": 1080,
           "height": 1080,
-          "bytes": 81018,
-          "sha256": "b3d1a09b3f01b2803b8851c2e2a64cfe885306397ddc2718cd30de46b5d48696",
+          "bytes": 72204,
+          "sha256": "f12298aebb6af43a010168b13f931abfc6e19b1a0c3b30a0ac6ccddfa3a890ab",
           "sourceDomains": [
             "cafenagomi.com"
           ]
@@ -395,8 +387,8 @@
           "headline": "Pixlcat · 519 Clement St",
           "width": 1080,
           "height": 1080,
-          "bytes": 76012,
-          "sha256": "2b48d18946796f9c5e32d26d31cc68d56a6c1ceac14e5a93e7c9f309ec94bb94",
+          "bytes": 67246,
+          "sha256": "feea3326a699d3c7a89aceb0a12713c54808edfd3a9346d5d47e11783cf302a1",
           "sourceDomains": [
             "pixlcatcoffee.com"
           ]
@@ -407,8 +399,8 @@
           "headline": "Sourcing is a starting point",
           "width": 1080,
           "height": 1080,
-          "bytes": 89814,
-          "sha256": "a4cef2f6cd601eef30a68df2893d77a9f543d2071ad0fb9d68e74517026fcafb",
+          "bytes": 68754,
+          "sha256": "a19b4d776494ccac196af4437a2bc851f7c5fe8cb61619ad599c0d62a0d854ae",
           "sourceDomains": [
             "stonemillmatcha-us.com",
             "cafenagomi.com",
@@ -434,11 +426,11 @@
         {
           "file": "social/matcha-under-seven-dollars-san-francisco/slide-01.png",
           "slide": 1,
-          "headline": "SF matcha under $7",
+          "headline": "Matcha under $7 in SF",
           "width": 1080,
           "height": 1080,
-          "bytes": 65571,
-          "sha256": "4280231963986ebac1f726da654161ecfa47275a6d9f4be42fee8fa07d396011",
+          "bytes": 63861,
+          "sha256": "379364389583c614d69049a3e2572620f7b70b54491bb90b7095a6b0a45dd1ea",
           "sourceDomains": [
             "papersoncoffee.com",
             "ilparcosf.com",
@@ -452,8 +444,8 @@
           "headline": "Paper Son · Downtown",
           "width": 1080,
           "height": 1080,
-          "bytes": 71975,
-          "sha256": "9957186bc55d43b9a8028abb3af12e66df74eb4e08c7382cc82b9b538b483f75",
+          "bytes": 69040,
+          "sha256": "30bc5e16f3d049af9ffde92c0ed8ac1db1985e2bbc1eaa34fddcbf99e19fd71f",
           "sourceDomains": [
             "papersoncoffee.com"
           ]
@@ -464,8 +456,8 @@
           "headline": "Il Parco · Presidio",
           "width": 1080,
           "height": 1080,
-          "bytes": 72015,
-          "sha256": "090d1cbd5ef87f35098e9e1af29a8d117dd222cfc42bc7bc91637fea64ac85a0",
+          "bytes": 58743,
+          "sha256": "546e63533103e61ed185b7652e2d0e8b6f82570c855813b5e5e1506fe7be16b0",
           "sourceDomains": [
             "ilparcosf.com"
           ]
@@ -476,8 +468,8 @@
           "headline": "Tadaima or SŌHN?",
           "width": 1080,
           "height": 1080,
-          "bytes": 79011,
-          "sha256": "1fdac030fe16373c02d0dc00dd569fb71039eb29534629ce25921e60f0cd507c",
+          "bytes": 71969,
+          "sha256": "590659e0ae47b482b2d4d66b019384df2e5c296889b9ab2fe95db4cfa8550a28",
           "sourceDomains": [
             "sohnsf.com",
             "tadaimasf.com"
@@ -489,13 +481,212 @@
           "headline": "Watch the modifiers",
           "width": 1080,
           "height": 1080,
-          "bytes": 85632,
-          "sha256": "007701f5d8c835240495dfdf7cbc334031ed45ea45049061a593f21b96c394dd",
+          "bytes": 69064,
+          "sha256": "b655642eb8d5743f75db9d5c9a04c1e375a1520db90de7e95296c5c15c738c5f",
           "sourceDomains": [
-            "papersoncoffee.com",
-            "ilparcosf.com",
+            "tadaimasf.com"
+          ]
+        }
+      ]
+    },
+    {
+      "guideSlug": "mission-district-matcha-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/mission-district-matcha-san-francisco/",
+      "verifiedAt": "2026-10-09",
+      "sourceUrls": [
+        "https://www.stonemillmatcha-us.com/menu",
+        "https://www.stonemillmatcha-us.com/",
+        "https://www.bingecoffeehouse.com/menu",
+        "https://postmates.com/store/binge-coffee-house-valencia/21Sjn46UVgWQG8Ib9fijLA",
+        "https://www.ceretea.com/",
+        "https://postmates.com/store/cere-tea/JK83sjtJUt6687g5r9EWzg",
+        "https://tadaimasf.com/san-francisco-suite-b-tadaima-sf-drink-menu",
+        "https://tadaimasf.com/san-francisco-suite-b-tadaima-sf-locations",
+        "https://marigoldsf.com/pages/cafe"
+      ],
+      "slideCount": 7,
+      "slides": [
+        {
+          "file": "social/mission-district-matcha-san-francisco/slide-01.png",
+          "slide": 1,
+          "headline": "5 matcha stops in the Mission",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 63355,
+          "sha256": "2ebaca46518fca8cd4201622c1b35f4659977f5ab62facc75ad512871c2e7ee4",
+          "sourceDomains": [
+            "stonemillmatcha-us.com",
+            "bingecoffeehouse.com",
+            "postmates.com",
+            "ceretea.com",
             "tadaimasf.com",
-            "sohnsf.com"
+            "marigoldsf.com"
+          ]
+        },
+        {
+          "file": "social/mission-district-matcha-san-francisco/slide-02.png",
+          "slide": 2,
+          "headline": "Stonemill",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 55554,
+          "sha256": "353d3213f9f4dd37fd3564e5cc6d7204cda5524ec41e21915263832885dd949d",
+          "sourceDomains": [
+            "stonemillmatcha-us.com"
+          ]
+        },
+        {
+          "file": "social/mission-district-matcha-san-francisco/slide-03.png",
+          "slide": 3,
+          "headline": "Binge Coffee House",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 59892,
+          "sha256": "7dfc4612ac83b3648333657742b7d7fff9f977d0d487c1bf1c764167133683fb",
+          "sourceDomains": [
+            "bingecoffeehouse.com"
+          ]
+        },
+        {
+          "file": "social/mission-district-matcha-san-francisco/slide-04.png",
+          "slide": 4,
+          "headline": "Ceré",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 54070,
+          "sha256": "4a13c276494197b2fa7f3d3cd52e6e80a60866196539112e4ef75f6148d80646",
+          "sourceDomains": [
+            "ceretea.com"
+          ]
+        },
+        {
+          "file": "social/mission-district-matcha-san-francisco/slide-05.png",
+          "slide": 5,
+          "headline": "Tadaima · Mission",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 65962,
+          "sha256": "ecbebbaedef1786ba968a51ad3382b42eed70b9c279a7045c04b5893da2e44ed",
+          "sourceDomains": [
+            "tadaimasf.com"
+          ]
+        },
+        {
+          "file": "social/mission-district-matcha-san-francisco/slide-06.png",
+          "slide": 6,
+          "headline": "Marigold",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 57011,
+          "sha256": "cae03a5ee38229a822f14c561cee6cd24407bfee79ecf9849c849e5a0bdc9544",
+          "sourceDomains": [
+            "marigoldsf.com"
+          ]
+        },
+        {
+          "file": "social/mission-district-matcha-san-francisco/slide-07.png",
+          "slide": 7,
+          "headline": "Save your next café stop",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 62336,
+          "sha256": "c7ca2909c1b5f3d14d1e1da2da03030ea598907e977904a5397cc70d3fe2223f",
+          "sourceDomains": [
+            "ceretea.com"
+          ]
+        }
+      ]
+    },
+    {
+      "guideSlug": "ube-matcha-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/ube-matcha-san-francisco/",
+      "verifiedAt": "2026-10-09",
+      "sourceUrls": [
+        "https://www.ceretea.com/",
+        "https://www.bingecoffeehouse.com/menu",
+        "https://postmates.com/store/binge-coffee-house-valencia/21Sjn46UVgWQG8Ib9fijLA",
+        "https://postmates.com/store/maruwu-seicha-japantown/gRIVlsHiVbC8QNCX5VX02g",
+        "https://www.maruwuseicha.us/pages/menu",
+        "https://www.instagram.com/p/DbiyOqHlPwk/",
+        "https://lemils.com/pages/find-us"
+      ],
+      "slideCount": 6,
+      "slides": [
+        {
+          "file": "social/ube-matcha-san-francisco/slide-01.png",
+          "slide": 1,
+          "headline": "Ube matcha: 4 SF spots to try",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 63177,
+          "sha256": "a6936e9f6a54dffa5f07f8ca3ef8d70eec6e50667b16333885ad9b4200cf3d0d",
+          "sourceDomains": [
+            "ceretea.com",
+            "bingecoffeehouse.com",
+            "postmates.com",
+            "maruwuseicha.us",
+            "instagram.com",
+            "lemils.com"
+          ]
+        },
+        {
+          "file": "social/ube-matcha-san-francisco/slide-02.png",
+          "slide": 2,
+          "headline": "Ceré",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 56178,
+          "sha256": "8f285124d8a965617c299ed7d899efd7da60fea25f29d834423358035a726cc8",
+          "sourceDomains": [
+            "ceretea.com"
+          ]
+        },
+        {
+          "file": "social/ube-matcha-san-francisco/slide-03.png",
+          "slide": 3,
+          "headline": "Binge Coffee House",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 70705,
+          "sha256": "f7faf6d682d3c4c77c5439ba6567b0af276091384bc99bbdd8b0e802eaba2423",
+          "sourceDomains": [
+            "bingecoffeehouse.com"
+          ]
+        },
+        {
+          "file": "social/ube-matcha-san-francisco/slide-04.png",
+          "slide": 4,
+          "headline": "Maruwu Seicha",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 62899,
+          "sha256": "301d9acd2f944d5b70247cdf95d5d2044b953fcc086a19102a497f3076a3d6b4",
+          "sourceDomains": [
+            "maruwuseicha.us"
+          ]
+        },
+        {
+          "file": "social/ube-matcha-san-francisco/slide-05.png",
+          "slide": 5,
+          "headline": "Le Mil’s Coffee",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 60907,
+          "sha256": "627ba6204702b35e7f64513f09cf163577ac94b91650d309209ea3296add7de9",
+          "sourceDomains": [
+            "lemils.com"
+          ]
+        },
+        {
+          "file": "social/ube-matcha-san-francisco/slide-06.png",
+          "slide": 6,
+          "headline": "Check every layer",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 62895,
+          "sha256": "da5ba6219276a194d5f9cd776eb75f71f0df6bdb1c6143fe6ceed579101a8813",
+          "sourceDomains": [
+            "bingecoffeehouse.com"
           ]
         }
       ]

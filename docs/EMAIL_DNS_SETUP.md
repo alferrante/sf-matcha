@@ -2,7 +2,7 @@
 
 Prepared October 7, 2026. Subscriber capture works independently of sender verification. No newsletter or confirmation email has been sent.
 
-The dedicated Resend sending domain is `updates.sanfranciscomatcha.com`, currently **not verified**. Add these provider-generated records to the DNS zone for `sanfranciscomatcha.com`. Names below are relative to that zone; some DNS editors require the full name with `.sanfranciscomatcha.com` appended.
+The dedicated Resend sending domain is `updates.sanfranciscomatcha.com`, currently **failed verification** (checked October 12, 2026). Add these provider-generated records to the DNS zone for `sanfranciscomatcha.com`. Names below are relative to that zone; some DNS editors require the full name with `.sanfranciscomatcha.com` appended.
 
 | Type | Name | Value | Priority | TTL |
 | --- | --- | --- | --- | --- |
@@ -16,3 +16,7 @@ These are public DNS records, not API credentials. Keep any existing domain mail
 After records are present, trigger Resend domain verification and check each required record succeeds. Before sending subscriber emails, configure an identified sender, reply contact, postal address, functioning broadcast unsubscribe and approved delivery workflow. Keep open/click tracking disabled. A sender domain alone does not create an inbox or authorize café outreach.
 
 Dedicated domain reference: `ac3cca5d-8f22-475f-83f5-43efac3a424f`. Source: connected Resend's create-domain response on October 7. DNS access is not available in the current deployment connection; no records were changed at the DNS host.
+
+## October 12 check
+
+The dedicated provider domain reports `failed`: DKIM TXT and both SPF MX/TXT records failed; the CNAME record remains `not_started`. Open/click tracking remains disabled. No DNS records were changed and no email was sent. The setup table above still matches the provider response. The dedicated audience has zero active real subscribers; its two synthetic tests are opted out and excluded from growth counts.

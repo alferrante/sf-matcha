@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-07",
+  "updatedAt": "2026-10-12",
   "status": "draft",
-  "assetCount": 24,
+  "assetCount": 32,
   "assets": [
     {
       "guideSlug": "banana-matcha-san-francisco",
@@ -21,32 +21,32 @@
       "slides": [
         {
           "number": 1,
-          "headline": "SF banana matcha: 3 ways to order it",
-          "body": "Banana oat milk, iced banana matcha, or a banana-and-kinako cloud? Three café menus to compare."
+          "headline": "3 places to get banana matcha in SF",
+          "body": "Banana oat milk, an iced latte or banana + kinako cloud."
         },
         {
           "number": 2,
           "headline": "SŌHN · Dogpatch",
-          "body": "The menu lists Banana Oat Milk Latte with matcha: $7. Iced only. 2535 3rd St."
+          "body": "Banana Oat Milk Latte with matcha: $7, iced.\n2535 3rd St."
         },
         {
           "number": 3,
           "headline": "YakiniQ · Japantown",
-          "body": "Iced Banana Matcha Latte: $8.50 for 16 oz. 1640 Post St. Plant-milk swaps are not shown for this drink."
+          "body": "Iced Banana Matcha Latte: $8.50 / 16 oz.\n1640 Post St. Plant-milk swap not listed."
         },
         {
           "number": 4,
           "headline": "Kumo · Sunday pop-up",
-          "body": "Banana purée + soy cloud + kinako. Menu season: Sept 5–Jan 3. Sundays 9am–1pm, 1377 Fell St. Price not published."
+          "body": "Banana purée, soy cloud + kinako. Sundays 9am–1pm at 1377 Fell St. Seasonal: Sept 5–Jan 3."
         },
         {
           "number": 5,
           "headline": "Soy cloud ≠ dairy-free",
-          "body": "Kumo marks the banana drink as containing dairy. SŌHN names oat milk; ask about the full recipe. Save the guide before your next matcha run."
+          "body": "Kumo lists this drink as containing dairy. SŌHN uses oat milk; check the full recipe."
         }
       ],
-      "designDirection": "Text cards and accurate official-menu screenshots only; no invented drink photos.",
-      "callToAction": "Read the guide: https://sanfranciscomatcha.com/guides/banana-matcha-san-francisco/"
+      "designDirection": "Text cards with café names, menu details and source links. No invented café photos.",
+      "callToAction": "Save the guide: https://sanfranciscomatcha.com/guides/banana-matcha-san-francisco/"
     },
     {
       "guideSlug": "banana-matcha-san-francisco",
@@ -63,7 +63,7 @@
       "id": "banana-matcha-san-francisco--instagram-caption",
       "type": "instagram-caption",
       "platform": "Instagram",
-      "text": "Banana matcha has options 🍌\n\nSŌHN’s menu: banana oat milk with matcha, $7.\nYakiniQ’s menu: a 16 oz iced banana matcha, $8.50.\nKumo’s seasonal menu: banana purée, soy cloud and kinako at its Sunday SF pop-up.\n\nOne detail that matters: Kumo marks its drink as containing dairy. A soy topping does not make the latte dairy-free. YakiniQ’s banana listing does not show a plant-milk swap.\n\nThese are menu finds, not tasting rankings. Which style would you try? Save the guide for addresses, hours and café sources.\n\nGuide: https://sanfranciscomatcha.com/guides/banana-matcha-san-francisco/\n\nMenus checked October 7, 2026. Menus and availability can change."
+      "text": "Banana matcha in SF 🍌\n\nSŌHN: $7 with oat milk.\nYakiniQ: $8.50 iced, 16 oz.\nKumo: seasonal banana + kinako with soy cloud.\n\nKumo’s drink contains dairy. Save the menus before your next matcha stop.\n\nhttps://sanfranciscomatcha.com/guides/banana-matcha-san-francisco/\nMenus checked October 7, 2026."
     },
     {
       "guideSlug": "banana-matcha-san-francisco",
@@ -98,9 +98,9 @@
       "type": "video-script",
       "platform": "Instagram Reels / TikTok",
       "durationSeconds": 40,
-      "voiceover": "Banana matcha in San Francisco comes in a few versions. SŌHN lists a seven-dollar banana oat milk latte with matcha. YakiniQ has an eight-fifty iced banana matcha. And Kumo’s Sunday pop-up has banana purée, soy cloud and kinako. Here is the detail to catch: Kumo marks that drink as containing dairy. Soy cloud does not mean dairy-free. These are café menu finds, not my tasting scores. The guide has the addresses and sources.",
-      "overlayDirection": "Use three text cards over screenshots of the linked café menus. Highlight SŌHN’s matcha selection, YakiniQ’s $8.50 size, and Kumo’s Contains: Dairy line. Do not use unrelated banana-latte footage.",
-      "endCard": "Menu guide • Oct 7, 2026 • https://sanfranciscomatcha.com/guides/banana-matcha-san-francisco/"
+      "voiceover": "Banana matcha in San Francisco: three stops to save. SŌHN has a seven-dollar banana oat milk latte with matcha. YakiniQ lists an eight-fifty iced banana matcha. Kumo’s seasonal version has banana, soy cloud and kinako. One thing to catch: Kumo says the drink contains dairy, despite the soy cloud. The guide has addresses, hours and menu links.",
+      "overlayDirection": "Use text cards and the exact linked menu lines. Show prices, milk choices and topping caveats. No fabricated café footage.",
+      "endCard": "3 places to get banana matcha in SF • Checked Oct 7, 2026 • https://sanfranciscomatcha.com/guides/banana-matcha-san-francisco/"
     },
     {
       "guideSlug": "matcha-cold-foam-san-francisco",
@@ -121,32 +121,32 @@
       "slides": [
         {
           "number": 1,
-          "headline": "Matcha clouds: choose your topping",
-          "body": "Four SF menu finds for matcha foam, cream and clouds."
+          "headline": "Cold foam matcha: 4 SF spots to try",
+          "body": "Four stops for matcha clouds, cream tops and cold foam."
         },
         {
           "number": 2,
           "headline": "Q · 3490 California St",
-          "body": "Velvet Matcha Cloud: $8.25. Q lists matcha cloud over a matcha latte. Foam ingredients are not specified."
+          "body": "Velvet Matcha Cloud: $8.25.\nFoam ingredients aren’t listed."
         },
         {
           "number": 3,
           "headline": "Tadaima · Mission",
-          "body": "Salted Cheese Cream Matcha: $7.50 iced. Strawberry and pistachio cream are also listed. A plant-milk base does not confirm a dairy-free topping."
+          "body": "Salted Cheese Cream Matcha: $7.50 iced.\nCream topping isn’t confirmed dairy-free."
         },
         {
           "number": 4,
           "headline": "SŌHN or Kumo?",
-          "body": "SŌHN lists its iced matcha Signature Cream Top at $7. Kumo lists an in-season London Fog Matcha Latte with vanilla cloud and Earl Grey syrup."
+          "body": "SŌHN: $7 iced matcha with cream top.\nKumo: seasonal London Fog Matcha with vanilla cloud."
         },
         {
           "number": 5,
           "headline": "Check the foam, not just the milk",
-          "body": "Kumo explicitly marks London Fog Matcha as containing dairy. Ask Q, Tadaima and SŌHN about topping ingredients. Menus checked Oct 7; prices before extras."
+          "body": "Kumo lists London Fog Matcha as containing dairy. Check toppings separately from the milk."
         }
       ],
-      "designDirection": "Text cards and accurate official-menu screenshots only; no invented drink photos.",
-      "callToAction": "Read the guide: https://sanfranciscomatcha.com/guides/matcha-cold-foam-san-francisco/"
+      "designDirection": "Text cards with café names, menu details and source links. No invented café photos.",
+      "callToAction": "Save the guide: https://sanfranciscomatcha.com/guides/matcha-cold-foam-san-francisco/"
     },
     {
       "guideSlug": "matcha-cold-foam-san-francisco",
@@ -164,7 +164,7 @@
       "id": "matcha-cold-foam-san-francisco--instagram-caption",
       "type": "instagram-caption",
       "platform": "Instagram",
-      "text": "The topping deserves its own order decision ☁️\n\nQ: Velvet Matcha Cloud, $8.25.\nTadaima Mission: Salted Cheese Cream Matcha, $7.50 iced.\nSŌHN: matcha Signature Cream Top, $7 iced.\nKumo: seasonal London Fog Matcha with Earl Grey syrup and vanilla cloud.\n\nThese names describe different café builds. They are not interchangeable recipes, and choosing oat milk underneath does not make the foam dairy-free. Kumo explicitly lists dairy; the other menus do not confirm dairy-free cream toppings.\n\nSave the menu guide for the drink details and sources. No tasting winner declared.\n\nGuide: https://sanfranciscomatcha.com/guides/matcha-cold-foam-san-francisco/\n\nMenus checked October 7, 2026. Menus and availability can change."
+      "text": "Cold foam matcha: four SF stops ☁️\n\nQ: $8.25 Velvet Matcha Cloud.\nTadaima: $7.50 salted cheese cream, iced.\nSŌHN: $7 matcha cream top, iced.\nKumo: seasonal London Fog with vanilla cloud.\n\nKumo’s drink contains dairy. Ask about the topping even if you swap the milk.\n\nhttps://sanfranciscomatcha.com/guides/matcha-cold-foam-san-francisco/\nMenus checked October 7, 2026."
     },
     {
       "guideSlug": "matcha-cold-foam-san-francisco",
@@ -201,9 +201,9 @@
       "type": "video-script",
       "platform": "Instagram Reels / TikTok",
       "durationSeconds": 40,
-      "voiceover": "If you are chasing matcha cold foam, compare the topping. Q lists a Velvet Matcha Cloud at eight twenty-five. Tadaima has salted cheese cream for seven fifty. SŌHN lists its matcha cream top at seven dollars. Kumo’s seasonal London Fog adds Earl Grey syrup and vanilla cloud. And yes, Kumo says it contains dairy. An oat-milk base is only half the question. These are menu options, not a best-foam award.",
-      "overlayDirection": "Show café names, menu screenshots and prices. On the final card, highlight Kumo’s dairy statement. Label all footage as a menu walkthrough; do not simulate tasting or foam-pouring at a café.",
-      "endCard": "Menu guide • Oct 7, 2026 • https://sanfranciscomatcha.com/guides/matcha-cold-foam-san-francisco/"
+      "voiceover": "Four stops for cold foam matcha in San Francisco. Q has a Velvet Matcha Cloud for eight twenty-five. Tadaima lists salted cheese cream matcha for seven fifty iced. SŌHN has a seven-dollar iced matcha cream top. Kumo’s seasonal London Fog has vanilla cloud and Earl Grey syrup. Kumo lists dairy; ask the other cafés about toppings separately from the milk.",
+      "overlayDirection": "Use text cards and the exact linked menu lines. Show prices, milk choices and topping caveats. No fabricated café footage.",
+      "endCard": "Cold foam matcha: 4 SF spots to try • Checked Oct 7, 2026 • https://sanfranciscomatcha.com/guides/matcha-cold-foam-san-francisco/"
     },
     {
       "guideSlug": "soy-milk-matcha-san-francisco",
@@ -221,32 +221,32 @@
       "slides": [
         {
           "number": 1,
-          "headline": "Looking for soy matcha in SF?",
-          "body": "Three café menus that actually list soy. Start with a plain latte and check the whole recipe."
+          "headline": "SF matcha spots with soy milk",
+          "body": "Three cafés that list soy for matcha."
         },
         {
           "number": 2,
           "headline": "Il Parco · Presidio",
-          "body": "12 oz matcha with soy: $6 hot or $6.30 iced. Official menu lists a $0.50 plant-milk charge. 215 Lincoln Blvd."
+          "body": "12 oz matcha with soy: $6 hot / $6.30 iced.\n215 Lincoln Blvd."
         },
         {
           "number": 3,
           "headline": "Lulu Fresh · Waterfront",
-          "body": "The $7 matcha product page has a soy selection, hot or iced. Check modifier totals at checkout. 50 Francisco St, Suite 105."
+          "body": "Matcha: $7 before modifiers. Soy listed.\n50 Francisco St, Suite 105."
         },
         {
           "number": 4,
           "headline": "YakiniQ · Japantown",
-          "body": "12 oz Matcha Latte: $7 + $0.75 soy; iced adds $0.25. The modifier says Extra Soy Milk—ask for replacement, not addition."
+          "body": "12 oz matcha: $7 + $0.75 soy; iced +$0.25. Ask for soy to replace dairy, not “Extra Soy Milk.”"
         },
         {
           "number": 5,
           "headline": "Milk swap is step one",
-          "body": "Ask about cream toppings and premixed bases too. Lactose-free dairy is still dairy. Save the guide for menu links and current hours."
+          "body": "A soy base doesn’t change the foam or premix. Ask about the whole drink."
         }
       ],
-      "designDirection": "Text cards and accurate official-menu screenshots only; no invented drink photos.",
-      "callToAction": "Read the guide: https://sanfranciscomatcha.com/guides/soy-milk-matcha-san-francisco/"
+      "designDirection": "Text cards with café names, menu details and source links. No invented café photos.",
+      "callToAction": "Save the guide: https://sanfranciscomatcha.com/guides/soy-milk-matcha-san-francisco/"
     },
     {
       "guideSlug": "soy-milk-matcha-san-francisco",
@@ -261,7 +261,7 @@
       "id": "soy-milk-matcha-san-francisco--instagram-caption",
       "type": "instagram-caption",
       "platform": "Instagram",
-      "text": "Soy matcha seekers: here are three menus to save 🌱\n\nIl Parco lists soy as a milk alternative: a 12 oz matcha is $6 hot or $6.30 iced with the surcharge.\nLulu Fresh’s $7 matcha product page has a soy selection; check checkout for modifiers.\nYakiniQ lists soy on its matcha ordering page for $0.75.\n\nAt YakiniQ, the option is called Extra Soy Milk. Specify that you want soy to replace the dairy milk. And at every café, check cream or premixed ingredients if you avoid dairy.\n\nSoy is verified from menus here—not an allergy certification. Full addresses, hours and sources in the guide.\n\nGuide: https://sanfranciscomatcha.com/guides/soy-milk-matcha-san-francisco/\n\nMenus checked October 7, 2026. Menus and availability can change."
+      "text": "SF matcha spots with soy milk 🌱\n\nIl Parco: $6 hot / $6.30 iced with soy, 12 oz.\nLulu Fresh: soy listed; check modifier totals.\nYakiniQ: soy +$0.75. Ask for replacement, not “Extra Soy Milk.”\n\nCheck cream toppings and premixed bases too.\n\nhttps://sanfranciscomatcha.com/guides/soy-milk-matcha-san-francisco/\nMenus checked October 7, 2026."
     },
     {
       "guideSlug": "soy-milk-matcha-san-francisco",
@@ -292,9 +292,9 @@
       "type": "video-script",
       "platform": "Instagram Reels / TikTok",
       "durationSeconds": 40,
-      "voiceover": "If you prefer soy with matcha, three San Francisco menus explicitly list it. Il Parco’s twelve-ounce matcha with soy is six dollars hot or six thirty iced. Lulu Fresh lets you select soy on its matcha page. YakiniQ lists soy for seventy-five cents extra. Its modifier says extra soy milk, so make clear that you want a replacement. Check the topping and base too. Lactose-free dairy is still dairy. The guide links every menu.",
-      "overlayDirection": "Use text-led cards with the official soy menu fields highlighted. Show no latte photograph unless it is owned and accurately represents the named order. End with Replacement, not addition / Check toppings.",
-      "endCard": "Menu guide • Oct 7, 2026 • https://sanfranciscomatcha.com/guides/soy-milk-matcha-san-francisco/"
+      "voiceover": "Looking for soy milk with matcha in San Francisco? Il Parco’s twelve-ounce order with soy is six dollars hot or six thirty iced. Lulu Fresh lists soy on its matcha ordering page. YakiniQ lists soy for seventy-five cents extra; ask for replacement because the modifier says extra soy milk. Check cream toppings and any premixed base too. Save the guide for menus.",
+      "overlayDirection": "Use text cards and the exact linked menu lines. Show prices, milk choices and topping caveats. No fabricated café footage.",
+      "endCard": "SF matcha spots with soy milk • Checked Oct 7, 2026 • https://sanfranciscomatcha.com/guides/soy-milk-matcha-san-francisco/"
     },
     {
       "guideSlug": "strawberry-matcha-san-francisco",
@@ -315,32 +315,32 @@
       "slides": [
         {
           "number": 1,
-          "headline": "Strawberry matcha: latte or topping?",
-          "body": "Four SF menus, two useful questions: where does the strawberry go, and what is in the cream?"
+          "headline": "Where to get strawberry matcha in SF",
+          "body": "Four stops for strawberry lattes, clouds and cream."
         },
         {
           "number": 2,
           "headline": "Stonemill · Valencia",
-          "body": "Cold Strawberry Latte has a matcha or hojicha choice, milk and cane sugar. Oat substitution is listed. Choose matcha."
+          "body": "Cold Strawberry Latte: choose matcha or hojicha. Milk + cane sugar; oat swap listed."
         },
         {
           "number": 3,
           "headline": "Four Chairs · Mission St",
-          "body": "Strawberry Matcha: $7. Oatly or almond adds $1. Menu address: 3282 Mission St."
+          "body": "Strawberry Matcha: $7.\nOatly or almond +$1.\n3282 Mission St."
         },
         {
           "number": 4,
           "headline": "Cloud or cream?",
-          "body": "Q lists Matcha Strawberry Cloud at $8.25. Tadaima Mission lists Matcha Latte with Strawberry Cream at $7.75 iced, before substitutions."
+          "body": "Q: Strawberry Cloud Matcha, $8.25.\nTadaima: Strawberry Cream Matcha, $7.75 iced."
         },
         {
           "number": 5,
           "headline": "Ask before swapping milk",
-          "body": "Q’s cloud ingredients are not specified. Tadaima does not list its cream as dairy-free. Plant milk underneath does not settle that question. Save the guide for sources."
+          "body": "Q’s cloud ingredients aren’t listed. Tadaima’s cream isn’t confirmed dairy-free."
         }
       ],
-      "designDirection": "Text cards and accurate official-menu screenshots only; no invented drink photos.",
-      "callToAction": "Read the guide: https://sanfranciscomatcha.com/guides/strawberry-matcha-san-francisco/"
+      "designDirection": "Text cards with café names, menu details and source links. No invented café photos.",
+      "callToAction": "Save the guide: https://sanfranciscomatcha.com/guides/strawberry-matcha-san-francisco/"
     },
     {
       "guideSlug": "strawberry-matcha-san-francisco",
@@ -358,7 +358,7 @@
       "id": "strawberry-matcha-san-francisco--instagram-caption",
       "type": "instagram-caption",
       "platform": "Instagram",
-      "text": "Strawberry in the latte or strawberry on top? 🍓\n\nStonemill lists a Cold Strawberry Latte with your choice of matcha or hojicha.\nFour Chairs lists Strawberry Matcha at $7, with $1 Oatly or almond substitutions.\nQ lists Matcha Strawberry Cloud at $8.25.\nTadaima Mission lists Strawberry Cream Matcha at $7.75 iced before milk swaps.\n\nWe checked the menus, not a side-by-side tasting. Sweetness and topping recipes vary. Ask about the cream separately if you need a dairy-free order.\n\nSave this before your next café stop; the guide has menu links, addresses and prices.\n\nGuide: https://sanfranciscomatcha.com/guides/strawberry-matcha-san-francisco/\n\nMenus checked October 7, 2026. Menus and availability can change."
+      "text": "Where to get strawberry matcha in SF 🍓\n\nStonemill: choose matcha for its Cold Strawberry Latte.\nFour Chairs: $7 strawberry matcha.\nQ: $8.25 Strawberry Cloud.\nTadaima: $7.75 strawberry cream, iced.\n\nPlant milk doesn’t make the cream dairy-free. Ask about the topping.\n\nhttps://sanfranciscomatcha.com/guides/strawberry-matcha-san-francisco/\nMenus checked October 7, 2026."
     },
     {
       "guideSlug": "strawberry-matcha-san-francisco",
@@ -395,9 +395,9 @@
       "type": "video-script",
       "platform": "Instagram Reels / TikTok",
       "durationSeconds": 40,
-      "voiceover": "Strawberry matcha is not one recipe. Stonemill lists a strawberry latte with a matcha or hojicha choice. Four Chairs lists Strawberry Matcha at seven dollars. Q puts strawberry in its cloud topping. Tadaima has strawberry cream over an iced matcha latte. So ask where the fruit goes—and what is in the topping. Oat underneath does not confirm dairy-free cream. Our guide compares the menus without pretending these are tasting rankings.",
-      "overlayDirection": "Show the four café menu names and the named drink lines. Illustrate fruit-in-latte versus topping with plain text labels, not fabricated drink images. Include the topping caveat on screen.",
-      "endCard": "Menu guide • Oct 7, 2026 • https://sanfranciscomatcha.com/guides/strawberry-matcha-san-francisco/"
+      "voiceover": "Four San Francisco strawberry matcha stops. Stonemill lists a Cold Strawberry Latte with a matcha or hojicha choice. Four Chairs has seven-dollar Strawberry Matcha. Q lists a strawberry cloud at eight twenty-five. Tadaima has strawberry cream over iced matcha for seven seventy-five. Ask about cream ingredients separately if you avoid dairy, even when a milk swap is listed. Save the menus in our guide.",
+      "overlayDirection": "Use text cards and the exact linked menu lines. Show prices, milk choices and topping caveats. No fabricated café footage.",
+      "endCard": "Where to get strawberry matcha in SF • Checked Oct 7, 2026 • https://sanfranciscomatcha.com/guides/strawberry-matcha-san-francisco/"
     },
     {
       "guideSlug": "ceremonial-hand-whisked-matcha-san-francisco",
@@ -416,32 +416,32 @@
       "slides": [
         {
           "number": 1,
-          "headline": "Want the tea to be the focus?",
-          "body": "Three SF cafés documenting their matcha sourcing or hand-whisking."
+          "headline": "3 SF cafés for ceremonial and hand-whisked matcha",
+          "body": "Three cafés naming their matcha source or preparation."
         },
         {
           "number": 2,
           "headline": "Stonemill · 561 Valencia St",
-          "body": "The menu names Hand Whisked Matcha made with First Crop matcha. It also lists a water-based Matchacano."
+          "body": "Hand Whisked Matcha uses First Crop matcha. A water-based Matchacano is also listed."
         },
         {
           "number": 3,
           "headline": "Nagomi · 74 New Montgomery St",
-          "body": "The café describes hand-whisking Oyaizu Seicha’s Heavenly Sky matcha from Shizuoka. Its site names Straus dairy milk for lattes."
+          "body": "Hand-whisked Oyaizu Seicha matcha from Shizuoka, per the café. Straus dairy listed for lattes."
         },
         {
           "number": 4,
           "headline": "Pixlcat · 519 Clement St",
-          "body": "The café describes hot or iced organic matcha lattes using ceremonial-grade Kyoto Uji matcha. Milk choices are not specified on that page."
+          "body": "Organic lattes with ceremonial-grade Kyoto Uji matcha, per the café. Milk options aren’t specified."
         },
         {
           "number": 5,
           "headline": "Sourcing is a starting point",
-          "body": "Ceremonial is the café’s description, not our quality award. Ask for a simple tea or plain latte if you want to compare. Sources and visit notes in the guide."
+          "body": "“Ceremonial” is the café’s description. Try a plain tea or latte to compare for yourself."
         }
       ],
-      "designDirection": "Text cards and accurate official-menu screenshots only; no invented drink photos.",
-      "callToAction": "Read the guide: https://sanfranciscomatcha.com/guides/ceremonial-hand-whisked-matcha-san-francisco/"
+      "designDirection": "Text cards with café names, menu details and source links. No invented café photos.",
+      "callToAction": "Save the guide: https://sanfranciscomatcha.com/guides/ceremonial-hand-whisked-matcha-san-francisco/"
     },
     {
       "guideSlug": "ceremonial-hand-whisked-matcha-san-francisco",
@@ -457,7 +457,7 @@
       "id": "ceremonial-hand-whisked-matcha-san-francisco--instagram-caption",
       "type": "instagram-caption",
       "platform": "Instagram",
-      "text": "Matcha without a cloud can be its own café mission 🍵\n\nStonemill’s menu names Hand Whisked Matcha.\nNagomi describes hand-whisking matcha from Shizuoka producer Oyaizu Seicha.\nPixlcat describes ceremonial-grade Kyoto Uji matcha in its organic lattes.\n\nThese are café sourcing and preparation claims, linked in our guide. “Ceremonial” alone is not our quality award, and we haven’t invented tasting scores.\n\nStart with a simple tea order or a plain latte if you want to compare for yourself. Nagomi’s site names dairy milk; Pixlcat’s page does not spell out milk choices. Save the guide for addresses and sources.\n\nGuide: https://sanfranciscomatcha.com/guides/ceremonial-hand-whisked-matcha-san-francisco/\n\nMenus checked October 7, 2026. Menus and availability can change."
+      "text": "Three SF cafés for ceremonial and hand-whisked matcha 🍵\n\nStonemill: Hand Whisked Matcha.\nNagomi: hand-whisked Shizuoka matcha from Oyaizu Seicha.\nPixlcat: ceremonial-grade Kyoto Uji matcha, per the café.\n\nTry a plain tea or latte to compare for yourself.\n\nhttps://sanfranciscomatcha.com/guides/ceremonial-hand-whisked-matcha-san-francisco/\nMenus checked October 7, 2026."
     },
     {
       "guideSlug": "ceremonial-hand-whisked-matcha-san-francisco",
@@ -490,9 +490,9 @@
       "type": "video-script",
       "platform": "Instagram Reels / TikTok",
       "durationSeconds": 40,
-      "voiceover": "Want the matcha itself to be the focus? Stonemill names a hand-whisked tea order. Nagomi describes hand-whisking Oyaizu Seicha matcha from Shizuoka. Pixlcat identifies the Kyoto Uji matcha in its lattes. Those are useful café sourcing claims, not our independent quality awards. Ask for a simple order and keep milk and sweetness consistent when comparing. The guide links the café sources and visit details.",
-      "overlayDirection": "Use screenshots of the exact official preparation or origin claims. Attribute each on screen to the named café. No stock whisking footage presented as that café’s process, and no invented tea-origin map.",
-      "endCard": "Menu guide • Oct 7, 2026 • https://sanfranciscomatcha.com/guides/ceremonial-hand-whisked-matcha-san-francisco/"
+      "voiceover": "Three San Francisco cafés that name their matcha source or preparation. Stonemill lists a hand-whisked matcha order. Nagomi describes hand-whisking Oyaizu Seicha matcha from Shizuoka. Pixlcat describes ceremonial-grade Kyoto Uji matcha in its lattes. Those details come from the cafés. If you want to compare for yourself, start with a plain tea or latte. The guide has locations and sources.",
+      "overlayDirection": "Use text cards and the exact linked menu lines. Show prices, milk choices and topping caveats. No fabricated café footage.",
+      "endCard": "3 SF cafés for ceremonial and hand-whisked matcha • Checked Oct 7, 2026 • https://sanfranciscomatcha.com/guides/ceremonial-hand-whisked-matcha-san-francisco/"
     },
     {
       "guideSlug": "matcha-under-seven-dollars-san-francisco",
@@ -513,32 +513,32 @@
       "slides": [
         {
           "number": 1,
-          "headline": "SF matcha under $7",
-          "body": "Four official menus with qualifying base orders. Before tax, tip and extras."
+          "headline": "Matcha under $7 in SF",
+          "body": "Four menus with a matcha under $7. Before tax, tip and extras."
         },
         {
           "number": 2,
           "headline": "Paper Son · Downtown",
-          "body": "Matcha Latte or Matcha Passionfruit Soda: $6. Oat or almond adds $0.25 to the latte. 303 2nd St N102."
+          "body": "Matcha Latte or Passionfruit Soda: $6.\nLatte: oat or almond +$0.25.\n303 2nd St N102."
         },
         {
           "number": 3,
           "headline": "Il Parco · Presidio",
-          "body": "12 oz matcha: $5.50 hot or $5.80 iced. Soy, oat or almond adds $0.50, keeping that size below $7 before tax."
+          "body": "12 oz matcha: $5.50 hot / $5.80 iced.\nSoy, oat or almond +$0.50."
         },
         {
           "number": 4,
           "headline": "Tadaima or SŌHN?",
-          "body": "Tadaima Mission: $6.25 hot / $6.75 iced, before swaps. SŌHN: Matcha Latte or Matchacano, $6; oat and almond alternatives listed free."
+          "body": "Tadaima Mission: $6.25 hot / $6.75 iced.\nSŌHN: $6 latte or Matchacano; oat and almond swaps listed free."
         },
         {
           "number": 5,
           "headline": "Watch the modifiers",
-          "body": "Tadaima’s $0.75 milk swap brings hot to $7 and iced to $7.50. No café discount is implied. Check the checkout total; save the price guide."
+          "body": "Tadaima’s $0.75 milk swap brings hot to $7 and iced to $7.50. Check the checkout total."
         }
       ],
-      "designDirection": "Text cards and accurate official-menu screenshots only; no invented drink photos.",
-      "callToAction": "Read the guide: https://sanfranciscomatcha.com/guides/matcha-under-seven-dollars-san-francisco/"
+      "designDirection": "Text cards with café names, menu details and source links. No invented café photos.",
+      "callToAction": "Save the guide: https://sanfranciscomatcha.com/guides/matcha-under-seven-dollars-san-francisco/"
     },
     {
       "guideSlug": "matcha-under-seven-dollars-san-francisco",
@@ -556,7 +556,7 @@
       "id": "matcha-under-seven-dollars-san-francisco--instagram-caption",
       "type": "instagram-caption",
       "platform": "Instagram",
-      "text": "Your next matcha does not need to start at $8 💸\n\nPaper Son: $6 matcha latte or passionfruit soda.\nIl Parco: $5.50 hot / $5.80 iced for 12 oz; plant milk adds $0.50.\nTadaima Mission: $6.25 hot / $6.75 iced, before substitutions.\nSŌHN: $6 matcha latte or Matchacano; oat and almond alternatives listed free.\n\nAll are official menu prices before tax, tip and extras. Tadaima’s milk swap takes the hot latte to exactly $7, so it no longer qualifies as under $7.\n\nThis is a price guide, not a Best Value taste award. No promo code or café participation is implied. Save the guide and check your checkout total.\n\nGuide: https://sanfranciscomatcha.com/guides/matcha-under-seven-dollars-san-francisco/\n\nMenus checked October 7, 2026. Menus and availability can change."
+      "text": "Matcha under $7 in SF 💸\n\nPaper Son: $6 latte or passionfruit soda.\nIl Parco: from $5.50 hot, 12 oz.\nTadaima Mission: $6.25 hot / $6.75 iced.\nSŌHN: $6 latte or Matchacano.\n\nBefore tax, tip and extras. Tadaima’s milk swap brings hot to $7.\n\nhttps://sanfranciscomatcha.com/guides/matcha-under-seven-dollars-san-francisco/\nMenus checked October 7, 2026."
     },
     {
       "guideSlug": "matcha-under-seven-dollars-san-francisco",
@@ -593,9 +593,244 @@
       "type": "video-script",
       "platform": "Instagram Reels / TikTok",
       "durationSeconds": 40,
-      "voiceover": "Here are four official matcha menus with an order under seven dollars before tax. Paper Son lists a six-dollar latte or passionfruit soda. Il Parco starts at five fifty hot for twelve ounces. Tadaima Mission lists six twenty-five hot and six seventy-five iced. SŌHN lists a six-dollar latte or Matchacano. Watch the extras: Tadaima’s plant-milk swap takes hot to exactly seven. This is a menu price guide, not a taste award or a discount offer.",
-      "overlayDirection": "Show exact menu prices with a persistent Before tax + extras label. For Tadaima, animate $6.25 + $0.75 = $7 using text. Do not display a working promo code or offer badge.",
-      "endCard": "Menu guide • Oct 7, 2026 • https://sanfranciscomatcha.com/guides/matcha-under-seven-dollars-san-francisco/"
+      "voiceover": "Four San Francisco menus with a matcha under seven dollars before tax and extras. Paper Son lists a six-dollar latte or passionfruit soda. Il Parco starts at five fifty hot for twelve ounces. Tadaima Mission has six twenty-five hot or six seventy-five iced. SŌHN lists a six-dollar latte or Matchacano. Watch substitutions: Tadaima’s seventy-five-cent milk swap brings the hot order to seven.",
+      "overlayDirection": "Use text cards and the exact linked menu lines. Show prices, milk choices and topping caveats. No fabricated café footage.",
+      "endCard": "Matcha under $7 in SF • Checked Oct 7, 2026 • https://sanfranciscomatcha.com/guides/matcha-under-seven-dollars-san-francisco/"
+    },
+    {
+      "guideSlug": "mission-district-matcha-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/mission-district-matcha-san-francisco/",
+      "status": "draft",
+      "verifiedAt": "2026-10-09",
+      "sources": [
+        "https://www.stonemillmatcha-us.com/menu",
+        "https://www.stonemillmatcha-us.com/",
+        "https://www.bingecoffeehouse.com/menu",
+        "https://postmates.com/store/binge-coffee-house-valencia/21Sjn46UVgWQG8Ib9fijLA",
+        "https://www.ceretea.com/",
+        "https://postmates.com/store/cere-tea/JK83sjtJUt6687g5r9EWzg",
+        "https://tadaimasf.com/san-francisco-suite-b-tadaima-sf-drink-menu",
+        "https://tadaimasf.com/san-francisco-suite-b-tadaima-sf-locations",
+        "https://marigoldsf.com/pages/cafe"
+      ],
+      "id": "mission-district-matcha-san-francisco--carousel",
+      "type": "carousel",
+      "platform": "Instagram / LinkedIn",
+      "slides": [
+        {
+          "number": 1,
+          "headline": "5 matcha stops in the Mission",
+          "body": "Plain, fruit, floral or cream-topped. Pick your next stop."
+        },
+        {
+          "number": 2,
+          "headline": "Stonemill",
+          "body": "Plain, ginger, rose and strawberry matcha. Oat listed; check toppings for dairy."
+        },
+        {
+          "number": 3,
+          "headline": "Binge Coffee House",
+          "body": "Uji, fruit, sesame, ube, banana and coconut matcha. Oat and almond listed; some foams contain dairy."
+        },
+        {
+          "number": 4,
+          "headline": "Ceré",
+          "body": "Classic, fruit, cream-top and sparkling matcha. Soy listed; check cream tops for dairy."
+        },
+        {
+          "number": 5,
+          "headline": "Tadaima · Mission",
+          "body": "Classic latte or salted-cheese, strawberry and pistachio cream. Oat and almond listed; cream isn’t confirmed dairy-free."
+        },
+        {
+          "number": 6,
+          "headline": "Marigold",
+          "body": "Lavender Matcha: $7.50 before substitutions. Oat +$0.50; soy not listed."
+        },
+        {
+          "number": 7,
+          "headline": "Save your next café stop",
+          "body": "Ceré lists soy. At every stop, ask about the topping separately from the milk."
+        }
+      ],
+      "designDirection": "Text and geometric motifs only. No invented café or drink photos.",
+      "callToAction": "Save the guide: https://sanfranciscomatcha.com/guides/mission-district-matcha-san-francisco/"
+    },
+    {
+      "guideSlug": "mission-district-matcha-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/mission-district-matcha-san-francisco/",
+      "status": "draft",
+      "verifiedAt": "2026-10-09",
+      "sources": [
+        "https://www.stonemillmatcha-us.com/menu",
+        "https://www.stonemillmatcha-us.com/",
+        "https://www.bingecoffeehouse.com/menu",
+        "https://postmates.com/store/binge-coffee-house-valencia/21Sjn46UVgWQG8Ib9fijLA",
+        "https://www.ceretea.com/",
+        "https://postmates.com/store/cere-tea/JK83sjtJUt6687g5r9EWzg",
+        "https://tadaimasf.com/san-francisco-suite-b-tadaima-sf-drink-menu",
+        "https://tadaimasf.com/san-francisco-suite-b-tadaima-sf-locations",
+        "https://marigoldsf.com/pages/cafe"
+      ],
+      "id": "mission-district-matcha-san-francisco--instagram-caption",
+      "type": "instagram-caption",
+      "platform": "Instagram",
+      "text": "5 matcha stops in the Mission 🍵\n\nStonemill: plain, ginger, rose or strawberry.\nBinge: fruit, sesame, ube, banana and coconut.\nCeré: classic, sparkling or cream-top.\nTadaima: classic or cream-topped.\nMarigold: lavender.\n\nCeré lists soy. Cream and cold foam can still contain dairy.\n\nSave the guide for addresses and menus.\n\nhttps://sanfranciscomatcha.com/guides/mission-district-matcha-san-francisco/\nMenus checked October 9, 2026."
+    },
+    {
+      "guideSlug": "mission-district-matcha-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/mission-district-matcha-san-francisco/",
+      "status": "draft",
+      "verifiedAt": "2026-10-09",
+      "sources": [
+        "https://www.stonemillmatcha-us.com/menu",
+        "https://www.stonemillmatcha-us.com/",
+        "https://www.bingecoffeehouse.com/menu",
+        "https://postmates.com/store/binge-coffee-house-valencia/21Sjn46UVgWQG8Ib9fijLA",
+        "https://www.ceretea.com/",
+        "https://postmates.com/store/cere-tea/JK83sjtJUt6687g5r9EWzg",
+        "https://tadaimasf.com/san-francisco-suite-b-tadaima-sf-drink-menu",
+        "https://tadaimasf.com/san-francisco-suite-b-tadaima-sf-locations",
+        "https://marigoldsf.com/pages/cafe"
+      ],
+      "id": "mission-district-matcha-san-francisco--short-post",
+      "type": "short-post",
+      "platform": "Threads / X",
+      "text": "5 Mission matcha stops: Stonemill, Binge, Ceré, Tadaima and Marigold. Ceré lists soy; check cream toppings for dairy. Save the route: https://sanfranciscomatcha.com/guides/mission-district-matcha-san-francisco/"
+    },
+    {
+      "guideSlug": "mission-district-matcha-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/mission-district-matcha-san-francisco/",
+      "status": "draft",
+      "verifiedAt": "2026-10-09",
+      "sources": [
+        "https://www.stonemillmatcha-us.com/menu",
+        "https://www.stonemillmatcha-us.com/",
+        "https://www.bingecoffeehouse.com/menu",
+        "https://postmates.com/store/binge-coffee-house-valencia/21Sjn46UVgWQG8Ib9fijLA",
+        "https://www.ceretea.com/",
+        "https://postmates.com/store/cere-tea/JK83sjtJUt6687g5r9EWzg",
+        "https://tadaimasf.com/san-francisco-suite-b-tadaima-sf-drink-menu",
+        "https://tadaimasf.com/san-francisco-suite-b-tadaima-sf-locations",
+        "https://marigoldsf.com/pages/cafe"
+      ],
+      "id": "mission-district-matcha-san-francisco--video-script",
+      "type": "video-script",
+      "platform": "Reels / TikTok",
+      "voiceover": "Five matcha stops in the Mission. Stonemill has plain and flavored lattes. Binge lists fruit, sesame, ube, banana and coconut matcha. Ceré has classic, cream-top and sparkling drinks. Tadaima has salted-cheese, strawberry and pistachio cream. Marigold has lavender matcha. Ceré lists soy, but check toppings separately for dairy. Save the guide for addresses and menus.",
+      "overlayDirection": "Show café names and the exact menu lines from linked sources. Keep dairy caveats on screen. Use text cards; no fabricated café footage.",
+      "endCard": "5 matcha stops in the Mission • Checked Oct 9, 2026 • https://sanfranciscomatcha.com/guides/mission-district-matcha-san-francisco/"
+    },
+    {
+      "guideSlug": "ube-matcha-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/ube-matcha-san-francisco/",
+      "status": "draft",
+      "verifiedAt": "2026-10-09",
+      "sources": [
+        "https://www.ceretea.com/",
+        "https://www.bingecoffeehouse.com/menu",
+        "https://postmates.com/store/binge-coffee-house-valencia/21Sjn46UVgWQG8Ib9fijLA",
+        "https://postmates.com/store/maruwu-seicha-japantown/gRIVlsHiVbC8QNCX5VX02g",
+        "https://www.maruwuseicha.us/pages/menu",
+        "https://www.instagram.com/p/DbiyOqHlPwk/",
+        "https://lemils.com/pages/find-us"
+      ],
+      "id": "ube-matcha-san-francisco--carousel",
+      "type": "carousel",
+      "platform": "Instagram / LinkedIn",
+      "slides": [
+        {
+          "number": 1,
+          "headline": "Ube matcha: 4 SF spots to try",
+          "body": "Cold foam, a layered latte, a snow top or an affogato."
+        },
+        {
+          "number": 2,
+          "headline": "Ceré",
+          "body": "Snowy Ube Matcha: $8.50 on the menu. Full dairy and topping ingredients aren’t listed."
+        },
+        {
+          "number": 3,
+          "headline": "Binge Coffee House",
+          "body": "Ube Matcha with coconut-ube cold foam. Foam contains dairy, even with a milk swap. $9 on the delivery menu; markup may apply."
+        },
+        {
+          "number": 4,
+          "headline": "Maruwu Seicha",
+          "body": "Layered Ube Matcha Latte, or Max + Snow Top. Soy listed for lattes; snow-top ingredients aren’t disclosed."
+        },
+        {
+          "number": 5,
+          "headline": "Le Mil’s Coffee",
+          "body": "Hand-whisked Ube Matcha Affogato on the launch menu. Check current availability, base and toppings."
+        },
+        {
+          "number": 6,
+          "headline": "Check every layer",
+          "body": "Binge’s coconut-ube foam contains dairy. Ask the other cafés about toppings and bases."
+        }
+      ],
+      "designDirection": "Text and geometric motifs only. No invented café or drink photos.",
+      "callToAction": "Save the guide: https://sanfranciscomatcha.com/guides/ube-matcha-san-francisco/"
+    },
+    {
+      "guideSlug": "ube-matcha-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/ube-matcha-san-francisco/",
+      "status": "draft",
+      "verifiedAt": "2026-10-09",
+      "sources": [
+        "https://www.ceretea.com/",
+        "https://www.bingecoffeehouse.com/menu",
+        "https://postmates.com/store/binge-coffee-house-valencia/21Sjn46UVgWQG8Ib9fijLA",
+        "https://postmates.com/store/maruwu-seicha-japantown/gRIVlsHiVbC8QNCX5VX02g",
+        "https://www.maruwuseicha.us/pages/menu",
+        "https://www.instagram.com/p/DbiyOqHlPwk/",
+        "https://lemils.com/pages/find-us"
+      ],
+      "id": "ube-matcha-san-francisco--instagram-caption",
+      "type": "instagram-caption",
+      "platform": "Instagram",
+      "text": "Ube matcha, four ways 💜\n\nCeré: Snowy Ube Matcha.\nBinge: coconut-ube cold foam.\nMaruwu: a layered latte or snow top.\nLe Mil’s: a launch-menu affogato; check availability.\n\nBinge’s foam contains dairy. Maruwu lists soy for lattes, but ask about the snow top separately.\n\nSave the guide for menus and locations.\n\nhttps://sanfranciscomatcha.com/guides/ube-matcha-san-francisco/\nMenus checked October 9, 2026."
+    },
+    {
+      "guideSlug": "ube-matcha-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/ube-matcha-san-francisco/",
+      "status": "draft",
+      "verifiedAt": "2026-10-09",
+      "sources": [
+        "https://www.ceretea.com/",
+        "https://www.bingecoffeehouse.com/menu",
+        "https://postmates.com/store/binge-coffee-house-valencia/21Sjn46UVgWQG8Ib9fijLA",
+        "https://postmates.com/store/maruwu-seicha-japantown/gRIVlsHiVbC8QNCX5VX02g",
+        "https://www.maruwuseicha.us/pages/menu",
+        "https://www.instagram.com/p/DbiyOqHlPwk/",
+        "https://lemils.com/pages/find-us"
+      ],
+      "id": "ube-matcha-san-francisco--short-post",
+      "type": "short-post",
+      "platform": "Threads / X",
+      "text": "Ube matcha in SF: Ceré, Binge, Maruwu and Le Mil’s. Binge’s foam contains dairy; Maruwu lists soy, but check the snow top. Menus: https://sanfranciscomatcha.com/guides/ube-matcha-san-francisco/"
+    },
+    {
+      "guideSlug": "ube-matcha-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/ube-matcha-san-francisco/",
+      "status": "draft",
+      "verifiedAt": "2026-10-09",
+      "sources": [
+        "https://www.ceretea.com/",
+        "https://www.bingecoffeehouse.com/menu",
+        "https://postmates.com/store/binge-coffee-house-valencia/21Sjn46UVgWQG8Ib9fijLA",
+        "https://postmates.com/store/maruwu-seicha-japantown/gRIVlsHiVbC8QNCX5VX02g",
+        "https://www.maruwuseicha.us/pages/menu",
+        "https://www.instagram.com/p/DbiyOqHlPwk/",
+        "https://lemils.com/pages/find-us"
+      ],
+      "id": "ube-matcha-san-francisco--video-script",
+      "type": "video-script",
+      "platform": "Reels / TikTok",
+      "voiceover": "Ube matcha comes in a few versions in San Francisco. Ceré lists Snowy Ube Matcha. Binge adds coconut-ube cold foam, which contains dairy even with a milk swap. Maruwu has a layered latte or snow-top version and lists soy for lattes. Le Mil’s launch menu has an affogato; check current availability. Save the guide for menu links and locations.",
+      "overlayDirection": "Show café names and the exact menu lines from linked sources. Keep dairy caveats on screen. Use text cards; no fabricated café footage.",
+      "endCard": "Ube matcha: 4 SF spots to try • Checked Oct 9, 2026 • https://sanfranciscomatcha.com/guides/ube-matcha-san-francisco/"
     }
   ]
 }
