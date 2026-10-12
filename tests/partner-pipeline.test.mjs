@@ -11,7 +11,7 @@ const allowedStages = new Set(['candidate', 'researched', 'ready_for_outreach', 
 test('partner pipeline uses the complete stage model and unique directory locations', () => {
   assert.equal(pipeline.schemaVersion, 1);
   assert.deepEqual(new Set(pipeline.stages), allowedStages);
-  assert.equal(pipeline.prospects.length, 2);
+  assert.ok(pipeline.prospects.length >= 2, 'preserve the initial qualified pool as it grows');
   assert.equal(new Set(pipeline.prospects.map(p => p.id)).size, pipeline.prospects.length);
   assert.equal(new Set(pipeline.prospects.map(p => p.shopId)).size, pipeline.prospects.length);
   const shopIds = new Set(shops.map(shop => shop.id));
@@ -23,7 +23,7 @@ test('partner pipeline uses the complete stage model and unique directory locati
 
 test('research-ready prospects have public evidence, unsent drafts and safe proposed terms', () => {
   for (const prospect of pipeline.prospects) {
-    assert.equal(prospect.stage, 'ready_for_outreach');
+    assert.ok(['researched', 'ready_for_outreach'].includes(prospect.stage));
     assert.equal(prospect.contactStatus, 'not_contacted');
     assert.equal(prospect.independent, true);
     assert.match(prospect.publicContact.source, /^https:\/\//);
@@ -35,6 +35,13 @@ test('research-ready prospects have public evidence, unsent drafts and safe prop
     assert.equal(prospect.proposedTerms.perCustomerLimit, 1);
     assert.equal(prospect.proposedTerms.merchantMaximumDiscountCostUsd, 100);
     assert.equal(prospect.proposedTerms.needsMerchantConfirmation, true);
+    const proposedDays = (Date.parse(prospect.proposedTerms.proposedEnd) - Date.parse(prospect.proposedTerms.proposedStart)) / 86400000 + 1;
+    assert.equal(proposedDays, pipeline.rules.defaultPilotDays, 'inclusive dates must match the six-week pilot');
+    assert.equal(prospect.proposedTerms.merchantMaximumDiscountCostUsd, prospect.proposedTerms.discountCents * prospect.proposedTerms.redemptionCap / 100);
+    assert.ok(prospect.proposedTerms.eligibleDrinks.length > 0);
+    if (prospect.stage === 'ready_for_outreach') {
+      assert.equal((prospect.qualificationBlockers || []).length, 0, 'incomplete item research cannot be marked ready');
+    }
   }
 });
 
@@ -49,6 +56,7 @@ test('no-duplicates ledger covers every prospect and preserves standing exclusio
 test('pipeline cannot imply a live or confirmed café offer', () => {
   assert.equal(pipeline.rules.outreachRequiresExplicitApproval, true);
   assert.equal(pipeline.rules.publicationRequiresMerchantConfirmation, true);
+  assert.equal(pipeline.rules.activationRequiresTestedClaimRedemptionService, true);
   assert.ok(pipeline.prospects.every(p => !['contacted', 'interested', 'negotiating', 'confirmed'].includes(p.stage)));
   assert.doesNotMatch(JSON.stringify(pipeline), /merchantConfirmedAt|confirmationRef|claimPath/);
 });

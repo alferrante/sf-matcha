@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-12",
   "stages": [
     "candidate",
     "researched",
@@ -17,7 +17,8 @@
     "publicationRequiresMerchantConfirmation": true,
     "defaultDiscountCents": 100,
     "defaultRedemptionCap": 100,
-    "defaultPilotDays": 42
+    "defaultPilotDays": 42,
+    "activationRequiresTestedClaimRedemptionService": true
   },
   "prospects": [
     {
@@ -43,12 +44,12 @@
         {
           "item": "Matcha Latte",
           "price": "$6.00",
-          "source": "https://static1.squarespace.com/static/684047fe6e7f3956c21a071e/t/691660f7a92f14502a586845/1763074295323/Beverage%2BMenu_1112.pdf"
+          "source": "https://www.sohnsf.com/s/Letter_0120_1-1.pdf"
         },
         {
           "item": "Banana Oat Milk Matcha",
           "price": "$7.00",
-          "source": "https://static1.squarespace.com/static/684047fe6e7f3956c21a071e/t/691660f7a92f14502a586845/1763074295323/Beverage%2BMenu_1112.pdf"
+          "source": "https://www.sohnsf.com/s/Letter_0120_1-1.pdf"
         }
       ],
       "proposedTerms": {
@@ -72,12 +73,17 @@
         "needsMerchantConfirmation": true
       },
       "outreachDraft": "Subject: A small SŌHN × SF Matcha pilot\n\nHi SŌHN team — I run sanfranciscomatcha.com, the independent map and guide to matcha around San Francisco. SŌHN is already featured for its Matcha Latte and Banana Oat Milk Matcha. I’d love to explore a simple six-week perk at the Dogpatch café: $1 off one of those two drinks, one use per customer, capped at 100 successful redemptions. There is no participation fee; SŌHN would fund only redeemed $1 discounts, for a maximum proposed cost of $100, and could pause the pilot.\n\nIf the idea is interesting, I can send the one-page terms and voucher flow for review. Nothing would be published until your team confirms the exact drinks, dates, exclusions, staff process and cap in writing. Editorial badges and awards stay completely separate.\n\nBest,\nAngela\nSF Matcha",
-      "nextAction": "Await Angela's explicit approval before using the existing relationship or public contact route. Recheck the linked menu immediately before any approved send.",
-      "verifiedAt": "2026-10-09",
+      "nextAction": "Await Angela's explicit send approval. Recheck the current linked menu before an approved send; confirm the banana-matcha POS SKU, proposed dates and non-dairy recipe. Activation also requires written terms and a tested claim/redemption service.",
+      "verifiedAt": "2026-10-12",
       "evidence": [
         "https://www.sohnsf.com/",
         "https://www.sohnsf.com/about",
-        "https://static1.squarespace.com/static/684047fe6e7f3956c21a071e/t/691660f7a92f14502a586845/1763074295323/Beverage%2BMenu_1112.pdf"
+        "https://static1.squarespace.com/static/684047fe6e7f3956c21a071e/t/691660f7a92f14502a586845/1763074295323/Beverage%2BMenu_1112.pdf",
+        "https://www.sohnsf.com/s/Letter_0120_1-1.pdf"
+      ],
+      "milkEvidence": "Current linked drink menu lists free oat or almond alternatives; soy is not listed. Banana Oat Milk Latte has a matcha version. No recipe-wide dairy-free claim.",
+      "researchNotes": [
+        "October 12: official drink-menu link changed from Beverage Menu_1112.pdf to Letter_0120_1-1.pdf. Rendered and visually checked the image-only PDF: Matcha Latte $6 and Banana Oat Milk Latte, matcha version, $7. Prices unchanged."
       ]
     },
     {
@@ -133,13 +139,173 @@
         "needsMerchantConfirmation": true
       },
       "outreachDraft": "Subject: A Golden Gate Park matcha perk\n\nHi California Kahve team — I run sanfranciscomatcha.com, the independent map and guide to matcha around San Francisco. I’ve featured the Golden Gate Park café for its classic Matcha Latte, Lavender Mint Matcha and rotating seasonal drinks.\n\nI’d love to explore a simple six-week perk at 320 Bowling Green Dr: $1 off the Matcha Latte or Lavender Mint Matcha, one use per customer, capped at 100 successful redemptions. There is no participation fee; California Kahve would fund only redeemed $1 discounts, for a maximum proposed cost of $100, and could pause the pilot.\n\nIf this sounds interesting, I can send the one-page terms and voucher flow. Nothing would be published until you confirm current prices, eligible drinks, dates, exclusions, staff process and cap in writing. Editorial badges and awards stay completely separate.\n\nBest,\nAngela\nSF Matcha",
-      "nextAction": "Await Angela's explicit approval before contacting the official public inbox. Confirm current counter prices and POS handling during merchant review; do not infer prices from third parties.",
-      "verifiedAt": "2026-10-09",
+      "nextAction": "Await Angela's explicit send approval. Merchant must confirm Golden Gate Park counter prices and POS handling; Sutter and Presidio locations are outside this proposal. No follow-up is due because nothing has been sent.",
+      "verifiedAt": "2026-10-12",
       "evidence": [
         "https://www.californiakahve.com/contact",
         "https://www.californiakahve.com/the-menu",
         "https://www.californiakahve.com/locations",
         "https://www.californiakahve.com/the-crew"
+      ],
+      "researchNotes": [
+        "October 12: contact, Golden Gate Park hours and always-on matcha names rechecked. Prices remain unverified. The newly announced 2108 Sutter storefront is a different location and is outside this proposal."
+      ]
+    },
+    {
+      "id": "best-boy-electric-japantown",
+      "shopId": "best-boy-electric",
+      "merchantName": "Best Boy Electric — Japantown",
+      "stage": "ready_for_outreach",
+      "contactStatus": "not_contacted",
+      "priority": 3,
+      "independent": true,
+      "location": {
+        "address": "1746 Post St, San Francisco, CA 94115",
+        "hours": "Mon–Fri 8am–3:30pm; Sat–Sun 9am–5pm"
+      },
+      "leadership": "Nichi Bei News (August 28, 2025) and New Fillmore (August 6, 2025) name Ryoji Taki as the operator who opened the café. Merchant signing authority still needs confirmation.",
+      "publicContact": {
+        "channel": "instagram",
+        "value": "https://www.instagram.com/bestboysf/",
+        "source": "https://www.newpeopleworld.com/best-boy-electric"
+      },
+      "alternativePublicContact": {
+        "channel": "phone",
+        "value": "+1 415-966-9850",
+        "source": "https://best-boy-electric.square.site/"
+      },
+      "fit": "Independent Japantown café already in the directory and guide, with a current hand-whisked matcha menu and two distinct drinks for a simple pilot.",
+      "menuEvidence": [
+        {
+          "item": "Matcha Latte",
+          "price": "$6.50",
+          "source": "https://best-boy-electric.square.site/"
+        },
+        {
+          "item": "Black Sesame Matcha Latte",
+          "price": "$7.50",
+          "source": "https://best-boy-electric.square.site/"
+        }
+      ],
+      "milkEvidence": "Public ordering page does not expose a complete milk-choice list; do not promise soy or recipe-wide dairy-free options.",
+      "proposedTerms": {
+        "eligibleDrinks": [
+          "Matcha Latte",
+          "Black Sesame Matcha Latte"
+        ],
+        "proposedStart": "2026-10-26",
+        "proposedEnd": "2026-12-06",
+        "discountCents": 100,
+        "redemptionCap": 100,
+        "perCustomerLimit": 1,
+        "merchantMaximumDiscountCostUsd": 100,
+        "exclusions": [
+          "seasonal specials",
+          "other matcha drinks",
+          "other add-ons",
+          "tax",
+          "delivery orders",
+          "discount stacking"
+        ],
+        "needsMerchantConfirmation": true,
+        "dateFlexibility": "Illustrative 42-day window; reset dates if approval, merchant confirmation or the tested claim/redemption service is not ready. No automatic activation."
+      },
+      "outreachDraft": "Hi Ryoji and Best Boy team — I run sanfranciscomatcha.com. Your Japantown café is already on our map and in our guide. Would you be open to a six-week pilot: $1 off a Matcha Latte or Black Sesame Matcha Latte at 1746 Post? One use per person, 100 redemptions total, no participation fee. You would cover only redeemed $1 discounts, capped at $100, and could pause the offer.\n\nIf that sounds useful, I can send the short terms and proposed counter process. Nothing would be published until your team confirms the drinks, dates, exclusions and cap in writing and the redemption service is ready. Offers do not affect editorial badges or awards.\n\nAngela\nSF Matcha",
+      "qualificationBlockers": [],
+      "merchantReviewQuestions": [
+        "Who can approve the agreement for this location?",
+        "Are the $6.50/$7.50 counter prices and exact POS item names current?",
+        "Which milk choices are offered and which add-ons are charged?",
+        "Can staff use a single-use voucher and discount code without stacking discounts?"
+      ],
+      "researchNotes": [
+        "The official landlord page links @bestboysf and the matching Linktree/ordering page. Same-name musician/DJ accounts are unrelated and excluded.",
+        "Square shows item prices but marks all listed items unavailable at fetch time. This is not proof of permanent closure or of in-stock availability; recheck stock and ordering before an approved send."
+      ],
+      "nextAction": "Await Angela's explicit approval for an Instagram DM. Recheck menu availability before sending. Do not use New People's separate landlord inbox as a café contact.",
+      "verifiedAt": "2026-10-12",
+      "evidence": [
+        "https://best-boy-electric.square.site/",
+        "https://www.newpeopleworld.com/best-boy-electric",
+        "https://linktr.ee/bestboysf",
+        "https://www.nichibei.org/2025/08/here-comes-the-boy-new-cafe-opens-in-s-f-s-j-town/",
+        "https://newfillmore.com/2025/08/06/fillmore-is-getting-a-summer-spruce-up/"
+      ]
+    },
+    {
+      "id": "constance-tea-outer-richmond",
+      "shopId": "constance-tea",
+      "merchantName": "Constance Tea — Outer Richmond",
+      "stage": "researched",
+      "contactStatus": "not_contacted",
+      "priority": 4,
+      "independent": true,
+      "location": {
+        "address": "3512 Balboa St, San Francisco, CA 94121",
+        "hours": "Soft opening: Mon, Wed–Thu 10am–5pm; Fri–Sun 10am–6pm; Tuesday closed"
+      },
+      "leadership": "The SF Standard (July 4, 2026) identifies Bill Tiet as owner and cousin Ryan Tiet as manager of the family business. Signing authority still needs confirmation.",
+      "publicContact": {
+        "channel": "email",
+        "value": "infoconstancetea@gmail.com",
+        "source": "https://www.constancetea.com/"
+      },
+      "fit": "Family-run Outer Richmond matcha and tea studio already featured in the directory and guide. A standard-latte-only proposal avoids putting limited reserve milling capacity into the discount pilot.",
+      "menuEvidence": [
+        {
+          "item": "Matcha lattes — standard green-tea SKU/name to confirm",
+          "price": "Current counter price unverified",
+          "source": "https://www.constancetea.com/"
+        }
+      ],
+      "milkEvidence": "Current milk choices, soy and cream ingredients are unverified; no dairy-free claim.",
+      "proposedTerms": {
+        "eligibleDrinks": [
+          "Standard green-tea matcha latte — exact SKU/name to confirm"
+        ],
+        "proposedStart": "2026-10-26",
+        "proposedEnd": "2026-12-06",
+        "discountCents": 100,
+        "redemptionCap": 100,
+        "perCustomerLimit": 1,
+        "merchantMaximumDiscountCostUsd": 100,
+        "exclusions": [
+          "freshly milled reserve drinks",
+          "black matcha drinks",
+          "einspänners",
+          "retail tins",
+          "workshops",
+          "other tea drinks",
+          "other add-ons",
+          "tax",
+          "delivery orders",
+          "discount stacking"
+        ],
+        "needsMerchantConfirmation": true,
+        "dateFlexibility": "Illustrative 42-day window; reset dates if approval, merchant confirmation or the tested claim/redemption service is not ready. No automatic activation."
+      },
+      "outreachDraft": "Subject: A small matcha perk at Constance\n\nHi Bill and Ryan — I run sanfranciscomatcha.com. Constance is already in our Outer Richmond guide. Would you be open to a six-week pilot at 3512 Balboa: $1 off a standard green matcha latte, excluding reserve drinks and einspänners? We would confirm the exact menu item with you first so this fits your supply and counter process.\n\nOne use per person, 100 redemptions total, no participation fee. You would cover only redeemed $1 discounts, capped at $100, and could pause the offer. Nothing would be published until you approve the drink, current price, dates, exclusions and cap in writing and the redemption service is ready. Offers do not affect editorial badges or awards.\n\nAngela\nSF Matcha",
+      "qualificationBlockers": [
+        "Recheck a readable current counter menu for the exact standard green matcha SKU and price before advancing to ready_for_outreach. The official menu image could not be fetched (HTTP 403)."
+      ],
+      "merchantReviewQuestions": [
+        "What is the current exact name/SKU and counter price of the standard green matcha latte?",
+        "Is the proposed exclusion of reserve, black matcha and einspänner drinks practical?",
+        "Who can approve terms for this location?",
+        "What milk choices, surcharges and daily stock limits should be disclosed?",
+        "Can the counter apply a single-use voucher without discount stacking?"
+      ],
+      "researchNotes": [
+        "Official public homepage/app verifies the street address, soft-opening schedule and contact mailto. The current official page confirms the matcha-latte program, but no current item-level price was established.",
+        "June 8 Infatuation coverage distinguishes standard green/black lattes from reserve drinks; it is context, not proof of current SKU availability or price.",
+        "No prices from unrelated Constance Fromagerie or Restaurant Constance pages are used."
+      ],
+      "nextAction": "Recheck the official menu image or another readable merchant-published menu before marking ready for outreach. Personalized email is drafted but unsent; no follow-up is due.",
+      "verifiedAt": "2026-10-12",
+      "evidence": [
+        "https://www.constancetea.com/",
+        "https://sfstandard.com/2026/07/04/get-tea-drunk-san-francisco-s-first-freshly-milled-matcha-cafe/",
+        "https://www.theinfatuation.com/san-francisco/reviews/constance-tea-and-matcha"
       ]
     }
   ],
@@ -160,6 +326,25 @@
         "California Kahve Golden Gate Park",
         "California Kahve — Golden Gate Park",
         "320 Bowling Green Dr"
+      ]
+    },
+    {
+      "canonicalId": "best-boy-electric-japantown",
+      "aliases": [
+        "Best Boy Electric",
+        "Best Boy Electric Coffee",
+        "Best Boy SF",
+        "bestboysf",
+        "1746 Post St"
+      ]
+    },
+    {
+      "canonicalId": "constance-tea-outer-richmond",
+      "aliases": [
+        "Constance Tea",
+        "Constance Tea & Matcha",
+        "Constance",
+        "3512 Balboa St"
       ]
     }
   ],
