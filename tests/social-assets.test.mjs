@@ -16,18 +16,19 @@ function pngDimensions(buffer) {
   return { width: buffer.readUInt32BE(16), height: buffer.readUInt32BE(20) };
 }
 
-test("social manifest describes eight complete, source-backed carousel sets", () => {
-  assert.equal(manifest.carouselSetCount, 8);
-  assert.equal(manifest.individualSlideCount, 43);
+test("social manifest describes nine complete, source-backed carousel sets", () => {
+  assert.equal(manifest.carouselSetCount, 9);
+  assert.equal(manifest.individualSlideCount, 48);
   assert.deepEqual(manifest.dimensions, { width: 1080, height: 1080 });
   assert.equal(manifest.status, "ready-to-export; not posted");
   assert.equal(manifest.qa.kumoDairyCaveatPresent, true);
-  assert.equal(manifest.sets.length, 8);
+  assert.equal(manifest.sets.length, 9);
   for (const set of manifest.sets) {
     assert.equal(set.slideCount, set.slides.length);
     assert.ok(set.slideCount >= 3);
     assert.match(set.guideUrl, /^https:\/\/sanfranciscomatcha\.com\/guides\//);
-    assert.equal(set.verifiedAt, /mission-district|ube-matcha/.test(set.guideSlug) ? "2026-10-09" : "2026-10-07");
+    const expectedDate = set.guideSlug === "matcha-work-cafes-san-francisco" ? "2026-10-13" : /mission-district|ube-matcha/.test(set.guideSlug) ? "2026-10-09" : "2026-10-07";
+    assert.equal(set.verifiedAt, expectedDate);
     assert.ok(set.sourceUrls.length > 0);
   }
 });
@@ -47,16 +48,16 @@ test("every social PNG matches manifest dimensions, bytes and SHA-256", () => {
       totalBytes += buffer.length;
     }
   }
-  assert.equal(seen.size, 43);
+  assert.equal(seen.size, 48);
   assert.equal(totalBytes, manifest.totalBytes);
 });
 
-test("export gallery links all 43 downloads and its evidence files", () => {
+test("export gallery links all 48 downloads and its evidence files", () => {
   assert.match(gallery, /ready to export; not posted/);
   assert.match(gallery, /href="manifest\.json"/);
   assert.match(gallery, /href="\.\.\/docs\/SOCIAL_ASSETS\.md"/);
-  assert.equal((gallery.match(/class="carousel-set"/g) || []).length, 8);
-  assert.equal((gallery.match(/class="download"/g) || []).length, 43);
+  assert.equal((gallery.match(/class="carousel-set"/g) || []).length, 9);
+  assert.equal((gallery.match(/class="download"/g) || []).length, 48);
   for (const set of manifest.sets) {
     for (const slide of set.slides) {
       const relative = slide.file.replace(/^social\//, "");

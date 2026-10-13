@@ -73,6 +73,18 @@ test("all guides have canonical URLs, source links, current venue facts and stru
   } finally { await rm(dir, { recursive: true, force: true }); }
 });
 
+test("guide hub shows the newest verified guide first", async () => {
+  const older = guide(0);
+  const newer = guide(1);
+  newer.updatedAt = "2026-10-13";
+  const dir = await fixture([older, newer]);
+  try {
+    await buildGuides({ root: dir });
+    const index = await readFile(path.join(dir, "guides/index.html"), "utf8");
+    assert.ok(index.indexOf("/guides/guide-1/") < index.indexOf("/guides/guide-0/"));
+  } finally { await rm(dir, { recursive: true, force: true }); }
+});
+
 test("offer validation permits a future pilot only with completed merchant confirmation", () => {
   assert.doesNotThrow(() => validateOffers({ ...emptyOffers, offers: [confirmedOffer()] }, [shop], { now: Date.parse("2026-10-07T18:00:00Z") }));
   const cases = [

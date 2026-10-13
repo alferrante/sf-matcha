@@ -1045,6 +1045,88 @@
         }
       ],
       compactLayout: true
+    },
+    {
+      slug: "matcha-work-cafes-san-francisco",
+      title: "3 SF cafés for matcha and a laptop",
+      cardTitle: "3 SF cafés for matcha and a laptop",
+      description: "Three San Francisco cafés with matcha, reported Wi-Fi and laptop seating.",
+      emoji: "💻",
+      updatedAt: "2026-10-13",
+      intro: "A change of scenery, a matcha and somewhere to open your laptop.",
+      methodology: "Menus checked October 13, 2026. Wi-Fi, seating and outlet notes come from dated visit reports; this is an unranked shortlist.",
+      entries: [
+        {
+          shopId: "sohn",
+          drink: "Matcha Latte",
+          verdict: "$6 classic matcha; the banana oat matcha is $7.",
+          details: "The current menu lists a $6 Matcha Latte and a $7 iced Banana Oat Milk Latte with matcha.",
+          milkNote: "Oat or almond substitutions are free; soy is not listed. The separate cream-top matcha is not confirmed dairy-free.",
+          price: "$6",
+          availability: "Tue–Sun 9am–4pm; Mon closed. Wi-Fi and two levels of laptop seating reported September 9.",
+          sources: [
+            {
+              label: "Drink menu",
+              url: "https://www.sohnsf.com/s/Letter_0120_1-1.pdf"
+            },
+            {
+              label: "Café and hours",
+              url: "https://www.sohnsf.com/"
+            },
+            {
+              label: "Wi-Fi and seating report",
+              url: "https://www.theinfatuation.com/san-francisco/guides/the-best-sf-coffee-shops-for-getting-work-done"
+            }
+          ]
+        },
+        {
+          shopId: "jandii-cafe-taraval",
+          drink: "Iced Matcha Einspanner",
+          verdict: "$8.50 reported August 5; confirm today’s price.",
+          details: "A dated firsthand visit reports an iced matcha einspanner for $8.50 with oat milk.",
+          milkNote: "The cream topping is not confirmed dairy-free; soy is not listed.",
+          price: "$8.50 reported August 5",
+          availability: "Daily 9am–4pm. Wi-Fi and outlets reported September 9; seats can fill, so try near opening.",
+          sources: [
+            {
+              label: "Drink and reported price",
+              url: "https://www.amysuto.com/desk-of-amy-suto/jandii-cafe-san-francisco-review"
+            },
+            {
+              label: "Hours and owner interview",
+              url: "https://richmondsunsetnews.com/2026/08/18/everything-nice-sit-sip-and-slow-down-at-jandii/"
+            },
+            {
+              label: "Wi-Fi, outlets and seating report",
+              url: "https://www.theinfatuation.com/san-francisco/guides/the-best-sf-coffee-shops-for-getting-work-done"
+            }
+          ]
+        },
+        {
+          shopId: "home-coffee-roasters-noriega",
+          drink: "Matcha Latte",
+          verdict: "$7.25, hot or iced, with adjustable sweetness.",
+          details: "The current menu lists ceremonial-grade matcha, steamed milk and microfoam. Matchacano with hot water is $5.25.",
+          milkNote: "Whole milk, or oat, almond or soy for $1 extra.",
+          price: "$7.25",
+          availability: "Mon–Fri 7:30am–4pm; Sat–Sun 8am–4pm. Wi-Fi and roomy tables reported September 9.",
+          sources: [
+            {
+              label: "Drink and milk options",
+              url: "https://toast.app/r/home-coffee-roasters-noriega-1222-noriega-st/order/item-matcha-latte_fdbebd5c-dbcf-4f16-84ae-38b2bbcfef90"
+            },
+            {
+              label: "Full menu and hours",
+              url: "https://toast.app/r/home-coffee-roasters-noriega-1222-noriega-st/order"
+            },
+            {
+              label: "Wi-Fi and seating report",
+              url: "https://www.theinfatuation.com/san-francisco/guides/the-best-sf-coffee-shops-for-getting-work-done"
+            }
+          ]
+        }
+      ],
+      compactLayout: true
     }
   ];
 

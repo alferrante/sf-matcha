@@ -306,6 +306,25 @@
       hours: "Mon–Fri 7:30am–3:30pm; Sat–Sun 8am–3:30pm"
     },
     {
+      id: "home-coffee-roasters-noriega",
+      name: "Home Coffee Roasters - Noriega",
+      address: "1222 Noriega St",
+      hood: "Outer Sunset",
+      status: "confirmed",
+      topPick: false,
+      buzzy: false,
+      emoji: "🏠",
+      note: "Neighborhood cafe with ceremonial-grade matcha latte, water-based Matchacano, Wi-Fi and roomy tables.",
+      soyNote: "Soy, oat and almond milk are available for the Matcha Latte for $1 extra.",
+      source: "https://toast.app/r/home-coffee-roasters-noriega-1222-noriega-st/order/item-matcha-latte_fdbebd5c-dbcf-4f16-84ae-38b2bbcfef90",
+      lat: 37.7544313,
+      lng: -122.4770105,
+      x: 28.4,
+      y: 58.8,
+      price: "$$",
+      hours: "Mon–Fri 7:30am–4pm; Sat–Sun 8am–4pm"
+    },
+    {
       id: "steep-creamery-and-tea",
       name: "Steep Creamery & Tea",
       address: "270 Brannan St",

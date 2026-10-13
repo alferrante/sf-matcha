@@ -80,6 +80,12 @@ GUIDE_STYLE = {
         "pale": "#F0FFB7",
         "motif": "coin",
     },
+    "matcha-work-cafes-san-francisco": {
+        "label": "MATCHA + A LAPTOP",
+        "accent": "#73B4A4",
+        "pale": "#DDF3EC",
+        "motif": "bowl",
+    },
 }
 
 DOMAIN_KEYS = {
@@ -101,6 +107,8 @@ DOMAIN_KEYS = {
     "marigold": "marigoldsf.com",
     "maruwu": "maruwuseicha.us",
     "le mil": "lemils.com",
+    "jandii": "amysuto.com",
+    "home ·": "toast.app",
 }
 
 

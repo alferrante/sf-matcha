@@ -1,6 +1,6 @@
 # SF Matcha sprint scoreboard
 
-Last updated: October 12, 2026. Goal: `GOAL.md`.
+Last updated: October 13, 2026. Goal: `GOAL.md`.
 
 ## Verified baseline
 
@@ -8,12 +8,12 @@ Repository baseline for October 8: `4e908193bca7135f5cf8163bd3a5b25ab05cd749` (v
 
 | Metric | Current verified state | Target |
 | --- | --- | ---: |
-| Directory venues | 94 source/built venues; audit passes 282 fields | Accuracy and freshness |
+| Directory venues | 95 source/built venues; audit passes 285 fields | Accuracy and freshness |
 | Monthly visits | Unknown; Cloudflare beacon exists, export not accessed | 50,000 |
 | Active email subscribers | 0 active real subscribers, audience queried October 12; signup live; two opted-out synthetic tests excluded | 10,000 |
 | Social followers | Unknown; project accounts not verified | 25,000 |
-| Guides | 12 published articles / 42 sourced entries prepared October 12 | 24 |
-| Derivative assets | 32 complete drafts across eight topics; eight carousel drafts rendered as 8 finished sets / 43 PNG slides; 0 posted. Count each carousel once, not each slide | 120 |
+| Guides | 13 published articles / 45 sourced entries prepared October 13 | 24 |
+| Derivative assets | 36 complete drafts across nine topics; nine carousel drafts rendered as 9 finished sets / 48 PNG slides; 0 posted. Count each carousel once, not each slide | 120 |
 | Live confirmed offers | 0 offer records in baseline repository | 20 |
 | Redemptions | Unknown; no verified tracking system | 2,000 |
 | Awards votes | Unknown; no verified voting system | 1,000 |
@@ -197,3 +197,13 @@ Publication: release `d029c38ff6fb6badf52568cede217cc76510e534` is on main and v
 - User authorized initial proposals to Best Boy Electric and Constance Tea only. Constance's email was sent and verified in Sent at 10:39pm PT; stage is now `contacted`, awaiting a reply and current item/price confirmation.
 - Best Boy's verified Instagram account requires sign-in in the connected browser; approved DM remains unsent. Approval persists for that initial message. SŌHN and California Kahve remain uncontacted; no follow-up or final agreement is authorized.
 - No merchant acceptance, active offer or redemption claimed. Public ledger excludes private sender and message identifiers.
+
+## October 13 growth release
+
+- Started from verified current main `4defacdb5a1fb60f3fbb6cd18ad8beb5626dd1ce`, preserving the October 12 partner ledger, all editorial exclusions and the Jandii Castro hold.
+- Added **Home Coffee Roasters — Noriega** as a separate, operating directory location at 1222 Noriega St. Current merchant evidence lists a $7.25 ceremonial-grade Matcha Latte, $5.25 Matchacano, soy/oat/almond substitutions and ordering hours. The Grant record remains separate. Directory moves **94 → 95**.
+- Added the compact, unranked guide **3 SF cafés for matcha and a laptop**: SŌHN, Jandii Taraval and Home Noriega. It separates current merchant menus from dated third-party work-space observations and labels Jandii’s $8.50 as an August 5 reported price. Guides move **12 → 13** and sourced entries **42 → 45**.
+- Sorted the guide hub by verification date so the new guide appears first, without duplicating cards or adding more hub copy. Analytics-covered public HTML surfaces move **18 → 19**.
+- Added four source-backed distribution drafts and rendered a five-slide text-led carousel. Drafts move **32 → 36** across nine topics; finished carousel sets move **8 → 9** and PNG slides **43 → 48**. Visual QA passed on the cover, Jandii, Home and closing cards. None posted.
+- Validation: clean `npm ci --include=dev`; deterministic source build; **70 passing tests**; customer-copy audit **95 venues / 285 fields**; source/bundle parity; current hashed app/data assets and homepage references generated together; PNG dimensions, bytes and hashes verified; whitespace checks passed.
+- Evidence: `docs/EDITORIAL_OCT13.md`. No subscriber, traffic, follower, live-offer, redemption or awards-vote growth is claimed. No café was contacted and no email or social post was sent.

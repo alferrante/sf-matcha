@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-12",
+  "updatedAt": "2026-10-13",
   "status": "draft",
-  "assetCount": 32,
+  "assetCount": 36,
   "assets": [
     {
       "guideSlug": "banana-matcha-san-francisco",
@@ -831,6 +831,109 @@
       "voiceover": "Ube matcha comes in a few versions in San Francisco. Ceré lists Snowy Ube Matcha. Binge adds coconut-ube cold foam, which contains dairy even with a milk swap. Maruwu has a layered latte or snow-top version and lists soy for lattes. Le Mil’s launch menu has an affogato; check current availability. Save the guide for menu links and locations.",
       "overlayDirection": "Show café names and the exact menu lines from linked sources. Keep dairy caveats on screen. Use text cards; no fabricated café footage.",
       "endCard": "Ube matcha: 4 SF spots to try • Checked Oct 9, 2026 • https://sanfranciscomatcha.com/guides/ube-matcha-san-francisco/"
+    },
+    {
+      "guideSlug": "matcha-work-cafes-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/matcha-work-cafes-san-francisco/",
+      "status": "draft",
+      "verifiedAt": "2026-10-13",
+      "sources": [
+        "https://www.sohnsf.com/s/Letter_0120_1-1.pdf",
+        "https://www.sohnsf.com/",
+        "https://www.theinfatuation.com/san-francisco/guides/the-best-sf-coffee-shops-for-getting-work-done",
+        "https://www.amysuto.com/desk-of-amy-suto/jandii-cafe-san-francisco-review",
+        "https://richmondsunsetnews.com/2026/08/18/everything-nice-sit-sip-and-slow-down-at-jandii/",
+        "https://toast.app/r/home-coffee-roasters-noriega-1222-noriega-st/order/item-matcha-latte_fdbebd5c-dbcf-4f16-84ae-38b2bbcfef90",
+        "https://toast.app/r/home-coffee-roasters-noriega-1222-noriega-st/order"
+      ],
+      "id": "matcha-work-cafes-san-francisco--carousel",
+      "type": "carousel",
+      "platform": "Instagram / LinkedIn",
+      "slides": [
+        {
+          "number": 1,
+          "headline": "3 SF cafés for matcha and a laptop",
+          "body": "Three spots with reported Wi-Fi and laptop seating."
+        },
+        {
+          "number": 2,
+          "headline": "SŌHN · Dogpatch",
+          "body": "Matcha: $6. Banana oat matcha: $7. Wi-Fi and two levels of seating reported."
+        },
+        {
+          "number": 3,
+          "headline": "Jandii · Parkside",
+          "body": "Iced Matcha Einspanner: $8.50 reported Aug 5. Wi-Fi and outlets reported; seats can fill."
+        },
+        {
+          "number": 4,
+          "headline": "Home · Noriega",
+          "body": "Matcha Latte: $7.25. Soy, oat or almond +$1. Wi-Fi and roomy tables reported."
+        },
+        {
+          "number": 5,
+          "headline": "Bring a charged laptop",
+          "body": "Seats, Wi-Fi and café policies can change. Save the addresses and menu links."
+        }
+      ],
+      "designDirection": "Text and geometric motifs only. No invented café, drink or laptop photos.",
+      "callToAction": "Save the guide: https://sanfranciscomatcha.com/guides/matcha-work-cafes-san-francisco/"
+    },
+    {
+      "guideSlug": "matcha-work-cafes-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/matcha-work-cafes-san-francisco/",
+      "status": "draft",
+      "verifiedAt": "2026-10-13",
+      "sources": [
+        "https://www.sohnsf.com/s/Letter_0120_1-1.pdf",
+        "https://www.sohnsf.com/",
+        "https://www.theinfatuation.com/san-francisco/guides/the-best-sf-coffee-shops-for-getting-work-done",
+        "https://www.amysuto.com/desk-of-amy-suto/jandii-cafe-san-francisco-review",
+        "https://richmondsunsetnews.com/2026/08/18/everything-nice-sit-sip-and-slow-down-at-jandii/",
+        "https://toast.app/r/home-coffee-roasters-noriega-1222-noriega-st/order/item-matcha-latte_fdbebd5c-dbcf-4f16-84ae-38b2bbcfef90",
+        "https://toast.app/r/home-coffee-roasters-noriega-1222-noriega-st/order"
+      ],
+      "id": "matcha-work-cafes-san-francisco--instagram-caption",
+      "type": "instagram-caption",
+      "platform": "Instagram",
+      "text": "Matcha + a laptop 💻\n\nSŌHN: $6 matcha or $7 banana oat matcha.\nJandii: matcha einspänner, with Wi-Fi and outlets reported.\nHome Noriega: $7.25 matcha; soy, oat or almond +$1.\n\nSeats and Wi-Fi can change. Save the guide for addresses, hours and menu links.\n\nhttps://sanfranciscomatcha.com/guides/matcha-work-cafes-san-francisco/\nDetails checked October 13, 2026."
+    },
+    {
+      "guideSlug": "matcha-work-cafes-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/matcha-work-cafes-san-francisco/",
+      "status": "draft",
+      "verifiedAt": "2026-10-13",
+      "sources": [
+        "https://www.sohnsf.com/",
+        "https://www.theinfatuation.com/san-francisco/guides/the-best-sf-coffee-shops-for-getting-work-done",
+        "https://richmondsunsetnews.com/2026/08/18/everything-nice-sit-sip-and-slow-down-at-jandii/",
+        "https://toast.app/r/home-coffee-roasters-noriega-1222-noriega-st/order"
+      ],
+      "id": "matcha-work-cafes-san-francisco--short-post",
+      "type": "short-post",
+      "platform": "Threads / X",
+      "text": "Matcha + a laptop: SŌHN, Jandii and Home Noriega all have reported Wi-Fi and work seating. Home lists soy; SŌHN lists oat and almond. Save the addresses and menus: https://sanfranciscomatcha.com/guides/matcha-work-cafes-san-francisco/"
+    },
+    {
+      "guideSlug": "matcha-work-cafes-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/matcha-work-cafes-san-francisco/",
+      "status": "draft",
+      "verifiedAt": "2026-10-13",
+      "sources": [
+        "https://www.sohnsf.com/s/Letter_0120_1-1.pdf",
+        "https://www.sohnsf.com/",
+        "https://www.theinfatuation.com/san-francisco/guides/the-best-sf-coffee-shops-for-getting-work-done",
+        "https://www.amysuto.com/desk-of-amy-suto/jandii-cafe-san-francisco-review",
+        "https://richmondsunsetnews.com/2026/08/18/everything-nice-sit-sip-and-slow-down-at-jandii/",
+        "https://toast.app/r/home-coffee-roasters-noriega-1222-noriega-st/order/item-matcha-latte_fdbebd5c-dbcf-4f16-84ae-38b2bbcfef90",
+        "https://toast.app/r/home-coffee-roasters-noriega-1222-noriega-st/order"
+      ],
+      "id": "matcha-work-cafes-san-francisco--video-script",
+      "type": "video-script",
+      "platform": "Reels / TikTok",
+      "voiceover": "Need somewhere to work with a matcha? Save these three San Francisco cafés. SŌHN in Dogpatch lists a six-dollar matcha or seven-dollar banana oat matcha. Jandii on Taraval has a matcha einspänner, with Wi-Fi and outlets reported. Home on Noriega lists matcha for seven twenty-five, with soy, oat or almond for a dollar more. Seats, Wi-Fi and policies can change, so check the guide before you go.",
+      "overlayDirection": "Show café names, addresses, prices and the dated Wi-Fi source. Use original or licensed footage only; text cards are sufficient.",
+      "endCard": "3 SF cafés for matcha and a laptop • Checked Oct 13, 2026 • https://sanfranciscomatcha.com/guides/matcha-work-cafes-san-francisco/"
     }
   ]
 }

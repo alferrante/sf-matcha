@@ -160,7 +160,7 @@ export async function buildGuides({ root = projectRoot, outDir = root, origin = 
   }
   validateOffers(JSON.parse(offers), shops);
   const pages = new Map();
-  const cards = guides.map(guide => `<article class="card"><a href="/guides/${esc(guide.slug)}/"><span class="emoji" aria-hidden="true">${esc(guide.emoji ?? "🍵")}</span><h2>${esc(guide.cardTitle ?? guide.title)}</h2><p>${guide.entries.length} spots <span aria-hidden="true">→</span></p></a></article>`).join("\n");
+  const cards = guides.toSorted((a, b) => b.updatedAt.localeCompare(a.updatedAt)).map(guide => `<article class="card"><a href="/guides/${esc(guide.slug)}/"><span class="emoji" aria-hidden="true">${esc(guide.emoji ?? "🍵")}</span><h2>${esc(guide.cardTitle ?? guide.title)}</h2><p>${guide.entries.length} spots <span aria-hidden="true">→</span></p></a></article>`).join("\n");
   pages.set("guides/index.html", shell({ title: "Matcha guides in San Francisco", description: "Where to get banana matcha, cold foam, soy milk matcha and more in San Francisco.", canonical: `${origin}/guides/`, newsletterAsset, compactFooter: true, body: `<section class="hero"><h1>Matcha guides</h1></section><section class="cards" aria-label="Matcha guides">${cards}</section>${newsletterForm("guides_hub")}` }));
   for (const guide of guides) pages.set(`guides/${guide.slug}/index.html`, guidePage(guide, shops, origin, newsletterAsset));
   pages.set("methodology/index.html", methodology);

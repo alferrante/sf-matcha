@@ -1,15 +1,15 @@
 {
   "generatedFrom": "content/social-launch.json",
-  "sourceUpdatedAt": "2026-10-12",
+  "sourceUpdatedAt": "2026-10-13",
   "status": "ready-to-export; not posted",
-  "carouselSetCount": 8,
-  "individualSlideCount": 43,
+  "carouselSetCount": 9,
+  "individualSlideCount": 48,
   "format": "PNG",
   "dimensions": {
     "width": 1080,
     "height": 1080
   },
-  "totalBytes": 2816861,
+  "totalBytes": 3131223,
   "qa": {
     "allSlidesVerifiedAsPng": true,
     "allSlides1080Square": true,
@@ -687,6 +687,91 @@
           "sha256": "da5ba6219276a194d5f9cd776eb75f71f0df6bdb1c6143fe6ceed579101a8813",
           "sourceDomains": [
             "bingecoffeehouse.com"
+          ]
+        }
+      ]
+    },
+    {
+      "guideSlug": "matcha-work-cafes-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/matcha-work-cafes-san-francisco/",
+      "verifiedAt": "2026-10-13",
+      "sourceUrls": [
+        "https://www.sohnsf.com/s/Letter_0120_1-1.pdf",
+        "https://www.sohnsf.com/",
+        "https://www.theinfatuation.com/san-francisco/guides/the-best-sf-coffee-shops-for-getting-work-done",
+        "https://www.amysuto.com/desk-of-amy-suto/jandii-cafe-san-francisco-review",
+        "https://richmondsunsetnews.com/2026/08/18/everything-nice-sit-sip-and-slow-down-at-jandii/",
+        "https://toast.app/r/home-coffee-roasters-noriega-1222-noriega-st/order/item-matcha-latte_fdbebd5c-dbcf-4f16-84ae-38b2bbcfef90",
+        "https://toast.app/r/home-coffee-roasters-noriega-1222-noriega-st/order"
+      ],
+      "slideCount": 5,
+      "slides": [
+        {
+          "file": "social/matcha-work-cafes-san-francisco/slide-01.png",
+          "slide": 1,
+          "headline": "3 SF cafés for matcha and a laptop",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 68807,
+          "sha256": "1319a8d9c44b2e69916417341f55a3f5653b86ae8e00b28dfa11a22f5c0db3ae",
+          "sourceDomains": [
+            "sohnsf.com",
+            "theinfatuation.com",
+            "amysuto.com",
+            "richmondsunsetnews.com",
+            "toast.app"
+          ]
+        },
+        {
+          "file": "social/matcha-work-cafes-san-francisco/slide-02.png",
+          "slide": 2,
+          "headline": "SŌHN · Dogpatch",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 59751,
+          "sha256": "01439ea4103f33ccfaca051307aa0cc7f7bad9dc4b8f8cbb9a7a1a636de39128",
+          "sourceDomains": [
+            "sohnsf.com"
+          ]
+        },
+        {
+          "file": "social/matcha-work-cafes-san-francisco/slide-03.png",
+          "slide": 3,
+          "headline": "Jandii · Parkside",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 62545,
+          "sha256": "0c381b350d97ef9f1c5c39bd8dbb5573fd4db8a6178c78a1dd8e7a77a62bdf5f",
+          "sourceDomains": [
+            "amysuto.com"
+          ]
+        },
+        {
+          "file": "social/matcha-work-cafes-san-francisco/slide-04.png",
+          "slide": 4,
+          "headline": "Home · Noriega",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 57246,
+          "sha256": "f89478482d63e717f27c050d7b38571afa8416ef5e24049d248994f7bb238560",
+          "sourceDomains": [
+            "toast.app"
+          ]
+        },
+        {
+          "file": "social/matcha-work-cafes-san-francisco/slide-05.png",
+          "slide": 5,
+          "headline": "Bring a charged laptop",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 66013,
+          "sha256": "628270fc1c72479c9b5890aa6e0681e51c957f135c6f1d691a5a2a453320c4bb",
+          "sourceDomains": [
+            "sohnsf.com",
+            "theinfatuation.com",
+            "amysuto.com",
+            "richmondsunsetnews.com",
+            "toast.app"
           ]
         }
       ]
