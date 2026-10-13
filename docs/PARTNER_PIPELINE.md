@@ -2,7 +2,7 @@
 
 Last verified: October 12, 2026. Source: `content/partner-pipeline.json`.
 
-This is a research and drafting ledger. No outreach has been sent, no café has agreed to participate, and no offer is active. An offer advances to `confirmed` only after written approval from an authorized merchant representative; publication also requires a working claim/redemption service.
+This is a research and drafting ledger. One initial proposal has been sent with explicit approval. No café has agreed to participate, and no offer is active. An offer advances to `confirmed` only after written approval from an authorized merchant representative; publication also requires a working claim/redemption service.
 
 ## Stage definitions
 
@@ -24,8 +24,8 @@ This is a research and drafting ledger. No outreach has been sent, no café has 
 | ---: | --- | --- | --- | --- | --- |
 | 1 | SŌHN — Dogpatch | Ready for outreach; **not contacted** | Official general inbox on [sohnsf.com](https://www.sohnsf.com/) | $1 off Matcha Latte or Banana Oat Milk Matcha; Oct 19–Nov 29; 100-redemption cap; base drinks only | Get Angela’s explicit send approval; recheck the official drink menu immediately before sending. |
 | 2 | California Kahve — Golden Gate Park | Ready for outreach; **not contacted** | Official email and form on its [contact page](https://www.californiakahve.com/contact) | $1 off Matcha Latte or Lavender Mint Matcha; Oct 19–Nov 29; 100-redemption cap; seasonal drinks excluded unless added in writing | Get Angela’s explicit send approval; merchant must confirm current counter prices and POS handling. |
-| 3 | Best Boy Electric — Japantown | Ready for outreach; **not contacted** | [Official café account](https://www.instagram.com/bestboysf/) linked by [New People](https://www.newpeopleworld.com/best-boy-electric); public café phone on its ordering page | $1 off Matcha Latte or Black Sesame Matcha Latte at 1746 Post; proposed Oct 26–Dec 6; 100-redemption cap | Get explicit DM approval; recheck item availability and counter prices. |
-| 4 | Constance Tea — Outer Richmond | Researched; **not contacted**; personalized email drafted | Official contact mailto on [constancetea.com](https://www.constancetea.com/) | Proposed $1 off a standard green-tea matcha latte at 3512 Balboa; reserve/black matcha/einspänner drinks excluded; illustrative Oct 26–Dec 6 | Verify exact current SKU and counter price from a readable merchant menu before marking ready for outreach. |
+| 3 | Best Boy Electric — Japantown | Ready for outreach; **approved, unsent** | [Official café account](https://www.instagram.com/bestboysf/) linked by [New People](https://www.newpeopleworld.com/best-boy-electric); public café phone on its ordering page | $1 off Matcha Latte or Black Sesame Matcha Latte at 1746 Post; proposed Oct 26–Dec 6; 100-redemption cap | Complete Instagram sign-in, then send the already approved initial DM. |
+| 4 | Constance Tea — Outer Richmond | **Contacted October 12**; proposal email sent | Official contact mailto on [constancetea.com](https://www.constancetea.com/) | Proposed $1 off a standard green-tea matcha latte at 3512 Balboa; reserve/black matcha/einspänner drinks excluded; illustrative Oct 26–Dec 6 | Await reply; confirm current SKU/price and terms with the merchant. |
 
 All four drafts propose no participation fee, a maximum $100 merchant-funded discount cost, one successful redemption per customer, a pause option and separation from editorial awards. Exact terms remain proposals.
 
@@ -61,3 +61,9 @@ The complete, personalized drafts and proposed terms are stored in `content/part
 1. Recheck Constance's merchant menu to establish the standard green matcha SKU/price; do not borrow prices from unrelated businesses named Constance.
 2. On explicit send approval, recheck the approved café's menu and use its verified contact route with the stored draft. No second message is due until an approved first message has actually been sent.
 3. After a merchant responds, confirm the exact location, drinks, prices, dates, funding, exclusions, staff process and cap in writing. Keep public offers inactive until the tested claim/redemption service is also ready.
+
+## October 12 approved initial outreach
+
+- User explicitly authorized the two newest prospects: Best Boy Electric and Constance Tea. Approval applies to these initial proposals only; SŌHN and California Kahve remain uncontacted and unapproved. No follow-up, final agreement or offer activation is authorized.
+- **Constance:** initial email sent October 12 at 10:39pm PT to its verified public inbox. Subject: “A small matcha perk at Constance.” Verified the sent message's recipient, subject and Sent label. It asks the merchant to confirm the exact standard matcha item and current price; no unverified price or participation claim. Stage is `contacted`; awaiting reply. Private sender/message identifiers are not published.
+- **Best Boy:** @bestboysf identity reconfirmed from its official profile and New People link. Instagram requires sign-in in the current browser, so no DM has been sent. The approved draft remains ready; account access is the remaining blocker, not outreach permission.

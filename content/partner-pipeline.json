@@ -222,7 +222,7 @@
         "The official landlord page links @bestboysf and the matching Linktree/ordering page. Same-name musician/DJ accounts are unrelated and excluded.",
         "Square shows item prices but marks all listed items unavailable at fetch time. This is not proof of permanent closure or of in-stock availability; recheck stock and ordering before an approved send."
       ],
-      "nextAction": "Await Angela's explicit approval for an Instagram DM. Recheck menu availability before sending. Do not use New People's separate landlord inbox as a café contact.",
+      "nextAction": "Complete Instagram sign-in, then send the already authorized initial DM to the verified @bestboysf account. Do not ask again for approval of this message; no follow-up is authorized.",
       "verifiedAt": "2026-10-12",
       "evidence": [
         "https://best-boy-electric.square.site/",
@@ -230,14 +230,20 @@
         "https://linktr.ee/bestboysf",
         "https://www.nichibei.org/2025/08/here-comes-the-boy-new-cafe-opens-in-s-f-s-j-town/",
         "https://newfillmore.com/2025/08/06/fillmore-is-getting-a-summer-spruce-up/"
-      ]
+      ],
+      "outreachAuthorization": {
+        "approvedAt": "2026-10-13T05:35:46Z",
+        "scope": "One initial location-specific pilot proposal",
+        "by": "user"
+      },
+      "outreachBlocker": "Instagram requires sign-in in the connected browser; the approved initial DM is unsent."
     },
     {
       "id": "constance-tea-outer-richmond",
       "shopId": "constance-tea",
       "merchantName": "Constance Tea — Outer Richmond",
-      "stage": "researched",
-      "contactStatus": "not_contacted",
+      "stage": "contacted",
+      "contactStatus": "sent",
       "priority": 4,
       "independent": true,
       "location": {
@@ -300,13 +306,23 @@
         "June 8 Infatuation coverage distinguishes standard green/black lattes from reserve drinks; it is context, not proof of current SKU availability or price.",
         "No prices from unrelated Constance Fromagerie or Restaurant Constance pages are used."
       ],
-      "nextAction": "Recheck the official menu image or another readable merchant-published menu before marking ready for outreach. Personalized email is drafted but unsent; no follow-up is due.",
+      "nextAction": "Await merchant reply. Confirm current standard-latte SKU/price and all terms before any agreement or public offer. No follow-up has been authorized.",
       "verifiedAt": "2026-10-12",
       "evidence": [
         "https://www.constancetea.com/",
         "https://sfstandard.com/2026/07/04/get-tea-drunk-san-francisco-s-first-freshly-milled-matcha-cafe/",
         "https://www.theinfatuation.com/san-francisco/reviews/constance-tea-and-matcha"
-      ]
+      ],
+      "outreachAuthorization": {
+        "approvedAt": "2026-10-13T05:35:46Z",
+        "scope": "One initial location-specific pilot proposal",
+        "by": "user"
+      },
+      "outreach": {
+        "channel": "email",
+        "sentAt": "2026-10-13T05:39:27Z",
+        "verifiedInSent": true
+      }
     }
   ],
   "noDuplicates": [

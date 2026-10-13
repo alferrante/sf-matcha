@@ -21,10 +21,19 @@ test('partner pipeline uses the complete stage model and unique directory locati
   }
 });
 
-test('research-ready prospects have public evidence, unsent drafts and safe proposed terms', () => {
+test('prospects have public evidence and safe proposed terms', () => {
   for (const prospect of pipeline.prospects) {
-    assert.ok(['researched', 'ready_for_outreach'].includes(prospect.stage));
-    assert.equal(prospect.contactStatus, 'not_contacted');
+    assert.ok(['researched', 'ready_for_outreach', 'contacted'].includes(prospect.stage));
+    if (prospect.stage === 'contacted') {
+      assert.equal(prospect.contactStatus, 'sent');
+      assert.equal(prospect.outreachAuthorization?.by, 'user');
+      assert.ok(Number.isFinite(Date.parse(prospect.outreachAuthorization.approvedAt)));
+      assert.ok(Date.parse(prospect.outreach.sentAt) >= Date.parse(prospect.outreachAuthorization.approvedAt));
+      assert.equal(prospect.outreach.verifiedInSent, true);
+    } else {
+      assert.equal(prospect.contactStatus, 'not_contacted');
+      assert.equal(prospect.outreach, undefined, 'unsent prospects cannot have a send receipt');
+    }
     assert.equal(prospect.independent, true);
     assert.match(prospect.publicContact.source, /^https:\/\//);
     assert.ok(prospect.evidence.length >= 3);
@@ -57,6 +66,6 @@ test('pipeline cannot imply a live or confirmed café offer', () => {
   assert.equal(pipeline.rules.outreachRequiresExplicitApproval, true);
   assert.equal(pipeline.rules.publicationRequiresMerchantConfirmation, true);
   assert.equal(pipeline.rules.activationRequiresTestedClaimRedemptionService, true);
-  assert.ok(pipeline.prospects.every(p => !['contacted', 'interested', 'negotiating', 'confirmed'].includes(p.stage)));
+  assert.ok(pipeline.prospects.every(p => !['interested', 'negotiating', 'confirmed'].includes(p.stage)));
   assert.doesNotMatch(JSON.stringify(pipeline), /merchantConfirmedAt|confirmationRef|claimPath/);
 });

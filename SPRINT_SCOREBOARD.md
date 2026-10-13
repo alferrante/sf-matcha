@@ -191,3 +191,9 @@ Publication: release `d029c38ff6fb6badf52568cede217cc76510e534` is on main and v
 1. Build the inactive authenticated atomic offer claim/redemption service; activate only after written merchant confirmation and approved outreach.
 2. Keep producing distinct menu-backed guides toward 24 and distribution formats toward 120.
 3. Distribution needs identified project social account access; traffic reporting needs a Cloudflare analytics export; newsletter delivery needs the documented sender DNS records and verified unsubscribe setup. Café outreach remains unsent pending explicit approval.
+
+## October 12 initial partner outreach
+
+- User authorized initial proposals to Best Boy Electric and Constance Tea only. Constance's email was sent and verified in Sent at 10:39pm PT; stage is now `contacted`, awaiting a reply and current item/price confirmation.
+- Best Boy's verified Instagram account requires sign-in in the connected browser; approved DM remains unsent. Approval persists for that initial message. SŌHN and California Kahve remain uncontacted; no follow-up or final agreement is authorized.
+- No merchant acceptance, active offer or redemption claimed. Public ledger excludes private sender and message identifiers.
