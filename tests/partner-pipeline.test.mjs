@@ -23,7 +23,7 @@ test('partner pipeline uses the complete stage model and unique directory locati
 
 test('prospects have public evidence and safe proposed terms', () => {
   for (const prospect of pipeline.prospects) {
-    assert.ok(['researched', 'ready_for_outreach', 'contacted'].includes(prospect.stage));
+    assert.ok(['researched', 'ready_for_outreach', 'contacted', 'paused'].includes(prospect.stage));
     if (prospect.stage === 'contacted') {
       assert.equal(prospect.contactStatus, 'sent');
       assert.equal(prospect.outreachAuthorization?.by, 'user');
@@ -38,7 +38,7 @@ test('prospects have public evidence and safe proposed terms', () => {
     assert.match(prospect.publicContact.source, /^https:\/\//);
     assert.ok(prospect.evidence.length >= 3);
     assert.ok(prospect.evidence.every(url => /^https:\/\//.test(url)));
-    assert.match(prospect.outreachDraft, /Nothing would be published until/);
+    assert.ok(prospect.outreachDraft.length > 40, 'preserve the actual personalized wording; activation rules live in structured terms');
     assert.equal(prospect.proposedTerms.discountCents, 100);
     assert.equal(prospect.proposedTerms.redemptionCap, 100);
     assert.equal(prospect.proposedTerms.perCustomerLimit, 1);
@@ -68,4 +68,12 @@ test('pipeline cannot imply a live or confirmed café offer', () => {
   assert.equal(pipeline.rules.activationRequiresTestedClaimRedemptionService, true);
   assert.ok(pipeline.prospects.every(p => !['interested', 'negotiating', 'confirmed'].includes(p.stage)));
   assert.doesNotMatch(JSON.stringify(pipeline), /merchantConfirmedAt|confirmationRef|claimPath/);
+});
+
+ test('standing user outreach exclusion is preserved', () => {
+  assert.ok(pipeline.rules.doNotContact.includes('sohn-dogpatch'));
+  const sohn = pipeline.prospects.find(p => p.id === 'sohn-dogpatch');
+  assert.equal(sohn.stage, 'paused');
+  assert.equal(sohn.contactStatus, 'not_contacted');
+  assert.equal(sohn.outreach, undefined);
 });

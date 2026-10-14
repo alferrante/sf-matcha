@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-12",
+  "updatedAt": "2026-10-13",
   "stages": [
     "candidate",
     "researched",
@@ -21,14 +21,17 @@
     "activationRequiresTestedClaimRedemptionService": true,
     "outreachVoice": "Use Angela's voice: conversational, warm and direct; open with specific true context, explain the idea simply and make one easy ask. No invented visits, tasting opinions, audience claims or personal relationship. Keep full operational terms for a later conversation; disclose merchant-funded discount and cap plainly.",
     "outreachDraftRequiresUserReview": true,
-    "outreachReviewNote": "October 13, 2026: Angela rejected the impersonal terms-first email. Show rewritten remaining outreach to her before sending. Earlier recipient approval does not approve replacement wording. Preserve sent Constance email as historical evidence."
+    "outreachReviewNote": "October 13: Angela approved ten personalized initial emails using the revised wording, including Junbi; explicitly excluded SŌHN. This approval is for this completed batch only. Review and approval still apply to future batches and follow-ups.",
+    "doNotContact": [
+      "sohn-dogpatch"
+    ]
   },
   "prospects": [
     {
       "id": "sohn-dogpatch",
       "shopId": "sohn",
       "merchantName": "SŌHN",
-      "stage": "ready_for_outreach",
+      "stage": "paused",
       "contactStatus": "not_contacted",
       "priority": 1,
       "independent": true,
@@ -76,7 +79,7 @@
         "needsMerchantConfirmation": true
       },
       "outreachDraft": "Subject: A matcha idea for SŌHN\n\nHi Janet and Deuki!\n\nI made sanfranciscomatcha.com to help people find matcha around the city, and SŌHN is already on the map (including the banana oat milk matcha!). I'm adding café perks and would love to try one with you.\n\nWould you be into offering $1 off a matcha for people who find you through the site? We could keep it small to start: six weeks, one per person, capped at 100 uses. You'd cover the $1 discounts—up to $100 total—and there's no fee to participate.\n\nIf you're interested, I'd love to figure out what would work best for your team.\n\nAngela",
-      "nextAction": "Show revised outreach to Angela and await approval of this wording before sending. Preserve prior recipient authorization; confirm merchant terms before activating any offer.",
+      "nextAction": "Do not contact. Angela explicitly excluded SŌHN from outreach on October 13, 2026. Resume only on her explicit instruction.",
       "verifiedAt": "2026-10-12",
       "evidence": [
         "https://www.sohnsf.com/",
@@ -92,14 +95,19 @@
         "status": "awaiting_user_review",
         "rewrittenAt": "2026-10-13",
         "reason": "Angela requested outreach in her voice and review before further sends."
+      },
+      "outreachHold": {
+        "setAt": "2026-10-13",
+        "by": "user",
+        "reason": "Nothing to SŌHN."
       }
     },
     {
       "id": "california-kahve-golden-gate-park",
       "shopId": "california-kahve-golden-gate-park",
       "merchantName": "California Kahve — Golden Gate Park",
-      "stage": "ready_for_outreach",
-      "contactStatus": "not_contacted",
+      "stage": "contacted",
+      "contactStatus": "sent",
       "priority": 2,
       "independent": true,
       "location": {
@@ -146,30 +154,43 @@
         ],
         "needsMerchantConfirmation": true
       },
-      "outreachDraft": "Subject: A matcha idea for California Kahve\n\nHi Molly!\n\nI made sanfranciscomatcha.com to help people find matcha around the city. Your Golden Gate Park café is already on the map, including the lavender mint matcha, and I'd love to add a little perk for people who discover you there.\n\nWould you be into trying $1 off a matcha at the park café? Six weeks, one per person, capped at 100 uses. You'd cover the $1 discounts—up to $100 total—and there's no fee to participate.\n\nIf it sounds interesting, we can pick the drinks and figure out an easy way for your team to handle it.\n\nAngela",
-      "nextAction": "Show revised outreach to Angela and await approval of this wording before sending. Preserve prior recipient authorization; confirm merchant terms before activating any offer.",
-      "verifiedAt": "2026-10-12",
+      "outreachDraft": "Subject: A matcha idea for California Kahve\n\nHi Molly!\n\nI made sanfranciscomatcha.com to help people find matcha around the city. Your Golden Gate Park café is already on the map, including the lavender mint matcha, and I'd love to add a little perk for people who discover you there.\n\nWould you be down to offer $1 off a matcha for people who find you through the site? We could start with six weeks, one per person, capped at 100 uses. You'd cover the $1 discounts—up to $100 total—with no fee to participate.\n\nIf you're interested, we can figure out which drinks and what would be easiest at the counter!\n\nAngela",
+      "nextAction": "Await reply. Verify exact location, SKU, price, dates, funding, staff handling and cap before written agreement. No follow-up or live offer is authorized by this initial-send approval.",
+      "verifiedAt": "2026-10-13",
       "evidence": [
         "https://www.californiakahve.com/contact",
         "https://www.californiakahve.com/the-menu",
         "https://www.californiakahve.com/locations",
-        "https://www.californiakahve.com/the-crew"
+        "https://www.californiakahve.com/the-crew",
+        "https://sanfranciscomatcha.com/"
       ],
       "researchNotes": [
         "October 12: contact, Golden Gate Park hours and always-on matcha names rechecked. Prices remain unverified. The newly announced 2108 Sutter storefront is a different location and is outside this proposal."
       ],
       "outreachDraftReview": {
-        "status": "awaiting_user_review",
+        "status": "approved",
         "rewrittenAt": "2026-10-13",
-        "reason": "Angela requested outreach in her voice and review before further sends."
+        "approvedAt": "2026-10-14T03:53:33Z",
+        "reason": "User approved sending ten messages with corrected wording."
+      },
+      "outreachAuthorization": {
+        "approvedAt": "2026-10-14T03:53:33Z",
+        "scope": "One initial personalized email in the user-approved batch of ten; SŌHN excluded. No follow-up or offer activation authorized.",
+        "by": "user"
+      },
+      "outreach": {
+        "channel": "email",
+        "subject": "A matcha idea for California Kahve",
+        "sentAt": "2026-10-14T03:56:13.000Z",
+        "verifiedInSent": true
       }
     },
     {
       "id": "best-boy-electric-japantown",
       "shopId": "best-boy-electric",
       "merchantName": "Best Boy Electric — Japantown",
-      "stage": "ready_for_outreach",
-      "contactStatus": "not_contacted",
+      "stage": "contacted",
+      "contactStatus": "sent",
       "priority": 3,
       "independent": true,
       "location": {
@@ -178,9 +199,9 @@
       },
       "leadership": "Nichi Bei News (August 28, 2025) and New Fillmore (August 6, 2025) name Ryoji Taki as the operator who opened the café. Merchant signing authority still needs confirmation.",
       "publicContact": {
-        "channel": "instagram",
-        "value": "https://www.instagram.com/bestboysf/",
-        "source": "https://www.newpeopleworld.com/best-boy-electric"
+        "channel": "email",
+        "value": "hello@bestboysf.com",
+        "source": "https://www.craigslist.org/view/d/san-francisco-now-hiring-part-time/9QEYaJ3TdZ7LYA8XbVPeGZ"
       },
       "alternativePublicContact": {
         "channel": "phone",
@@ -223,7 +244,7 @@
         "needsMerchantConfirmation": true,
         "dateFlexibility": "Illustrative 42-day window; reset dates if approval, merchant confirmation or the tested claim/redemption service is not ready. No automatic activation."
       },
-      "outreachDraft": "Hi Ryoji! I made sanfranciscomatcha.com to help people find matcha around the city. Best Boy is already on the map and in our Japantown guide, and I'd love to try a little perk with you.\n\nWould you be down to offer $1 off a matcha for people who find you through the site? We could start with six weeks, one per person, capped at 100 uses. You'd cover the $1 discounts—up to $100 total—with no fee to participate.\n\nIf you're interested, we can figure out which drinks and what would be easiest at the counter!\n\nAngela",
+      "outreachDraft": "Subject: A matcha idea for Best Boy Electric\n\nHi Ryoji!\n\nI made sanfranciscomatcha.com to help people find matcha around the city. Best Boy is already on the map and in our Japantown guide, and I'd love to try a little perk with you.\n\nWould you be down to offer $1 off a matcha for people who find you through the site? We could start with six weeks, one per person, capped at 100 uses. You'd cover the $1 discounts—up to $100 total—with no fee to participate.\n\nIf you're interested, we can figure out which drinks and what would be easiest at the counter!\n\nAngela",
       "qualificationBlockers": [],
       "merchantReviewQuestions": [
         "Who can approve the agreement for this location?",
@@ -235,25 +256,34 @@
         "The official landlord page links @bestboysf and the matching Linktree/ordering page. Same-name musician/DJ accounts are unrelated and excluded.",
         "Square shows item prices but marks all listed items unavailable at fetch time. This is not proof of permanent closure or of in-stock availability; recheck stock and ordering before an approved send."
       ],
-      "nextAction": "Show revised outreach to Angela and await approval of this wording before sending. Preserve prior recipient authorization; confirm merchant terms before activating any offer.",
-      "verifiedAt": "2026-10-12",
+      "nextAction": "Await reply. Verify exact location, SKU, price, dates, funding, staff handling and cap before written agreement. No follow-up or live offer is authorized by this initial-send approval.",
+      "verifiedAt": "2026-10-13",
       "evidence": [
         "https://best-boy-electric.square.site/",
         "https://www.newpeopleworld.com/best-boy-electric",
         "https://linktr.ee/bestboysf",
         "https://www.nichibei.org/2025/08/here-comes-the-boy-new-cafe-opens-in-s-f-s-j-town/",
-        "https://newfillmore.com/2025/08/06/fillmore-is-getting-a-summer-spruce-up/"
+        "https://newfillmore.com/2025/08/06/fillmore-is-getting-a-summer-spruce-up/",
+        "https://www.craigslist.org/view/d/san-francisco-now-hiring-part-time/9QEYaJ3TdZ7LYA8XbVPeGZ",
+        "https://bestboysf.com/",
+        "https://sanfranciscomatcha.com/"
       ],
       "outreachAuthorization": {
-        "approvedAt": "2026-10-13T05:35:46Z",
-        "scope": "One initial location-specific pilot proposal",
+        "approvedAt": "2026-10-14T03:53:33Z",
+        "scope": "One initial personalized email in the user-approved batch of ten; SŌHN excluded. No follow-up or offer activation authorized.",
         "by": "user"
       },
-      "outreachBlocker": "Instagram requires sign-in in the connected browser; the approved initial DM is unsent.",
       "outreachDraftReview": {
-        "status": "awaiting_user_review",
+        "status": "approved",
         "rewrittenAt": "2026-10-13",
-        "reason": "Angela requested outreach in her voice and review before further sends."
+        "approvedAt": "2026-10-14T03:53:33Z",
+        "reason": "User approved sending ten messages with corrected wording."
+      },
+      "outreach": {
+        "channel": "email",
+        "subject": "A matcha idea for Best Boy Electric",
+        "sentAt": "2026-10-14T03:56:06.000Z",
+        "verifiedInSent": true
       }
     },
     {
@@ -341,6 +371,588 @@
         "sentAt": "2026-10-13T05:39:27Z",
         "verifiedInSent": true
       }
+    },
+    {
+      "id": "junbi-san-francisco",
+      "shopId": "junbi-matcha-and-tea",
+      "merchantName": "Junbi San Francisco",
+      "stage": "contacted",
+      "contactStatus": "sent",
+      "priority": 5,
+      "independent": true,
+      "location": {
+        "address": "685 Market St, Suite 130",
+        "hours": "Mon–Fri 8:30am–5pm; Sat–Sun 10am–5pm"
+      },
+      "leadership": "Recipient identity based on the linked merchant contact pages; merchant signing authority still needs confirmation.",
+      "fit": "Operating SF matcha venue already in the directory; one exact location proposed for a small pilot.",
+      "menuEvidence": [
+        {
+          "item": "Matcha drink — exact eligible SKU to confirm with merchant",
+          "price": "Current counter price to confirm",
+          "source": "https://joe.coffee/locations/ca/san-francisco/junbi-matcha-and-tea-san-francisco-san-francisco-45c9022d-62e4-46d3-8449-edc63a7df87e/"
+        }
+      ],
+      "milkEvidence": "Unsweetened soy milk is available.",
+      "proposedTerms": {
+        "eligibleDrinks": [
+          "Matcha drink — exact SKU to confirm"
+        ],
+        "proposedStart": "2026-10-26",
+        "proposedEnd": "2026-12-06",
+        "discountCents": 100,
+        "redemptionCap": 100,
+        "perCustomerLimit": 1,
+        "merchantMaximumDiscountCostUsd": 100,
+        "exclusions": [
+          "add-ons",
+          "tax",
+          "delivery orders",
+          "discount stacking"
+        ],
+        "needsMerchantConfirmation": true,
+        "dateFlexibility": "Illustrative 42-day window. Reset after merchant approval and tested service readiness; no automatic activation."
+      },
+      "publicContact": {
+        "channel": "email",
+        "value": "sanfrancisco@junbishop.com",
+        "source": "https://junbi-la.myshopify.com/pages/locations"
+      },
+      "evidence": [
+        "https://junbi-la.myshopify.com/pages/locations",
+        "https://matchabarsf.com/",
+        "https://order.toasttab.com/online/junbi-sanfrancisco",
+        "https://joe.coffee/locations/ca/san-francisco/junbi-matcha-and-tea-san-francisco-san-francisco-45c9022d-62e4-46d3-8449-edc63a7df87e/",
+        "https://sanfranciscomatcha.com/"
+      ],
+      "verifiedAt": "2026-10-13",
+      "outreachDraft": "Subject: A matcha idea for Junbi San Francisco\n\nHi Brian and Amelia!\n\nI made sanfranciscomatcha.com to help people find matcha around the city. Junbi's Market Street shop is already on the map, and I'd love to add a little perk for people who discover you there.\n\nWould you be down to offer $1 off a matcha for people who find you through the site? We could start with six weeks, one per person, capped at 100 uses. You'd cover the $1 discounts—up to $100 total—with no fee to participate.\n\nIf you're interested, we can figure out which drinks and what would be easiest at the counter!\n\nAngela",
+      "outreachAuthorization": {
+        "approvedAt": "2026-10-14T03:53:33Z",
+        "scope": "One initial personalized email in the user-approved batch of ten; SŌHN excluded. No follow-up or offer activation authorized.",
+        "by": "user"
+      },
+      "outreachDraftReview": {
+        "status": "approved",
+        "rewrittenAt": "2026-10-13",
+        "approvedAt": "2026-10-14T03:53:33Z",
+        "reason": "User approved sending ten messages with corrected wording."
+      },
+      "outreach": {
+        "channel": "email",
+        "subject": "A matcha idea for Junbi San Francisco",
+        "sentAt": "2026-10-14T03:56:10.000Z",
+        "verifiedInSent": true
+      },
+      "nextAction": "Await reply. Verify exact location, SKU, price, dates, funding, staff handling and cap before written agreement. No follow-up or live offer is authorized by this initial-send approval."
+    },
+    {
+      "id": "home-coffee-roasters-noriega",
+      "shopId": "home-coffee-roasters-noriega",
+      "merchantName": "Home Coffee Roasters",
+      "stage": "contacted",
+      "contactStatus": "sent",
+      "priority": 6,
+      "independent": true,
+      "location": {
+        "address": "1222 Noriega St",
+        "hours": "Mon–Fri 7:30am–4pm; Sat–Sun 8am–4pm"
+      },
+      "leadership": "Recipient identity based on the linked merchant contact pages; merchant signing authority still needs confirmation.",
+      "fit": "Operating SF matcha venue already in the directory; one exact location proposed for a small pilot.",
+      "menuEvidence": [
+        {
+          "item": "Matcha drink — exact eligible SKU to confirm with merchant",
+          "price": "Current counter price to confirm",
+          "source": "https://toast.app/r/home-coffee-roasters-noriega-1222-noriega-st/order/item-matcha-latte_fdbebd5c-dbcf-4f16-84ae-38b2bbcfef90"
+        }
+      ],
+      "milkEvidence": "Soy, oat and almond milk are available for the Matcha Latte for $1 extra.",
+      "proposedTerms": {
+        "eligibleDrinks": [
+          "Matcha drink — exact SKU to confirm"
+        ],
+        "proposedStart": "2026-10-26",
+        "proposedEnd": "2026-12-06",
+        "discountCents": 100,
+        "redemptionCap": 100,
+        "perCustomerLimit": 1,
+        "merchantMaximumDiscountCostUsd": 100,
+        "exclusions": [
+          "add-ons",
+          "tax",
+          "delivery orders",
+          "discount stacking"
+        ],
+        "needsMerchantConfirmation": true,
+        "dateFlexibility": "Illustrative 42-day window. Reset after merchant approval and tested service readiness; no automatic activation."
+      },
+      "publicContact": {
+        "channel": "email",
+        "value": "hello@homecoffeesf.com",
+        "source": "https://homecoffeesf.com/pages/wholesale"
+      },
+      "evidence": [
+        "https://homecoffeesf.com/pages/wholesale",
+        "https://toast.app/r/home-coffee-roasters-noriega-1222-noriega-st/order",
+        "https://toast.app/r/home-coffee-roasters-noriega-1222-noriega-st/order/item-matcha-latte_fdbebd5c-dbcf-4f16-84ae-38b2bbcfef90",
+        "https://sanfranciscomatcha.com/"
+      ],
+      "verifiedAt": "2026-10-13",
+      "outreachDraft": "Subject: A matcha idea for Home Coffee Roasters\n\nHi Home team!\n\nI made sanfranciscomatcha.com to help people find matcha around the city. Your Noriega café is already on the map and in our new guide to cafés for matcha and a laptop. I'd love to try a little perk at that location.\n\nWould you be down to offer $1 off a matcha for people who find you through the site? We could start with six weeks, one per person, capped at 100 uses. You'd cover the $1 discounts—up to $100 total—with no fee to participate.\n\nIf you're interested, we can figure out which drinks and what would be easiest at the counter!\n\nAngela",
+      "outreachAuthorization": {
+        "approvedAt": "2026-10-14T03:53:33Z",
+        "scope": "One initial personalized email in the user-approved batch of ten; SŌHN excluded. No follow-up or offer activation authorized.",
+        "by": "user"
+      },
+      "outreachDraftReview": {
+        "status": "approved",
+        "rewrittenAt": "2026-10-13",
+        "approvedAt": "2026-10-14T03:53:33Z",
+        "reason": "User approved sending ten messages with corrected wording."
+      },
+      "outreach": {
+        "channel": "email",
+        "subject": "A matcha idea for Home Coffee Roasters",
+        "sentAt": "2026-10-14T03:56:21.000Z",
+        "verifiedInSent": true
+      },
+      "nextAction": "Await reply. Verify exact location, SKU, price, dates, funding, staff handling and cap before written agreement. No follow-up or live offer is authorized by this initial-send approval."
+    },
+    {
+      "id": "tadaima-mission",
+      "shopId": "tadaima-mission",
+      "merchantName": "Tadaima",
+      "stage": "contacted",
+      "contactStatus": "sent",
+      "priority": 7,
+      "independent": true,
+      "location": {
+        "address": "3515 20th St",
+        "hours": "Mon–Thu 11am–4:30pm; Fri–Sun 10am–5:30pm"
+      },
+      "leadership": "Recipient identity based on the linked merchant contact pages; merchant signing authority still needs confirmation.",
+      "fit": "Operating SF matcha venue already in the directory; one exact location proposed for a small pilot.",
+      "menuEvidence": [
+        {
+          "item": "Matcha drink — exact eligible SKU to confirm with merchant",
+          "price": "Current counter price to confirm",
+          "source": "https://tadaimasf.com/san-francisco-suite-b-tadaima-sf-drink-menu"
+        }
+      ],
+      "milkEvidence": "Soy is not listed; oat and almond milk are available.",
+      "proposedTerms": {
+        "eligibleDrinks": [
+          "Matcha drink — exact SKU to confirm"
+        ],
+        "proposedStart": "2026-10-26",
+        "proposedEnd": "2026-12-06",
+        "discountCents": 100,
+        "redemptionCap": 100,
+        "perCustomerLimit": 1,
+        "merchantMaximumDiscountCostUsd": 100,
+        "exclusions": [
+          "add-ons",
+          "tax",
+          "delivery orders",
+          "discount stacking"
+        ],
+        "needsMerchantConfirmation": true,
+        "dateFlexibility": "Illustrative 42-day window. Reset after merchant approval and tested service readiness; no automatic activation."
+      },
+      "publicContact": {
+        "channel": "email",
+        "value": "info@tadaimasf.com",
+        "source": "https://tadaimasf.com/"
+      },
+      "evidence": [
+        "https://tadaimasf.com/",
+        "https://tadaimasf.com/san-francisco-suite-b-tadaima-sf-drink-menu",
+        "https://sanfranciscomatcha.com/"
+      ],
+      "verifiedAt": "2026-10-13",
+      "outreachDraft": "Subject: A matcha idea for Tadaima\n\nHi Tadaima team!\n\nI made sanfranciscomatcha.com to help people find matcha around the city. Your Mission café is already on the map, and I'd love to try a little perk there for people who find you through the site.\n\nWould you be down to offer $1 off a matcha for people who find you through the site? We could start with six weeks, one per person, capped at 100 uses. You'd cover the $1 discounts—up to $100 total—with no fee to participate.\n\nIf you're interested, we can figure out which drinks and what would be easiest at the counter!\n\nAngela",
+      "outreachAuthorization": {
+        "approvedAt": "2026-10-14T03:53:33Z",
+        "scope": "One initial personalized email in the user-approved batch of ten; SŌHN excluded. No follow-up or offer activation authorized.",
+        "by": "user"
+      },
+      "outreachDraftReview": {
+        "status": "approved",
+        "rewrittenAt": "2026-10-13",
+        "approvedAt": "2026-10-14T03:53:33Z",
+        "reason": "User approved sending ten messages with corrected wording."
+      },
+      "outreach": {
+        "channel": "email",
+        "subject": "A matcha idea for Tadaima",
+        "sentAt": "2026-10-14T03:56:25.000Z",
+        "verifiedInSent": true
+      },
+      "nextAction": "Await reply. Verify exact location, SKU, price, dates, funding, staff handling and cap before written agreement. No follow-up or live offer is authorized by this initial-send approval."
+    },
+    {
+      "id": "paper-son-fidi",
+      "shopId": "paper-son-coffee-fidi",
+      "merchantName": "Paper Son Coffee",
+      "stage": "contacted",
+      "contactStatus": "sent",
+      "priority": 8,
+      "independent": true,
+      "location": {
+        "address": "303 2nd St N102",
+        "hours": "Mon–Fri 8am–3:30pm; Sat–Sun closed"
+      },
+      "leadership": "Recipient identity based on the linked merchant contact pages; merchant signing authority still needs confirmation.",
+      "fit": "Operating SF matcha venue already in the directory; one exact location proposed for a small pilot.",
+      "menuEvidence": [
+        {
+          "item": "Matcha drink — exact eligible SKU to confirm with merchant",
+          "price": "Current counter price to confirm",
+          "source": "https://papersoncoffee.com/menu"
+        }
+      ],
+      "milkEvidence": "Soy is not listed; oat, almond, and lactose-free whole milk are available.",
+      "proposedTerms": {
+        "eligibleDrinks": [
+          "Matcha drink — exact SKU to confirm"
+        ],
+        "proposedStart": "2026-10-26",
+        "proposedEnd": "2026-12-06",
+        "discountCents": 100,
+        "redemptionCap": 100,
+        "perCustomerLimit": 1,
+        "merchantMaximumDiscountCostUsd": 100,
+        "exclusions": [
+          "add-ons",
+          "tax",
+          "delivery orders",
+          "discount stacking"
+        ],
+        "needsMerchantConfirmation": true,
+        "dateFlexibility": "Illustrative 42-day window. Reset after merchant approval and tested service readiness; no automatic activation."
+      },
+      "publicContact": {
+        "channel": "email",
+        "value": "papersoncoffee@gmail.com",
+        "source": "https://papersoncoffee.com/faq"
+      },
+      "evidence": [
+        "https://papersoncoffee.com/faq",
+        "https://papersoncoffee.com/menu",
+        "https://sanfranciscomatcha.com/"
+      ],
+      "verifiedAt": "2026-10-13",
+      "outreachDraft": "Subject: A matcha idea for Paper Son Coffee\n\nHi Paper Son team!\n\nI made sanfranciscomatcha.com to help people find matcha around the city. Your downtown café is already on the map, including the matcha passionfruit soda. I'd love to try a little perk at 303 2nd St.\n\nWould you be down to offer $1 off a matcha for people who find you through the site? We could start with six weeks, one per person, capped at 100 uses. You'd cover the $1 discounts—up to $100 total—with no fee to participate.\n\nIf you're interested, we can figure out which drinks and what would be easiest at the counter!\n\nAngela",
+      "outreachAuthorization": {
+        "approvedAt": "2026-10-14T03:53:33Z",
+        "scope": "One initial personalized email in the user-approved batch of ten; SŌHN excluded. No follow-up or offer activation authorized.",
+        "by": "user"
+      },
+      "outreachDraftReview": {
+        "status": "approved",
+        "rewrittenAt": "2026-10-13",
+        "approvedAt": "2026-10-14T03:53:33Z",
+        "reason": "User approved sending ten messages with corrected wording."
+      },
+      "outreach": {
+        "channel": "email",
+        "subject": "A matcha idea for Paper Son Coffee",
+        "sentAt": "2026-10-14T03:56:33.000Z",
+        "verifiedInSent": true
+      },
+      "nextAction": "Await reply. Verify exact location, SKU, price, dates, funding, staff handling and cap before written agreement. No follow-up or live offer is authorized by this initial-send approval."
+    },
+    {
+      "id": "kiss-of-matcha-clement",
+      "shopId": "kiss-of-matcha-clement",
+      "merchantName": "Kiss of Matcha",
+      "stage": "contacted",
+      "contactStatus": "sent",
+      "priority": 9,
+      "independent": true,
+      "location": {
+        "address": "750 Clement St",
+        "hours": "Mon closed; Tue–Thu 10am–8pm; Fri–Sat 10am–10pm; Sun 10am–9pm"
+      },
+      "leadership": "Recipient identity based on the linked merchant contact pages; merchant signing authority still needs confirmation.",
+      "fit": "Operating SF matcha venue already in the directory; one exact location proposed for a small pilot.",
+      "menuEvidence": [
+        {
+          "item": "Matcha drink — exact eligible SKU to confirm with merchant",
+          "price": "Current counter price to confirm",
+          "source": "https://kiss-of-matcha.res-menu.net/menu"
+        }
+      ],
+      "milkEvidence": "Soy milk is available for lattes. The Matcha Cloud foam contains whole milk and cream, so choose a standard matcha latte for a soy-based drink.",
+      "proposedTerms": {
+        "eligibleDrinks": [
+          "Matcha drink — exact SKU to confirm"
+        ],
+        "proposedStart": "2026-10-26",
+        "proposedEnd": "2026-12-06",
+        "discountCents": 100,
+        "redemptionCap": 100,
+        "perCustomerLimit": 1,
+        "merchantMaximumDiscountCostUsd": 100,
+        "exclusions": [
+          "add-ons",
+          "tax",
+          "delivery orders",
+          "discount stacking"
+        ],
+        "needsMerchantConfirmation": true,
+        "dateFlexibility": "Illustrative 42-day window. Reset after merchant approval and tested service readiness; no automatic activation."
+      },
+      "publicContact": {
+        "channel": "email",
+        "value": "info@kissofmatcha.com",
+        "source": "https://www.kissofmatcha.com/"
+      },
+      "evidence": [
+        "https://www.kissofmatcha.com/",
+        "https://www.kissofmatcha.com/product/matcha-latte/4",
+        "https://kiss-of-matcha.res-menu.net/menu",
+        "https://sanfranciscomatcha.com/"
+      ],
+      "verifiedAt": "2026-10-13",
+      "outreachDraft": "Subject: A matcha idea for Kiss of Matcha\n\nHi Kiss of Matcha team!\n\nI made sanfranciscomatcha.com to help people find matcha around the city. Your SF cafés are already on the map, and I'd love to start with a little perk at the Clement shop.\n\nWould you be down to offer $1 off a matcha for people who find you through the site? We could start with six weeks, one per person, capped at 100 uses. You'd cover the $1 discounts—up to $100 total—with no fee to participate.\n\nIf you're interested, we can figure out which drinks and what would be easiest at the counter!\n\nAngela",
+      "outreachAuthorization": {
+        "approvedAt": "2026-10-14T03:53:33Z",
+        "scope": "One initial personalized email in the user-approved batch of ten; SŌHN excluded. No follow-up or offer activation authorized.",
+        "by": "user"
+      },
+      "outreachDraftReview": {
+        "status": "approved",
+        "rewrittenAt": "2026-10-13",
+        "approvedAt": "2026-10-14T03:53:33Z",
+        "reason": "User approved sending ten messages with corrected wording."
+      },
+      "outreach": {
+        "channel": "email",
+        "subject": "A matcha idea for Kiss of Matcha",
+        "sentAt": "2026-10-14T03:56:36.000Z",
+        "verifiedInSent": true
+      },
+      "nextAction": "Await reply. Verify exact location, SKU, price, dates, funding, staff handling and cap before written agreement. No follow-up or live offer is authorized by this initial-send approval."
+    },
+    {
+      "id": "asha-tea-house-sf",
+      "shopId": "asha-tea-house",
+      "merchantName": "Asha Tea House",
+      "stage": "contacted",
+      "contactStatus": "sent",
+      "priority": 10,
+      "independent": true,
+      "location": {
+        "address": "17 Kearny St",
+        "hours": "Mon–Fri 10am–6:30pm; Sat 10:30am–6:30pm; Sun closed"
+      },
+      "leadership": "Recipient identity based on the linked merchant contact pages; merchant signing authority still needs confirmation.",
+      "fit": "Operating SF matcha venue already in the directory; one exact location proposed for a small pilot.",
+      "menuEvidence": [
+        {
+          "item": "Matcha drink — exact eligible SKU to confirm with merchant",
+          "price": "Current counter price to confirm",
+          "source": "https://asha-tea-house.grubbio.com/menu"
+        }
+      ],
+      "milkEvidence": "Soy milk is available for the Matcha Latte; the menu specifically lists Pacific Foods Soy.",
+      "proposedTerms": {
+        "eligibleDrinks": [
+          "Matcha drink — exact SKU to confirm"
+        ],
+        "proposedStart": "2026-10-26",
+        "proposedEnd": "2026-12-06",
+        "discountCents": 100,
+        "redemptionCap": 100,
+        "perCustomerLimit": 1,
+        "merchantMaximumDiscountCostUsd": 100,
+        "exclusions": [
+          "add-ons",
+          "tax",
+          "delivery orders",
+          "discount stacking"
+        ],
+        "needsMerchantConfirmation": true,
+        "dateFlexibility": "Illustrative 42-day window. Reset after merchant approval and tested service readiness; no automatic activation."
+      },
+      "publicContact": {
+        "channel": "email",
+        "value": "hello@ashateahouse.com",
+        "source": "https://ashateahouse.square.site/"
+      },
+      "evidence": [
+        "https://ashateahouse.square.site/",
+        "https://ashateahouse.com/password",
+        "https://asha-tea-house.grubbio.com/menu",
+        "https://sanfranciscomatcha.com/"
+      ],
+      "verifiedAt": "2026-10-13",
+      "outreachDraft": "Subject: A matcha idea for Asha Tea House\n\nHi Asha team!\n\nI made sanfranciscomatcha.com to help people find matcha around the city. Your Kearny Street shop is already on the map, and I'd love to add a little perk for people who discover you there.\n\nWould you be down to offer $1 off a matcha for people who find you through the site? We could start with six weeks, one per person, capped at 100 uses. You'd cover the $1 discounts—up to $100 total—with no fee to participate.\n\nIf you're interested, we can figure out which drinks and what would be easiest at the counter!\n\nAngela",
+      "outreachAuthorization": {
+        "approvedAt": "2026-10-14T03:53:33Z",
+        "scope": "One initial personalized email in the user-approved batch of ten; SŌHN excluded. No follow-up or offer activation authorized.",
+        "by": "user"
+      },
+      "outreachDraftReview": {
+        "status": "approved",
+        "rewrittenAt": "2026-10-13",
+        "approvedAt": "2026-10-14T03:53:33Z",
+        "reason": "User approved sending ten messages with corrected wording."
+      },
+      "outreach": {
+        "channel": "email",
+        "subject": "A matcha idea for Asha Tea House",
+        "sentAt": "2026-10-14T03:56:41.000Z",
+        "verifiedInSent": true
+      },
+      "nextAction": "Await reply. Verify exact location, SKU, price, dates, funding, staff handling and cap before written agreement. No follow-up or live offer is authorized by this initial-send approval."
+    },
+    {
+      "id": "origin-lab-sutter",
+      "shopId": "origin-lab-coffee-and-matcha",
+      "merchantName": "Origin Lab",
+      "stage": "contacted",
+      "contactStatus": "sent",
+      "priority": 11,
+      "independent": true,
+      "location": {
+        "address": "211 Sutter St",
+        "hours": "daily 6am–8pm"
+      },
+      "leadership": "Recipient identity based on the linked merchant contact pages; merchant signing authority still needs confirmation.",
+      "fit": "Operating SF matcha venue already in the directory; one exact location proposed for a small pilot.",
+      "menuEvidence": [
+        {
+          "item": "Matcha drink — exact eligible SKU to confirm with merchant",
+          "price": "Current counter price to confirm",
+          "source": "https://originlabcoffee.com/"
+        }
+      ],
+      "milkEvidence": "Soy milk is available.",
+      "proposedTerms": {
+        "eligibleDrinks": [
+          "Matcha drink — exact SKU to confirm"
+        ],
+        "proposedStart": "2026-10-26",
+        "proposedEnd": "2026-12-06",
+        "discountCents": 100,
+        "redemptionCap": 100,
+        "perCustomerLimit": 1,
+        "merchantMaximumDiscountCostUsd": 100,
+        "exclusions": [
+          "add-ons",
+          "tax",
+          "delivery orders",
+          "discount stacking"
+        ],
+        "needsMerchantConfirmation": true,
+        "dateFlexibility": "Illustrative 42-day window. Reset after merchant approval and tested service readiness; no automatic activation."
+      },
+      "publicContact": {
+        "channel": "email",
+        "value": "originlabmatchacoffee@gmail.com",
+        "source": "https://originlabcoffee.com/"
+      },
+      "evidence": [
+        "https://originlabcoffee.com/",
+        "https://originlabcoffee.com/menu/",
+        "https://sanfranciscomatcha.com/"
+      ],
+      "verifiedAt": "2026-10-13",
+      "outreachDraft": "Subject: A matcha idea for Origin Lab\n\nHi Ibrahim!\n\nI made sanfranciscomatcha.com to help people find matcha around the city. Origin Lab is already on the map, including your matcha cloud drinks. I'd love to try a little perk at the Sutter Street shop.\n\nWould you be down to offer $1 off a matcha for people who find you through the site? We could start with six weeks, one per person, capped at 100 uses. You'd cover the $1 discounts—up to $100 total—with no fee to participate.\n\nIf you're interested, we can figure out which drinks and what would be easiest at the counter!\n\nAngela",
+      "outreachAuthorization": {
+        "approvedAt": "2026-10-14T03:53:33Z",
+        "scope": "One initial personalized email in the user-approved batch of ten; SŌHN excluded. No follow-up or offer activation authorized.",
+        "by": "user"
+      },
+      "outreachDraftReview": {
+        "status": "approved",
+        "rewrittenAt": "2026-10-13",
+        "approvedAt": "2026-10-14T03:53:33Z",
+        "reason": "User approved sending ten messages with corrected wording."
+      },
+      "outreach": {
+        "channel": "email",
+        "subject": "A matcha idea for Origin Lab",
+        "sentAt": "2026-10-14T03:56:44.000Z",
+        "verifiedInSent": true
+      },
+      "nextAction": "Await reply. Verify exact location, SKU, price, dates, funding, staff handling and cap before written agreement. No follow-up or live offer is authorized by this initial-send approval."
+    },
+    {
+      "id": "motoring-coffee-sf",
+      "shopId": "motoring-coffee",
+      "merchantName": "Motoring Coffee",
+      "stage": "contacted",
+      "contactStatus": "sent",
+      "priority": 12,
+      "independent": true,
+      "location": {
+        "address": "1525 Union St",
+        "hours": "daily 7am–6pm"
+      },
+      "leadership": "Recipient identity based on the linked merchant contact pages; merchant signing authority still needs confirmation.",
+      "fit": "Operating SF matcha venue already in the directory; one exact location proposed for a small pilot.",
+      "menuEvidence": [
+        {
+          "item": "Matcha drink — exact eligible SKU to confirm with merchant",
+          "price": "Current counter price to confirm",
+          "source": "https://www.theinfatuation.com/san-francisco/reviews/motoring-coffee"
+        }
+      ],
+      "milkEvidence": "Soy availability is not listed; oat and almond milk are available.",
+      "proposedTerms": {
+        "eligibleDrinks": [
+          "Matcha drink — exact SKU to confirm"
+        ],
+        "proposedStart": "2026-10-26",
+        "proposedEnd": "2026-12-06",
+        "discountCents": 100,
+        "redemptionCap": 100,
+        "perCustomerLimit": 1,
+        "merchantMaximumDiscountCostUsd": 100,
+        "exclusions": [
+          "add-ons",
+          "tax",
+          "delivery orders",
+          "discount stacking"
+        ],
+        "needsMerchantConfirmation": true,
+        "dateFlexibility": "Illustrative 42-day window. Reset after merchant approval and tested service readiness; no automatic activation."
+      },
+      "publicContact": {
+        "channel": "email",
+        "value": "hello@motoring.coffee",
+        "source": "https://www.motoring.coffee/"
+      },
+      "evidence": [
+        "https://www.motoring.coffee/",
+        "https://themotoringclub.com/about-us",
+        "https://www.theinfatuation.com/san-francisco/reviews/motoring-coffee",
+        "https://sanfranciscomatcha.com/"
+      ],
+      "verifiedAt": "2026-10-13",
+      "outreachDraft": "Subject: A matcha idea for Motoring Coffee\n\nHi Motoring team!\n\nI made sanfranciscomatcha.com to help people find matcha around the city. Your Union Street café is already on the map for its matcha, and I'd love to add a little perk for people who discover you there.\n\nWould you be down to offer $1 off a matcha for people who find you through the site? We could start with six weeks, one per person, capped at 100 uses. You'd cover the $1 discounts—up to $100 total—with no fee to participate.\n\nIf you're interested, we can figure out which drinks and what would be easiest at the counter!\n\nAngela",
+      "outreachAuthorization": {
+        "approvedAt": "2026-10-14T03:53:33Z",
+        "scope": "One initial personalized email in the user-approved batch of ten; SŌHN excluded. No follow-up or offer activation authorized.",
+        "by": "user"
+      },
+      "outreachDraftReview": {
+        "status": "approved",
+        "rewrittenAt": "2026-10-13",
+        "approvedAt": "2026-10-14T03:53:33Z",
+        "reason": "User approved sending ten messages with corrected wording."
+      },
+      "outreach": {
+        "channel": "email",
+        "subject": "A matcha idea for Motoring Coffee",
+        "sentAt": "2026-10-14T03:56:48.000Z",
+        "verifiedInSent": true
+      },
+      "nextAction": "Await reply. Verify exact location, SKU, price, dates, funding, staff handling and cap before written agreement. No follow-up or live offer is authorized by this initial-send approval."
     }
   ],
   "noDuplicates": [
@@ -379,6 +991,70 @@
         "Constance Tea & Matcha",
         "Constance",
         "3512 Balboa St"
+      ]
+    },
+    {
+      "canonicalId": "junbi-san-francisco",
+      "aliases": [
+        "Junbi San Francisco",
+        "685 Market St, Suite 130",
+        "sanfrancisco@junbishop.com"
+      ]
+    },
+    {
+      "canonicalId": "home-coffee-roasters-noriega",
+      "aliases": [
+        "Home Coffee Roasters",
+        "1222 Noriega St",
+        "hello@homecoffeesf.com"
+      ]
+    },
+    {
+      "canonicalId": "tadaima-mission",
+      "aliases": [
+        "Tadaima",
+        "3515 20th St",
+        "info@tadaimasf.com"
+      ]
+    },
+    {
+      "canonicalId": "paper-son-fidi",
+      "aliases": [
+        "Paper Son Coffee",
+        "303 2nd St N102",
+        "papersoncoffee@gmail.com"
+      ]
+    },
+    {
+      "canonicalId": "kiss-of-matcha-clement",
+      "aliases": [
+        "Kiss of Matcha",
+        "750 Clement St",
+        "info@kissofmatcha.com"
+      ]
+    },
+    {
+      "canonicalId": "asha-tea-house-sf",
+      "aliases": [
+        "Asha Tea House",
+        "17 Kearny St",
+        "hello@ashateahouse.com"
+      ]
+    },
+    {
+      "canonicalId": "origin-lab-sutter",
+      "aliases": [
+        "Origin Lab",
+        "211 Sutter St",
+        "originlabmatchacoffee@gmail.com"
+      ]
+    },
+    {
+      "canonicalId": "motoring-coffee-sf",
+      "aliases": [
+        "Motoring Coffee",
+        "1525 Union St",
+        "hello@motoring.coffee"
       ]
     }
   ],

@@ -8,7 +8,7 @@ Repository baseline for October 8: `4e908193bca7135f5cf8163bd3a5b25ab05cd749` (v
 
 | Metric | Current verified state | Target |
 | --- | --- | ---: |
-| Directory venues | 95 source/built venues; audit passes 285 fields | Accuracy and freshness |
+| Directory venues | 96 current-main source/built venues; audit passes 288 fields | Accuracy and freshness |
 | Monthly visits | Unknown; Cloudflare beacon exists, export not accessed | 50,000 |
 | Active email subscribers | 0 active real subscribers, audience queried October 12; signup live; two opted-out synthetic tests excluded | 10,000 |
 | Social followers | Unknown; project accounts not verified | 25,000 |
@@ -208,3 +208,12 @@ Publication: release `d029c38ff6fb6badf52568cede217cc76510e534` is on main and v
 - Validation: clean `npm ci --include=dev`; deterministic source build; **70 passing tests**; customer-copy audit **95 venues / 285 fields**; source/bundle parity; current hashed app/data assets and homepage references generated together; PNG dimensions, bytes and hashes verified; whitespace checks passed.
 - Evidence: `docs/EDITORIAL_OCT13.md`. No subscriber, traffic, follower, live-offer, redemption or awards-vote growth is claimed. No café was contacted and no email or social post was sent.
 - Publication: release `2345dfdc1fd5d11f304d7cf1cf3d6007389c9bbb` is on `main` and verified live October 13. The canonical guide returns the committed article; it is the first card on `/guides/`; the homepage references `data.d10abe483f9e.js` and `app.dfe1a3389307.js`; the live data bundle matches the committed SHA-256 bytes and exposes **95** venues including Home Noriega; and the live social manifest exposes **9 sets / 48 slides** with a byte-identical work-cafés cover.
+
+## October 13 evening partner outreach
+
+- Angela approved ten new personalized initial emails and explicitly excluded SŌHN. Sent and read back all ten at **8:56pm PT**: Best Boy Electric, Junbi San Francisco, California Kahve (Golden Gate Park), Home (Noriega), Tadaima (Mission), Paper Son (303 2nd St), Kiss of Matcha (Clement), Asha (17 Kearny), Origin Lab (211 Sutter) and Motoring Coffee (1525 Union).
+- Initial emails sent: **1 → 11** total; prospect pool **4 → 12**, with **11 contacted / 1 paused**. SŌHN has a persistent do-not-contact rule. Constance was not contacted again.
+- Merchant contact pages verified; Best Boy’s merchant-published email resolved the Instagram blocker. No confirmed participation, offer activation, redemption, audience growth or new reply claimed. Follow-ups are outside this initial-send approval.
+- The exact sent wording and public source evidence are in `content/partner-pipeline.json`; `docs/PARTNER_PIPELINE.md` reflects the current stages. Tests validate receipts, user approval, unique location identities, tentative merchant-funded terms and the SŌHN hold without requiring boilerplate in email copy.
+
+Validation for the outreach ledger: clean install/build, **71 passing tests**, customer-copy audit **96 shops / 288 fields**. The 96-venue dataset was already on current main; this outreach batch added no directory listings or public offers.
