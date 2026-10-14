@@ -1631,6 +1631,23 @@ const SHOPS = [
     "x": 28.5,
     "y": 70.5
   },
+  {
+    id: "red-door-coffee-minna",
+    name: "Red Door Coffee",
+    address: "111 Minna St",
+    hood: "SoMa / Yerba Buena",
+    status: "none",
+    topPick: false,
+    buzzy: false,
+    emoji: "🎨",
+    note: "21+ gallery cafe with Kyoto matcha lattes and Chaga Matcha with cacao and cinnamon.",
+    soyNote: "Soy milk is not listed; the menu lists whole, oat, and almond milk.",
+    source: "https://111minnagallery.com/red-door-coffee/",
+    lat: 37.787339, lng: -122.399407,
+    x: 60.5, y: 38.2,
+    price: "$$",
+    hours: "Mon & Fri 9am–4pm; Tue–Thu 8am–3pm; Sat–Sun closed",
+  },
 ];
 
 const STATUS_META = {
