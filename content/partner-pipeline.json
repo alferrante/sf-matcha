@@ -18,7 +18,10 @@
     "defaultDiscountCents": 100,
     "defaultRedemptionCap": 100,
     "defaultPilotDays": 42,
-    "activationRequiresTestedClaimRedemptionService": true
+    "activationRequiresTestedClaimRedemptionService": true,
+    "outreachVoice": "Use Angela's voice: conversational, warm and direct; open with specific true context, explain the idea simply and make one easy ask. No invented visits, tasting opinions, audience claims or personal relationship. Keep full operational terms for a later conversation; disclose merchant-funded discount and cap plainly.",
+    "outreachDraftRequiresUserReview": true,
+    "outreachReviewNote": "October 13, 2026: Angela rejected the impersonal terms-first email. Show rewritten remaining outreach to her before sending. Earlier recipient approval does not approve replacement wording. Preserve sent Constance email as historical evidence."
   },
   "prospects": [
     {
@@ -72,8 +75,8 @@
         ],
         "needsMerchantConfirmation": true
       },
-      "outreachDraft": "Subject: A small SŌHN × SF Matcha pilot\n\nHi SŌHN team — I run sanfranciscomatcha.com, the independent map and guide to matcha around San Francisco. SŌHN is already featured for its Matcha Latte and Banana Oat Milk Matcha. I’d love to explore a simple six-week perk at the Dogpatch café: $1 off one of those two drinks, one use per customer, capped at 100 successful redemptions. There is no participation fee; SŌHN would fund only redeemed $1 discounts, for a maximum proposed cost of $100, and could pause the pilot.\n\nIf the idea is interesting, I can send the one-page terms and voucher flow for review. Nothing would be published until your team confirms the exact drinks, dates, exclusions, staff process and cap in writing. Editorial badges and awards stay completely separate.\n\nBest,\nAngela\nSF Matcha",
-      "nextAction": "Await Angela's explicit send approval. Recheck the current linked menu before an approved send; confirm the banana-matcha POS SKU, proposed dates and non-dairy recipe. Activation also requires written terms and a tested claim/redemption service.",
+      "outreachDraft": "Subject: A matcha idea for SŌHN\n\nHi Janet and Deuki!\n\nI made sanfranciscomatcha.com to help people find matcha around the city, and SŌHN is already on the map (including the banana oat milk matcha!). I'm adding café perks and would love to try one with you.\n\nWould you be into offering $1 off a matcha for people who find you through the site? We could keep it small to start: six weeks, one per person, capped at 100 uses. You'd cover the $1 discounts—up to $100 total—and there's no fee to participate.\n\nIf you're interested, I'd love to figure out what would work best for your team.\n\nAngela",
+      "nextAction": "Show revised outreach to Angela and await approval of this wording before sending. Preserve prior recipient authorization; confirm merchant terms before activating any offer.",
       "verifiedAt": "2026-10-12",
       "evidence": [
         "https://www.sohnsf.com/",
@@ -84,7 +87,12 @@
       "milkEvidence": "Current linked drink menu lists free oat or almond alternatives; soy is not listed. Banana Oat Milk Latte has a matcha version. No recipe-wide dairy-free claim.",
       "researchNotes": [
         "October 12: official drink-menu link changed from Beverage Menu_1112.pdf to Letter_0120_1-1.pdf. Rendered and visually checked the image-only PDF: Matcha Latte $6 and Banana Oat Milk Latte, matcha version, $7. Prices unchanged."
-      ]
+      ],
+      "outreachDraftReview": {
+        "status": "awaiting_user_review",
+        "rewrittenAt": "2026-10-13",
+        "reason": "Angela requested outreach in her voice and review before further sends."
+      }
     },
     {
       "id": "california-kahve-golden-gate-park",
@@ -138,8 +146,8 @@
         ],
         "needsMerchantConfirmation": true
       },
-      "outreachDraft": "Subject: A Golden Gate Park matcha perk\n\nHi California Kahve team — I run sanfranciscomatcha.com, the independent map and guide to matcha around San Francisco. I’ve featured the Golden Gate Park café for its classic Matcha Latte, Lavender Mint Matcha and rotating seasonal drinks.\n\nI’d love to explore a simple six-week perk at 320 Bowling Green Dr: $1 off the Matcha Latte or Lavender Mint Matcha, one use per customer, capped at 100 successful redemptions. There is no participation fee; California Kahve would fund only redeemed $1 discounts, for a maximum proposed cost of $100, and could pause the pilot.\n\nIf this sounds interesting, I can send the one-page terms and voucher flow. Nothing would be published until you confirm current prices, eligible drinks, dates, exclusions, staff process and cap in writing. Editorial badges and awards stay completely separate.\n\nBest,\nAngela\nSF Matcha",
-      "nextAction": "Await Angela's explicit send approval. Merchant must confirm Golden Gate Park counter prices and POS handling; Sutter and Presidio locations are outside this proposal. No follow-up is due because nothing has been sent.",
+      "outreachDraft": "Subject: A matcha idea for California Kahve\n\nHi Molly!\n\nI made sanfranciscomatcha.com to help people find matcha around the city. Your Golden Gate Park café is already on the map, including the lavender mint matcha, and I'd love to add a little perk for people who discover you there.\n\nWould you be into trying $1 off a matcha at the park café? Six weeks, one per person, capped at 100 uses. You'd cover the $1 discounts—up to $100 total—and there's no fee to participate.\n\nIf it sounds interesting, we can pick the drinks and figure out an easy way for your team to handle it.\n\nAngela",
+      "nextAction": "Show revised outreach to Angela and await approval of this wording before sending. Preserve prior recipient authorization; confirm merchant terms before activating any offer.",
       "verifiedAt": "2026-10-12",
       "evidence": [
         "https://www.californiakahve.com/contact",
@@ -149,7 +157,12 @@
       ],
       "researchNotes": [
         "October 12: contact, Golden Gate Park hours and always-on matcha names rechecked. Prices remain unverified. The newly announced 2108 Sutter storefront is a different location and is outside this proposal."
-      ]
+      ],
+      "outreachDraftReview": {
+        "status": "awaiting_user_review",
+        "rewrittenAt": "2026-10-13",
+        "reason": "Angela requested outreach in her voice and review before further sends."
+      }
     },
     {
       "id": "best-boy-electric-japantown",
@@ -210,7 +223,7 @@
         "needsMerchantConfirmation": true,
         "dateFlexibility": "Illustrative 42-day window; reset dates if approval, merchant confirmation or the tested claim/redemption service is not ready. No automatic activation."
       },
-      "outreachDraft": "Hi Ryoji and Best Boy team — I run sanfranciscomatcha.com. Your Japantown café is already on our map and in our guide. Would you be open to a six-week pilot: $1 off a Matcha Latte or Black Sesame Matcha Latte at 1746 Post? One use per person, 100 redemptions total, no participation fee. You would cover only redeemed $1 discounts, capped at $100, and could pause the offer.\n\nIf that sounds useful, I can send the short terms and proposed counter process. Nothing would be published until your team confirms the drinks, dates, exclusions and cap in writing and the redemption service is ready. Offers do not affect editorial badges or awards.\n\nAngela\nSF Matcha",
+      "outreachDraft": "Hi Ryoji! I made sanfranciscomatcha.com to help people find matcha around the city. Best Boy is already on the map and in our Japantown guide, and I'd love to try a little perk with you.\n\nWould you be into offering $1 off a matcha for people who find you through the site? We could start with six weeks, one per person, capped at 100 uses. You'd cover the $1 discounts—up to $100 total—with no fee to participate.\n\nIf you're interested, we can figure out which drinks and what would be easiest at the counter!\n\nAngela",
       "qualificationBlockers": [],
       "merchantReviewQuestions": [
         "Who can approve the agreement for this location?",
@@ -222,7 +235,7 @@
         "The official landlord page links @bestboysf and the matching Linktree/ordering page. Same-name musician/DJ accounts are unrelated and excluded.",
         "Square shows item prices but marks all listed items unavailable at fetch time. This is not proof of permanent closure or of in-stock availability; recheck stock and ordering before an approved send."
       ],
-      "nextAction": "Complete Instagram sign-in, then send the already authorized initial DM to the verified @bestboysf account. Do not ask again for approval of this message; no follow-up is authorized.",
+      "nextAction": "Show revised outreach to Angela and await approval of this wording before sending. Preserve prior recipient authorization; confirm merchant terms before activating any offer.",
       "verifiedAt": "2026-10-12",
       "evidence": [
         "https://best-boy-electric.square.site/",
@@ -236,7 +249,12 @@
         "scope": "One initial location-specific pilot proposal",
         "by": "user"
       },
-      "outreachBlocker": "Instagram requires sign-in in the connected browser; the approved initial DM is unsent."
+      "outreachBlocker": "Instagram requires sign-in in the connected browser; the approved initial DM is unsent.",
+      "outreachDraftReview": {
+        "status": "awaiting_user_review",
+        "rewrittenAt": "2026-10-13",
+        "reason": "Angela requested outreach in her voice and review before further sends."
+      }
     },
     {
       "id": "constance-tea-outer-richmond",
