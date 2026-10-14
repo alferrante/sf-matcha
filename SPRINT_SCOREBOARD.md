@@ -217,3 +217,13 @@ Publication: release `d029c38ff6fb6badf52568cede217cc76510e534` is on main and v
 - The exact sent wording and public source evidence are in `content/partner-pipeline.json`; `docs/PARTNER_PIPELINE.md` reflects the current stages. Tests validate receipts, user approval, unique location identities, tentative merchant-funded terms and the SŌHN hold without requiring boilerplate in email copy.
 
 Validation for the outreach ledger: clean install/build, **71 passing tests**, customer-copy audit **96 shops / 288 fields**. The 96-venue dataset was already on current main; this outreach batch added no directory listings or public offers.
+
+## October 13 late-evening partner expansion
+
+- On Angela’s explicit authorization, sent and read back **20 more initial emails** at **10:09–10:10pm PT**, using her “Would you be down to offer” wording and distinct true café context. All addresses were verified on merchant websites and checked against Sent/pipeline duplicates.
+- Initial emails **11 → 31** total; pool **12 → 32**, with **31 contacted / 1 paused**. SŌHN remains excluded. The exact sent text and evidence are in `content/partner-pipeline.json`; public sender/message IDs are excluded.
+- Saltwater was omitted for lack of a verified matcha drink. Wrecking Ball’s Potrero proposal is explicitly conditional on opening; Le Mil’s eligible matcha item needs confirmation. No new directory data, public offer, merchant acceptance, reply or audience metric is claimed.
+
+- Reply check: Wrecking Ball returned an automatic receipt acknowledgement; no human response or merchant interest recorded.
+
+Validation: clean install/build, **71 passing tests**, copy audit **96 venues / 288 fields**, duplicate-location checks and persistent SŌHN hold. No browser source or generated bundle changes in this ledger update.

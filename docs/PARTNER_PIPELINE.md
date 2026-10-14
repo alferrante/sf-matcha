@@ -2,7 +2,7 @@
 
 Last verified: October 13, 2026. Source: `content/partner-pipeline.json`.
 
-This is a research and drafting ledger. Eleven initial emails have been sent with explicit approval, including ten on October 13. No café has agreed to participate, and no offer is active. An offer advances to `confirmed` only after written approval from an authorized merchant representative; publication also requires a working claim/redemption service.
+This is a research and drafting ledger. Thirty-one initial emails have been sent with explicit approval, including thirty on October 13. No café has agreed to participate, and no offer is active. An offer advances to `confirmed` only after written approval from an authorized merchant representative; publication also requires a working claim/redemption service.
 
 ## Stage definitions
 
@@ -23,19 +23,39 @@ This is a research and drafting ledger. Eleven initial emails have been sent wit
 | Prospect | Stage | Public contact | Next action |
 | --- | --- | --- | --- |
 | SŌHN | Paused; do not contact | [hello@sohnsf.com](https://www.sohnsf.com/) | Excluded by Angela on October 13. |
-| California Kahve — Golden Gate Park | Contacted; Sent verified | [californiakahve@gmail.com](https://www.californiakahve.com/contact) | Await merchant reply; no follow-up or active offer authorized. |
-| Best Boy Electric — Japantown | Contacted; Sent verified | [hello@bestboysf.com](https://www.craigslist.org/view/d/san-francisco-now-hiring-part-time/9QEYaJ3TdZ7LYA8XbVPeGZ) | Await merchant reply; no follow-up or active offer authorized. |
-| Constance Tea — Outer Richmond | Contacted; Sent verified | [infoconstancetea@gmail.com](https://www.constancetea.com/) | Await merchant reply; no follow-up or active offer authorized. |
-| Junbi San Francisco | Contacted; Sent verified | [sanfrancisco@junbishop.com](https://junbi-la.myshopify.com/pages/locations) | Await merchant reply; no follow-up or active offer authorized. |
-| Home Coffee Roasters | Contacted; Sent verified | [hello@homecoffeesf.com](https://homecoffeesf.com/pages/wholesale) | Await merchant reply; no follow-up or active offer authorized. |
-| Tadaima | Contacted; Sent verified | [info@tadaimasf.com](https://tadaimasf.com/) | Await merchant reply; no follow-up or active offer authorized. |
-| Paper Son Coffee | Contacted; Sent verified | [papersoncoffee@gmail.com](https://papersoncoffee.com/faq) | Await merchant reply; no follow-up or active offer authorized. |
-| Kiss of Matcha | Contacted; Sent verified | [info@kissofmatcha.com](https://www.kissofmatcha.com/) | Await merchant reply; no follow-up or active offer authorized. |
-| Asha Tea House | Contacted; Sent verified | [hello@ashateahouse.com](https://ashateahouse.square.site/) | Await merchant reply; no follow-up or active offer authorized. |
-| Origin Lab | Contacted; Sent verified | [originlabmatchacoffee@gmail.com](https://originlabcoffee.com/) | Await merchant reply; no follow-up or active offer authorized. |
-| Motoring Coffee | Contacted; Sent verified | [hello@motoring.coffee](https://www.motoring.coffee/) | Await merchant reply; no follow-up or active offer authorized. |
+| California Kahve — Golden Gate Park | Contacted; Sent verified | [californiakahve@gmail.com](https://www.californiakahve.com/contact) | Await reply; no follow-up or active offer authorized. |
+| Best Boy Electric — Japantown | Contacted; Sent verified | [hello@bestboysf.com](https://www.craigslist.org/view/d/san-francisco-now-hiring-part-time/9QEYaJ3TdZ7LYA8XbVPeGZ) | Await reply; no follow-up or active offer authorized. |
+| Constance Tea — Outer Richmond | Contacted; Sent verified | [infoconstancetea@gmail.com](https://www.constancetea.com/) | Await reply; no follow-up or active offer authorized. |
+| Junbi San Francisco | Contacted; Sent verified | [sanfrancisco@junbishop.com](https://junbi-la.myshopify.com/pages/locations) | Await reply; no follow-up or active offer authorized. |
+| Home Coffee Roasters | Contacted; Sent verified | [hello@homecoffeesf.com](https://homecoffeesf.com/pages/wholesale) | Await reply; no follow-up or active offer authorized. |
+| Tadaima | Contacted; Sent verified | [info@tadaimasf.com](https://tadaimasf.com/) | Await reply; no follow-up or active offer authorized. |
+| Paper Son Coffee | Contacted; Sent verified | [papersoncoffee@gmail.com](https://papersoncoffee.com/faq) | Await reply; no follow-up or active offer authorized. |
+| Kiss of Matcha | Contacted; Sent verified | [info@kissofmatcha.com](https://www.kissofmatcha.com/) | Await reply; no follow-up or active offer authorized. |
+| Asha Tea House | Contacted; Sent verified | [hello@ashateahouse.com](https://ashateahouse.square.site/) | Await reply; no follow-up or active offer authorized. |
+| Origin Lab | Contacted; Sent verified | [originlabmatchacoffee@gmail.com](https://originlabcoffee.com/) | Await reply; no follow-up or active offer authorized. |
+| Motoring Coffee | Contacted; Sent verified | [hello@motoring.coffee](https://www.motoring.coffee/) | Await reply; no follow-up or active offer authorized. |
+| SPRO Coffee Lab | Contacted; Sent verified | [info@sprocoffeesf.com](https://www.sprocoffeelab.com/) | Await reply; no follow-up or active offer authorized. |
+| Telescope Coffee | Contacted; Sent verified | [telescopecoffee@gmail.com](https://www.telescopecoffee.com/) | Await reply; no follow-up or active offer authorized. |
+| Pixlcat Coffee | Contacted; Sent verified | [hi@pixlcatcoffee.com](https://www.pixlcatcoffee.com/contact) | Await reply; no follow-up or active offer authorized. |
+| Hardware Coffee Co. | Contacted; Sent verified | [info@hardwarecoffee.co](https://hardwarecoffee.co/pages/contact) | Await reply; no follow-up or active offer authorized. |
+| Stonemill Matcha | Contacted; Sent verified | [contact@stonemillmatcha-us.com](https://www.stonemillmatcha-us.com/contact) | Await reply; no follow-up or active offer authorized. |
+| Black Bird | Contacted; Sent verified | [books@blackbirdsf.com](https://blackbirdsf.com/pages/contact) | Await reply; no follow-up or active offer authorized. |
+| Third Wheel Coffee | Contacted; Sent verified | [info@thirdwheel.coffee](https://www.thirdwheel.coffee/connect) | Await reply; no follow-up or active offer authorized. |
+| Shoji | Contacted; Sent verified | [hello@shojisf.com](https://www.shojisf.com/faq) | Await reply; no follow-up or active offer authorized. |
+| Le Mil's Coffee | Contacted; Sent verified | [shopper@lemils.com](https://lemils.com/pages/le-mils-coffee-faq) | Await reply; no follow-up or active offer authorized. |
+| Urban Ritual | Contacted; Sent verified | [hello@urbanritualcafe.com](https://www.urbanritualcafe.com/) | Await reply; no follow-up or active offer authorized. |
+| Wrecking Ball | Contacted; Sent verified | [help@wreckingballcoffee.com](https://www.wreckingballcoffee.com/pages/wholesale-contact) | Await reply; verify opening before any perk. |
+| Réveille | Contacted; Sent verified | [info@reveillecoffee.com](https://www.cafereveille.com/accessibility-statement) | Await reply; no follow-up or active offer authorized. |
+| Blue House Cafe | Contacted; Sent verified | [bhcafesf@gmail.com](https://bluehousecafesf.com/) | Await reply; no follow-up or active offer authorized. |
+| Oishii Matcha | Contacted; Sent verified | [oishiimatchablend@gmail.com](https://www.oishiimatcha.com/) | Await reply; no follow-up or active offer authorized. |
+| Excelsior Coffee | Contacted; Sent verified | [info@xlcrsf.com](https://www.xlcrsf.com/) | Await reply; no follow-up or active offer authorized. |
+| Wanjai | Contacted; Sent verified | [wanjaicafesf@gmail.com](https://wanjaisf.com/about) | Await reply; no follow-up or active offer authorized. |
+| Four Chairs | Contacted; Sent verified | [info@fourchairssf.com](https://www.fourchairssf.com/) | Await reply; no follow-up or active offer authorized. |
+| Barista Coffee & Brunch | Contacted; Sent verified | [baristapresidio@gmail.com](https://baristasf.com/) | Await reply; no follow-up or active offer authorized. |
+| Double Black | Contacted; Sent verified | [hey@yardsale.day](https://yardsale.day/pages/double-black) | Await reply; no follow-up or active offer authorized. |
+| Red Door Coffee | Contacted; Sent verified | [michelle@111minnagallery.com](https://111minnagallery.com/red-door-coffee/) | Await reply; no follow-up or active offer authorized. |
 
-Each proposed pilot is six weeks, $1 off one matcha per person, capped at 100 uses and $100 in merchant-funded discounts, with no participation fee. Exact drinks, dates and counter handling still need written merchant agreement. No offer is active.
+Each proposed pilot is six weeks, $1 off one matcha per person, capped at 100 uses and $100 in merchant-funded discounts, with no participation fee. Exact items, dates and counter handling still need written merchant agreement. Wrecking Ball’s Potrero proposal waits for verified opening; Le Mil’s exact eligible matcha item needs confirmation. No offer is active.
 
 ## October 9 baseline evidence
 
@@ -85,3 +105,13 @@ The complete, personalized drafts and proposed terms are stored in `content/part
 - Kiss of Matcha and Motoring Coffee emails were verified in the raw HTML of their official homepages; platform-support addresses and sample addresses were excluded. Other routes were verified on linked official merchant pages.
 - The warm messages use the user’s exact ask, “Would you be down to offer,” and shop-specific true context. No invented visits, tasting opinions, audience-size claims or merchant participation.
 - Current pool: **12 businesses, 11 contacted and 1 paused**. Zero confirmed offers. No follow-up has been authorized. Private sender/message IDs remain outside the public repository.
+
+## October 13 second approved batch — completed
+
+- Angela authorized a larger batch and repeated “no SŌHN yet.” Sent **20 additional initial emails** from **10:09:21pm–10:10:47pm PT**, then read back all twenty recipients, subjects, bodies and Sent labels. No duplicate shop or inbox was contacted. Total initial sends **11 → 31**; pool **12 → 32**, with **31 contacted and 1 paused**.
+- Recipients: SPRO Coffee Lab, Telescope Coffee, Pixlcat Coffee, Hardware Coffee Co., Stonemill Matcha, Black Bird, Third Wheel Coffee, Shoji, Le Mil's Coffee, Urban Ritual, Wrecking Ball, Réveille, Blue House Cafe, Oishii Matcha, Excelsior Coffee, Wanjai, Four Chairs, Barista Coffee & Brunch, Double Black, Red Door Coffee.
+- All email addresses came from public merchant websites. Double Black’s Cloudflare-protected address decodes to `hey@yardsale.day`; technical/sample addresses were excluded. Red Door uses the public 111 Minna Gallery contact; no similarly named out-of-city roaster was used.
+- Saltwater was omitted because a matcha drink was not verified. Wrecking Ball’s email acknowledges the planned Potrero Hill opening and asks about a perk only after it opens. Le Mil’s email asks about a matcha item, without assuming a standard latte exists. Shoji proposal is café-hours-only; Red Door’s 21+ restriction remains in structured terms.
+- No reply, confirmed participation or active offer is claimed. Future initial batches and follow-ups require separate approval. SŌHN remains paused in `rules.doNotContact`.
+
+- Reply check: Wrecking Ball returned an automatic receipt acknowledgement; no human response or merchant interest recorded.
