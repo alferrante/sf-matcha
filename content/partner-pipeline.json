@@ -223,7 +223,7 @@
         "needsMerchantConfirmation": true,
         "dateFlexibility": "Illustrative 42-day window; reset dates if approval, merchant confirmation or the tested claim/redemption service is not ready. No automatic activation."
       },
-      "outreachDraft": "Hi Ryoji! I made sanfranciscomatcha.com to help people find matcha around the city. Best Boy is already on the map and in our Japantown guide, and I'd love to try a little perk with you.\n\nWould you be into offering $1 off a matcha for people who find you through the site? We could start with six weeks, one per person, capped at 100 uses. You'd cover the $1 discounts—up to $100 total—with no fee to participate.\n\nIf you're interested, we can figure out which drinks and what would be easiest at the counter!\n\nAngela",
+      "outreachDraft": "Hi Ryoji! I made sanfranciscomatcha.com to help people find matcha around the city. Best Boy is already on the map and in our Japantown guide, and I'd love to try a little perk with you.\n\nWould you be down to offer $1 off a matcha for people who find you through the site? We could start with six weeks, one per person, capped at 100 uses. You'd cover the $1 discounts—up to $100 total—with no fee to participate.\n\nIf you're interested, we can figure out which drinks and what would be easiest at the counter!\n\nAngela",
       "qualificationBlockers": [],
       "merchantReviewQuestions": [
         "Who can approve the agreement for this location?",
