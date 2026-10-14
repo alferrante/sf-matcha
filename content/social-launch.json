@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-13",
+  "updatedAt": "2026-10-14",
   "status": "draft",
-  "assetCount": 36,
+  "assetCount": 40,
   "assets": [
     {
       "guideSlug": "banana-matcha-san-francisco",
@@ -934,6 +934,91 @@
       "voiceover": "Need somewhere to work with a matcha? Save these three San Francisco cafés. SŌHN in Dogpatch lists a six-dollar matcha or seven-dollar banana oat matcha. Jandii on Taraval has a matcha einspänner, with Wi-Fi and outlets reported. Home on Noriega lists matcha for seven twenty-five, with soy, oat or almond for a dollar more. Seats, Wi-Fi and policies can change, so check the guide before you go.",
       "overlayDirection": "Show café names, addresses, prices and the dated Wi-Fi source. Use original or licensed footage only; text cards are sufficient.",
       "endCard": "3 SF cafés for matcha and a laptop • Checked Oct 13, 2026 • https://sanfranciscomatcha.com/guides/matcha-work-cafes-san-francisco/"
+    },
+    {
+      "guideSlug": "pistachio-matcha-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/pistachio-matcha-san-francisco/",
+      "status": "draft",
+      "verifiedAt": "2026-10-14",
+      "sources": [
+        "https://toast.app/r/taidama-sf-3515-20th-st/order/item-matcha-latte-w-pistachio-cream_5edde900-f1ef-4460-bd96-22be73e03942",
+        "https://tadaimasf.com/san-francisco-suite-b-tadaima-sf-drink-menu",
+        "https://tadaimasf.com/",
+        "https://postmates.com/store/binge-coffee-house-valencia/21Sjn46UVgWQG8Ib9fijLA"
+      ],
+      "id": "pistachio-matcha-san-francisco--carousel",
+      "type": "carousel",
+      "platform": "Instagram",
+      "slides": [
+        {
+          "number": 1,
+          "headline": "Where to get pistachio matcha in SF",
+          "body": "Two Mission stops: Tadaima and Binge."
+        },
+        {
+          "number": 2,
+          "headline": "Tadaima · Mission",
+          "body": "Matcha Latte with Pistachio Cream: $7.75 iced.\n3515 20th St, Suite B. Oat or almond +$0.75."
+        },
+        {
+          "number": 3,
+          "headline": "Binge · Valencia",
+          "body": "Pistachio Matcha Latte: $9.14 on Postmates.\n530 Valencia St. Online prices vary."
+        },
+        {
+          "number": 4,
+          "headline": "Check the cream, too",
+          "body": "Neither drink is confirmed dairy-free. Ask about toppings if you avoid dairy."
+        }
+      ],
+      "designDirection": "Text cards with exact drink names and addresses. Use no invented café photos or tasting claims.",
+      "callToAction": "Save the menus: https://sanfranciscomatcha.com/guides/pistachio-matcha-san-francisco/"
+    },
+    {
+      "guideSlug": "pistachio-matcha-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/pistachio-matcha-san-francisco/",
+      "status": "draft",
+      "verifiedAt": "2026-10-14",
+      "sources": [
+        "https://toast.app/r/taidama-sf-3515-20th-st/order/item-matcha-latte-w-pistachio-cream_5edde900-f1ef-4460-bd96-22be73e03942",
+        "https://postmates.com/store/binge-coffee-house-valencia/21Sjn46UVgWQG8Ib9fijLA"
+      ],
+      "id": "pistachio-matcha-san-francisco--instagram-caption",
+      "type": "instagram-caption",
+      "platform": "Instagram",
+      "text": "Pistachio matcha in the Mission 🍵\n\nTadaima: $7.75 iced with pistachio cream.\nBinge: Pistachio Matcha Latte, $9.14 on Postmates when checked; online prices vary.\n\nNeither is confirmed dairy-free. Check the toppings separately from the milk.\n\nAddresses and menus: https://sanfranciscomatcha.com/guides/pistachio-matcha-san-francisco/\nChecked October 14, 2026."
+    },
+    {
+      "guideSlug": "pistachio-matcha-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/pistachio-matcha-san-francisco/",
+      "status": "draft",
+      "verifiedAt": "2026-10-14",
+      "sources": [
+        "https://tadaimasf.com/san-francisco-suite-b-tadaima-sf-drink-menu",
+        "https://postmates.com/store/binge-coffee-house-valencia/21Sjn46UVgWQG8Ib9fijLA"
+      ],
+      "id": "pistachio-matcha-san-francisco--short-post",
+      "type": "short-post",
+      "platform": "Threads / X",
+      "text": "Pistachio matcha in SF: Tadaima has an iced pistachio-cream latte; Binge lists Pistachio Matcha Latte. Neither is confirmed dairy-free. Menus: https://sanfranciscomatcha.com/guides/pistachio-matcha-san-francisco/"
+    },
+    {
+      "guideSlug": "pistachio-matcha-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/pistachio-matcha-san-francisco/",
+      "status": "draft",
+      "verifiedAt": "2026-10-14",
+      "sources": [
+        "https://toast.app/r/taidama-sf-3515-20th-st/order/item-matcha-latte-w-pistachio-cream_5edde900-f1ef-4460-bd96-22be73e03942",
+        "https://tadaimasf.com/",
+        "https://postmates.com/store/binge-coffee-house-valencia/21Sjn46UVgWQG8Ib9fijLA"
+      ],
+      "id": "pistachio-matcha-san-francisco--video-script",
+      "type": "video-script",
+      "platform": "Instagram Reels / TikTok",
+      "durationSeconds": 30,
+      "voiceover": "Looking for pistachio matcha in San Francisco? Here are two Mission stops. Tadaima on Twentieth Street has an iced matcha latte with pistachio cream for seven seventy-five. Binge on Valencia lists a Pistachio Matcha Latte. Check its linked menu for the current online price. If you avoid dairy, ask about the toppings too—neither drink is confirmed dairy-free. Save the guide for both addresses and menus.",
+      "overlayDirection": "Use text cards and the linked menu names. Show the Tadaima price before tax/extras; do not imply Binge online prices equal counter prices. No fabricated café footage.",
+      "endCard": "Pistachio matcha in SF · Checked Oct 14, 2026 · https://sanfranciscomatcha.com/guides/pistachio-matcha-san-francisco/"
     }
   ]
 }

@@ -79,7 +79,12 @@
         }
       ],
       cardTitle: "3 places to get banana matcha in SF",
-      compactLayout: true
+      compactLayout: true,
+      relatedGuides: [
+        "matcha-cold-foam-san-francisco",
+        "soy-milk-matcha-san-francisco",
+        "strawberry-matcha-san-francisco"
+      ]
     },
     {
       slug: "matcha-cold-foam-san-francisco",
@@ -174,7 +179,12 @@
         }
       ],
       cardTitle: "Cold foam matcha: 4 SF spots to try",
-      compactLayout: true
+      compactLayout: true,
+      relatedGuides: [
+        "pistachio-matcha-san-francisco",
+        "banana-matcha-san-francisco",
+        "ube-matcha-san-francisco"
+      ]
     },
     {
       slug: "soy-milk-matcha-san-francisco",
@@ -250,7 +260,12 @@
         }
       ],
       cardTitle: "SF matcha spots with soy milk",
-      compactLayout: true
+      compactLayout: true,
+      relatedGuides: [
+        "matcha-without-milk-san-francisco",
+        "coconut-water-matcha-san-francisco",
+        "banana-matcha-san-francisco"
+      ]
     },
     {
       slug: "strawberry-matcha-san-francisco",
@@ -345,7 +360,12 @@
         }
       ],
       cardTitle: "Where to get strawberry matcha in SF",
-      compactLayout: true
+      compactLayout: true,
+      relatedGuides: [
+        "matcha-cold-foam-san-francisco",
+        "ube-matcha-san-francisco",
+        "banana-matcha-san-francisco"
+      ]
     },
     {
       slug: "ceremonial-hand-whisked-matcha-san-francisco",
@@ -421,7 +441,12 @@
         }
       ],
       cardTitle: "3 SF cafés for ceremonial and hand-whisked matcha",
-      compactLayout: true
+      compactLayout: true,
+      relatedGuides: [
+        "matcha-without-milk-san-francisco",
+        "matcha-under-seven-dollars-san-francisco",
+        "richmond-district-matcha-san-francisco"
+      ]
     },
     {
       slug: "matcha-under-seven-dollars-san-francisco",
@@ -516,7 +541,12 @@
         }
       ],
       cardTitle: "Matcha under $7 in SF",
-      compactLayout: true
+      compactLayout: true,
+      relatedGuides: [
+        "matcha-without-milk-san-francisco",
+        "ceremonial-hand-whisked-matcha-san-francisco",
+        "matcha-work-cafes-san-francisco"
+      ]
     },
     {
       slug: "japantown-matcha-san-francisco",
@@ -603,7 +633,12 @@
         }
       ],
       cardTitle: "Where to get matcha in Japantown",
-      compactLayout: true
+      compactLayout: true,
+      relatedGuides: [
+        "banana-matcha-san-francisco",
+        "soy-milk-matcha-san-francisco",
+        "richmond-district-matcha-san-francisco"
+      ]
     },
     {
       slug: "richmond-district-matcha-san-francisco",
@@ -693,7 +728,12 @@
         }
       ],
       cardTitle: "Where to get matcha in the Richmond",
-      compactLayout: true
+      compactLayout: true,
+      relatedGuides: [
+        "ceremonial-hand-whisked-matcha-san-francisco",
+        "japantown-matcha-san-francisco",
+        "ube-matcha-san-francisco"
+      ]
     },
     {
       slug: "mission-district-matcha-san-francisco",
@@ -807,7 +847,12 @@
         }
       ],
       cardTitle: "5 matcha stops in the Mission",
-      compactLayout: true
+      compactLayout: true,
+      relatedGuides: [
+        "pistachio-matcha-san-francisco",
+        "matcha-cold-foam-san-francisco",
+        "strawberry-matcha-san-francisco"
+      ]
     },
     {
       slug: "ube-matcha-san-francisco",
@@ -904,7 +949,12 @@
         }
       ],
       cardTitle: "Ube matcha: 4 SF spots to try",
-      compactLayout: true
+      compactLayout: true,
+      relatedGuides: [
+        "pistachio-matcha-san-francisco",
+        "strawberry-matcha-san-francisco",
+        "matcha-cold-foam-san-francisco"
+      ]
     },
     {
       slug: "coconut-water-matcha-san-francisco",
@@ -974,7 +1024,12 @@
           ]
         }
       ],
-      compactLayout: true
+      compactLayout: true,
+      relatedGuides: [
+        "matcha-without-milk-san-francisco",
+        "soy-milk-matcha-san-francisco",
+        "strawberry-matcha-san-francisco"
+      ]
     },
     {
       slug: "matcha-without-milk-san-francisco",
@@ -1044,7 +1099,12 @@
           ]
         }
       ],
-      compactLayout: true
+      compactLayout: true,
+      relatedGuides: [
+        "ceremonial-hand-whisked-matcha-san-francisco",
+        "coconut-water-matcha-san-francisco",
+        "matcha-under-seven-dollars-san-francisco"
+      ]
     },
     {
       slug: "matcha-work-cafes-san-francisco",
@@ -1126,7 +1186,68 @@
           ]
         }
       ],
-      compactLayout: true
+      compactLayout: true,
+      relatedGuides: [
+        "matcha-under-seven-dollars-san-francisco",
+        "soy-milk-matcha-san-francisco",
+        "banana-matcha-san-francisco"
+      ]
+    },
+    {
+      slug: "pistachio-matcha-san-francisco",
+      title: "Where to get pistachio matcha in SF",
+      cardTitle: "Where to get pistachio matcha in SF",
+      description: "Two Mission cafés with pistachio matcha on the menu.",
+      emoji: "🍵",
+      updatedAt: "2026-10-14",
+      intro: "Pistachio matcha at Tadaima and Binge, a short walk apart.",
+      methodology: "Unranked menu shortlist checked October 14, 2026. Prices are before tax and extras; delivery prices can differ from the counter.",
+      entries: [
+        {
+          shopId: "tadaima-mission",
+          drink: "Matcha Latte with Pistachio Cream",
+          verdict: "$7.75, iced.",
+          details: "An iced matcha latte topped with pistachio cream.",
+          milkNote: "Oat or almond +$0.75. Cream is not confirmed dairy-free; soy is not listed.",
+          price: "$7.75",
+          availability: "Mon–Thu 11am–4:30pm; Fri–Sun 10am–5:30pm. Online pickup ends 15 minutes earlier.",
+          sources: [
+            {
+              label: "Drink and milk options",
+              url: "https://toast.app/r/taidama-sf-3515-20th-st/order/item-matcha-latte-w-pistachio-cream_5edde900-f1ef-4460-bd96-22be73e03942"
+            },
+            {
+              label: "Official drink menu",
+              url: "https://tadaimasf.com/san-francisco-suite-b-tadaima-sf-drink-menu"
+            },
+            {
+              label: "Location and café hours",
+              url: "https://tadaimasf.com/"
+            }
+          ]
+        },
+        {
+          shopId: "binge-coffee-house",
+          drink: "Pistachio Matcha Latte",
+          verdict: "Pistachio matcha at the Valencia café.",
+          details: "Listed on the Valencia location’s current ordering menu.",
+          milkNote: "Milk choices, soy and full topping ingredients are not confirmed for this drink. Ask the café about dairy and nuts.",
+          price: "$9.14 on Postmates; online prices vary",
+          availability: "Ordering hours: Mon–Fri 9am–6pm; Sat 9am–7:30pm; Sun 9am–7pm.",
+          sources: [
+            {
+              label: "Valencia drink, price and hours",
+              url: "https://postmates.com/store/binge-coffee-house-valencia/21Sjn46UVgWQG8Ib9fijLA"
+            }
+          ]
+        }
+      ],
+      compactLayout: true,
+      relatedGuides: [
+        "matcha-cold-foam-san-francisco",
+        "mission-district-matcha-san-francisco",
+        "ube-matcha-san-francisco"
+      ]
     }
   ];
 

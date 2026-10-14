@@ -6,11 +6,12 @@ const guides = JSON.parse(await readFile(new URL('../content/guides.json', impor
 const launch = JSON.parse(await readFile(new URL('../content/social-launch.json', import.meta.url), 'utf8'));
 const expectedTypes = ['carousel', 'instagram-caption', 'short-post', 'video-script'];
 
-test('social launch counts only 36 complete drafts, with four formats per guide', () => {
+test('social launch counts complete drafts, with exactly four formats per guide', () => {
   assert.equal(launch.status, 'draft');
-  assert.equal(launch.assetCount, 36);
-  assert.equal(launch.assets.length, 36);
-  assert.equal(new Set(launch.assets.map(a => a.id)).size, 36);
+  assert.ok(launch.assetCount >= 40, 'preserve delivered draft packages');
+  assert.equal(launch.assets.length, launch.assetCount);
+  assert.equal(new Set(launch.assets.map(a => a.id)).size, launch.assetCount);
+  assert.equal(launch.assetCount, new Set(launch.assets.map(a => a.guideSlug)).size * 4);
   for (const slug of new Set(launch.assets.map(a => a.guideSlug))) {
     const guide = guides.find(g => g.slug === slug);
     assert.ok(guide, slug);

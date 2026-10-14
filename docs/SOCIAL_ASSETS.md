@@ -1,6 +1,6 @@
 # SF Matcha carousel exports
 
-[Download the slides](https://sanfranciscomatcha.com/social/): **nine carousel sets, 48 PNGs**. All are ready to export; none have been posted.
+[Download the slides](https://sanfranciscomatcha.com/social/): **ten carousel sets, 52 PNGs**. All are ready to export; none have been posted.
 
 | Topic | Slides | Menu check |
 |---|---:|---|
@@ -13,8 +13,9 @@
 | Mission matcha | 7 | October 9, 2026 |
 | Ube matcha | 6 | October 9, 2026 |
 | Matcha and a laptop | 5 | October 13, 2026 |
+| Pistachio matcha | 4 | October 14, 2026 |
 
-These are rendered versions of nine carousel drafts in the **36-draft** launch package. They do not add nine more assets to that count. The companion captions, short posts and video scripts remain text drafts; no videos or published reach are claimed.
+These are rendered versions of ten carousel drafts in the **40-draft** launch package. They do not add ten more assets to that count. The companion captions, short posts and video scripts remain text drafts; no videos or published reach are claimed.
 
 The October 12 refresh uses the concise published guide headlines and shorter copy. Original menu-check dates remain visible. Recheck menu links before posting, particularly seasonal drinks, launch-menu items and delivery prices.
 
@@ -29,7 +30,7 @@ python3 scripts/render-social-assets.py
 ## Content and visual checks
 
 - 1080 × 1080 RGB PNGs; numeric filenames give slide order.
-- All 48 slides inspected in contact sheets; the newest work-café set was also checked at full resolution. Headlines, body copy, date/source footers and guide links fit their allotted areas.
+- The original 48 slides were inspected in contact sheets; the newest four-slide pistachio set was also checked at full resolution. Headlines, body copy, date/source footers and guide links fit their allotted areas.
 - Text and simple geometric illustrations only; no invented café or drink photos.
 - Every set has a closing guide link. No tasting ranking, quality award, partnership or approved discount is implied.
 - Kumo's banana and London Fog drinks retain their dairy warnings. Binge's ube cold foam contains dairy even with a milk swap. Other undisclosed topping ingredients remain uncertain.

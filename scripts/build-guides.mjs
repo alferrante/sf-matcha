@@ -15,6 +15,7 @@ const signupCss = `.guide-newsletter{position:relative;background:#d9ff3f;border
 
 const shareCss = `.guide-sharing{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:16px}.guide-sharing button{font:inherit;font-size:14px;cursor:pointer;background:#fffef9}.guide-sharing button:disabled{opacity:.6;cursor:wait}.guide-sharing button:focus-visible{outline:3px solid #45691e;outline-offset:4px}.guide-sharing span{font-size:13px}.guide-sharing input{width:min(100%,620px);padding:9px;border:1px solid #1a1a1a;font:inherit;font-size:13px}.guide-sharing [hidden]{display:none}`;
 const sharingControl = () => `<div class="guide-sharing" data-guide-sharing><button class="button" type="button" hidden>Share guide</button><span data-share-message role="status" aria-live="polite"></span><input aria-label="Guide link" type="text" readonly hidden></div>`;
+const relatedCss = `.related-guides{display:block;margin:34px 0}.related-guides h2{font-size:24px;margin:0 0 12px}.related-guides ul{padding-left:22px;margin:0}.related-guides li+li{margin-top:8px}`;
 
 function newsletterForm(source, concise = false) {
   const compact = concise || source === "guides_hub";
@@ -27,7 +28,7 @@ function shell({ title, description, canonical, body, structured, newsletterAsse
 <title>${esc(title)} | SF Matcha</title><meta name="description" content="${esc(description)}"><link rel="canonical" href="${esc(canonical)}">
 <meta property="og:type" content="${structured ? "article" : "website"}"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${esc(canonical)}"><meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Nunito:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<style>${css}${shareCss}${newsletterAsset ? signupCss : ""}</style>${structured ? `<script type="application/ld+json">${json(structured)}</script>` : ""}</head>
+<style>${css}${shareCss}${relatedCss}${newsletterAsset ? signupCss : ""}</style>${structured ? `<script type="application/ld+json">${json(structured)}</script>` : ""}</head>
 <body><header><a class="brand" href="/">🍵 sf matcha, mapped</a><nav aria-label="Main navigation"><a href="/">Map</a><a href="/guides/">Guides</a><a href="/perks/">Perks</a></nav></header><main>${body}</main><footer>${compactFooter ? `<p><a href="/">Map</a> · <a href="/methodology/">How we choose</a> · <a href="/perks/">Perks</a></p>` : `<p>Fresh finds. Clear milk details. San Francisco matcha, mapped.</p><p><a href="/">Explore the map</a> · <a href="/guides/">Browse guides</a> · <a href="/methodology/">How we verify</a> · <a href="/perks/">Café perks</a></p>`}</footer>${newsletterAsset ? `<script src="/config.js"></script><script type="module" src="${esc(newsletterAsset)}"></script>` : ""}</body></html>\n`;
 }
 
@@ -108,19 +109,35 @@ export function validateGuides(guides, shops) {
       requireText(faq.answer, `${guide.slug}.faq.answer`);
     }
   }
+  for (const guide of guides) {
+    if (guide.relatedGuides === undefined) continue;
+    if (!Array.isArray(guide.relatedGuides) || guide.relatedGuides.length > 3) throw new Error("relatedGuides must contain at most three guide slugs");
+    const related = new Set();
+    for (const slug of guide.relatedGuides) {
+      if (!slugs.has(slug) || slug === guide.slug || related.has(slug)) throw new Error(`Invalid related guide in ${guide.slug}: ${slug}`);
+      related.add(slug);
+    }
+  }
 }
 
-function compactGuidePage(guide, shops, origin, newsletterAsset, structured) {
+function relatedGuideLinks(guide, guides) {
+  const bySlug = new Map(guides.map(record => [record.slug, record]));
+  const related = (guide.relatedGuides ?? []).map(slug => bySlug.get(slug));
+  if (!related.length) return "";
+  return `<nav class="related-guides" aria-label="More matcha guides"><h2>More matcha</h2><ul>${related.map(record => `<li><a href="/guides/${esc(record.slug)}/">${esc(record.cardTitle ?? record.title)} →</a></li>`).join("")}</ul></nav>`;
+}
+
+function compactGuidePage(guide, shops, origin, newsletterAsset, structured, related) {
   const shopById = new Map(shops.map(shop => [shop.id, shop]));
   const entries = guide.entries.map(entry => {
     const shop = shopById.get(entry.shopId);
     const map = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${shop.name}, ${shop.address}, San Francisco, CA`)}`;
     return `<article class="venue" id="${esc(shop.id)}"><h2>${esc(shop.name)}</h2><p class="location">${esc(shop.address)} · ${esc(shop.hood)}</p><p class="verdict">${esc(entry.drink)}</p><p>${esc(entry.details)}</p><dl><dt>Price</dt><dd>${esc(entry.price ?? "Ask the café")}</dd><dt>Milk</dt><dd>${esc(entry.milkNote)}</dd>${entry.soyNote ? `<dt>Soy</dt><dd>${esc(entry.soyNote)}</dd>` : ""}<dt>When</dt><dd>${esc(entry.hours ?? entry.availability ?? shop.hours)}</dd></dl><div class="links"><a class="button" href="${esc(map)}" target="_blank" rel="noopener noreferrer">Directions ↗</a>${entry.sources.map(source => `<a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.label)} ↗</a>`).join("")}</div></article>`;
   }).join("\n");
-  return shell({ title: guide.title, description: guide.description, canonical: `${origin}/guides/${guide.slug}/`, structured, newsletterAsset, compactFooter: true, body: `<div class="breadcrumbs"><a href="/guides/">← Guides</a></div><section class="hero"><h1>${esc(guide.title)}</h1><p class="lead">${esc(guide.intro)}</p><p class="date">Menus checked ${esc(guide.updatedAt)} · Prices before tax</p>${sharingControl()}</section><div class="prose">${entries}<p class="date">Menu picks, not tasting rankings. <a href="/methodology/">How we choose</a></p>${newsletterForm("guide_article", true)}</div>` });
+  return shell({ title: guide.title, description: guide.description, canonical: `${origin}/guides/${guide.slug}/`, structured, newsletterAsset, compactFooter: true, body: `<div class="breadcrumbs"><a href="/guides/">← Guides</a></div><section class="hero"><h1>${esc(guide.title)}</h1><p class="lead">${esc(guide.intro)}</p><p class="date">Menus checked ${esc(guide.updatedAt)} · Prices before tax</p>${sharingControl()}</section><div class="prose">${entries}<p class="date">Menu picks, not tasting rankings. <a href="/methodology/">How we choose</a></p>${related}${newsletterForm("guide_article", true)}</div>` });
 }
 
-function guidePage(guide, shops, origin, newsletterAsset) {
+function guidePage(guide, shops, origin, newsletterAsset, guides) {
   const canonical = `${origin}/guides/${guide.slug}/`;
   const shopById = new Map(shops.map(shop => [shop.id, shop]));
   const entries = guide.entries.map(entry => {
@@ -133,9 +150,10 @@ function guidePage(guide, shops, origin, newsletterAsset) {
     "@context": "https://schema.org",
     "@graph": [{ "@type": "Article", "@id": `${canonical}#article`, headline: guide.title, description: guide.description, dateModified: guide.updatedAt, mainEntityOfPage: canonical, author: { "@type": "Organization", name: "SF Matcha", url: `${origin}/` }, publisher: { "@type": "Organization", name: "SF Matcha", url: `${origin}/` }, about: "Matcha in San Francisco", mainEntity: { "@id": `${canonical}#list` } }, { "@type": "ItemList", "@id": `${canonical}#list`, name: guide.title, itemListOrder: "https://schema.org/ItemListUnordered", numberOfItems: guide.entries.length, itemListElement: guide.entries.map((entry, index) => { const shop = shopById.get(entry.shopId); return { "@type": "ListItem", position: index + 1, url: `${canonical}#${shop.id}`, name: `${shop.name}: ${entry.drink}`, item: { "@type": "CafeOrCoffeeShop", name: shop.name, address: { "@type": "PostalAddress", streetAddress: shop.address, addressLocality: "San Francisco", addressRegion: "CA", addressCountry: "US" } } }; }) }],
   };
-  if (guide.compactLayout) return compactGuidePage(guide, shops, origin, newsletterAsset, structured);
+  const related = relatedGuideLinks(guide, guides);
+  if (guide.compactLayout) return compactGuidePage(guide, shops, origin, newsletterAsset, structured, related);
   const date = new Date(`${guide.updatedAt}T12:00:00Z`).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
-  return shell({ title: guide.title, description: guide.description, canonical, structured, newsletterAsset, body: `<div class="breadcrumbs"><a href="/guides/">← All matcha guides</a></div><section class="hero"><div class="eyebrow">${esc(guide.emoji ?? "🍵")} SF Matcha Guide</div><h1>${esc(guide.title)}</h1><p class="lead">${esc(guide.description)}</p><p class="date">Updated ${esc(date)}</p>${sharingControl()}</section><div class="prose">${paragraph(guide.intro)}<aside class="note"><p>${esc(guide.methodology)}</p><p><a href="/methodology/">Read our editorial and badge methodology</a></p></aside><h2>In this guide</h2><ul class="toc">${guide.entries.map(entry => `<li><a href="#${esc(entry.shopId)}">${esc(shopById.get(entry.shopId).name)} — ${esc(entry.drink)}</a></li>`).join("")}</ul>${entries}${guide.faqs?.length ? `<section><h2>Before you go</h2>${guide.faqs.map(faq => `<details><summary>${esc(faq.question)}</summary>${paragraph(faq.answer)}</details>`).join("")}</section>` : ""}<aside class="note"><p>Menus, prices, and hours can change. Check the linked café sources before making a special trip; ask the café about allergies and shared preparation.</p></aside><p><a class="button" href="/">Find your next matcha on the map →</a></p>${newsletterForm("guide_article")}</div>` });
+  return shell({ title: guide.title, description: guide.description, canonical, structured, newsletterAsset, body: `<div class="breadcrumbs"><a href="/guides/">← All matcha guides</a></div><section class="hero"><div class="eyebrow">${esc(guide.emoji ?? "🍵")} SF Matcha Guide</div><h1>${esc(guide.title)}</h1><p class="lead">${esc(guide.description)}</p><p class="date">Updated ${esc(date)}</p>${sharingControl()}</section><div class="prose">${paragraph(guide.intro)}<aside class="note"><p>${esc(guide.methodology)}</p><p><a href="/methodology/">Read our editorial and badge methodology</a></p></aside><h2>In this guide</h2><ul class="toc">${guide.entries.map(entry => `<li><a href="#${esc(entry.shopId)}">${esc(shopById.get(entry.shopId).name)} — ${esc(entry.drink)}</a></li>`).join("")}</ul>${entries}${guide.faqs?.length ? `<section><h2>Before you go</h2>${guide.faqs.map(faq => `<details><summary>${esc(faq.question)}</summary>${paragraph(faq.answer)}</details>`).join("")}</section>` : ""}<aside class="note"><p>Menus, prices, and hours can change. Check the linked café sources before making a special trip; ask the café about allergies and shared preparation.</p></aside><p><a class="button" href="/">Find your next matcha on the map →</a></p>${related}${newsletterForm("guide_article")}</div>` });
 }
 
 export async function buildGuides({ root = projectRoot, outDir = root, origin = defaultOrigin, allowMissing = false, newsletterAsset = "/dist/guide-newsletter.js" } = {}) {
@@ -162,7 +180,7 @@ export async function buildGuides({ root = projectRoot, outDir = root, origin = 
   const pages = new Map();
   const cards = guides.toSorted((a, b) => b.updatedAt.localeCompare(a.updatedAt)).map(guide => `<article class="card"><a href="/guides/${esc(guide.slug)}/"><span class="emoji" aria-hidden="true">${esc(guide.emoji ?? "🍵")}</span><h2>${esc(guide.cardTitle ?? guide.title)}</h2><p>${guide.entries.length} spots <span aria-hidden="true">→</span></p></a></article>`).join("\n");
   pages.set("guides/index.html", shell({ title: "Matcha guides in San Francisco", description: "Where to get banana matcha, cold foam, soy milk matcha and more in San Francisco.", canonical: `${origin}/guides/`, newsletterAsset, compactFooter: true, body: `<section class="hero"><h1>Matcha guides</h1></section><section class="cards" aria-label="Matcha guides">${cards}</section>${newsletterForm("guides_hub")}` }));
-  for (const guide of guides) pages.set(`guides/${guide.slug}/index.html`, guidePage(guide, shops, origin, newsletterAsset));
+  for (const guide of guides) pages.set(`guides/${guide.slug}/index.html`, guidePage(guide, shops, origin, newsletterAsset, guides));
   pages.set("methodology/index.html", methodology);
   pages.set("perks/index.html", perks);
   pages.set("perks/partner-kit.md", partnerKit);

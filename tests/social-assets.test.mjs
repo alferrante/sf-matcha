@@ -9,6 +9,9 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const socialRoot = path.join(root, "social");
 const manifest = JSON.parse(fs.readFileSync(path.join(socialRoot, "manifest.json"), "utf8"));
 const gallery = fs.readFileSync(path.join(socialRoot, "index.html"), "utf8");
+const launch = JSON.parse(fs.readFileSync(path.join(root, "content/social-launch.json"), "utf8"));
+const carousels = launch.assets.filter(asset => asset.type === "carousel");
+const slideCount = carousels.reduce((count, asset) => count + asset.slides.length, 0);
 
 function pngDimensions(buffer) {
   assert.equal(buffer.subarray(0, 8).toString("hex"), "89504e470d0a1a0a", "valid PNG signature");
@@ -16,19 +19,23 @@ function pngDimensions(buffer) {
   return { width: buffer.readUInt32BE(16), height: buffer.readUInt32BE(20) };
 }
 
-test("social manifest describes nine complete, source-backed carousel sets", () => {
-  assert.equal(manifest.carouselSetCount, 9);
-  assert.equal(manifest.individualSlideCount, 48);
+test("social manifest matches every source-backed carousel and original check date", () => {
+  assert.ok(carousels.length >= 10, "preserve published carousel production");
+  assert.equal(manifest.carouselSetCount, carousels.length);
+  assert.equal(manifest.individualSlideCount, slideCount);
   assert.deepEqual(manifest.dimensions, { width: 1080, height: 1080 });
   assert.equal(manifest.status, "ready-to-export; not posted");
   assert.equal(manifest.qa.kumoDairyCaveatPresent, true);
-  assert.equal(manifest.sets.length, 9);
+  assert.equal(manifest.sets.length, carousels.length);
+  assert.equal(new Set(manifest.sets.map(set => set.guideSlug)).size, carousels.length);
   for (const set of manifest.sets) {
     assert.equal(set.slideCount, set.slides.length);
     assert.ok(set.slideCount >= 3);
     assert.match(set.guideUrl, /^https:\/\/sanfranciscomatcha\.com\/guides\//);
-    const expectedDate = set.guideSlug === "matcha-work-cafes-san-francisco" ? "2026-10-13" : /mission-district|ube-matcha/.test(set.guideSlug) ? "2026-10-09" : "2026-10-07";
-    assert.equal(set.verifiedAt, expectedDate);
+    const source = carousels.find(asset => asset.guideSlug === set.guideSlug);
+    assert.ok(source, set.guideSlug);
+    assert.equal(set.verifiedAt, source.verifiedAt);
+    assert.deepEqual(set.sourceUrls, source.sources);
     assert.ok(set.sourceUrls.length > 0);
   }
 });
@@ -48,16 +55,16 @@ test("every social PNG matches manifest dimensions, bytes and SHA-256", () => {
       totalBytes += buffer.length;
     }
   }
-  assert.equal(seen.size, 48);
+  assert.equal(seen.size, slideCount);
   assert.equal(totalBytes, manifest.totalBytes);
 });
 
-test("export gallery links all 48 downloads and its evidence files", () => {
+test("export gallery links every current download and its evidence files", () => {
   assert.match(gallery, /ready to export; not posted/);
   assert.match(gallery, /href="manifest\.json"/);
   assert.match(gallery, /href="\.\.\/docs\/SOCIAL_ASSETS\.md"/);
-  assert.equal((gallery.match(/class="carousel-set"/g) || []).length, 9);
-  assert.equal((gallery.match(/class="download"/g) || []).length, 48);
+  assert.equal((gallery.match(/class="carousel-set"/g) || []).length, carousels.length);
+  assert.equal((gallery.match(/class="download"/g) || []).length, slideCount);
   for (const set of manifest.sets) {
     for (const slide of set.slides) {
       const relative = slide.file.replace(/^social\//, "");

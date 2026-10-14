@@ -48,12 +48,16 @@ The Blueprint runs `npm ci --include=dev`, `npm run build`, then `npm run config
 
 `content/guides.json` is the source for the static guides hub and articles. `content/methodology.html` and `content/perks.html` are reviewed standalone pages; `content/offers.json` starts empty and passes strict publication validation. `npm run build` regenerates these pages, the public partner kit/offers feed, sitemap, and browser bundles. Commit source and generated output together. Keep earlier content-addressed bundles so older cached HTML remains usable.
 
-`docs/SOCIAL_LAUNCH.md` contains 24 source-backed text drafts. They have not been posted and are not finished visual assets. Recheck dated menus before distribution.
+`content/social-launch.json` is the current source for distribution drafts; `social/manifest.json` records finished carousel exports and their evidence dates. None have been posted. Recheck dated menus before distribution.
 
 The newsletter frontend uses the verified public capture service at `https://sfmatcha-newsletter.onrender.com/api/newsletter/subscribe`. A public `NEWSLETTER_ENDPOINT` configuration can override it; an explicit empty value hides the form. `server/newsletter.mjs` is a separate Node backend; it cannot run on the static site. Read `docs/NEWSLETTER_SETUP.md` before deployment. Keep the private Resend key exclusively in the backend environment. Public config contains only the browser map key and signup URL.
 
 The café pilot planner produces a local proposal and does not enroll merchants. An active offer requires explicit outreach authorization, written merchant confirmation, and a tested server claim/redemption service. A valid JSON record alone is not approval to activate an offer.
 
+`server/offers-store.mjs` and `server/offers-http.mjs` implement a disabled, unmounted transactional offer backend. Read [OFFER_SERVICE_SETUP.md](docs/OFFER_SERVICE_SETUP.md) before integration. Verified customer authentication, persistent production storage, counter/customer screens and merchant approval remain required; no claim flow is live.
+
 ## Public copy
 
 Use direct article headlines on both guide cards and article pages. Keep public copy short: one-line introductions, drink names, prices, milk details, hours, directions and menu links. New guides must set `compactLayout: true`. Do not repeat ordering advice, FAQs or editorial-process explanations around every listing. Keep source links, original menu-check dates and material dietary/availability uncertainty. Use “best” or “tastiest” only with recorded firsthand evidence. Merchant proposal tools belong in the closed café-owner section of perks, away from the customer offer status.
+
+`relatedGuides` may list up to three distinct existing article slugs. Use short, relevant links without repeated descriptions. Never link an article to itself or change its menu-check date just for a navigation edit.

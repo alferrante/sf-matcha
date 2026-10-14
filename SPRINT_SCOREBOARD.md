@@ -10,10 +10,10 @@ Repository baseline for October 8: `4e908193bca7135f5cf8163bd3a5b25ab05cd749` (v
 | --- | --- | ---: |
 | Directory venues | 96 current-main source/built venues; audit passes 288 fields | Accuracy and freshness |
 | Monthly visits | Unknown; Cloudflare beacon exists, export not accessed | 50,000 |
-| Active email subscribers | 0 active real subscribers, audience queried October 12; signup live; two opted-out synthetic tests excluded | 10,000 |
+| Active email subscribers | 0 active real subscribers, audience queried October 14; signup live; two opted-out synthetic tests excluded | 10,000 |
 | Social followers | Unknown; project accounts not verified | 25,000 |
-| Guides | 13 published articles / 45 sourced entries prepared October 13 | 24 |
-| Derivative assets | 36 complete drafts across nine topics; nine carousel drafts rendered as 9 finished sets / 48 PNG slides; 0 posted. Count each carousel once, not each slide | 120 |
+| Guides | 14 articles / 47 sourced entries prepared October 14; publication verification recorded below | 24 |
+| Derivative assets | 40 complete drafts across ten topics; ten carousel drafts rendered as 10 finished sets / 52 PNG slides; 0 posted. Count each carousel once, not each slide | 120 |
 | Live confirmed offers | 0 offer records in baseline repository | 20 |
 | Redemptions | Unknown; no verified tracking system | 2,000 |
 | Awards votes | Unknown; no verified voting system | 1,000 |
@@ -54,14 +54,14 @@ Live-review correction: official SŌHN hours confirm Tue–Sun 9am–4pm, Monday
 3. Publish the next verified neighborhood/seasonal guide package and turn text drafts into finished visual assets; keep unknown metrics explicitly unknown until measured.
 4. Continue the venue/address watch and update articles when menu evidence changes.
 5. Add Buzzy expiry/reason metadata and publish transparent editorial methodology; gather tasting evidence before Best awards.
-6. Obtain explicit outreach authorization and merchant confirmation, then implement and deploy authenticated atomic claim/redemption service before activating the first $1-off pilot. The public proposal planner and validation schema are ready.
+6. Monitor the approved initial café outreach; follow-ups need separate approval. Complete verified customer identity, durable production storage, claim/staff interfaces and staging checks for the inactive transactional offer backend. Activate only after written merchant confirmation; the public planner and validation schema are ready.
 
 ## Dependencies requiring evidence or access
 
 - Dedicated audience, consent fields, private credential and Render backend are established. Dedicated sending domain `updates.sanfranciscomatcha.com` is prepared but unverified. DNS access and broadcast unsubscribe verification are still needed before sending newsletter emails; exact records are in `docs/EMAIL_DNS_SETUP.md`.
 - Analytics data and identified SF Matcha social accounts.
 - Firsthand tasting notes/photos for qualitative rankings and awards.
-- Explicit outreach authorization and merchant acceptance for $1-off offers.
+- Initial outreach approvals were consumed by the completed batches. Follow-up/retry approval and written merchant acceptance for $1-off offers remain outstanding; no café is confirmed. Production offer identity/storage/interfaces are also required.
 
 ## Run protocol
 
@@ -190,7 +190,7 @@ Publication: release `d029c38ff6fb6badf52568cede217cc76510e534` is on main and v
 
 1. Build the inactive authenticated atomic offer claim/redemption service; activate only after written merchant confirmation and approved outreach.
 2. Keep producing distinct menu-backed guides toward 24 and distribution formats toward 120.
-3. Distribution needs identified project social account access; traffic reporting needs a Cloudflare analytics export; newsletter delivery needs the documented sender DNS records and verified unsubscribe setup. Café outreach remains unsent pending explicit approval.
+3. Distribution needs identified project social account access; traffic reporting needs a Cloudflare analytics export; newsletter delivery needs the documented sender DNS records and verified unsubscribe setup. This historical October 12 queue predates the approved initial café outreach recorded below; follow-ups still need separate approval.
 
 ## October 12 initial partner outreach
 
@@ -237,3 +237,19 @@ Validation: clean install/build, **71 passing tests**, copy audit **96 venues / 
 - **Live offers remain 0.** No directory, guide, social asset or audience metric change claimed. Full evidence and current stages: `content/partner-pipeline.json` and `docs/PARTNER_PIPELINE.md`.
 
 Validation: clean `npm ci --include=dev`, source build, **72 passing tests**, customer-copy audit **96 venues / 288 fields** and whitespace checks passed. Public source/bundles/pages are unchanged; excluded cafés and planned-location constraints preserved. A regression test preserves failed-send history while blocking retries and ordinary follow-ups.
+
+## October 14 growth release
+
+- Started an isolated clean checkout from current main `eca7445102cfeb58b0e68f737f000df348ec8d75`, preserving today's delivery-failure correction, all 32 partner records, SŌHN hold, 96 directory venues, editorial exclusions and the Jandii Castro constraint. Canonical map, guides, methodology, perks, gallery and empty offers feed matched main bytes; signup health returned configured.
+- **New guide:** `https://sanfranciscomatcha.com/guides/pistachio-matcha-san-francisco/`, two Mission orders at Tadaima and Binge. Fresh exact menu evidence, milk/cream uncertainty and attributed online pricing are documented in `docs/EDITORIAL_OCT14.md`. No tasting ranking. Affogato was held because current mapped-menu availability was not strong enough. Guides **13 → 14**; sourced entries **45 → 47**.
+- **Article discovery:** three curated related-guide links on every article (**42** links across 14 articles), without repeated descriptions or restored hub categories. Validator rejects self/unknown/duplicate/unsafe links and more than three. Existing menu-check dates and all old entries are unchanged. This creates navigation paths; no click/traffic uplift is claimed without analytics.
+- **Distribution:** four new source-linked formats; the pistachio carousel is rendered and all four slides visually checked. Drafts **36 → 40**; finished carousel sets **9 → 10**; PNG slides **48 → 52**. Gallery/manifest/source dates and hashes are synchronized, and original 48 PNGs are unchanged. No assets posted, no video footage or café photography fabricated, no subscriber email sent.
+- **Offer backend implemented, not activated:** added file-backed SQLite transaction core and disabled HTTP adapter. Twelve focused tests cover independent-worker cap and redemption races, persistent retries, one claim per verified identity per approved pilot, location-scoped merchant credentials, sticky pauses, stable-key protection and exact start/expiry. Independent code review caught restart pause and coverage gaps; both were fixed and rechecked. Module is not imported by the newsletter server, mounted, auto-started or provisioned. Public offers stay **0**; no real claims/redemptions or merchant confirmation. Setup blockers: real verified identity, durable production disk/secret setup, ingress safeguards, customer/staff screens, staging and merchant agreement. See `docs/OFFER_SERVICE_SETUP.md`.
+- **Metrics rechecked October 14:** dedicated audience has only two opted-out synthetic records, **0 active real subscribers**. Sender remains failed: DKIM and SPF records failed; CNAME not started. No DNS/account state was changed. Visits/followers/votes remain unmeasured, not zero. Analytics-covered public HTML pages **19 → 20**. Today's partner status is preserved rather than reported again as new outreach.
+- **Validation:** `npm ci --include=dev`, source build, **86 passing tests**, customer-copy audit **96 venues / 288 fields**, source/entry/date preservation, PNG hashes/dimensions, whitespace checks and deterministic rebuild passed. Source, stable app bundle, new hashed app bundle and matching index are committed together; old hashes are retained. Final canonical live byte verification follows publication.
+
+### Next unblocked work
+
+1. Implement the inactive customer/staff offer screens and reconciliation export against the tested service contract; no claims issued until identity, storage and merchant approval are verified.
+2. Continue distinct sourced guides and derivative production toward 24 / 120; review reply and menu updates without unauthorized follow-ups.
+3. Distribution and measured growth require identified project social access, the documented sender DNS records/verified unsubscribe, and an analytics export. No audience-growth claim should replace those missing measurements.

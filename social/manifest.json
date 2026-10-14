@@ -1,15 +1,15 @@
 {
   "generatedFrom": "content/social-launch.json",
-  "sourceUpdatedAt": "2026-10-13",
+  "sourceUpdatedAt": "2026-10-14",
   "status": "ready-to-export; not posted",
-  "carouselSetCount": 9,
-  "individualSlideCount": 48,
+  "carouselSetCount": 10,
+  "individualSlideCount": 52,
   "format": "PNG",
   "dimensions": {
     "width": 1080,
     "height": 1080
   },
-  "totalBytes": 3131223,
+  "totalBytes": 3376388,
   "qa": {
     "allSlidesVerifiedAsPng": true,
     "allSlides1080Square": true,
@@ -772,6 +772,74 @@
             "amysuto.com",
             "richmondsunsetnews.com",
             "toast.app"
+          ]
+        }
+      ]
+    },
+    {
+      "guideSlug": "pistachio-matcha-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/pistachio-matcha-san-francisco/",
+      "verifiedAt": "2026-10-14",
+      "sourceUrls": [
+        "https://toast.app/r/taidama-sf-3515-20th-st/order/item-matcha-latte-w-pistachio-cream_5edde900-f1ef-4460-bd96-22be73e03942",
+        "https://tadaimasf.com/san-francisco-suite-b-tadaima-sf-drink-menu",
+        "https://tadaimasf.com/",
+        "https://postmates.com/store/binge-coffee-house-valencia/21Sjn46UVgWQG8Ib9fijLA"
+      ],
+      "slideCount": 4,
+      "slides": [
+        {
+          "file": "social/pistachio-matcha-san-francisco/slide-01.png",
+          "slide": 1,
+          "headline": "Where to get pistachio matcha in SF",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 61146,
+          "sha256": "56c8f15a8bf162bb79ecf7f1473504156e5c17cd762835fd87a3488132b895a1",
+          "sourceDomains": [
+            "toast.app",
+            "tadaimasf.com",
+            "postmates.com"
+          ]
+        },
+        {
+          "file": "social/pistachio-matcha-san-francisco/slide-02.png",
+          "slide": 2,
+          "headline": "Tadaima · Mission",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 64053,
+          "sha256": "6a631d16908f1823c3d50dd307924478825a964645435256afe54673b07361df",
+          "sourceDomains": [
+            "tadaimasf.com"
+          ]
+        },
+        {
+          "file": "social/pistachio-matcha-san-francisco/slide-03.png",
+          "slide": 3,
+          "headline": "Binge · Valencia",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 61892,
+          "sha256": "beb0a6a12d164e26b15711d3d621ee602a94b1d42383178d0b7eb501486985d1",
+          "sourceDomains": [
+            "toast.app",
+            "tadaimasf.com",
+            "postmates.com"
+          ]
+        },
+        {
+          "file": "social/pistachio-matcha-san-francisco/slide-04.png",
+          "slide": 4,
+          "headline": "Check the cream, too",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 58074,
+          "sha256": "1bc340081d4a15af87928bb07f170bf29d2a4a63f4f2a2b097477fe010558b7c",
+          "sourceDomains": [
+            "toast.app",
+            "tadaimasf.com",
+            "postmates.com"
           ]
         }
       ]

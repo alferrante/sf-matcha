@@ -38,6 +38,9 @@ FONT_MONO = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
 FONT_MONO_BOLD = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf"
 
 GUIDE_STYLE = {
+    "pistachio-matcha-san-francisco": {
+        "label": "PISTACHIO MATCHA", "accent": "#A8BD78", "pale": "#ECF2DD", "motif": "bowl",
+    },
     "banana-matcha-san-francisco": {
         "label": "BANANA MATCHA",
         "accent": "#F2C94C",

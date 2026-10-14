@@ -85,6 +85,42 @@ test("guide hub shows the newest verified guide first", async () => {
   } finally { await rm(dir, { recursive: true, force: true }); }
 });
 
+test("related guide links use curated order, existing local URLs and escaped titles", async () => {
+  for (const compactLayout of [true, false]) {
+    const records = [guide(0), guide(1), guide(2), guide(3)];
+    records[0].compactLayout = compactLayout;
+    records[0].relatedGuides = ["guide-2", "guide-1"];
+    records[2].cardTitle = '<img src=x onerror=alert(1)> & tea';
+    const dir = await fixture(records);
+    try {
+      await buildGuides({ root: dir });
+      const html = await readFile(path.join(dir, "guides/guide-0/index.html"), "utf8");
+      const nav = html.match(/<nav class="related-guides"[^>]*>([\s\S]*?)<\/nav>/)[1];
+      assert.equal((nav.match(/<li>/g) ?? []).length, 2);
+      assert.ok(nav.indexOf('/guides/guide-2/') < nav.indexOf('/guides/guide-1/'));
+      assert.doesNotMatch(nav, /guide-0|guide-3|<img/);
+      assert.match(nav, /&lt;img src=x onerror=alert\(1\)&gt; &amp; tea/);
+      assert.ok(html.indexOf('aria-label="More matcha guides"') < html.indexOf('data-guide-newsletter'));
+      const noRelated = await readFile(path.join(dir, "guides/guide-3/index.html"), "utf8");
+      assert.doesNotMatch(noRelated, /<nav class="related-guides"/);
+      const structured = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
+      assert.equal(structured["@graph"][0].dateModified, records[0].updatedAt);
+    } finally { await rm(dir, { recursive: true, force: true }); }
+  }
+});
+
+test("bad related guides fail before writing any public page", async () => {
+  for (const relatedGuides of [["missing"], ["guide-0"], ["guide-1", "guide-1"], ["guide-1", "guide-2", "guide-3", "guide-4"], "guide-1", ["../perks"], ["https://evil.example/"]]) {
+    const records = Array.from({ length: 5 }, (_, i) => guide(i));
+    records[0].relatedGuides = relatedGuides;
+    const dir = await fixture(records);
+    try {
+      await assert.rejects(buildGuides({ root: dir }), /related guide|relatedGuides/);
+      await assert.rejects(readFile(path.join(dir, "guides/index.html")), { code: "ENOENT" });
+    } finally { await rm(dir, { recursive: true, force: true }); }
+  }
+});
+
 test("offer validation permits a future pilot only with completed merchant confirmation", () => {
   assert.doesNotThrow(() => validateOffers({ ...emptyOffers, offers: [confirmedOffer()] }, [shop], { now: Date.parse("2026-10-07T18:00:00Z") }));
   const cases = [
