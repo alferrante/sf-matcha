@@ -1,6 +1,6 @@
 # SF Matcha sprint scoreboard
 
-Last updated: October 13, 2026. Goal: `GOAL.md`.
+Last updated: October 14, 2026. Goal: `GOAL.md`.
 
 ## Verified baseline
 
@@ -227,3 +227,13 @@ Validation for the outreach ledger: clean install/build, **71 passing tests**, c
 - Reply check: Wrecking Ball returned an automatic receipt acknowledgement; no human response or merchant interest recorded.
 
 Validation: clean install/build, **71 passing tests**, copy audit **96 venues / 288 fields**, duplicate-location checks and persistent SŌHN hold. No browser source or generated bundle changes in this ledger update.
+
+## October 14 partner delivery review
+
+- Reviewed initial outreach, recipient replies and broad delivery-failure mail. **31 initial email attempts / 1 hard bounce / 30 attempts without an observed bounce / 0 human replies / 1 automatic acknowledgement**. Sent receipts prove attempts, not inbox delivery. No new messages or follow-ups sent.
+- Oishii’s public website email failed with address-not-found; moved its existing record to `paused` and preserved its historical send receipt. Official Instagram identity verified as an alternate research route; no DM/retry approved. Pool remains **32**, now **30 contacted / 2 paused**. SŌHN remains excluded.
+- Refined Junbi’s location-specific proposal to its $7.25 Matcha Latte and Origin Lab’s to its $7.75 Pure Matcha Lab without cloud; verified exact ordering item IDs, milk options and +$0.75 alternate-milk charges. Preserved sent wording; final counter price, POS handling, signing authority, dates and participation remain unconfirmed. Origin’s older price and hours conflict are flagged.
+- Added non-sending review dates: Constance October 19, remaining non-bounced initial emails October 20. None are due October 14. Initial-batch authorization does not cover retries, follow-ups or agreements. No new leads needed; next tasks are reply review and contact repair.
+- **Live offers remain 0.** No directory, guide, social asset or audience metric change claimed. Full evidence and current stages: `content/partner-pipeline.json` and `docs/PARTNER_PIPELINE.md`.
+
+Validation: clean `npm ci --include=dev`, source build, **72 passing tests**, customer-copy audit **96 venues / 288 fields** and whitespace checks passed. Public source/bundles/pages are unchanged; excluded cafés and planned-location constraints preserved. A regression test preserves failed-send history while blocking retries and ordinary follow-ups.

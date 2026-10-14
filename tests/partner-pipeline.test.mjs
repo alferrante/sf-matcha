@@ -24,7 +24,9 @@ test('partner pipeline uses the complete stage model and unique directory locati
 test('prospects have public evidence and safe proposed terms', () => {
   for (const prospect of pipeline.prospects) {
     assert.ok(['researched', 'ready_for_outreach', 'contacted', 'paused'].includes(prospect.stage));
-    if (prospect.stage === 'contacted') {
+    if (prospect.stage === 'contacted') assert.ok(prospect.outreach, 'contacted requires an actual send receipt');
+    if (prospect.outreach) {
+      assert.ok(['contacted', 'paused'].includes(prospect.stage), 'historical authorized send receipts survive a delivery-failure pause');
       assert.equal(prospect.contactStatus, 'sent');
       assert.equal(prospect.outreachAuthorization?.by, 'user');
       assert.ok(Number.isFinite(Date.parse(prospect.outreachAuthorization.approvedAt)));
@@ -76,4 +78,23 @@ test('pipeline cannot imply a live or confirmed café offer', () => {
   assert.equal(sohn.stage, 'paused');
   assert.equal(sohn.contactStatus, 'not_contacted');
   assert.equal(sohn.outreach, undefined);
+});
+
+test('failed delivery preserves history and blocks retry or ordinary follow-up', () => {
+  const failed = pipeline.prospects.filter(p => p.delivery?.status === 'failed');
+  assert.ok(failed.length > 0);
+  for (const prospect of failed) {
+    assert.equal(prospect.stage, 'paused');
+    assert.equal(prospect.contactStatus, 'sent');
+    assert.equal(prospect.outreach.verifiedInSent, true);
+    assert.ok(Date.parse(prospect.delivery.failedAt) >= Date.parse(prospect.outreach.sentAt));
+    assert.equal(prospect.delivery.retryAuthorized, false);
+    assert.equal(prospect.followUpReview.status, 'blocked_contact_repair');
+    assert.equal(prospect.followUpReview.sendAuthorized, false);
+    assert.equal(prospect.alternatePublicContact.sendAuthorized, false);
+    assert.equal(prospect.alternatePublicContact.contacted, false);
+  }
+  assert.equal(pipeline.replyReview.initialEmailAttempts, pipeline.prospects.filter(p => p.outreach).length);
+  assert.equal(pipeline.replyReview.hardBounces, failed.length);
+  assert.equal(pipeline.replyReview.attemptsWithoutObservedBounce, pipeline.replyReview.initialEmailAttempts - failed.length);
 });

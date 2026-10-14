@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-13",
+  "updatedAt": "2026-10-14",
   "stages": [
     "candidate",
     "researched",
@@ -21,7 +21,7 @@
     "activationRequiresTestedClaimRedemptionService": true,
     "outreachVoice": "Use Angela's voice: conversational, warm and direct; open with specific true context, explain the idea simply and make one easy ask. No invented visits, tasting opinions, audience claims or personal relationship. Keep full operational terms for a later conversation; disclose merchant-funded discount and cap plainly.",
     "outreachDraftRequiresUserReview": true,
-    "outreachReviewNote": "October 13: Angela approved the first ten and another twenty initial personalized emails in the revised voice. Both batches are completed; 31 total initial emails including Constance. SŌHN remains paused/do-not-contact. These completed-batch approvals do not authorize follow-ups, future batches, agreements or offer activation.",
+    "outreachReviewNote": "October 13: Angela approved the first ten and another twenty initial personalized emails in the revised voice. Both batches are completed; 31 total initial emails including Constance. SŌHN remains paused/do-not-contact. These completed-batch approvals do not authorize follow-ups, future batches, agreements or offer activation. October 14 delivery review: one Oishii hard bounce is recorded; 31 is an attempt count, not a delivered count. Retrying or using another channel needs new approval.",
     "doNotContact": [
       "sohn-dogpatch"
     ]
@@ -183,7 +183,13 @@
         "subject": "A matcha idea for California Kahve",
         "sentAt": "2026-10-14T03:56:13.000Z",
         "verifiedInSent": true
-      }
+      },
+      "followUpReview": {
+        "reviewOn": "2026-10-20",
+        "status": "not_due",
+        "sendAuthorized": false
+      },
+      "replyStatus": "no_human_reply_observed"
     },
     {
       "id": "best-boy-electric-japantown",
@@ -284,7 +290,13 @@
         "subject": "A matcha idea for Best Boy Electric",
         "sentAt": "2026-10-14T03:56:06.000Z",
         "verifiedInSent": true
-      }
+      },
+      "followUpReview": {
+        "reviewOn": "2026-10-20",
+        "status": "not_due",
+        "sendAuthorized": false
+      },
+      "replyStatus": "no_human_reply_observed"
     },
     {
       "id": "constance-tea-outer-richmond",
@@ -370,7 +382,13 @@
         "channel": "email",
         "sentAt": "2026-10-13T05:39:27Z",
         "verifiedInSent": true
-      }
+      },
+      "followUpReview": {
+        "reviewOn": "2026-10-19",
+        "status": "not_due",
+        "sendAuthorized": false
+      },
+      "replyStatus": "no_human_reply_observed"
     },
     {
       "id": "junbi-san-francisco",
@@ -384,19 +402,22 @@
         "address": "685 Market St, Suite 130",
         "hours": "Mon–Fri 8:30am–5pm; Sat–Sun 10am–5pm"
       },
-      "leadership": "Recipient identity based on the linked merchant contact pages; merchant signing authority still needs confirmation.",
+      "leadership": "Local operators Brian and Amelia, identified on matchabarsf.com; merchant signing authority still needs confirmation.",
       "fit": "Operating SF matcha venue already in the directory; one exact location proposed for a small pilot.",
       "menuEvidence": [
         {
-          "item": "Matcha drink — exact eligible SKU to confirm with merchant",
-          "price": "Current counter price to confirm",
-          "source": "https://joe.coffee/locations/ca/san-francisco/junbi-matcha-and-tea-san-francisco-san-francisco-45c9022d-62e4-46d3-8449-edc63a7df87e/"
+          "item": "Matcha Latte",
+          "price": "$7.25 on current merchant ordering menu; counter price to confirm",
+          "priceCents": 725,
+          "source": "https://order.toasttab.com/online/junbi-sanfrancisco/item-matcha-latte_501b5076-1e5a-4601-8fd3-e75f4eb97053",
+          "verifiedAt": "2026-10-14",
+          "orderingItemId": "501b5076-1e5a-4601-8fd3-e75f4eb97053"
         }
       ],
-      "milkEvidence": "Unsweetened soy milk is available.",
+      "milkEvidence": "Matcha Latte defaults to whole milk. Minor Figures oat, organic coconut, Your Good Foods unsweetened soy and Eclipse nondairy whole are each +$0.75 on the current item menu. Toppings require separate recipe confirmation.",
       "proposedTerms": {
         "eligibleDrinks": [
-          "Matcha drink — exact SKU to confirm"
+          "Matcha Latte — standard base drink only, exact POS SKU to confirm"
         ],
         "proposedStart": "2026-10-26",
         "proposedEnd": "2026-12-06",
@@ -408,10 +429,14 @@
           "add-ons",
           "tax",
           "delivery orders",
-          "discount stacking"
+          "discount stacking",
+          "foam and toppings",
+          "extra matcha shots",
+          "ceremonial cold-brew products"
         ],
         "needsMerchantConfirmation": true,
-        "dateFlexibility": "Illustrative 42-day window. Reset after merchant approval and tested service readiness; no automatic activation."
+        "dateFlexibility": "Illustrative 42-day window. Reset after merchant approval and tested service readiness; no automatic activation.",
+        "priceIllustration": "Listed base $7.25 → proposed $6.25 before tax; soy version $8.00 → $7.00. The $1 discount applies to the base drink only; milk surcharge and all other modifiers remain payable. Merchant approval required."
       },
       "publicContact": {
         "channel": "email",
@@ -423,9 +448,10 @@
         "https://matchabarsf.com/",
         "https://order.toasttab.com/online/junbi-sanfrancisco",
         "https://joe.coffee/locations/ca/san-francisco/junbi-matcha-and-tea-san-francisco-san-francisco-45c9022d-62e4-46d3-8449-edc63a7df87e/",
-        "https://sanfranciscomatcha.com/"
+        "https://sanfranciscomatcha.com/",
+        "https://order.toasttab.com/online/junbi-sanfrancisco/item-matcha-latte_501b5076-1e5a-4601-8fd3-e75f4eb97053"
       ],
-      "verifiedAt": "2026-10-13",
+      "verifiedAt": "2026-10-14",
       "outreachDraft": "Subject: A matcha idea for Junbi San Francisco\n\nHi Brian and Amelia!\n\nI made sanfranciscomatcha.com to help people find matcha around the city. Junbi's Market Street shop is already on the map, and I'd love to add a little perk for people who discover you there.\n\nWould you be down to offer $1 off a matcha for people who find you through the site? We could start with six weeks, one per person, capped at 100 uses. You'd cover the $1 discounts—up to $100 total—with no fee to participate.\n\nIf you're interested, we can figure out which drinks and what would be easiest at the counter!\n\nAngela",
       "outreachAuthorization": {
         "approvedAt": "2026-10-14T03:53:33Z",
@@ -444,7 +470,13 @@
         "sentAt": "2026-10-14T03:56:10.000Z",
         "verifiedInSent": true
       },
-      "nextAction": "Await reply. Verify exact location, SKU, price, dates, funding, staff handling and cap before written agreement. No follow-up or live offer is authorized by this initial-send approval."
+      "nextAction": "Await reply; review October 20. Propose the standard Matcha Latte at the Market Street shop only. Confirm counter price, POS SKU, modifier exclusions, signing authority and final dates in writing. No follow-up or activation authorized.",
+      "followUpReview": {
+        "reviewOn": "2026-10-20",
+        "status": "not_due",
+        "sendAuthorized": false
+      },
+      "replyStatus": "no_human_reply_observed"
     },
     {
       "id": "home-coffee-roasters-noriega",
@@ -517,7 +549,13 @@
         "sentAt": "2026-10-14T03:56:21.000Z",
         "verifiedInSent": true
       },
-      "nextAction": "Await reply. Verify exact location, SKU, price, dates, funding, staff handling and cap before written agreement. No follow-up or live offer is authorized by this initial-send approval."
+      "nextAction": "Await reply. Verify exact location, SKU, price, dates, funding, staff handling and cap before written agreement. No follow-up or live offer is authorized by this initial-send approval.",
+      "followUpReview": {
+        "reviewOn": "2026-10-20",
+        "status": "not_due",
+        "sendAuthorized": false
+      },
+      "replyStatus": "no_human_reply_observed"
     },
     {
       "id": "tadaima-mission",
@@ -589,7 +627,13 @@
         "sentAt": "2026-10-14T03:56:25.000Z",
         "verifiedInSent": true
       },
-      "nextAction": "Await reply. Verify exact location, SKU, price, dates, funding, staff handling and cap before written agreement. No follow-up or live offer is authorized by this initial-send approval."
+      "nextAction": "Await reply. Verify exact location, SKU, price, dates, funding, staff handling and cap before written agreement. No follow-up or live offer is authorized by this initial-send approval.",
+      "followUpReview": {
+        "reviewOn": "2026-10-20",
+        "status": "not_due",
+        "sendAuthorized": false
+      },
+      "replyStatus": "no_human_reply_observed"
     },
     {
       "id": "paper-son-fidi",
@@ -661,7 +705,13 @@
         "sentAt": "2026-10-14T03:56:33.000Z",
         "verifiedInSent": true
       },
-      "nextAction": "Await reply. Verify exact location, SKU, price, dates, funding, staff handling and cap before written agreement. No follow-up or live offer is authorized by this initial-send approval."
+      "nextAction": "Await reply. Verify exact location, SKU, price, dates, funding, staff handling and cap before written agreement. No follow-up or live offer is authorized by this initial-send approval.",
+      "followUpReview": {
+        "reviewOn": "2026-10-20",
+        "status": "not_due",
+        "sendAuthorized": false
+      },
+      "replyStatus": "no_human_reply_observed"
     },
     {
       "id": "kiss-of-matcha-clement",
@@ -734,7 +784,13 @@
         "sentAt": "2026-10-14T03:56:36.000Z",
         "verifiedInSent": true
       },
-      "nextAction": "Await reply. Verify exact location, SKU, price, dates, funding, staff handling and cap before written agreement. No follow-up or live offer is authorized by this initial-send approval."
+      "nextAction": "Await reply. Verify exact location, SKU, price, dates, funding, staff handling and cap before written agreement. No follow-up or live offer is authorized by this initial-send approval.",
+      "followUpReview": {
+        "reviewOn": "2026-10-20",
+        "status": "not_due",
+        "sendAuthorized": false
+      },
+      "replyStatus": "no_human_reply_observed"
     },
     {
       "id": "asha-tea-house-sf",
@@ -807,7 +863,13 @@
         "sentAt": "2026-10-14T03:56:41.000Z",
         "verifiedInSent": true
       },
-      "nextAction": "Await reply. Verify exact location, SKU, price, dates, funding, staff handling and cap before written agreement. No follow-up or live offer is authorized by this initial-send approval."
+      "nextAction": "Await reply. Verify exact location, SKU, price, dates, funding, staff handling and cap before written agreement. No follow-up or live offer is authorized by this initial-send approval.",
+      "followUpReview": {
+        "reviewOn": "2026-10-20",
+        "status": "not_due",
+        "sendAuthorized": false
+      },
+      "replyStatus": "no_human_reply_observed"
     },
     {
       "id": "origin-lab-sutter",
@@ -819,21 +881,24 @@
       "independent": true,
       "location": {
         "address": "211 Sutter St",
-        "hours": "daily 6am–8pm"
+        "hours": "Official footer: Mon–Thu 6am–8pm; Fri–Sun 6am–9pm. Homepage hero and ordering site disagree; confirm with merchant before final pilot."
       },
-      "leadership": "Recipient identity based on the linked merchant contact pages; merchant signing authority still needs confirmation.",
+      "leadership": "Official website names founder Ibrahim C.; signing authority still needs confirmation.",
       "fit": "Operating SF matcha venue already in the directory; one exact location proposed for a small pilot.",
       "menuEvidence": [
         {
-          "item": "Matcha drink — exact eligible SKU to confirm with merchant",
-          "price": "Current counter price to confirm",
-          "source": "https://originlabcoffee.com/"
+          "item": "Pure Matcha Lab (no cloud)",
+          "price": "$7.75 on current merchant ordering menu; counter price to confirm",
+          "priceCents": 775,
+          "source": "https://originlabcoffeematcha.toast.site/order/origin-lab-matcha-cafe-211-sutter-st/item-pure-matcha-lab_00bb0bfa-4e26-4560-8498-26002b669b72",
+          "verifiedAt": "2026-10-14",
+          "orderingItemId": "00bb0bfa-4e26-4560-8498-26002b669b72"
         }
       ],
-      "milkEvidence": "Soy milk is available.",
+      "milkEvidence": "Pure Matcha Lab lists whole, reduced 2%, nonfat/skim or no milk; almond, coconut, oat and soy each +$0.75. Official website states cloud foam contains dairy and honey. An alternate milk does not make a cloud drink vegan.",
       "proposedTerms": {
         "eligibleDrinks": [
-          "Matcha drink — exact SKU to confirm"
+          "Pure Matcha Lab — no cloud; exact POS SKU to confirm"
         ],
         "proposedStart": "2026-10-26",
         "proposedEnd": "2026-12-06",
@@ -845,10 +910,14 @@
           "add-ons",
           "tax",
           "delivery orders",
-          "discount stacking"
+          "discount stacking",
+          "cloud foam",
+          "extra matcha or espresso",
+          "ice and milk surcharges"
         ],
         "needsMerchantConfirmation": true,
-        "dateFlexibility": "Illustrative 42-day window. Reset after merchant approval and tested service readiness; no automatic activation."
+        "dateFlexibility": "Illustrative 42-day window. Reset after merchant approval and tested service readiness; no automatic activation.",
+        "priceIllustration": "Current ordering base $7.75 → proposed $6.75 before tax; soy version $8.50 → $7.50. Milk surcharge and other modifiers remain payable. Merchant approval required."
       },
       "publicContact": {
         "channel": "email",
@@ -858,9 +927,10 @@
       "evidence": [
         "https://originlabcoffee.com/",
         "https://originlabcoffee.com/menu/",
-        "https://sanfranciscomatcha.com/"
+        "https://sanfranciscomatcha.com/",
+        "https://originlabcoffeematcha.toast.site/order/origin-lab-matcha-cafe-211-sutter-st/item-pure-matcha-lab_00bb0bfa-4e26-4560-8498-26002b669b72"
       ],
-      "verifiedAt": "2026-10-13",
+      "verifiedAt": "2026-10-14",
       "outreachDraft": "Subject: A matcha idea for Origin Lab\n\nHi Ibrahim!\n\nI made sanfranciscomatcha.com to help people find matcha around the city. Origin Lab is already on the map, including your matcha cloud drinks. I'd love to try a little perk at the Sutter Street shop.\n\nWould you be down to offer $1 off a matcha for people who find you through the site? We could start with six weeks, one per person, capped at 100 uses. You'd cover the $1 discounts—up to $100 total—with no fee to participate.\n\nIf you're interested, we can figure out which drinks and what would be easiest at the counter!\n\nAngela",
       "outreachAuthorization": {
         "approvedAt": "2026-10-14T03:53:33Z",
@@ -879,7 +949,16 @@
         "sentAt": "2026-10-14T03:56:44.000Z",
         "verifiedInSent": true
       },
-      "nextAction": "Await reply. Verify exact location, SKU, price, dates, funding, staff handling and cap before written agreement. No follow-up or live offer is authorized by this initial-send approval."
+      "nextAction": "Await reply; review October 20. Propose Pure Matcha Lab without cloud at 211 Sutter only. Resolve counter price and hours conflicts; confirm POS SKU, modifier exclusions, signing authority and dates. No follow-up or activation authorized.",
+      "followUpReview": {
+        "reviewOn": "2026-10-20",
+        "status": "not_due",
+        "sendAuthorized": false
+      },
+      "replyStatus": "no_human_reply_observed",
+      "researchNotes": [
+        "Older official /menu/ page lists Pure Matcha Lab at $7.20; active ordering item lists $7.75. Use the current ordering quote for preparation and ask the merchant to confirm the counter price. Hours also conflict between first-party surfaces."
+      ]
     },
     {
       "id": "motoring-coffee-sf",
@@ -952,7 +1031,13 @@
         "sentAt": "2026-10-14T03:56:48.000Z",
         "verifiedInSent": true
       },
-      "nextAction": "Await reply. Verify exact location, SKU, price, dates, funding, staff handling and cap before written agreement. No follow-up or live offer is authorized by this initial-send approval."
+      "nextAction": "Await reply. Verify exact location, SKU, price, dates, funding, staff handling and cap before written agreement. No follow-up or live offer is authorized by this initial-send approval.",
+      "followUpReview": {
+        "reviewOn": "2026-10-20",
+        "status": "not_due",
+        "sendAuthorized": false
+      },
+      "replyStatus": "no_human_reply_observed"
     },
     {
       "id": "spro-coffee-lab-embarcadero",
@@ -1027,7 +1112,13 @@
       ],
       "researchNotes": [
         "Public contact read on the merchant website; site address and current-directory location matched. Unrelated employee, reporter, platform-support and sample addresses excluded. No invented visits, tasting judgments, audience statistics or participation claims."
-      ]
+      ],
+      "followUpReview": {
+        "reviewOn": "2026-10-20",
+        "status": "not_due",
+        "sendAuthorized": false
+      },
+      "replyStatus": "no_human_reply_observed"
     },
     {
       "id": "telescope-coffee",
@@ -1103,7 +1194,13 @@
       "researchNotes": [
         "Public contact read on the merchant website; site address and current-directory location matched. Unrelated employee, reporter, platform-support and sample addresses excluded. No invented visits, tasting judgments, audience statistics or participation claims.",
         "The district directory retains the older 451 9th St address. Current official merchant site lists 345 6th St; that primary address is used for this proposal."
-      ]
+      ],
+      "followUpReview": {
+        "reviewOn": "2026-10-20",
+        "status": "not_due",
+        "sendAuthorized": false
+      },
+      "replyStatus": "no_human_reply_observed"
     },
     {
       "id": "pixlcat-coffee",
@@ -1178,7 +1275,13 @@
       ],
       "researchNotes": [
         "Public contact read on the merchant website; site address and current-directory location matched. Unrelated employee, reporter, platform-support and sample addresses excluded. No invented visits, tasting judgments, audience statistics or participation claims."
-      ]
+      ],
+      "followUpReview": {
+        "reviewOn": "2026-10-20",
+        "status": "not_due",
+        "sendAuthorized": false
+      },
+      "replyStatus": "no_human_reply_observed"
     },
     {
       "id": "hardware-coffee-co-west-portal",
@@ -1253,7 +1356,13 @@
       ],
       "researchNotes": [
         "Public contact read on the merchant website; site address and current-directory location matched. Unrelated employee, reporter, platform-support and sample addresses excluded. No invented visits, tasting judgments, audience statistics or participation claims."
-      ]
+      ],
+      "followUpReview": {
+        "reviewOn": "2026-10-20",
+        "status": "not_due",
+        "sendAuthorized": false
+      },
+      "replyStatus": "no_human_reply_observed"
     },
     {
       "id": "stonemill-matcha",
@@ -1328,7 +1437,13 @@
       ],
       "researchNotes": [
         "Public contact read on the merchant website; site address and current-directory location matched. Unrelated employee, reporter, platform-support and sample addresses excluded. No invented visits, tasting judgments, audience statistics or participation claims."
-      ]
+      ],
+      "followUpReview": {
+        "reviewOn": "2026-10-20",
+        "status": "not_due",
+        "sendAuthorized": false
+      },
+      "replyStatus": "no_human_reply_observed"
     },
     {
       "id": "black-bird-bookstore-and-cafe",
@@ -1403,7 +1518,13 @@
       ],
       "researchNotes": [
         "Public contact read on the merchant website; site address and current-directory location matched. Unrelated employee, reporter, platform-support and sample addresses excluded. No invented visits, tasting judgments, audience statistics or participation claims."
-      ]
+      ],
+      "followUpReview": {
+        "reviewOn": "2026-10-20",
+        "status": "not_due",
+        "sendAuthorized": false
+      },
+      "replyStatus": "no_human_reply_observed"
     },
     {
       "id": "third-wheel-coffee",
@@ -1478,7 +1599,13 @@
       ],
       "researchNotes": [
         "Public contact read on the merchant website; site address and current-directory location matched. Unrelated employee, reporter, platform-support and sample addresses excluded. No invented visits, tasting judgments, audience statistics or participation claims."
-      ]
+      ],
+      "followUpReview": {
+        "reviewOn": "2026-10-20",
+        "status": "not_due",
+        "sendAuthorized": false
+      },
+      "replyStatus": "no_human_reply_observed"
     },
     {
       "id": "shoji",
@@ -1554,7 +1681,13 @@
       ],
       "researchNotes": [
         "Public contact read on the merchant website; site address and current-directory location matched. Unrelated employee, reporter, platform-support and sample addresses excluded. No invented visits, tasting judgments, audience statistics or participation claims."
-      ]
+      ],
+      "followUpReview": {
+        "reviewOn": "2026-10-20",
+        "status": "not_due",
+        "sendAuthorized": false
+      },
+      "replyStatus": "no_human_reply_observed"
     },
     {
       "id": "le-mils-coffee",
@@ -1629,7 +1762,13 @@
       ],
       "researchNotes": [
         "Public contact read on the merchant website; site address and current-directory location matched. Unrelated employee, reporter, platform-support and sample addresses excluded. No invented visits, tasting judgments, audience statistics or participation claims."
-      ]
+      ],
+      "followUpReview": {
+        "reviewOn": "2026-10-20",
+        "status": "not_due",
+        "sendAuthorized": false
+      },
+      "replyStatus": "no_human_reply_observed"
     },
     {
       "id": "urban-ritual-fell",
@@ -1704,7 +1843,13 @@
       ],
       "researchNotes": [
         "Public contact read on the merchant website; site address and current-directory location matched. Unrelated employee, reporter, platform-support and sample addresses excluded. No invented visits, tasting judgments, audience statistics or participation claims."
-      ]
+      ],
+      "followUpReview": {
+        "reviewOn": "2026-10-20",
+        "status": "not_due",
+        "sendAuthorized": false
+      },
+      "replyStatus": "no_human_reply_observed"
     },
     {
       "id": "wrecking-ball-potrero-hill",
@@ -1781,10 +1926,11 @@
       "researchNotes": [
         "Public contact read on the merchant website; site address and current-directory location matched. Unrelated employee, reporter, platform-support and sample addresses excluded. No invented visits, tasting judgments, audience statistics or participation claims."
       ],
-      "replyStatus": {
-        "type": "automatic_acknowledgement",
-        "receivedAt": "2026-10-14T05:10:15Z",
-        "humanResponse": false
+      "replyStatus": "automatic_acknowledgement",
+      "followUpReview": {
+        "reviewOn": "2026-10-20",
+        "status": "not_due",
+        "sendAuthorized": false
       }
     },
     {
@@ -1860,7 +2006,13 @@
       ],
       "researchNotes": [
         "Public contact read on the merchant website; site address and current-directory location matched. Unrelated employee, reporter, platform-support and sample addresses excluded. No invented visits, tasting judgments, audience statistics or participation claims."
-      ]
+      ],
+      "followUpReview": {
+        "reviewOn": "2026-10-20",
+        "status": "not_due",
+        "sendAuthorized": false
+      },
+      "replyStatus": "no_human_reply_observed"
     },
     {
       "id": "blue-house-cafe",
@@ -1935,13 +2087,19 @@
       ],
       "researchNotes": [
         "Public contact read on the merchant website; site address and current-directory location matched. Unrelated employee, reporter, platform-support and sample addresses excluded. No invented visits, tasting judgments, audience statistics or participation claims."
-      ]
+      ],
+      "followUpReview": {
+        "reviewOn": "2026-10-20",
+        "status": "not_due",
+        "sendAuthorized": false
+      },
+      "replyStatus": "no_human_reply_observed"
     },
     {
       "id": "oishii-matcha",
       "shopId": "oishii-matcha",
       "merchantName": "Oishii Matcha",
-      "stage": "contacted",
+      "stage": "paused",
       "contactStatus": "sent",
       "priority": 26,
       "independent": true,
@@ -1954,7 +2112,9 @@
       "publicContact": {
         "channel": "email",
         "value": "oishiimatchablend@gmail.com",
-        "source": "https://www.oishiimatcha.com/"
+        "source": "https://www.oishiimatcha.com/",
+        "deliverability": "hard_bounce",
+        "verifiedAt": "2026-10-14"
       },
       "fit": "SF venue already mapped for matcha; one exact location proposed for a small pilot.",
       "menuEvidence": [
@@ -2001,15 +2161,43 @@
         "sentAt": "2026-10-14T05:10:21.000Z",
         "verifiedInSent": true
       },
-      "nextAction": "Await reply. Confirm exact item, price, dates, funding, location, staff handling and cap before agreement. No follow-up or live offer authorized.",
-      "verifiedAt": "2026-10-13",
+      "nextAction": "Repair contact route: website still lists the failed address; official Instagram identity is verified, but no message is authorized. Do not resend to the bounced inbox. Seek new channel-specific approval only after a viable route is established.",
+      "verifiedAt": "2026-10-14",
       "evidence": [
         "https://www.oishiimatcha.com/",
         "https://www.restaurantji.com/ca/san-francisco/oishii-matcha-/",
-        "https://sanfranciscomatcha.com/"
+        "https://sanfranciscomatcha.com/",
+        "https://www.instagram.com/oishii_matcha_sf/"
       ],
       "researchNotes": [
-        "Public contact read on the merchant website; site address and current-directory location matched. Unrelated employee, reporter, platform-support and sample addresses excluded. No invented visits, tasting judgments, audience statistics or participation claims."
+        "Public contact read on the merchant website; site address and current-directory location matched. Unrelated employee, reporter, platform-support and sample addresses excluded. No invented visits, tasting judgments, audience statistics or participation claims.",
+        "October 14: reviewed delivery failure for the October 13 10:10pm PT attempt. Preserve historical Sent receipt; it does not prove delivery. Official website still advertises the failed email and links @oishii_matcha_sf. No alternate valid email found; no resend or DM made."
+      ],
+      "followUpReview": {
+        "reviewOn": null,
+        "status": "blocked_contact_repair",
+        "sendAuthorized": false
+      },
+      "replyStatus": "delivery_failure",
+      "delivery": {
+        "status": "failed",
+        "reason": "address_not_found",
+        "smtpCode": "550 5.1.1",
+        "failedAt": "2026-10-14T05:10:23Z",
+        "verifiedAt": "2026-10-14",
+        "retryAuthorized": false
+      },
+      "alternatePublicContact": {
+        "channel": "instagram",
+        "value": "https://www.instagram.com/oishii_matcha_sf/",
+        "source": "https://www.oishiimatcha.com/",
+        "verifiedAt": "2026-10-14",
+        "contacted": false,
+        "sendAuthorized": false
+      },
+      "qualificationBlockers": [
+        "Website-listed email hard-bounced; no alternate working email verified.",
+        "A retry or another channel needs new explicit approval."
       ]
     },
     {
@@ -2085,7 +2273,13 @@
       ],
       "researchNotes": [
         "Public contact read on the merchant website; site address and current-directory location matched. Unrelated employee, reporter, platform-support and sample addresses excluded. No invented visits, tasting judgments, audience statistics or participation claims."
-      ]
+      ],
+      "followUpReview": {
+        "reviewOn": "2026-10-20",
+        "status": "not_due",
+        "sendAuthorized": false
+      },
+      "replyStatus": "no_human_reply_observed"
     },
     {
       "id": "wanjai-restaurant-and-bar",
@@ -2160,7 +2354,13 @@
       ],
       "researchNotes": [
         "Public contact read on the merchant website; site address and current-directory location matched. Unrelated employee, reporter, platform-support and sample addresses excluded. No invented visits, tasting judgments, audience statistics or participation claims."
-      ]
+      ],
+      "followUpReview": {
+        "reviewOn": "2026-10-20",
+        "status": "not_due",
+        "sendAuthorized": false
+      },
+      "replyStatus": "no_human_reply_observed"
     },
     {
       "id": "four-chairs",
@@ -2235,7 +2435,13 @@
       ],
       "researchNotes": [
         "Public contact read on the merchant website; site address and current-directory location matched. Unrelated employee, reporter, platform-support and sample addresses excluded. No invented visits, tasting judgments, audience statistics or participation claims."
-      ]
+      ],
+      "followUpReview": {
+        "reviewOn": "2026-10-20",
+        "status": "not_due",
+        "sendAuthorized": false
+      },
+      "replyStatus": "no_human_reply_observed"
     },
     {
       "id": "barista-sacramento",
@@ -2310,7 +2516,13 @@
       ],
       "researchNotes": [
         "Public contact read on the merchant website; site address and current-directory location matched. Unrelated employee, reporter, platform-support and sample addresses excluded. No invented visits, tasting judgments, audience statistics or participation claims."
-      ]
+      ],
+      "followUpReview": {
+        "reviewOn": "2026-10-20",
+        "status": "not_due",
+        "sendAuthorized": false
+      },
+      "replyStatus": "no_human_reply_observed"
     },
     {
       "id": "double-black-sf",
@@ -2385,7 +2597,13 @@
       ],
       "researchNotes": [
         "Public contact read on the merchant website; site address and current-directory location matched. Unrelated employee, reporter, platform-support and sample addresses excluded. No invented visits, tasting judgments, audience statistics or participation claims."
-      ]
+      ],
+      "followUpReview": {
+        "reviewOn": "2026-10-20",
+        "status": "not_due",
+        "sendAuthorized": false
+      },
+      "replyStatus": "no_human_reply_observed"
     },
     {
       "id": "red-door-coffee-minna",
@@ -2461,7 +2679,13 @@
       ],
       "researchNotes": [
         "Public contact read on the merchant website; site address and current-directory location matched. Unrelated employee, reporter, platform-support and sample addresses excluded. No invented visits, tasting judgments, audience statistics or participation claims."
-      ]
+      ],
+      "followUpReview": {
+        "reviewOn": "2026-10-20",
+        "status": "not_due",
+        "sendAuthorized": false
+      },
+      "replyStatus": "no_human_reply_observed"
     }
   ],
   "noDuplicates": [
@@ -2731,5 +2955,14 @@
     "Little Sweet",
     "Avotoasty",
     "Haraz Coffee House"
-  ]
+  ],
+  "replyReview": {
+    "checkedAt": "2026-10-14",
+    "initialEmailAttempts": 31,
+    "hardBounces": 1,
+    "attemptsWithoutObservedBounce": 30,
+    "humanReplies": 0,
+    "automaticAcknowledgements": 1,
+    "deliveryNote": "Absence of a bounce does not prove delivery. Sent receipts establish attempts only."
+  }
 }

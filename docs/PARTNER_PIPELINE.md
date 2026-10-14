@@ -1,8 +1,8 @@
 # SF Matcha partner pipeline
 
-Last verified: October 13, 2026. Source: `content/partner-pipeline.json`.
+Last verified: October 14, 2026. Source: `content/partner-pipeline.json`.
 
-This is a research and drafting ledger. Thirty-one initial emails have been sent with explicit approval, including thirty on October 13. No café has agreed to participate, and no offer is active. An offer advances to `confirmed` only after written approval from an authorized merchant representative; publication also requires a working claim/redemption service.
+This is a research and drafting ledger. Thirty-one initial emails were attempted with explicit approval, including thirty on October 13. One hard-bounced; the other thirty have no observed bounce, which does not prove delivery. No human reply is recorded; one response is an automatic acknowledgement. No café has agreed to participate, and no offer is active. An offer advances to `confirmed` only after written approval from an authorized merchant representative; publication also requires a working claim/redemption service.
 
 ## Stage definitions
 
@@ -15,7 +15,7 @@ This is a research and drafting ledger. Thirty-one initial emails have been sent
 | `interested` | Merchant has replied positively without agreeing final terms. |
 | `negotiating` | Drinks, dates, cap, funding, POS process or exclusions are under review. |
 | `confirmed` | Authorized merchant has approved final terms in writing. This still does not prove the offer is live. |
-| `paused` | Work is intentionally on hold or an approved offer is temporarily unavailable. |
+| `paused` | Work is on hold, including failed contact routes. Historical send receipts remain preserved. |
 | `declined` | Merchant declined; do not re-contact without a new reason and approval. |
 
 ## Current qualified pool
@@ -47,7 +47,7 @@ This is a research and drafting ledger. Thirty-one initial emails have been sent
 | Wrecking Ball | Contacted; Sent verified | [help@wreckingballcoffee.com](https://www.wreckingballcoffee.com/pages/wholesale-contact) | Await reply; verify opening before any perk. |
 | Réveille | Contacted; Sent verified | [info@reveillecoffee.com](https://www.cafereveille.com/accessibility-statement) | Await reply; no follow-up or active offer authorized. |
 | Blue House Cafe | Contacted; Sent verified | [bhcafesf@gmail.com](https://bluehousecafesf.com/) | Await reply; no follow-up or active offer authorized. |
-| Oishii Matcha | Contacted; Sent verified | [oishiimatchablend@gmail.com](https://www.oishiimatcha.com/) | Await reply; no follow-up or active offer authorized. |
+| Oishii Matcha | Paused; hard bounce | [Official @oishii_matcha_sf](https://www.instagram.com/oishii_matcha_sf/) | Repair contact route; no resend or DM authorized. |
 | Excelsior Coffee | Contacted; Sent verified | [info@xlcrsf.com](https://www.xlcrsf.com/) | Await reply; no follow-up or active offer authorized. |
 | Wanjai | Contacted; Sent verified | [wanjaicafesf@gmail.com](https://wanjaisf.com/about) | Await reply; no follow-up or active offer authorized. |
 | Four Chairs | Contacted; Sent verified | [info@fourchairssf.com](https://www.fourchairssf.com/) | Await reply; no follow-up or active offer authorized. |
@@ -115,3 +115,12 @@ The complete, personalized drafts and proposed terms are stored in `content/part
 - No reply, confirmed participation or active offer is claimed. Future initial batches and follow-ups require separate approval. SŌHN remains paused in `rules.doNotContact`.
 
 - Reply check: Wrecking Ball returned an automatic receipt acknowledgement; no human response or merchant interest recorded.
+
+## October 14 delivery review and proposal refinements
+
+- **31 initial attempts; one hard bounce; zero human replies.** Broad delivery-failure and recipient checks found Oishii’s website-listed email failed October 13 at 10:10:23pm PT with SMTP 550 5.1.1 (address not found). Wrecking Ball’s earlier acknowledgement is automated. Thirty other attempts have no observed bounce; this is not a delivered-inbox claim. Pool: **30 contacted / 2 paused**, including the standing SŌHN exclusion. No new messages sent.
+- **Oishii:** paused without deleting its historical sent receipt or adding a duplicate lead. The [official website](https://www.oishiimatcha.com/) still lists the failed address and links [@oishii_matcha_sf](https://www.instagram.com/oishii_matcha_sf/). No alternate working email verified; no retry or alternate-channel outreach authorized. Contact repair replaces the ordinary follow-up task.
+- **Junbi, 685 Market St Suite 130:** narrowed the tentative pilot to [Matcha Latte](https://order.toasttab.com/online/junbi-sanfrancisco/item-matcha-latte_501b5076-1e5a-4601-8fd3-e75f4eb97053), currently **$7.25**. Whole milk is standard; oat, organic coconut, unsweetened soy and nondairy whole are **+$0.75**. Proposed base price after discount: **$6.25** before tax, or **$7.00 with soy**, with modifiers still payable. Exclude foam/toppings, extra shots and ceremonial cold-brew products. Local operators Brian and Amelia are identified on [their site](https://matchabarsf.com/); signing authority and counter price still require confirmation.
+- **Origin Lab, 211 Sutter St:** narrowed the tentative pilot to [Pure Matcha Lab without cloud](https://originlabcoffeematcha.toast.site/order/origin-lab-matcha-cafe-211-sutter-st/item-pure-matcha-lab_00bb0bfa-4e26-4560-8498-26002b669b72), currently **$7.75**. Soy/oat/almond/coconut each **+$0.75**. Proposed base price after discount: **$6.75**, or **$7.50 with soy**, before tax. Exclude cloud foam and all surcharges/add-ons; the [official site](https://originlabcoffee.com/) says cloud foam contains dairy and honey. Older /menu/ price ($7.20) and conflicting first-party hours are flagged for merchant confirmation. Founder Ibrahim C. is named publicly; signing authority is unconfirmed.
+- All figures above were checked **October 14, 2026**. They are proposal illustrations, not active discounts or merchant agreements. Existing sent drafts are unchanged. Proposed 42-day dates remain illustrative, with one use per customer, 100-redemption cap and maximum $100 merchant-funded discount cost.
+- **Next review dates:** Constance October 19; other non-bounced initial emails October 20. No follow-up is due today and no follow-up send is authorized. The 32-prospect pool does not need new leads this run. Next work is reply monitoring, Oishii contact repair and resolving item/POS details when a merchant responds.
