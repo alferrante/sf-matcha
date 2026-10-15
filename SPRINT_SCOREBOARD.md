@@ -12,7 +12,7 @@ Repository baseline for October 8: `4e908193bca7135f5cf8163bd3a5b25ab05cd749` (v
 | Monthly visits | Unknown; Cloudflare beacon exists, export not accessed | 50,000 |
 | Active email subscribers | 0 active real subscribers, audience queried October 15; signup live; two opted-out synthetic tests excluded | 10,000 |
 | Social followers | Unknown; project accounts not verified | 25,000 |
-| Guides | 15 articles / 49 sourced entries prepared October 15; publication verification recorded below | 24 |
+| Guides | 15 published articles / 49 sourced entries; live verified October 15 | 24 |
 | Derivative assets | 44 complete drafts across eleven topics; eleven carousel drafts rendered as 11 finished sets / 56 PNG slides; 0 posted. Count each carousel once, not each slide | 120 |
 | Live confirmed offers | 0 offer records in baseline repository | 20 |
 | Redemptions | Unknown; no verified tracking system | 2,000 |
@@ -265,6 +265,7 @@ Validation: clean `npm ci --include=dev`, source build, **72 passing tests**, cu
 - **Delivery status changed:** Four Chairs' initial authorized attempt has a temporary SMTP 4.4.1 connection delay. Provider retries through **October 16 at 10:10pm PT**; no duplicate or alternate-channel message sent. Counts: **31 initial attempts / 1 hard bounce / 1 delay / 29 without delivery notice / 0 human replies / 1 automatic acknowledgement**. No-notice does not prove delivery. The same 32 prospects and all exact recipient/draft/authorization/send records are preserved; SŌHN remains excluded and Oishii paused. Follow-up approvals are still separate. See `docs/PARTNER_PIPELINE.md`.
 - **Metrics checked October 15:** dedicated audience remains **0 active real subscribers**; both synthetic tests opted out. Sender still failed (DKIM and SPF failed, CNAME not started); no DNS changes. Visits, followers and votes remain unmeasured. Live offers stay **0**, and the inactive ledger/report fixtures are not real redemptions or audience growth.
 - **Validation:** `npm ci --include=dev`, source build, **97 passing tests**, customer-copy audit **96 venues / 288 fields**, PNG dimensions/hash checks, original-data/source/date preservation and whitespace checks passed. Source, stable bundles, new hashed app/data and synchronized index are committed together; older published hashes retained. Canonical live verification follows publication; browser layout QA is unavailable here.
+- **Published and live verified:** release `85e376e06c2144c54690a9d9f70fad1d802f07d0` is on main with an expected-head lease and no force; the complete remote tree equals the tested local tree. All **33 canonical HTTP 200 / byte checks passed**: 21 public HTML pages, five currently referenced browser assets, sitemap, offers/manifest and four new carousel PNGs. The hub has **15 cards**; executing the live `data.878d644a80d2.js` confirms **96 venues** and the corrected Ceré SF link. Homepage references synchronized `app.567d2cd3d0c8.js` and that data hash; all earlier browser hashes are retained. New gallery/manifest and four slides match committed bytes. Browser layout/interaction QA was unavailable; automated functional tests and full-resolution carousel visual checks passed. Private report routes remain undeployed/default-off, public offers empty, and no messages/posts sent.
 
 ### Next unblocked work
 
