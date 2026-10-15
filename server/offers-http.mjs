@@ -1,5 +1,6 @@
 import { createServer } from 'node:http';
 import { OfferError } from './offers-store.mjs';
+import { reconciliationCSV } from './offer-report.mjs';
 
 function send(res, status, body) {
   res.writeHead(status, { 'Content-Type': 'application/json; charset=utf-8',
@@ -22,11 +23,28 @@ async function bodyJSON(req) {
 }
 
 /** No CLI auto-start, CORS enablement, cookie auth, identity implementation or live offers. */
-export function createOfferHandler({ enabled = false, store, verifyCustomer } = {}) {
+export function createOfferHandler({ enabled = false, reportingEnabled = false, store, verifyCustomer } = {}) {
   return async (req, res) => {
     try {
       const url = new URL(req.url, 'http://localhost');
-      if (url.pathname === '/health' && req.method === 'GET') return send(res, 200, { ok: true, offersConfigured: enabled === true && store?.enabled === true && typeof verifyCustomer === 'function' });
+      if (url.pathname === '/health' && req.method === 'GET') return send(res, 200, { ok: true,
+        offersConfigured: enabled === true && store?.enabled === true && typeof verifyCustomer === 'function',
+        reportsConfigured: enabled === true && store?.enabled === true && reportingEnabled === true && store?.reportingEnabled === true });
+      const reportRoute = /^\/api\/merchant\/offers\/reconciliation(\.csv)?$/.exec(url.pathname);
+      if (reportRoute) {
+        if (enabled !== true || reportingEnabled !== true || store?.enabled !== true || store?.reportingEnabled !== true) return send(res, 503, { error: 'reports_disabled' });
+        if (req.method !== 'POST') return send(res, 405, { error: 'post_required' });
+        if (url.search) return send(res, 400, { error: 'invalid_request' });
+        if (!/^application\/json(?:\s*;|$)/i.test(String(req.headers['content-type'] || ''))) return send(res, 415, { error: 'json_required' });
+        const body = await bodyJSON(req);
+        if (Object.keys(body).length !== 1 || !Object.hasOwn(body, 'merchantId') || typeof body.merchantId !== 'string') throw new OfferError(400, 'invalid_request');
+        const report = store.reconcile({ merchantId: body.merchantId, credential: req.headers['x-merchant-key'] });
+        if (!reportRoute[1]) return send(res, 200, report);
+        const csv = reconciliationCSV(report);
+        res.writeHead(200, { 'Content-Type': 'text/csv; charset=utf-8', 'Cache-Control': 'no-store',
+          'X-Content-Type-Options': 'nosniff', 'Content-Disposition': 'attachment; filename="sf-matcha-reconciliation.csv"' });
+        return res.end(csv);
+      }
       const route = /^\/api\/offers\/([a-z0-9][a-z0-9-]{0,79})\/(claim|redeem)$/.exec(url.pathname);
       if (!route) return send(res, 404, { error: 'not_found' });
       if (enabled !== true || store?.enabled !== true || typeof verifyCustomer !== 'function') return send(res, 503, { error: 'offers_disabled' });

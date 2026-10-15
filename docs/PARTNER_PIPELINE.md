@@ -1,8 +1,8 @@
 # SF Matcha partner pipeline
 
-Last verified: October 14, 2026. Source: `content/partner-pipeline.json`.
+Last verified: October 15, 2026. Source: `content/partner-pipeline.json`.
 
-This is a research and drafting ledger. Thirty-one initial emails were attempted with explicit approval, including thirty on October 13. One hard-bounced; the other thirty have no observed bounce, which does not prove delivery. No human reply is recorded; one response is an automatic acknowledgement. No café has agreed to participate, and no offer is active. An offer advances to `confirmed` only after written approval from an authorized merchant representative; publication also requires a working claim/redemption service.
+This is a research and drafting ledger. Thirty-one initial emails were attempted with explicit approval, including thirty on October 13. One hard-bounced; one has a temporary delivery delay; 29 have no delivery notice, which does not prove delivery. No human reply is recorded; one response is an automatic acknowledgement. No café has agreed to participate, and no offer is active. An offer advances to `confirmed` only after written approval from an authorized merchant representative; publication also requires a working claim/redemption service.
 
 ## Stage definitions
 
@@ -50,7 +50,7 @@ This is a research and drafting ledger. Thirty-one initial emails were attempted
 | Oishii Matcha | Paused; hard bounce | [Official @oishii_matcha_sf](https://www.instagram.com/oishii_matcha_sf/) | Repair contact route; no resend or DM authorized. |
 | Excelsior Coffee | Contacted; Sent verified | [info@xlcrsf.com](https://www.xlcrsf.com/) | Await reply; no follow-up or active offer authorized. |
 | Wanjai | Contacted; Sent verified | [wanjaicafesf@gmail.com](https://wanjaisf.com/about) | Await reply; no follow-up or active offer authorized. |
-| Four Chairs | Contacted; Sent verified | [info@fourchairssf.com](https://www.fourchairssf.com/) | Await reply; no follow-up or active offer authorized. |
+| Four Chairs | Contacted; delivery delayed | [info@fourchairssf.com](https://www.fourchairssf.com/) | Await provider retry through October 16, 10:10pm PT; no duplicate send. |
 | Barista Coffee & Brunch | Contacted; Sent verified | [baristapresidio@gmail.com](https://baristasf.com/) | Await reply; no follow-up or active offer authorized. |
 | Double Black | Contacted; Sent verified | [hey@yardsale.day](https://yardsale.day/pages/double-black) | Await reply; no follow-up or active offer authorized. |
 | Red Door Coffee | Contacted; Sent verified | [michelle@111minnagallery.com](https://111minnagallery.com/red-door-coffee/) | Await reply; no follow-up or active offer authorized. |
@@ -124,3 +124,9 @@ The complete, personalized drafts and proposed terms are stored in `content/part
 - **Origin Lab, 211 Sutter St:** narrowed the tentative pilot to [Pure Matcha Lab without cloud](https://originlabcoffeematcha.toast.site/order/origin-lab-matcha-cafe-211-sutter-st/item-pure-matcha-lab_00bb0bfa-4e26-4560-8498-26002b669b72), currently **$7.75**. Soy/oat/almond/coconut each **+$0.75**. Proposed base price after discount: **$6.75**, or **$7.50 with soy**, before tax. Exclude cloud foam and all surcharges/add-ons; the [official site](https://originlabcoffee.com/) says cloud foam contains dairy and honey. Older /menu/ price ($7.20) and conflicting first-party hours are flagged for merchant confirmation. Founder Ibrahim C. is named publicly; signing authority is unconfirmed.
 - All figures above were checked **October 14, 2026**. They are proposal illustrations, not active discounts or merchant agreements. Existing sent drafts are unchanged. Proposed 42-day dates remain illustrative, with one use per customer, 100-redemption cap and maximum $100 merchant-funded discount cost.
 - **Next review dates:** Constance October 19; other non-bounced initial emails October 20. No follow-up is due today and no follow-up send is authorized. The 32-prospect pool does not need new leads this run. Next work is reply monitoring, Oishii contact repair and resolving item/POS details when a merchant responds.
+
+## October 15 delivery review
+
+- **Four Chairs:** a temporary recipient-server connection error produced a delivery-delay notice October 14 at 10:36pm PT (SMTP 4.4.1). The provider's structured retry deadline is **October 16, 10:10pm PT**. The original authorized attempt remains in the ledger; no new message, alternate-channel contact or follow-up was sent. Await the provider's final outcome before contact repair. This is not a permanent bounce or merchant rejection.
+- Updated counters: **31 initial attempts / 1 hard bounce / 1 temporary delivery delay / 29 with no delivery notice / 0 human replies / 1 automatic acknowledgement**. No-notice is not proof of inbox delivery. The legacy `attemptsWithoutObservedBounce` count remains 30 because it excludes permanent failures only; the new no-notice count excludes both delivery issues.
+- Stage counts remain **30 contacted / 2 paused**; SŌHN stays excluded and Oishii stays paused for its failed address. Exact recipients, sent wording and original authorization/receipt records are unchanged. No café is confirmed and no offer is active. Private message identifiers, headers and correspondence are not copied into this report.

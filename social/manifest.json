@@ -1,15 +1,15 @@
 {
   "generatedFrom": "content/social-launch.json",
-  "sourceUpdatedAt": "2026-10-14",
+  "sourceUpdatedAt": "2026-10-15",
   "status": "ready-to-export; not posted",
-  "carouselSetCount": 10,
-  "individualSlideCount": 52,
+  "carouselSetCount": 11,
+  "individualSlideCount": 56,
   "format": "PNG",
   "dimensions": {
     "width": 1080,
     "height": 1080
   },
-  "totalBytes": 3376388,
+  "totalBytes": 3640583,
   "qa": {
     "allSlidesVerifiedAsPng": true,
     "allSlides1080Square": true,
@@ -840,6 +840,77 @@
             "toast.app",
             "tadaimasf.com",
             "postmates.com"
+          ]
+        }
+      ]
+    },
+    {
+      "guideSlug": "black-sesame-matcha-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/black-sesame-matcha-san-francisco/",
+      "verifiedAt": "2026-10-15",
+      "sourceUrls": [
+        "https://best-boy-electric.square.site/",
+        "https://linktr.ee/bestboysf",
+        "https://postmates.com/store/binge-coffee-house-valencia/21Sjn46UVgWQG8Ib9fijLA",
+        "https://www.bingecoffeehouse.com/menu"
+      ],
+      "slideCount": 4,
+      "slides": [
+        {
+          "file": "social/black-sesame-matcha-san-francisco/slide-01.png",
+          "slide": 1,
+          "headline": "Black sesame matcha in SF",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 61933,
+          "sha256": "06796eba85789df23222e3f329bb901eaa060fabbe7aefb484a8d110ed134a30",
+          "sourceDomains": [
+            "best-boy-electric.square.site",
+            "linktr.ee",
+            "postmates.com",
+            "bingecoffeehouse.com"
+          ]
+        },
+        {
+          "file": "social/black-sesame-matcha-san-francisco/slide-02.png",
+          "slide": 2,
+          "headline": "Best Boy Electric · Japantown",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 73388,
+          "sha256": "78f91982fd65e352d8884f887f77235ebd2e167763bf095d4feab619f9ab92b8",
+          "sourceDomains": [
+            "best-boy-electric.square.site",
+            "linktr.ee",
+            "postmates.com",
+            "bingecoffeehouse.com"
+          ]
+        },
+        {
+          "file": "social/black-sesame-matcha-san-francisco/slide-03.png",
+          "slide": 3,
+          "headline": "Binge · Valencia",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 65310,
+          "sha256": "e93f167b99be5bb949c8f3aa0935e549c44bd3aa3ac991a0b0b963736f7bd231",
+          "sourceDomains": [
+            "bingecoffeehouse.com"
+          ]
+        },
+        {
+          "file": "social/black-sesame-matcha-san-francisco/slide-04.png",
+          "slide": 4,
+          "headline": "Check the topping, too",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 63564,
+          "sha256": "880ae58135459d3414fae2b9dc7635871e22966275482a50f2db120a896d090c",
+          "sourceDomains": [
+            "best-boy-electric.square.site",
+            "linktr.ee",
+            "postmates.com",
+            "bingecoffeehouse.com"
           ]
         }
       ]

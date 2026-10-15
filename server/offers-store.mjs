@@ -1,6 +1,7 @@
 import { DatabaseSync } from 'node:sqlite';
 import { isAbsolute } from 'node:path';
 import { createHash, createHmac, randomBytes, timingSafeEqual, createCipheriv, createDecipheriv } from 'node:crypto';
+import { MAX_REPORT_OFFERS } from './offer-report.mjs';
 
 export class OfferError extends Error {
   constructor(status, code) { super(code); this.status = status; this.code = code; }
@@ -18,10 +19,11 @@ const validStamp = value => {
 };
 
 /** Trusted server-only core. No browser-provided email is accepted as identity. */
-export function createOfferStore({ enabled = false, databasePath, encryptionKey, identityKey,
+export function createOfferStore({ enabled = false, reportingEnabled = false, databasePath, encryptionKey, identityKey,
   merchantCredentialHashes = {}, approvedOffers = [], now = Date.now } = {}) {
   if (enabled !== true) return {
     claim() { fail(503, 'offers_disabled'); }, redeem() { fail(503, 'offers_disabled'); },
+    reconcile() { fail(503, 'reports_disabled'); }, reportingEnabled: false,
     pause() { fail(503, 'offers_disabled'); }, close() {}, enabled: false,
   };
   if (typeof databasePath !== 'string' || !isAbsolute(databasePath) || databasePath.includes(':memory:')) throw new Error('A persistent absolute SQLite file path is required');
@@ -112,6 +114,35 @@ export function createOfferStore({ enabled = false, databasePath, encryptionKey,
   }
   return {
     enabled: true,
+    reportingEnabled: reportingEnabled === true,
+    reconcile({ merchantId, credential }) {
+      if (reportingEnabled !== true) fail(503, 'reports_disabled');
+      // Authenticate before any ledger lookup; unknown credentials/locations share one error.
+      authenticateMerchant(merchantId, credential);
+      db.exec('BEGIN');
+      try {
+        const rows = statement(`SELECT o.id, o.starts, o.expires, o.paused, o.cap,
+          COUNT(c.id) AS reserved, COUNT(c.redeemed) AS redeemed
+          FROM offers o LEFT JOIN claims c ON c.offer_id = o.id AND c.merchant_id = o.merchant_id
+          WHERE o.merchant_id = ? GROUP BY o.id ORDER BY o.starts, o.id LIMIT ?`).all(merchantId, MAX_REPORT_OFFERS + 1);
+        // No silent truncation, pagination race or partial totals/CSV downloads.
+        if (rows.length > MAX_REPORT_OFFERS) fail(409, 'report_limit_exceeded');
+        const offers = rows.map(row => ({ offerId: row.id,
+          startsAt: new Date(row.starts).toISOString(), expiresAt: new Date(row.expires).toISOString(),
+          paused: row.paused === 1, redemptionCap: row.cap, reservedClaims: row.reserved,
+          unredeemedClaims: row.reserved - row.redeemed, successfulRedemptions: row.redeemed,
+          discountCents: 100, discountTotalCents: row.redeemed * 100, currency: 'USD' }));
+        const totals = offers.reduce((sum, row) => ({ reservedClaims: sum.reservedClaims + row.reservedClaims,
+          unredeemedClaims: sum.unredeemedClaims + row.unredeemedClaims,
+          successfulRedemptions: sum.successfulRedemptions + row.successfulRedemptions,
+          discountTotalCents: sum.discountTotalCents + row.discountTotalCents }),
+        { reservedClaims: 0, unredeemedClaims: 0, successfulRedemptions: 0, discountTotalCents: 0 });
+        const report = { merchantId, generatedAt: new Date(now()).toISOString(), currency: 'USD',
+          discountCents: 100, complete: true, offerCount: offers.length, totals, offers };
+        db.exec('COMMIT');
+        return report;
+      } catch (error) { db.exec('ROLLBACK'); throw error; }
+    },
     claim({ offerId, identity, idempotencyKey }) {
       if (!identifier(offerId) || !keyOK(idempotencyKey)) fail(400, 'invalid_request');
       if (identity?.verified !== true || typeof identity.subject !== 'string' || !identity.subject.trim()

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-14",
+  "updatedAt": "2026-10-15",
   "stages": [
     "candidate",
     "researched",
@@ -2426,7 +2426,7 @@
         "sentAt": "2026-10-14T05:10:38.000Z",
         "verifiedInSent": true
       },
-      "nextAction": "Await reply. Confirm exact item, price, dates, funding, location, staff handling and cap before agreement. No follow-up or live offer authorized.",
+      "nextAction": "Await the provider retry outcome through October 16 at 10:10pm PT; inspect any final notice before contact repair. Do not send a duplicate, change channel or treat this delay as merchant rejection or verified delivery. Follow-ups remain unauthorized.",
       "verifiedAt": "2026-10-13",
       "evidence": [
         "https://www.fourchairssf.com/",
@@ -2438,10 +2438,19 @@
       ],
       "followUpReview": {
         "reviewOn": "2026-10-20",
-        "status": "not_due",
+        "status": "blocked_provider_retry",
         "sendAuthorized": false
       },
-      "replyStatus": "no_human_reply_observed"
+      "replyStatus": "delivery_delay",
+      "delivery": {
+        "status": "delayed",
+        "reason": "recipient_server_connection_failed",
+        "smtpCode": "4.4.1",
+        "noticeAt": "2026-10-15T05:36:56Z",
+        "providerRetryUntil": "2026-10-17T05:10:38Z",
+        "verifiedAt": "2026-10-15",
+        "retryAuthorized": false
+      }
     },
     {
       "id": "barista-sacramento",
@@ -2957,12 +2966,14 @@
     "Haraz Coffee House"
   ],
   "replyReview": {
-    "checkedAt": "2026-10-14",
+    "checkedAt": "2026-10-15",
     "initialEmailAttempts": 31,
     "hardBounces": 1,
     "attemptsWithoutObservedBounce": 30,
     "humanReplies": 0,
     "automaticAcknowledgements": 1,
-    "deliveryNote": "Absence of a bounce does not prove delivery. Sent receipts establish attempts only."
+    "deliveryNote": "Thirty-one attempts: one permanent failure, one temporary delivery delay, and 29 with no delivery notice. The legacy attemptsWithoutObservedBounce counter excludes permanent failures only; absence of a notice does not prove delivery. Sent receipts establish attempts only.",
+    "temporaryDelays": 1,
+    "attemptsWithoutDeliveryNotice": 29
   }
 }

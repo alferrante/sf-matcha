@@ -98,3 +98,21 @@ test('failed delivery preserves history and blocks retry or ordinary follow-up',
   assert.equal(pipeline.replyReview.hardBounces, failed.length);
   assert.equal(pipeline.replyReview.attemptsWithoutObservedBounce, pipeline.replyReview.initialEmailAttempts - failed.length);
 });
+
+test('temporary delivery delays preserve attempts without implying delivery or merchant rejection', () => {
+  const delayed = pipeline.prospects.filter(p => p.delivery?.status === 'delayed');
+  assert.equal(delayed.length, pipeline.replyReview.temporaryDelays);
+  for (const prospect of delayed) {
+    assert.equal(prospect.stage, 'contacted');
+    assert.equal(prospect.contactStatus, 'sent');
+    assert.equal(prospect.outreach.verifiedInSent, true);
+    assert.equal(prospect.replyStatus, 'delivery_delay');
+    assert.ok(Date.parse(prospect.delivery.noticeAt) >= Date.parse(prospect.outreach.sentAt));
+    assert.ok(Date.parse(prospect.delivery.providerRetryUntil) > Date.parse(prospect.delivery.noticeAt));
+    assert.equal(prospect.delivery.retryAuthorized, false);
+    assert.equal(prospect.followUpReview.status, 'blocked_provider_retry');
+    assert.equal(prospect.followUpReview.sendAuthorized, false);
+  }
+  assert.equal(pipeline.replyReview.attemptsWithoutDeliveryNotice,
+    pipeline.replyReview.initialEmailAttempts - pipeline.replyReview.hardBounces - delayed.length);
+});

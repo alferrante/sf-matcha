@@ -1,6 +1,6 @@
 # SF Matcha sprint scoreboard
 
-Last updated: October 14, 2026. Goal: `GOAL.md`.
+Last updated: October 15, 2026. Goal: `GOAL.md`.
 
 ## Verified baseline
 
@@ -10,10 +10,10 @@ Repository baseline for October 8: `4e908193bca7135f5cf8163bd3a5b25ab05cd749` (v
 | --- | --- | ---: |
 | Directory venues | 96 current-main source/built venues; audit passes 288 fields | Accuracy and freshness |
 | Monthly visits | Unknown; Cloudflare beacon exists, export not accessed | 50,000 |
-| Active email subscribers | 0 active real subscribers, audience queried October 14; signup live; two opted-out synthetic tests excluded | 10,000 |
+| Active email subscribers | 0 active real subscribers, audience queried October 15; signup live; two opted-out synthetic tests excluded | 10,000 |
 | Social followers | Unknown; project accounts not verified | 25,000 |
-| Guides | 14 published articles / 47 sourced entries; live verified October 14 | 24 |
-| Derivative assets | 40 complete drafts across ten topics; ten carousel drafts rendered as 10 finished sets / 52 PNG slides; 0 posted. Count each carousel once, not each slide | 120 |
+| Guides | 15 articles / 49 sourced entries prepared October 15; publication verification recorded below | 24 |
+| Derivative assets | 44 complete drafts across eleven topics; eleven carousel drafts rendered as 11 finished sets / 56 PNG slides; 0 posted. Count each carousel once, not each slide | 120 |
 | Live confirmed offers | 0 offer records in baseline repository | 20 |
 | Redemptions | Unknown; no verified tracking system | 2,000 |
 | Awards votes | Unknown; no verified voting system | 1,000 |
@@ -251,6 +251,23 @@ Validation: clean `npm ci --include=dev`, source build, **72 passing tests**, cu
 
 ### Next unblocked work
 
-1. Implement the inactive customer/staff offer screens and reconciliation export against the tested service contract; no claims issued until identity, storage and merchant approval are verified.
+1. Implement the inactive customer/staff offer screens against the tested service contract; the October 15 reconciliation export is implemented but not deployed. No claims issued until identity, storage and merchant approval are verified.
 2. Continue distinct sourced guides and derivative production toward 24 / 120; review reply and menu updates without unauthorized follow-ups.
 3. Distribution and measured growth require identified project social access, the documented sender DNS records/verified unsubscribe, and an analytics export. No audience-growth claim should replace those missing measurements.
+
+## October 15 growth release
+
+- Started from verified current main `a0dcdc3de3dde6d906c94c64f5e59ded32dc2787` in a clean isolated checkout. Live map, hub, pistachio article, perks, methodology, social gallery/manifest and empty offers feed matched repository bytes; capture health reports configured. Read the current goal/README, latest venue/editorial/partner reports and Buzzy evidence. No badge review is due today; existing reason/source/expiry records are preserved.
+- **New guide:** `https://sanfranciscomatcha.com/guides/black-sesame-matcha-san-francisco/`, Best Boy Electric and Binge Valencia. Exact menu names, prices, hours, address sources and unresolved milk/foam details checked October 15; Binge's price is explicitly a marketplace quote. No tasting ranking or inferred stock/allergen assurance. Three related links on the new article and relevant incoming links retain the compact format. Guides **14 → 15**, sourced entries **47 → 49**, related links **42 → 45**, analytics-covered HTML surfaces **20 → 21**. All original guide entries and menu-check dates remain unchanged.
+- **Factual link repair:** replaced only Ceré Tea's broken directory source URL with the current SF menu at 1186 Valencia St. The old full item URL fails and the shortened store ID identifies Saratoga. All other fields in all 96 venue records are unchanged; this is not a new whole-venue menu/soy/hours verification. Source, stable data, new hashed data and index are built together.
+- **Distribution:** four new source-linked draft formats; four-slide black-sesame carousel rendered and visually checked at full resolution. Drafts **40 → 44**, finished carousel sets **10 → 11**, PNG slides **52 → 56**. Original 52 PNGs/manifest receipts remain unchanged. No social posts, newsletter sends, fabricated footage, tasting awards or participating-café claims.
+- **Merchant reconciliation implemented, still inactive:** location-authenticated JSON summary and CSV export in the unmounted offer backend. Read-only snapshots distinguish reservations from successful redemptions, count idempotent retries once and calculate exact integer-cent totals. Reports include historical paused/expired pilots without reactivation, exclude identities/claim IDs/tokens/hashes/private agreement data, and reject whole exports above 100 pilots rather than silently truncating. Default-off reporting flags, credential scope, safe CSV/download headers and unchanged cap/deduplication behavior pass tests and independent review. Ten new report tests plus twelve existing service tests pass. No infrastructure, merchant credential, claim, redemption or public offer was created. Production identity/storage/ingress/screens and written merchant confirmation remain prerequisites.
+- **Delivery status changed:** Four Chairs' initial authorized attempt has a temporary SMTP 4.4.1 connection delay. Provider retries through **October 16 at 10:10pm PT**; no duplicate or alternate-channel message sent. Counts: **31 initial attempts / 1 hard bounce / 1 delay / 29 without delivery notice / 0 human replies / 1 automatic acknowledgement**. No-notice does not prove delivery. The same 32 prospects and all exact recipient/draft/authorization/send records are preserved; SŌHN remains excluded and Oishii paused. Follow-up approvals are still separate. See `docs/PARTNER_PIPELINE.md`.
+- **Metrics checked October 15:** dedicated audience remains **0 active real subscribers**; both synthetic tests opted out. Sender still failed (DKIM and SPF failed, CNAME not started); no DNS changes. Visits, followers and votes remain unmeasured. Live offers stay **0**, and the inactive ledger/report fixtures are not real redemptions or audience growth.
+- **Validation:** `npm ci --include=dev`, source build, **97 passing tests**, customer-copy audit **96 venues / 288 fields**, PNG dimensions/hash checks, original-data/source/date preservation and whitespace checks passed. Source, stable bundles, new hashed app/data and synchronized index are committed together; older published hashes retained. Canonical live verification follows publication; browser layout QA is unavailable here.
+
+### Next unblocked work
+
+1. Build the inactive customer/staff offer interfaces and staging integration; keep identity/storage, merchant agreement and no-activation gates explicit.
+2. Continue verified editorial production toward 24 guides / 120 derivative formats; retain honest menu dates and uncertainty.
+3. Monitor Four Chairs' provider retry outcome, other replies and Oishii contact repair without duplicate or unauthorized sends. Distribution/measurement still needs the previously documented social access, sender DNS/unsubscribe setup and analytics export.

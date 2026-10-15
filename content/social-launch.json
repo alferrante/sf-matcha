@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-14",
+  "updatedAt": "2026-10-15",
   "status": "draft",
-  "assetCount": 40,
+  "assetCount": 44,
   "assets": [
     {
       "guideSlug": "banana-matcha-san-francisco",
@@ -1019,6 +1019,93 @@
       "voiceover": "Looking for pistachio matcha in San Francisco? Here are two Mission stops. Tadaima on Twentieth Street has an iced matcha latte with pistachio cream for seven seventy-five. Binge on Valencia lists a Pistachio Matcha Latte. Check its linked menu for the current online price. If you avoid dairy, ask about the toppings too—neither drink is confirmed dairy-free. Save the guide for both addresses and menus.",
       "overlayDirection": "Use text cards and the linked menu names. Show the Tadaima price before tax/extras; do not imply Binge online prices equal counter prices. No fabricated café footage.",
       "endCard": "Pistachio matcha in SF · Checked Oct 14, 2026 · https://sanfranciscomatcha.com/guides/pistachio-matcha-san-francisco/"
+    },
+    {
+      "guideSlug": "black-sesame-matcha-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/black-sesame-matcha-san-francisco/",
+      "status": "draft",
+      "verifiedAt": "2026-10-15",
+      "sources": [
+        "https://best-boy-electric.square.site/",
+        "https://linktr.ee/bestboysf",
+        "https://postmates.com/store/binge-coffee-house-valencia/21Sjn46UVgWQG8Ib9fijLA",
+        "https://www.bingecoffeehouse.com/menu"
+      ],
+      "id": "black-sesame-matcha-san-francisco--carousel",
+      "type": "carousel",
+      "platform": "Instagram",
+      "slides": [
+        {
+          "number": 1,
+          "headline": "Black sesame matcha in SF",
+          "body": "Two stops to save: Best Boy Electric and Binge."
+        },
+        {
+          "number": 2,
+          "headline": "Best Boy Electric · Japantown",
+          "body": "Black Sesame Matcha Latte: $7.50.\n1746 Post St. Check availability before visiting."
+        },
+        {
+          "number": 3,
+          "headline": "Binge · Valencia",
+          "body": "Black Sesame Matcha: $8.62 on Postmates.\n530 Valencia St. Online prices vary."
+        },
+        {
+          "number": 4,
+          "headline": "Check the topping, too",
+          "body": "Neither drink is confirmed dairy-free. Save the guide for menus and hours."
+        }
+      ],
+      "designDirection": "Use text cards with exact drink names and addresses. No invented café photos, tasting claims or partnership badges.",
+      "callToAction": "Save both menus: https://sanfranciscomatcha.com/guides/black-sesame-matcha-san-francisco/"
+    },
+    {
+      "guideSlug": "black-sesame-matcha-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/black-sesame-matcha-san-francisco/",
+      "status": "draft",
+      "verifiedAt": "2026-10-15",
+      "sources": [
+        "https://best-boy-electric.square.site/",
+        "https://postmates.com/store/binge-coffee-house-valencia/21Sjn46UVgWQG8Ib9fijLA",
+        "https://www.bingecoffeehouse.com/menu"
+      ],
+      "id": "black-sesame-matcha-san-francisco--instagram-caption",
+      "type": "instagram-caption",
+      "platform": "Instagram",
+      "text": "Black sesame matcha in SF 🍵\n\nBest Boy Electric: Black Sesame Matcha Latte, $7.50.\nBinge on Valencia: Black Sesame Matcha, $8.62 on Postmates; online prices vary.\n\nNeither drink is confirmed dairy-free. Check availability before heading over.\n\nMenus and hours: https://sanfranciscomatcha.com/guides/black-sesame-matcha-san-francisco/\nChecked October 15, 2026."
+    },
+    {
+      "guideSlug": "black-sesame-matcha-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/black-sesame-matcha-san-francisco/",
+      "status": "draft",
+      "verifiedAt": "2026-10-15",
+      "sources": [
+        "https://best-boy-electric.square.site/",
+        "https://postmates.com/store/binge-coffee-house-valencia/21Sjn46UVgWQG8Ib9fijLA"
+      ],
+      "id": "black-sesame-matcha-san-francisco--short-post",
+      "type": "short-post",
+      "platform": "Threads / X",
+      "text": "Black sesame matcha in SF: Best Boy Electric in Japantown and Binge on Valencia list it. Neither drink is confirmed dairy-free. Save the menus and check availability: https://sanfranciscomatcha.com/guides/black-sesame-matcha-san-francisco/"
+    },
+    {
+      "guideSlug": "black-sesame-matcha-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/black-sesame-matcha-san-francisco/",
+      "status": "draft",
+      "verifiedAt": "2026-10-15",
+      "sources": [
+        "https://best-boy-electric.square.site/",
+        "https://linktr.ee/bestboysf",
+        "https://postmates.com/store/binge-coffee-house-valencia/21Sjn46UVgWQG8Ib9fijLA",
+        "https://www.bingecoffeehouse.com/menu"
+      ],
+      "id": "black-sesame-matcha-san-francisco--video-script",
+      "type": "video-script",
+      "platform": "Instagram Reels / TikTok",
+      "durationSeconds": 30,
+      "voiceover": "Looking for black sesame matcha in San Francisco? Here are two menus to save. Best Boy Electric on Post Street lists a Black Sesame Matcha Latte for seven fifty. Binge on Valencia lists Black Sesame Matcha; its own menu describes a roasted black sesame cold foam. Check the linked ordering page for the current price. Neither drink is confirmed dairy-free, so ask about the full recipe if that matters to you. The guide has both addresses and hours.",
+      "overlayDirection": "Text cards with café addresses and exact menu names. Attribute Binge’s price to Postmates, not the counter. Show availability caveats. Use no fabricated drink footage.",
+      "endCard": "Black sesame matcha in SF · Checked Oct 15, 2026 · https://sanfranciscomatcha.com/guides/black-sesame-matcha-san-francisco/"
     }
   ]
 }

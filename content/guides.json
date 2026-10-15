@@ -179,9 +179,9 @@
     "cardTitle": "Cold foam matcha: 4 SF spots to try",
     "compactLayout": true,
     "relatedGuides": [
+      "black-sesame-matcha-san-francisco",
       "pistachio-matcha-san-francisco",
-      "banana-matcha-san-francisco",
-      "ube-matcha-san-francisco"
+      "banana-matcha-san-francisco"
     ]
   },
   {
@@ -633,9 +633,9 @@
     "cardTitle": "Where to get matcha in Japantown",
     "compactLayout": true,
     "relatedGuides": [
+      "black-sesame-matcha-san-francisco",
       "banana-matcha-san-francisco",
-      "soy-milk-matcha-san-francisco",
-      "richmond-district-matcha-san-francisco"
+      "soy-milk-matcha-san-francisco"
     ]
   },
   {
@@ -1242,9 +1242,65 @@
     ],
     "compactLayout": true,
     "relatedGuides": [
+      "black-sesame-matcha-san-francisco",
       "matcha-cold-foam-san-francisco",
-      "mission-district-matcha-san-francisco",
-      "ube-matcha-san-francisco"
+      "mission-district-matcha-san-francisco"
+    ]
+  },
+  {
+    "slug": "black-sesame-matcha-san-francisco",
+    "title": "Black sesame matcha in SF",
+    "cardTitle": "Black sesame matcha in SF",
+    "description": "Black sesame matcha at Best Boy Electric and Binge Coffee House.",
+    "emoji": "🍵",
+    "updatedAt": "2026-10-15",
+    "intro": "Two stops: one in Japantown, one on Valencia.",
+    "methodology": "Unranked menu shortlist checked October 15, 2026. Prices are before tax and extras; delivery prices can differ from the counter. A menu listing does not guarantee stock.",
+    "entries": [
+      {
+        "shopId": "best-boy-electric",
+        "drink": "Black Sesame Matcha Latte",
+        "verdict": "$7.50 on the café’s menu.",
+        "details": "Listed on Best Boy Electric’s official Square menu.",
+        "milkNote": "Milk choices and soy are not shown for this drink. Full recipe and dairy-free status are unconfirmed.",
+        "price": "$7.50",
+        "availability": "Mon–Fri 8am–3:30pm; Sat–Sun 9am–5pm. Pickup ends 30 minutes earlier; check drink availability before visiting.",
+        "sources": [
+          {
+            "label": "Official menu and hours",
+            "url": "https://best-boy-electric.square.site/"
+          },
+          {
+            "label": "Official café links and address",
+            "url": "https://linktr.ee/bestboysf"
+          }
+        ]
+      },
+      {
+        "shopId": "binge-coffee-house",
+        "drink": "Black Sesame Matcha",
+        "verdict": "The sesame-foam option on Valencia.",
+        "details": "Binge’s own menu describes matcha with roasted black sesame cold foam.",
+        "milkNote": "Exact milk choices, soy and foam ingredients are not confirmed for the Valencia order. Ask about dairy in the topping separately.",
+        "price": "$8.62 on Postmates; online prices vary",
+        "availability": "Ordering hours: Mon–Fri 9am–6pm; Sat 9am–7:30pm; Sun 9am–7pm.",
+        "sources": [
+          {
+            "label": "Valencia drink, price and hours",
+            "url": "https://postmates.com/store/binge-coffee-house-valencia/21Sjn46UVgWQG8Ib9fijLA"
+          },
+          {
+            "label": "Official drink description",
+            "url": "https://www.bingecoffeehouse.com/menu"
+          }
+        ]
+      }
+    ],
+    "compactLayout": true,
+    "relatedGuides": [
+      "matcha-cold-foam-san-francisco",
+      "pistachio-matcha-san-francisco",
+      "soy-milk-matcha-san-francisco"
     ]
   }
 ]

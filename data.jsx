@@ -65,7 +65,7 @@ const SHOPS = [
     emoji: "🍵",
     note: "New SF location with matcha and hojicha einspanners, fruit matcha, and strong delivery ratings.",
     soyNote: "Soy milk is available for matcha drinks.",
-    source: "https://postmates.com/store/cere-tea/GDbcB8o0WkKVXAiXEwc4mA/c9fa33fc-d479-5b61-8f0c-78b78ba90a4a/0367e151-2460-578d-b321-08c9954a3b33/6019a96f-5668-5fd9-ba98-f52e6a4cf54e",
+    source: "https://postmates.com/store/cere-tea/JK83sjtJUt6687g5r9EWzg",
     lat: 37.7539712, lng: -122.4210238,
     x: 51.5, y: 56.3,
     price: "$$",

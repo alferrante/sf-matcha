@@ -38,6 +38,9 @@ FONT_MONO = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
 FONT_MONO_BOLD = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf"
 
 GUIDE_STYLE = {
+    "black-sesame-matcha-san-francisco": {
+        "label": "BLACK SESAME MATCHA", "accent": "#B9B5AC", "pale": "#F0EDE5", "motif": "bowl",
+    },
     "pistachio-matcha-san-francisco": {
         "label": "PISTACHIO MATCHA", "accent": "#A8BD78", "pale": "#ECF2DD", "motif": "bowl",
     },
