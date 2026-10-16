@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-15",
+  "updatedAt": "2026-10-16",
   "status": "draft",
-  "assetCount": 44,
+  "assetCount": 48,
   "assets": [
     {
       "guideSlug": "banana-matcha-san-francisco",
@@ -1106,6 +1106,106 @@
       "voiceover": "Looking for black sesame matcha in San Francisco? Here are two menus to save. Best Boy Electric on Post Street lists a Black Sesame Matcha Latte for seven fifty. Binge on Valencia lists Black Sesame Matcha; its own menu describes a roasted black sesame cold foam. Check the linked ordering page for the current price. Neither drink is confirmed dairy-free, so ask about the full recipe if that matters to you. The guide has both addresses and hours.",
       "overlayDirection": "Text cards with café addresses and exact menu names. Attribute Binge’s price to Postmates, not the counter. Show availability caveats. Use no fabricated drink footage.",
       "endCard": "Black sesame matcha in SF · Checked Oct 15, 2026 · https://sanfranciscomatcha.com/guides/black-sesame-matcha-san-francisco/"
+    },
+    {
+      "guideSlug": "new-matcha-spots-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/new-matcha-spots-san-francisco/",
+      "status": "draft",
+      "verifiedAt": "2026-10-16",
+      "sources": [
+        "https://www.florecitapanaderia.com/",
+        "https://www.sfchronicle.com/food/restaurants/article/florecita-panaderia-concha-mission-san-francisco-22433727.php",
+        "https://www.doordash.com/store/kiyomi-ca-phe-san-francisco-51474249",
+        "https://www.instagram.com/kiyomi_ca_phe/",
+        "https://messhallpresidio.com/thecoffeeshop/",
+        "https://presidio.gov/explore/attractions/the-mess-hall"
+      ],
+      "id": "new-matcha-spots-san-francisco--carousel",
+      "type": "carousel",
+      "platform": "Instagram",
+      "slides": [
+        {
+          "number": 1,
+          "headline": "3 new SF spots for matcha",
+          "body": "Tres-leches cold foam, strawberry matcha and a Matchaful latte. Recent openings or new storefronts to save."
+        },
+        {
+          "number": 2,
+          "headline": "Florecita · Mission",
+          "body": "Tres Leches Matcha Latte: $8.75 reported Oct 2 by the Chronicle.\n3349 23rd St. Thu–Mon, 8am–2pm."
+        },
+        {
+          "number": 3,
+          "headline": "Kiyomi · Parkside",
+          "body": "Strawberry Matcha: $9.75 on DoorDash. Counter prices may differ.\n1439 Taraval St, inside Lost & Found. Check pop-up hours."
+        },
+        {
+          "number": 4,
+          "headline": "The Mess Hall · Presidio",
+          "body": "Matcha Latte by Matchaful: $7–$7.50 on the official menu.\n201 Halleck St. Café opens daily at 7am."
+        },
+        {
+          "number": 5,
+          "headline": "Save your next stop",
+          "body": "Soy isn’t confirmed at these spots. Ask about milk and foam. For the Taraval pop-up, check hours before heading over."
+        }
+      ],
+      "designDirection": "Use the existing text-card system with exact drink names, addresses and dated price attribution. No invented café photos, tasting rankings, award seals or implied partnerships.",
+      "callToAction": "Save the guide: https://sanfranciscomatcha.com/guides/new-matcha-spots-san-francisco/"
+    },
+    {
+      "guideSlug": "new-matcha-spots-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/new-matcha-spots-san-francisco/",
+      "status": "draft",
+      "verifiedAt": "2026-10-16",
+      "sources": [
+        "https://www.florecitapanaderia.com/",
+        "https://www.sfchronicle.com/food/restaurants/article/florecita-panaderia-concha-mission-san-francisco-22433727.php",
+        "https://www.doordash.com/store/kiyomi-ca-phe-san-francisco-51474249",
+        "https://www.instagram.com/kiyomi_ca_phe/",
+        "https://messhallpresidio.com/thecoffeeshop/",
+        "https://presidio.gov/explore/attractions/the-mess-hall"
+      ],
+      "id": "new-matcha-spots-san-francisco--instagram-caption",
+      "type": "instagram-caption",
+      "platform": "Instagram",
+      "text": "3 new SF spots for matcha 🍵\n\nFlorecita: tres-leches cold foam at its new Mission storefront.\nKiyomi Cà Phê: strawberry matcha inside Lost & Found on Taraval.\nThe Mess Hall: Matchaful lattes at Tunnel Tops, $7–$7.50 on the official menu.\n\nSoy isn’t confirmed at these stops. Check Kiyomi’s pop-up hours before going.\n\nAddresses and menus: https://sanfranciscomatcha.com/guides/new-matcha-spots-san-francisco/\nSources checked October 16, 2026."
+    },
+    {
+      "guideSlug": "new-matcha-spots-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/new-matcha-spots-san-francisco/",
+      "status": "draft",
+      "verifiedAt": "2026-10-16",
+      "sources": [
+        "https://www.florecitapanaderia.com/",
+        "https://www.doordash.com/store/kiyomi-ca-phe-san-francisco-51474249",
+        "https://messhallpresidio.com/thecoffeeshop/"
+      ],
+      "id": "new-matcha-spots-san-francisco--short-post",
+      "type": "short-post",
+      "platform": "Threads / X",
+      "text": "3 new SF spots for matcha: Florecita’s tres-leches cold foam, Kiyomi’s strawberry matcha and Matchaful lattes at The Mess Hall. Soy isn’t confirmed; check pop-up hours. https://sanfranciscomatcha.com/guides/new-matcha-spots-san-francisco/"
+    },
+    {
+      "guideSlug": "new-matcha-spots-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/new-matcha-spots-san-francisco/",
+      "status": "draft",
+      "verifiedAt": "2026-10-16",
+      "sources": [
+        "https://www.florecitapanaderia.com/",
+        "https://www.sfchronicle.com/food/restaurants/article/florecita-panaderia-concha-mission-san-francisco-22433727.php",
+        "https://www.doordash.com/store/kiyomi-ca-phe-san-francisco-51474249",
+        "https://www.instagram.com/kiyomi_ca_phe/",
+        "https://messhallpresidio.com/thecoffeeshop/",
+        "https://presidio.gov/explore/attractions/the-mess-hall"
+      ],
+      "id": "new-matcha-spots-san-francisco--video-script",
+      "type": "video-script",
+      "platform": "Instagram Reels / TikTok",
+      "durationSeconds": 30,
+      "voiceover": "Three new SF stops for your matcha list. Florecita’s new Mission storefront has a tres-leches cold-foam matcha. Find it on Twenty-third Street. Kiyomi does strawberry matcha inside Lost and Found on Taraval. Check its pop-up hours before you go. And The Mess Hall at Tunnel Tops serves Matchaful lattes, listed at seven to seven-fifty. Soy isn’t confirmed at these spots. Save the guide for addresses and menus.",
+      "overlayDirection": "Show text cards with each café’s exact address. Attribute Florecita’s $8.75 to the October 2 Chronicle report and Kiyomi’s $9.75 to DoorDash; counter prices may differ. Do not present delivery windows as walk-in hours. Use no fabricated café footage.",
+      "endCard": "3 new SF spots for matcha · Checked Oct 16, 2026 · https://sanfranciscomatcha.com/guides/new-matcha-spots-san-francisco/"
     }
   ]
 }

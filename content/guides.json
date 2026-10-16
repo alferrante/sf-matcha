@@ -181,7 +181,7 @@
     "relatedGuides": [
       "black-sesame-matcha-san-francisco",
       "pistachio-matcha-san-francisco",
-      "banana-matcha-san-francisco"
+      "new-matcha-spots-san-francisco"
     ]
   },
   {
@@ -362,7 +362,7 @@
     "relatedGuides": [
       "matcha-cold-foam-san-francisco",
       "ube-matcha-san-francisco",
-      "banana-matcha-san-francisco"
+      "new-matcha-spots-san-francisco"
     ]
   },
   {
@@ -847,7 +847,7 @@
     "cardTitle": "5 matcha stops in the Mission",
     "compactLayout": true,
     "relatedGuides": [
-      "pistachio-matcha-san-francisco",
+      "new-matcha-spots-san-francisco",
       "matcha-cold-foam-san-francisco",
       "strawberry-matcha-san-francisco"
     ]
@@ -1301,6 +1301,85 @@
       "matcha-cold-foam-san-francisco",
       "pistachio-matcha-san-francisco",
       "soy-milk-matcha-san-francisco"
+    ]
+  },
+  {
+    "slug": "new-matcha-spots-san-francisco",
+    "title": "3 new SF spots for matcha",
+    "cardTitle": "3 new SF spots for matcha",
+    "description": "Three recent openings and new storefronts for matcha in San Francisco.",
+    "emoji": "🍵",
+    "updatedAt": "2026-10-16",
+    "intro": "Tres-leches cold foam in the Mission, strawberry matcha on Taraval and Matchaful at Tunnel Tops.",
+    "methodology": "Recent openings or new storefronts with documented matcha drinks; unranked, not taste-tested. Sources checked October 16, 2026. Prices exclude tax and extras; counter prices and availability may differ.",
+    "entries": [
+      {
+        "shopId": "florecita-panaderia",
+        "drink": "Tres Leches Matcha Latte",
+        "verdict": "Tres-leches cold foam at the new Mission storefront.",
+        "details": "Matcha topped with tres-leches cold foam at the concha bakery’s new storefront.",
+        "milkNote": "Milk substitutions, including soy, aren’t published. Foam isn’t confirmed dairy-free.",
+        "price": "$8.75 reported October 2 by the Chronicle",
+        "availability": "Thu–Mon 8am–2pm, per the website’s Visit Us section.",
+        "sources": [
+          {
+            "label": "Drink and reported price",
+            "url": "https://www.sfchronicle.com/food/restaurants/article/florecita-panaderia-concha-mission-san-francisco-22433727.php"
+          },
+          {
+            "label": "Official location and hours",
+            "url": "https://www.florecitapanaderia.com/"
+          }
+        ]
+      },
+      {
+        "shopId": "kiyomi-ca-phe-popup",
+        "drink": "Strawberry Matcha",
+        "verdict": "Strawberry matcha inside Lost & Found.",
+        "details": "A matcha order at the pop-up inside Lost & Found on Taraval.",
+        "milkNote": "Milk options and soy aren’t specified; dairy-free status is unconfirmed.",
+        "price": "$9.75 on DoorDash; counter prices may differ",
+        "availability": "DoorDash ordering: 10am–2:10pm. Check Instagram for pop-up days and walk-in hours.",
+        "sources": [
+          {
+            "label": "Drink, price and ordering window",
+            "url": "https://www.doordash.com/store/kiyomi-ca-phe-san-francisco-51474249"
+          },
+          {
+            "label": "Pop-up location report",
+            "url": "https://www.theinfatuation.com/san-francisco/reviews/kiyomi-ca-phe"
+          },
+          {
+            "label": "Pop-up updates",
+            "url": "https://www.instagram.com/kiyomi_ca_phe/"
+          }
+        ]
+      },
+      {
+        "shopId": "the-mess-hall-presidio",
+        "drink": "Matcha Latte by Matchaful",
+        "verdict": "Matchaful at Presidio Tunnel Tops.",
+        "details": "The coffee shop inside the new food hall serves Matchaful matcha lattes.",
+        "milkNote": "Plant-milk types and soy aren’t named. Confirm substitutions and any surcharge.",
+        "price": "$7–$7.50 on the official café menu",
+        "availability": "Coffee shop opens daily at 7am; closing time not separately verified.",
+        "sources": [
+          {
+            "label": "Official café menu",
+            "url": "https://messhallpresidio.com/thecoffeeshop/"
+          },
+          {
+            "label": "Location and opening time",
+            "url": "https://presidio.gov/explore/attractions/the-mess-hall"
+          }
+        ]
+      }
+    ],
+    "compactLayout": true,
+    "relatedGuides": [
+      "matcha-cold-foam-san-francisco",
+      "strawberry-matcha-san-francisco",
+      "mission-district-matcha-san-francisco"
     ]
   }
 ]

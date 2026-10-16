@@ -1,15 +1,15 @@
 {
   "generatedFrom": "content/social-launch.json",
-  "sourceUpdatedAt": "2026-10-15",
+  "sourceUpdatedAt": "2026-10-16",
   "status": "ready-to-export; not posted",
-  "carouselSetCount": 11,
-  "individualSlideCount": 56,
+  "carouselSetCount": 12,
+  "individualSlideCount": 61,
   "format": "PNG",
   "dimensions": {
     "width": 1080,
     "height": 1080
   },
-  "totalBytes": 3640583,
+  "totalBytes": 4006886,
   "qa": {
     "allSlidesVerifiedAsPng": true,
     "allSlides1080Square": true,
@@ -911,6 +911,95 @@
             "linktr.ee",
             "postmates.com",
             "bingecoffeehouse.com"
+          ]
+        }
+      ]
+    },
+    {
+      "guideSlug": "new-matcha-spots-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/new-matcha-spots-san-francisco/",
+      "verifiedAt": "2026-10-16",
+      "sourceUrls": [
+        "https://www.florecitapanaderia.com/",
+        "https://www.sfchronicle.com/food/restaurants/article/florecita-panaderia-concha-mission-san-francisco-22433727.php",
+        "https://www.doordash.com/store/kiyomi-ca-phe-san-francisco-51474249",
+        "https://www.instagram.com/kiyomi_ca_phe/",
+        "https://messhallpresidio.com/thecoffeeshop/",
+        "https://presidio.gov/explore/attractions/the-mess-hall"
+      ],
+      "slideCount": 5,
+      "slides": [
+        {
+          "file": "social/new-matcha-spots-san-francisco/slide-01.png",
+          "slide": 1,
+          "headline": "3 new SF spots for matcha",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 75128,
+          "sha256": "09d29a6156c0701c4da5ea596570e4d7da882cd83259c08e1826975e7f5bb873",
+          "sourceDomains": [
+            "florecitapanaderia.com",
+            "sfchronicle.com",
+            "doordash.com",
+            "instagram.com",
+            "messhallpresidio.com",
+            "presidio.gov"
+          ]
+        },
+        {
+          "file": "social/new-matcha-spots-san-francisco/slide-02.png",
+          "slide": 2,
+          "headline": "Florecita · Mission",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 67477,
+          "sha256": "170ff624dc745980509e98e49b7e132ecc1ac59ba05de0f9e6393813c61cc469",
+          "sourceDomains": [
+            "florecitapanaderia.com",
+            "sfchronicle.com"
+          ]
+        },
+        {
+          "file": "social/new-matcha-spots-san-francisco/slide-03.png",
+          "slide": 3,
+          "headline": "Kiyomi · Parkside",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 78622,
+          "sha256": "b431ea7da4f423a16012f897463fa3249a10d4756085c4ad482d33728ea48978",
+          "sourceDomains": [
+            "doordash.com",
+            "instagram.com"
+          ]
+        },
+        {
+          "file": "social/new-matcha-spots-san-francisco/slide-04.png",
+          "slide": 4,
+          "headline": "The Mess Hall · Presidio",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 68626,
+          "sha256": "ab7dd77c111b8aad413205a1c7ba6f243fc79e466ef2cfeab163b452d133a9b4",
+          "sourceDomains": [
+            "messhallpresidio.com",
+            "presidio.gov"
+          ]
+        },
+        {
+          "file": "social/new-matcha-spots-san-francisco/slide-05.png",
+          "slide": 5,
+          "headline": "Save your next stop",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 76450,
+          "sha256": "18269af33f909a8a213c21f3ddf6260c2365003789023aa737a8ea08c4ab7fa8",
+          "sourceDomains": [
+            "florecitapanaderia.com",
+            "sfchronicle.com",
+            "doordash.com",
+            "instagram.com",
+            "messhallpresidio.com",
+            "presidio.gov"
           ]
         }
       ]

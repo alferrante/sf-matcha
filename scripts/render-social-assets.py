@@ -38,6 +38,9 @@ FONT_MONO = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
 FONT_MONO_BOLD = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf"
 
 GUIDE_STYLE = {
+    "new-matcha-spots-san-francisco": {
+        "label": "NEW MATCHA SPOTS", "accent": "#73B4A4", "pale": "#DDF3EC", "motif": "bowl",
+    },
     "black-sesame-matcha-san-francisco": {
         "label": "BLACK SESAME MATCHA", "accent": "#B9B5AC", "pale": "#F0EDE5", "motif": "bowl",
     },
@@ -95,6 +98,12 @@ GUIDE_STYLE = {
 }
 
 DOMAIN_KEYS = {
+    "florecita": "florecitapanaderia.com",
+    "florecita ·": "sfchronicle.com",
+    "kiyomi": "doordash.com",
+    "kiyomi ·": "instagram.com",
+    "the mess hall": "messhallpresidio.com",
+    "mess hall ·": "presidio.gov",
     "sohn": "sohnsf.com",
     "yakiniq": "toast.app",
     "kumo": "kumomatchaca.com",
