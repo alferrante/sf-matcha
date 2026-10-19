@@ -2,6 +2,7 @@ import { readFile, writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
 import vm from "node:vm";
 import { fileURLToPath } from "node:url";
+import { loadGuidePreviews } from "../lib/guide-preview.mjs";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const defaultOrigin = "https://sanfranciscomatcha.com";
@@ -22,11 +23,12 @@ function newsletterForm(source, concise = false) {
   return `<section class="guide-newsletter" data-guide-newsletter data-newsletter-source="${esc(source)}" aria-labelledby="guide-newsletter-heading"><h2 id="guide-newsletter-heading">${compact ? "Get new matcha spots by email" : "Your next matcha find, in your inbox."}</h2>${compact ? "" : "<p>Get new SF matcha spots, fresh guides, and café perks as they launch.</p>"}<form><label class="signup-email-label" for="guide-newsletter-email">Email address</label><div class="signup-row"><input id="guide-newsletter-email" name="email" type="email" inputmode="email" autocomplete="email" required maxlength="254" placeholder="you@example.com"><button type="submit" disabled>${compact ? "Sign up" : "Get matcha updates →"}</button></div><label class="signup-consent"><input name="consent" type="checkbox" required> Send me SF Matcha guides and new-spot emails. Unsubscribe anytime.</label><label class="signup-trap" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label><a class="signup-privacy" href="/privacy/">Privacy details</a></form><p class="signup-message" data-signup-message role="status" aria-live="polite"></p><noscript><p>Enable JavaScript to sign up for matcha updates.</p></noscript></section>`;
 }
 
-function shell({ title, description, canonical, body, structured, newsletterAsset, compactFooter = false }) {
+function shell({ title, description, canonical, body, structured, newsletterAsset, preview, compactFooter = false }) {
+  const image = preview ? new URL(preview.urlPath, canonical).href : null;
   return `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(title)} | SF Matcha</title><meta name="description" content="${esc(description)}"><link rel="canonical" href="${esc(canonical)}">
-<meta property="og:type" content="${structured ? "article" : "website"}"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${esc(canonical)}"><meta name="twitter:card" content="summary">
+<meta property="og:type" content="${structured ? "article" : "website"}"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${esc(canonical)}"><meta name="twitter:card" content="summary">${image ? `\n<meta property="og:image" content="${esc(image)}"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="${preview.width}"><meta property="og:image:height" content="${preview.height}"><meta property="og:image:alt" content="${esc(preview.alt)}"><meta name="twitter:image" content="${esc(image)}"><meta name="twitter:image:alt" content="${esc(preview.alt)}">` : ""}
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Nunito:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>${css}${shareCss}${relatedCss}${newsletterAsset ? signupCss : ""}</style>${structured ? `<script type="application/ld+json">${json(structured)}</script>` : ""}</head>
 <body><header><a class="brand" href="/">🍵 sf matcha, mapped</a><nav aria-label="Main navigation"><a href="/">Map</a><a href="/guides/">Guides</a><a href="/perks/">Perks</a></nav></header><main>${body}</main><footer>${compactFooter ? `<p><a href="/">Map</a> · <a href="/methodology/">How we choose</a> · <a href="/perks/">Perks</a></p>` : `<p>Fresh finds. Clear milk details. San Francisco matcha, mapped.</p><p><a href="/">Explore the map</a> · <a href="/guides/">Browse guides</a> · <a href="/methodology/">How we verify</a> · <a href="/perks/">Café perks</a></p>`}</footer>${newsletterAsset ? `<script src="/config.js"></script><script type="module" src="${esc(newsletterAsset)}"></script>` : ""}</body></html>\n`;
@@ -84,7 +86,7 @@ export function validateGuides(guides, shops) {
     if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(guide.slug)) throw new Error(`Invalid guide slug: ${guide.slug}`);
     if (slugs.has(guide.slug)) throw new Error(`Duplicate guide slug: ${guide.slug}`);
     slugs.add(guide.slug);
-    if (!/^\d{4}-\d{2}-\d{2}$/.test(guide.updatedAt) || !Number.isFinite(Date.parse(guide.updatedAt)) || new Date(guide.updatedAt).toISOString().slice(0, 10) !== guide.updatedAt) throw new Error(`Invalid updatedAt: ${guide.updatedAt}`);
+    if (!validDay(guide.updatedAt)) throw new Error(`Invalid updatedAt: ${guide.updatedAt}`);
     if (!Array.isArray(guide.entries) || !guide.entries.length) throw new Error(`${guide.slug} needs nonempty entries`);
     const entryIds = new Set();
     for (const entry of guide.entries) {
@@ -127,17 +129,17 @@ function relatedGuideLinks(guide, guides) {
   return `<nav class="related-guides" aria-label="More matcha guides"><h2>More matcha</h2><ul>${related.map(record => `<li><a href="/guides/${esc(record.slug)}/">${esc(record.cardTitle ?? record.title)} →</a></li>`).join("")}</ul></nav>`;
 }
 
-function compactGuidePage(guide, shops, origin, newsletterAsset, structured, related) {
+function compactGuidePage(guide, shops, origin, newsletterAsset, structured, related, preview) {
   const shopById = new Map(shops.map(shop => [shop.id, shop]));
   const entries = guide.entries.map(entry => {
     const shop = shopById.get(entry.shopId);
     const map = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${shop.name}, ${shop.address}, San Francisco, CA`)}`;
     return `<article class="venue" id="${esc(shop.id)}"><h2>${esc(shop.name)}</h2><p class="location">${esc(shop.address)} · ${esc(shop.hood)}</p><p class="verdict">${esc(entry.drink)}</p><p>${esc(entry.details)}</p><dl><dt>Price</dt><dd>${esc(entry.price ?? "Ask the café")}</dd><dt>Milk</dt><dd>${esc(entry.milkNote)}</dd>${entry.soyNote ? `<dt>Soy</dt><dd>${esc(entry.soyNote)}</dd>` : ""}<dt>When</dt><dd>${esc(entry.hours ?? entry.availability ?? shop.hours)}</dd></dl><div class="links"><a class="button" href="${esc(map)}" target="_blank" rel="noopener noreferrer">Directions ↗</a>${entry.sources.map(source => `<a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.label)} ↗</a>`).join("")}</div></article>`;
   }).join("\n");
-  return shell({ title: guide.title, description: guide.description, canonical: `${origin}/guides/${guide.slug}/`, structured, newsletterAsset, compactFooter: true, body: `<div class="breadcrumbs"><a href="/guides/">← Guides</a></div><section class="hero"><h1>${esc(guide.title)}</h1><p class="lead">${esc(guide.intro)}</p><p class="date">Menus checked ${esc(guide.updatedAt)} · Prices before tax</p>${sharingControl()}</section><div class="prose">${entries}<p class="date">Menu picks, not tasting rankings. <a href="/methodology/">How we choose</a></p>${related}${newsletterForm("guide_article", true)}</div>` });
+  return shell({ title: guide.title, description: guide.description, canonical: `${origin}/guides/${guide.slug}/`, structured, newsletterAsset, preview, compactFooter: true, body: `<div class="breadcrumbs"><a href="/guides/">← Guides</a></div><section class="hero"><h1>${esc(guide.title)}</h1><p class="lead">${esc(guide.intro)}</p><p class="date">Menus checked ${esc(guide.updatedAt)} · Prices before tax</p>${sharingControl()}</section><div class="prose">${entries}<p class="date">Menu picks, not tasting rankings. <a href="/methodology/">How we choose</a></p>${related}${newsletterForm("guide_article", true)}</div>` });
 }
 
-function guidePage(guide, shops, origin, newsletterAsset, guides) {
+function guidePage(guide, shops, origin, newsletterAsset, guides, preview) {
   const canonical = `${origin}/guides/${guide.slug}/`;
   const shopById = new Map(shops.map(shop => [shop.id, shop]));
   const entries = guide.entries.map(entry => {
@@ -151,9 +153,10 @@ function guidePage(guide, shops, origin, newsletterAsset, guides) {
     "@graph": [{ "@type": "Article", "@id": `${canonical}#article`, headline: guide.title, description: guide.description, dateModified: guide.updatedAt, mainEntityOfPage: canonical, author: { "@type": "Organization", name: "SF Matcha", url: `${origin}/` }, publisher: { "@type": "Organization", name: "SF Matcha", url: `${origin}/` }, about: "Matcha in San Francisco", mainEntity: { "@id": `${canonical}#list` } }, { "@type": "ItemList", "@id": `${canonical}#list`, name: guide.title, itemListOrder: "https://schema.org/ItemListUnordered", numberOfItems: guide.entries.length, itemListElement: guide.entries.map((entry, index) => { const shop = shopById.get(entry.shopId); return { "@type": "ListItem", position: index + 1, url: `${canonical}#${shop.id}`, name: `${shop.name}: ${entry.drink}`, item: { "@type": "CafeOrCoffeeShop", name: shop.name, address: { "@type": "PostalAddress", streetAddress: shop.address, addressLocality: "San Francisco", addressRegion: "CA", addressCountry: "US" } } }; }) }],
   };
   const related = relatedGuideLinks(guide, guides);
-  if (guide.compactLayout) return compactGuidePage(guide, shops, origin, newsletterAsset, structured, related);
+  if (preview) structured["@graph"][0].image = { "@type": "ImageObject", url: new URL(preview.urlPath, canonical).href, width: preview.width, height: preview.height, caption: preview.alt };
+  if (guide.compactLayout) return compactGuidePage(guide, shops, origin, newsletterAsset, structured, related, preview);
   const date = new Date(`${guide.updatedAt}T12:00:00Z`).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
-  return shell({ title: guide.title, description: guide.description, canonical, structured, newsletterAsset, body: `<div class="breadcrumbs"><a href="/guides/">← All matcha guides</a></div><section class="hero"><div class="eyebrow">${esc(guide.emoji ?? "🍵")} SF Matcha Guide</div><h1>${esc(guide.title)}</h1><p class="lead">${esc(guide.description)}</p><p class="date">Updated ${esc(date)}</p>${sharingControl()}</section><div class="prose">${paragraph(guide.intro)}<aside class="note"><p>${esc(guide.methodology)}</p><p><a href="/methodology/">Read our editorial and badge methodology</a></p></aside><h2>In this guide</h2><ul class="toc">${guide.entries.map(entry => `<li><a href="#${esc(entry.shopId)}">${esc(shopById.get(entry.shopId).name)} — ${esc(entry.drink)}</a></li>`).join("")}</ul>${entries}${guide.faqs?.length ? `<section><h2>Before you go</h2>${guide.faqs.map(faq => `<details><summary>${esc(faq.question)}</summary>${paragraph(faq.answer)}</details>`).join("")}</section>` : ""}<aside class="note"><p>Menus, prices, and hours can change. Check the linked café sources before making a special trip; ask the café about allergies and shared preparation.</p></aside><p><a class="button" href="/">Find your next matcha on the map →</a></p>${related}${newsletterForm("guide_article")}</div>` });
+  return shell({ title: guide.title, description: guide.description, canonical, structured, newsletterAsset, preview, body: `<div class="breadcrumbs"><a href="/guides/">← All matcha guides</a></div><section class="hero"><div class="eyebrow">${esc(guide.emoji ?? "🍵")} SF Matcha Guide</div><h1>${esc(guide.title)}</h1><p class="lead">${esc(guide.description)}</p><p class="date">Updated ${esc(date)}</p>${sharingControl()}</section><div class="prose">${paragraph(guide.intro)}<aside class="note"><p>${esc(guide.methodology)}</p><p><a href="/methodology/">Read our editorial and badge methodology</a></p></aside><h2>In this guide</h2><ul class="toc">${guide.entries.map(entry => `<li><a href="#${esc(entry.shopId)}">${esc(shopById.get(entry.shopId).name)} — ${esc(entry.drink)}</a></li>`).join("")}</ul>${entries}${guide.faqs?.length ? `<section><h2>Before you go</h2>${guide.faqs.map(faq => `<details><summary>${esc(faq.question)}</summary>${paragraph(faq.answer)}</details>`).join("")}</section>` : ""}<aside class="note"><p>Menus, prices, and hours can change. Check the linked café sources before making a special trip; ask the café about allergies and shared preparation.</p></aside><p><a class="button" href="/">Find your next matcha on the map →</a></p>${related}${newsletterForm("guide_article")}</div>` });
 }
 
 export async function buildGuides({ root = projectRoot, outDir = root, origin = defaultOrigin, allowMissing = false, newsletterAsset = "/dist/guide-newsletter.js" } = {}) {
@@ -171,6 +174,7 @@ export async function buildGuides({ root = projectRoot, outDir = root, origin = 
   const shops = context.window.SHOPS;
   if (!Array.isArray(shops) || !shops.length) throw new Error("No shops exported by data.jsx");
   validateGuides(guides, shops);
+  const previews = await loadGuidePreviews({ root, guides });
   // These documents are reviewed repository content, not venue-provided HTML.
   const [methodology, perks, partnerKit, offers] = await Promise.all(["methodology.html", "perks.html", "partner-kit.md", "offers.json"].map(file => readFile(path.join(root, "content", file), "utf8")));
   for (const [route, document] of [["methodology", methodology], ["perks", perks]]) {
@@ -180,15 +184,21 @@ export async function buildGuides({ root = projectRoot, outDir = root, origin = 
   const pages = new Map();
   const cards = guides.toSorted((a, b) => b.updatedAt.localeCompare(a.updatedAt)).map(guide => `<article class="card"><a href="/guides/${esc(guide.slug)}/"><span class="emoji" aria-hidden="true">${esc(guide.emoji ?? "🍵")}</span><h2>${esc(guide.cardTitle ?? guide.title)}</h2><p>${guide.entries.length} spots <span aria-hidden="true">→</span></p></a></article>`).join("\n");
   pages.set("guides/index.html", shell({ title: "Matcha guides in San Francisco", description: "Where to get banana matcha, cold foam, soy milk matcha and more in San Francisco.", canonical: `${origin}/guides/`, newsletterAsset, compactFooter: true, body: `<section class="hero"><h1>Matcha guides</h1></section><section class="cards" aria-label="Matcha guides">${cards}</section>${newsletterForm("guides_hub")}` }));
-  for (const guide of guides) pages.set(`guides/${guide.slug}/index.html`, guidePage(guide, shops, origin, newsletterAsset, guides));
+  for (const guide of guides) pages.set(`guides/${guide.slug}/index.html`, guidePage(guide, shops, origin, newsletterAsset, guides, previews.get(guide.slug)));
   pages.set("methodology/index.html", methodology);
   pages.set("perks/index.html", perks);
   pages.set("perks/partner-kit.md", partnerKit);
   pages.set("partner-kit.md", partnerKit);
   pages.set("offers.json", offers);
-  const latest = guides.map(g => g.updatedAt).sort().at(-1);
-  const urls = [`${origin}/`, `${origin}/guides/`, ...guides.map(g => `${origin}/guides/${g.slug}/`), `${origin}/methodology/`, `${origin}/perks/`, `${origin}/privacy/`];
-  pages.set("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(url => `  <url><loc>${esc(url)}</loc><lastmod>${esc(latest)}</lastmod></url>`).join("\n")}\n</urlset>\n`);
+  // Only articles have a recorded content date. Do not make unrelated pages
+  // look newly verified whenever another guide is added or the site rebuilds.
+  const urls = [
+    { loc: `${origin}/` },
+    { loc: `${origin}/guides/` },
+    ...guides.map(guide => ({ loc: `${origin}/guides/${guide.slug}/`, lastmod: guide.updatedAt })),
+    ...["methodology", "perks", "privacy"].map(route => ({ loc: `${origin}/${route}/` })),
+  ];
+  pages.set("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(({ loc, lastmod }) => `  <url><loc>${esc(loc)}</loc>${lastmod ? `<lastmod>${esc(lastmod)}</lastmod>` : ""}</url>`).join("\n")}\n</urlset>\n`);
   for (const [file, contents] of pages) {
     await mkdir(path.dirname(path.join(outDir, file)), { recursive: true });
     await writeFile(path.join(outDir, file), contents);

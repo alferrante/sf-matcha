@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import { mkdtemp, mkdir, writeFile, readFile, rm } from "node:fs/promises";
 import path from "node:path";
 import os from "node:os";
+import { createHash } from "node:crypto";
 import { buildGuides, validateOffers } from "../scripts/build-guides.mjs";
 
 const shop = { id: "test-cafe", name: "Tea & Matcha", address: "1 Main St", hood: "FiDi", soyNote: "Soy is available.", hours: "Daily 8am–4pm" };
@@ -83,6 +84,81 @@ test("guide hub shows the newest verified guide first", async () => {
     const index = await readFile(path.join(dir, "guides/index.html"), "utf8");
     assert.ok(index.indexOf("/guides/guide-1/") < index.indexOf("/guides/guide-0/"));
   } finally { await rm(dir, { recursive: true, force: true }); }
+});
+
+test("sitemap dates belong to each article and do not advance when another guide is added", async () => {
+  const older = guide(0);
+  older.updatedAt = "2024-02-29";
+  const newer = guide(1);
+  newer.updatedAt = "2026-10-13";
+  const dir = await fixture([older, newer]);
+  const sitemapEntries = text => new Map([...text.matchAll(/<url><loc>([^<]+)<\/loc>(.*?)<\/url>/g)].map(([, loc, metadata]) => [loc, metadata]));
+  try {
+    await buildGuides({ root: dir });
+    const before = sitemapEntries(await readFile(path.join(dir, "sitemap.xml"), "utf8"));
+    for (const record of [older, newer]) {
+      assert.equal(before.get(`https://sanfranciscomatcha.com/guides/${record.slug}/`), `<lastmod>${record.updatedAt}</lastmod>`);
+    }
+    const olderHtml = await readFile(path.join(dir, "guides/guide-0/index.html"), "utf8");
+    const newest = guide(2);
+    newest.updatedAt = "2026-10-19";
+    await writeFile(path.join(dir, "content/guides.json"), JSON.stringify([older, newer, newest]));
+    await buildGuides({ root: dir });
+    const sitemap = await readFile(path.join(dir, "sitemap.xml"), "utf8");
+    const after = sitemapEntries(sitemap);
+    assert.equal(after.size, before.size + 1);
+    for (const [loc, metadata] of before) assert.equal(after.get(loc), metadata, `Unrelated page date changed: ${loc}`);
+    assert.equal(after.get("https://sanfranciscomatcha.com/guides/guide-2/"), "<lastmod>2026-10-19</lastmod>");
+    assert.equal((sitemap.match(/<lastmod>/g) ?? []).length, 3);
+    assert.equal(await readFile(path.join(dir, "guides/guide-0/index.html"), "utf8"), olderHtml);
+  } finally { await rm(dir, { recursive: true, force: true }); }
+});
+
+test("sitemap omits unknown modification dates for nonarticle pages", async () => {
+  const dir = await fixture();
+  try {
+    await buildGuides({ root: dir });
+    const sitemap = await readFile(path.join(dir, "sitemap.xml"), "utf8");
+    for (const route of ["/", "/guides/", "/methodology/", "/perks/", "/privacy/"]) {
+      assert.ok(sitemap.includes(`<url><loc>https://sanfranciscomatcha.com${route}</loc></url>`), `Unexpected inferred date for ${route}`);
+    }
+    assert.equal((sitemap.match(/<lastmod>/g) ?? []).length, 1);
+  } finally { await rm(dir, { recursive: true, force: true }); }
+});
+
+test("guide previews render matching covers in both layouts and remove stale image metadata", async () => {
+  const image = await readFile(new URL("../social/banana-matcha-san-francisco/slide-01.png", import.meta.url));
+  for (const compactLayout of [true, false]) {
+    const record = { ...guide(), compactLayout, title: 'Matcha "guide" & picks </script>' };
+    const dir = await fixture([record]);
+    const file = `social/${record.slug}/slide-01.png`;
+    try {
+      await mkdir(path.join(dir, "social", record.slug), { recursive: true });
+      await writeFile(path.join(dir, file), image);
+      const set = { guideSlug: record.slug, guideUrl: `https://sanfranciscomatcha.com/guides/${record.slug}/`, verifiedAt: record.updatedAt, slides: [{ file, slide: 1, headline: record.title, width: 1080, height: 1080, bytes: image.length, sha256: createHash("sha256").update(image).digest("hex") }] };
+      await writeFile(path.join(dir, "social/manifest.json"), JSON.stringify({ sets: [set] }));
+      await buildGuides({ root: dir });
+      const html = await readFile(path.join(dir, `guides/${record.slug}/index.html`), "utf8");
+      const imageUrl = `https://sanfranciscomatcha.com/${file}`;
+      assert.ok(html.includes(`<meta property="og:image" content="${imageUrl}">`));
+      assert.ok(html.includes(`<meta name="twitter:image" content="${imageUrl}">`));
+      assert.match(html, /property="og:image:width" content="1080"/);
+      assert.match(html, /property="og:image:height" content="1080"/);
+      assert.match(html, /property="og:image:alt" content="Matcha &quot;guide&quot; &amp; picks &lt;\/script&gt;"/);
+      assert.match(html, /name="twitter:card" content="summary"/);
+      assert.doesNotMatch(html, /summary_large_image/);
+      const structured = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
+      assert.deepEqual(structured["@graph"][0].image, { "@type": "ImageObject", url: imageUrl, width: 1080, height: 1080, caption: record.title });
+      assert.equal(structured["@graph"][0].dateModified, record.updatedAt);
+      assert.doesNotMatch(await readFile(path.join(dir, "guides/index.html"), "utf8"), /og:image|twitter:image/);
+      set.verifiedAt = "2026-10-06";
+      await writeFile(path.join(dir, "social/manifest.json"), JSON.stringify({ sets: [set] }));
+      await buildGuides({ root: dir });
+      const fallback = await readFile(path.join(dir, `guides/${record.slug}/index.html`), "utf8");
+      assert.doesNotMatch(fallback, /og:image|twitter:image|ImageObject/);
+      assert.equal(fallback.split("</head>")[1], html.split("</head>")[1]);
+    } finally { await rm(dir, { recursive: true, force: true }); }
+  }
 });
 
 test("related guide links use curated order, existing local URLs and escaped titles", async () => {
@@ -220,6 +296,9 @@ test("bad venue IDs, duplicate slugs, impossible dates and unsafe sources fail b
     { modify: records => { records.push(structuredClone(records[0])); }, error: /Duplicate guide slug/ },
     { modify: records => { records[0].slug = "../bad"; }, error: /Invalid guide slug/ },
     { modify: records => { records[0].updatedAt = "2026-02-30"; }, error: /Invalid updatedAt/ },
+    { modify: records => { records[0].updatedAt = "2026-02-29"; }, error: /Invalid updatedAt/ },
+    { modify: records => { records[0].updatedAt = "2026-10-07T00:00:00Z"; }, error: /Invalid updatedAt/ },
+    { modify: records => { records[0].updatedAt = "2026-10-07</lastmod><priority>1</priority>"; }, error: /Invalid updatedAt/ },
     { modify: records => { records[0].entries[0].sources[0].url = "javascript:alert(1)"; }, error: /HTTPS/ },
     { modify: records => { records[0].entries[0].sources[0].url = "https://user:password@example.com"; }, error: /credentials/ },
     { modify: records => { records[0].entries = []; }, error: /nonempty entries/ },
