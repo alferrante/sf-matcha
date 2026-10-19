@@ -1,0 +1,28 @@
+# Venue watch — October 19, 2026
+
+Started from current main `03050df68fa1375590b637aee09090a90242c7e3`: 96 venues and 16 guides. Read current README before editing. Added one nonduplicate operating location; all 96 previous venue objects, existing guides/social assets, partner files, excluded businesses and planned-location constraints are unchanged. No scoreboard edit or private/internal deployment material is included in this public release.
+
+## Addition: Linea Caffe — Dolores Park
+
+- **Address:** 3690 18th St, San Francisco, CA 94110, on the [official café page](https://lineacaffe.com/visit-us/).
+- **Status/hours:** opened October 17. Temporary daily 8am–2pm; expanded weekday 7am–4pm/weekend 7am–5pm hours are scheduled for October 23, not asserted already in effect. [Opening report, October 17, updated October 18](https://www.sfchronicle.com/food/article/linea-caffe-opening-sf-22481672.php).
+- **Matcha:** official menu lists Mizuba Matcha Latte, $7. The opening report separately announces a frozen blended matcha drink exclusive to this branch; its launch-day stock, exact name, price and recipe are not established. The limited soft-opening menu may differ from the full menu.
+- **Milk:** official menu names Straus dairy and Minor Figures oat, with a $1 vegan-milk add-on. Soy is unlisted, not asserted unavailable. Frozen drink substitutions/dairy content remain unannounced. No dairy-free claim is made.
+- **Mapping:** US Census oneline address geocoder matched `3690 18TH ST, SAN FRANCISCO, CA, 94110`, longitude -122.425768367472 / latitude 37.761503449568. Stylized-map position is adjacent to existing Dolores Park Cafe, a different business at 501 Dolores St. No duplicate Linea name/address exists in the prior 96 records.
+- No tasting judgment, Top Pick, Buzzy receipt, award, partnership or discount is added.
+
+## Other leads and address checks
+
+- **Urban Matcha:** no independently verified public SF street address recovered. [Official site](https://www.urbanmatchastore.com/) still lists Las Vegas; [KQED](https://www.kqed.org/arts/13993389/best-matcha-bay-area-oakland-berkeley-sf-san-jose) identifies the operating Castro Valley branch, which is outside SF. Previously tracked [Japantown announcement](https://www.instagram.com/p/DW_8LvegrfD/) could not be freshly fetched (throttled); this is not proof that no newer address exists. Keep on address watch, not mapped.
+- **Elsewhere:** current [official link hub](https://linktr.ee/elsewhere.today) and [founder manifesto](https://elsewherecafe.substack.com/p/elsewhere) do not give a permanent public café address. Its [September 23 guest matcha event](https://luma.com/kwgjb7r1) requires registration to see the location; the host's monthly event does not establish monthly Elsewhere participation or a permanent storefront. No addition.
+- **Ocha:** [official site](https://ochamatcha.us/) still says winter 2026 at 1934 Union St; already mapped as planned. Daly City is outside this directory. No duplicate.
+- **Q downtown:** [existing opening report](https://sfstandard.com/2026/09/18/q-specialty-coffee-tea-downtown/) still projects late October at the already mapped 405 Howard St. No new customer-ready evidence established in this run.
+- **Jandii Castro:** [October 14 expansion reporting](https://www.aol.com/articles/recently-opened-korean-cafe-san-011555000.html) still describes an upcoming branch without a completed opening. Preserve README's hold on 3499 16th St until separately verified customer-ready opening; do not add it as planned.
+- **Chalant at Mellow:** [October 18 event](https://sf-based.com/events/fall-matcha-popup-mellow-2026-10-18) at 2185 Union St has passed; apple and maple drinks are documented, but no recurring future schedule is established. Chalant already has a directory identity. Do not create a duplicate permanent café or assert a residency from a one-off event.
+- **Tea For Us / One More Matcha:** [Kindred tasting](https://www.kindredstudiosf.com/events-list/teaforuspopup) was April 18; October workshop/event leads do not establish a current recurring public service schedule. Held.
+- **Thaicocoa:** the [October 12 new-openings guide](https://www.theinfatuation.com/san-francisco/guides/new-san-francisco-restaurant-openings) now describes an operating Thai tea/cocoa counter. It is already mapped; fresh first-party matcha menu/milk/hours evidence was not established, so no speculative duplicate or full menu refresh.
+- **Hi NRG, Chula, Kopê:** reviewed current new-opening coverage; no newly verified notable matcha program sufficient for addition. Yume Mori is Berkeley, not SF. Black Jet's announced Sunset bakery opening alone is not matcha-program evidence. Preserved the Avocado Green permitting hold and Little Sweet/Avotoasty/Haraz exclusions.
+
+## Validation
+
+Clean `npm ci --include=dev`, `npm run build`, all **97 tests**, `npm run audit` (**97 shops / 291 fields**), original-record preservation, source/bundle parity, deterministic rebuild and whitespace checks passed. Source, stable data, new `data.0d0fdc7c6f3c.js` and matching index are included together; every previously published hash is retained. Canonical homepage/current hashed data verification follows publication. No partner outreach, offer activation, guide publication or scoreboard upload is part of this venue-only release.

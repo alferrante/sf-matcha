@@ -1824,6 +1824,25 @@
       y: 38.2,
       price: "$$",
       hours: "Mon & Fri 9am–4pm; Tue–Thu 8am–3pm; Sat–Sun closed"
+    },
+    {
+      id: "linea-caffe-dolores-park",
+      name: "Linea Caffe - Dolores Park",
+      address: "3690 18th St",
+      hood: "Mission Dolores",
+      status: "none",
+      topPick: false,
+      buzzy: false,
+      emoji: "🍵",
+      note: "Opened October 17, 2026. The menu lists a $7 Mizuba Matcha Latte; a frozen matcha drink is also announced.",
+      soyNote: "Soy milk is not listed; oat milk and a $1 vegan-milk add-on are listed. Frozen-drink milk options are unannounced.",
+      source: "https://lineacaffe.com/visit-us/",
+      lat: 37.7615034,
+      lng: -122.4257684,
+      x: 49.6,
+      y: 52.2,
+      price: "$$",
+      hours: "Soft opening: daily 8am–2pm. From Oct 23, scheduled Mon–Fri 7am–4pm; Sat–Sun 7am–5pm"
     }
   ];
   var STATUS_META = {
