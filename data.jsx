@@ -1665,6 +1665,23 @@ const SHOPS = [
     price: "$$",
     hours: "Soft opening: daily 8am–2pm. From Oct 23, scheduled Mon–Fri 7am–4pm; Sat–Sun 7am–5pm",
   },
+  {
+    id: "umbrella-coffee-and-tea",
+    name: "Umbrella Coffee & Tea",
+    address: "1 Stanyan St",
+    hood: "Lone Mountain",
+    status: "none",
+    topPick: false,
+    buzzy: true,
+    emoji: "☂️",
+    note: "Neighborhood cafe with coconut-cloud, einspanner, condensed-milk, and seasonal banana-cream matcha.",
+    soyNote: "Soy milk is not listed; oat and almond milk are listed.",
+    source: "https://www.google.com/maps/place/Umbrella+Coffee+%26+Tea/@37.7809693,-122.4563779,17z/data=!3m1!4b1!4m6!3m5!1s0x808587c85cadcf31:0x6e5253143b621379!8m2!3d37.7809693!4d-122.4563779!16s%2Fg%2F11zyzk273f",
+    lat: 37.7809693, lng: -122.4563779,
+    x: 37, y: 41.8,
+    price: "$$",
+    hours: "Tue–Fri 7am–2pm; Sat–Sun 7:30am–2pm; Mon closed",
+  },
 ];
 
 const STATUS_META = {
