@@ -2,6 +2,7 @@ import guides from "./content/guides.json";
 import buzzyEvidence from "./content/buzzy-evidence.json";
 import { isBuzzyCurrent, validateBuzzyEvidence } from "./lib/buzzy-evidence.mjs";
 import { DEFAULT_NEWSLETTER_ENDPOINT, newsletterEndpoint, subscribe } from "./lib/newsletter-client.mjs";
+import { GuideDiscovery } from "./lib/guide-discovery.jsx";
 
 // Main SF Matcha app
 
@@ -103,7 +104,7 @@ function App() {
       <Marquee speed={tweaks.marqueeSpeed} />
       <Header C={C} />
       <NewsletterSignup />
-      <div className="guide-discovery"><a href="/guides/"><strong>{guides.length} matcha guides →</strong><span>banana · cold foam · soy milk · neighborhoods</span></a></div>
+      <GuideDiscovery guides={guides} />
       <FilterBar filter={filter} setFilter={setFilter} stats={stats} C={C} />
 
       <div className="main-grid" style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 24, padding: "0 32px 48px", maxWidth: 1600, margin: "0 auto" }}>

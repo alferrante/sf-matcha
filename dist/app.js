@@ -637,7 +637,7 @@
       relatedGuides: [
         "black-sesame-matcha-san-francisco",
         "banana-matcha-san-francisco",
-        "soy-milk-matcha-san-francisco"
+        "matcha-soft-serve-san-francisco"
       ]
     },
     {
@@ -1383,6 +1383,81 @@
         "strawberry-matcha-san-francisco",
         "mission-district-matcha-san-francisco"
       ]
+    },
+    {
+      slug: "matcha-soft-serve-san-francisco",
+      title: "3 places to get matcha soft serve in SF",
+      cardTitle: "3 places to get matcha soft serve in SF",
+      description: "Three San Francisco stops for matcha soft serve, with addresses, prices where verified, milk notes and hours.",
+      emoji: "🍦",
+      updatedAt: "2026-10-20",
+      intro: "For when you want your matcha in a cup or cone instead of a latte.",
+      methodology: "Three operating SF locations with documented matcha soft serve; unranked, not taste-tested. Sources checked October 20, 2026. None is confirmed dairy-free. Prices exclude tax and extras; availability can change.",
+      entries: [
+        {
+          shopId: "nagomi",
+          drink: "Matcha soft serve",
+          verdict: "Matcha soft serve at the New Montgomery café.",
+          details: "The café's site names Shizuoka matcha and Straus dairy milk; a complete soft-serve recipe isn't published.",
+          milkNote: "Soy or oat soft-serve options aren't listed. Dairy-free isn't confirmed.",
+          price: "Ask at the counter; no current price verified",
+          hours: "Temporary hours: Mon–Sat 10:30am–5pm; Sunday closed.",
+          sources: [
+            {
+              label: "Official café, address and hours",
+              url: "https://cafenagomi.com/"
+            },
+            {
+              label: "Local soft-serve listing",
+              url: "https://yerbabuena.org/go/nagomi-cafe"
+            }
+          ]
+        },
+        {
+          shopId: "matcha-cafe-maiko-japantown",
+          drink: "Soft serve (Matcha)",
+          verdict: "A matcha cone in Japantown.",
+          details: "Listed on the brand menu; confirm this counter's current selection.",
+          milkNote: "No full ingredient list or soft-serve milk swaps verified. Soy latte options don't establish soy soft serve; dairy-free isn't confirmed.",
+          price: "Confirm at this shop; no current local price verified",
+          hours: "Japantown directory: Sun–Thu 11:30am–9pm; Fri–Sat 11:30am–10pm. Brand asks visitors to confirm current hours.",
+          sources: [
+            {
+              label: "Official brand menu",
+              url: "https://www.matchacafe-maiko.com/eng/menu/"
+            },
+            {
+              label: "Official SF locations",
+              url: "https://www.matchacafe-maiko.com/eng/store/index.html?country=usa&region=ca&target=ca-sanfran"
+            },
+            {
+              label: "Local soft-serve listing and hours",
+              url: "https://www.sfjapantown.org/directory-jpndirectory/listing/matcha-cafe-maiko/"
+            }
+          ]
+        },
+        {
+          shopId: "kiss-of-matcha-clement",
+          drink: "Matcha Soft Serve in Cup",
+          verdict: "A matcha cup on Clement Street.",
+          details: "A cup order; the menu lists a matcha cone separately.",
+          milkNote: "Soy or oat substitutions for the soft serve aren't specified. Dairy-free isn't confirmed.",
+          price: "$8.49 on Uber Eats; counter prices may differ",
+          hours: "Uber Eats lists Tue–Thu 10am–8pm; Fri–Sat 10am–10pm; Sun 10am–9pm. Monday unlisted; walk-in hours aren't separately confirmed.",
+          sources: [
+            {
+              label: "Clement menu, price and app-listed hours",
+              url: "https://www.ubereats.com/store/kiss-of-matcha-richmond-clement/x4VL7ZEeXC6gWMS4umrpKg"
+            }
+          ]
+        }
+      ],
+      compactLayout: true,
+      relatedGuides: [
+        "japantown-matcha-san-francisco",
+        "richmond-district-matcha-san-francisco",
+        "matcha-without-milk-san-francisco"
+      ]
     }
   ];
 
@@ -1479,6 +1554,17 @@
     return "Signup received. Unsubscribe anytime.";
   }
 
+  // lib/guide-discovery.jsx
+  var TOPICS = [
+    { slug: "banana-matcha-san-francisco", label: "banana matcha" },
+    { slug: "matcha-cold-foam-san-francisco", label: "cold foam" },
+    { slug: "soy-milk-matcha-san-francisco", label: "soy milk" }
+  ];
+  function GuideDiscovery({ guides }) {
+    const available = new Set(guides.map((guide) => guide.slug));
+    return /* @__PURE__ */ React.createElement("nav", { className: "guide-discovery", "aria-label": "Matcha guides" }, /* @__PURE__ */ React.createElement("div", { className: "guide-discovery-row" }, /* @__PURE__ */ React.createElement("a", { className: "guide-discovery-all", href: "/guides/" }, /* @__PURE__ */ React.createElement("strong", null, guides.length, " matcha guides →")), /* @__PURE__ */ React.createElement("div", { className: "guide-discovery-topics" }, TOPICS.filter((topic) => available.has(topic.slug)).map((topic) => /* @__PURE__ */ React.createElement("a", { key: topic.slug, href: `/guides/${topic.slug}/`, "aria-label": `${topic.label} guide` }, topic.label)))));
+  }
+
   // app.jsx
   var { useState, useMemo, useEffect, useRef } = React;
   var BUZZY_BY_SHOP = validateBuzzyEvidence(buzzy_evidence_default, SHOPS);
@@ -1556,7 +1642,7 @@
       buzzy: filtered.filter(activeBuzzy).length,
       top: filtered.filter((s) => s.topPick).length
     }), [filtered]);
-    return /* @__PURE__ */ React.createElement("div", { style: { "--bg": C.bg, "--ink": C.ink, "--pop": C.pop, "--pop2": C.pop2, "--lime": C.lime, background: C.bg, color: C.ink, minHeight: "100vh" } }, /* @__PURE__ */ React.createElement(Marquee, { speed: tweaks.marqueeSpeed }), /* @__PURE__ */ React.createElement(Header, { C }), /* @__PURE__ */ React.createElement(NewsletterSignup, null), /* @__PURE__ */ React.createElement("div", { className: "guide-discovery" }, /* @__PURE__ */ React.createElement("a", { href: "/guides/" }, /* @__PURE__ */ React.createElement("strong", null, guides_default.length, " matcha guides →"), /* @__PURE__ */ React.createElement("span", null, "banana · cold foam · soy milk · neighborhoods"))), /* @__PURE__ */ React.createElement(FilterBar, { filter, setFilter, stats, C }), /* @__PURE__ */ React.createElement("div", { className: "main-grid", style: { display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 24, padding: "0 32px 48px", maxWidth: 1600, margin: "0 auto" } }, /* @__PURE__ */ React.createElement(
+    return /* @__PURE__ */ React.createElement("div", { style: { "--bg": C.bg, "--ink": C.ink, "--pop": C.pop, "--pop2": C.pop2, "--lime": C.lime, background: C.bg, color: C.ink, minHeight: "100vh" } }, /* @__PURE__ */ React.createElement(Marquee, { speed: tweaks.marqueeSpeed }), /* @__PURE__ */ React.createElement(Header, { C }), /* @__PURE__ */ React.createElement(NewsletterSignup, null), /* @__PURE__ */ React.createElement(GuideDiscovery, { guides: guides_default }), /* @__PURE__ */ React.createElement(FilterBar, { filter, setFilter, stats, C }), /* @__PURE__ */ React.createElement("div", { className: "main-grid", style: { display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 24, padding: "0 32px 48px", maxWidth: 1600, margin: "0 auto" } }, /* @__PURE__ */ React.createElement(
       MapPanel,
       {
         shops: SHOPS,
