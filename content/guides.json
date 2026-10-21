@@ -1456,5 +1456,95 @@
       "richmond-district-matcha-san-francisco",
       "matcha-without-milk-san-francisco"
     ]
+  },
+  {
+    "slug": "matcha-einspanner-san-francisco",
+    "title": "Where to get matcha einspänner in SF",
+    "cardTitle": "Where to get matcha einspänner in SF",
+    "description": "Four San Francisco cafés with matcha einspänner, including prices, dairy notes, addresses and hours.",
+    "emoji": "☁️",
+    "updatedAt": "2026-10-21",
+    "intro": "Four cream-topped matchas, from the classic version to salted cream and banana pudding.",
+    "methodology": "Four operating SF cafés with a specifically named matcha einspänner on a current official or merchant menu; unranked, not taste-tested. Sources checked October 21, 2026. App prices can differ from counter prices. None is confirmed dairy-free.",
+    "entries": [
+      {
+        "shopId": "shoji",
+        "drink": "Matcha Einspanner",
+        "verdict": "Ceremonial matcha under lightly sweetened whipped cream.",
+        "details": "Shoji calls it a signature café drink and describes a generous cloud of whipped cream.",
+        "milkNote": "The topping is whipped cream. Soy and a dairy-free version aren't published.",
+        "price": "Ask at the café; no current official price published",
+        "hours": "Sun 9am–2:30pm; Mon 8am–2:30pm; Tue–Fri 8am–3pm; Sat 9am–3pm.",
+        "sources": [
+          {
+            "label": "Official drink, address and hours",
+            "url": "https://www.shojisf.com/"
+          },
+          {
+            "label": "Official café hours",
+            "url": "https://www.shojisf.com/cafe-menu"
+          }
+        ]
+      },
+      {
+        "shopId": "cere-tea",
+        "drink": "Matcha Einspänner",
+        "verdict": "The classic plus strawberry, banana pudding and other versions.",
+        "details": "The current menu also lists Strawberry Matcha Einspänner, Banana Pudding Matcha Einspänner and Sunny Side Up Matcha Einspänner.",
+        "milkNote": "Cream or whipped toppings are listed. Soy is available for matcha, but a dairy-free einspänner isn't confirmed.",
+        "price": "$8.99 on Uber Eats; other versions are $9.49–$9.99 and counter prices may differ",
+        "hours": "Current ordering page: daily 10am–7pm.",
+        "sources": [
+          {
+            "label": "Current SF menu, prices, address and hours",
+            "url": "https://www.ubereats.com/store/cere-tea/JK83sjtJUt6687g5r9EWzg"
+          },
+          {
+            "label": "Official SF location",
+            "url": "https://www.ceretea.com/"
+          }
+        ]
+      },
+      {
+        "shopId": "kiyomi-ca-phe-popup",
+        "drink": "Matcha Einspanner",
+        "verdict": "Ceremonial matcha with condensed milk and salted cream foam.",
+        "details": "A weekday pop-up inside Lost & Found on Taraval.",
+        "milkNote": "Contains condensed milk and salted cream foam. Soy isn't listed, and dairy-free isn't confirmed.",
+        "price": "$9.75 on DoorDash; counter prices may differ",
+        "hours": "Weekday pop-up; check Instagram before visiting because ordering windows vary.",
+        "sources": [
+          {
+            "label": "Current drink, price and location",
+            "url": "https://www.doordash.com/store/kiyomi-ca-phe-san-francisco-51474249"
+          },
+          {
+            "label": "Current pop-up schedule",
+            "url": "https://www.instagram.com/kiyomi_ca_phe/"
+          }
+        ]
+      },
+      {
+        "shopId": "the-buoy",
+        "drink": "Matcha Einspanner",
+        "verdict": "The current Uber Eats menu lists matcha topped with dairy cream.",
+        "details": "The same menu also lists a regular Matcha Latte and Strawberry Matcha Latte.",
+        "milkNote": "Uber Eats lists dairy cream. Soy isn't listed; confirm ingredients with the café for allergen needs.",
+        "price": "$7.50 on Uber Eats; counter prices may differ",
+        "hours": "Uber Eats lists daily 11am–1:50pm; walk-in hours aren't separately confirmed.",
+        "sources": [
+          {
+            "label": "Current menu, price, address and app hours",
+            "url": "https://www.ubereats.com/store/the-buoy-desserts-%26-coffee-shop/EGNbN9ByWHGf2Qk7NrBvcA"
+          }
+        ]
+      }
+    ],
+    "compactLayout": true,
+    "relatedGuides": [
+      "matcha-cold-foam-san-francisco",
+      "new-matcha-spots-san-francisco",
+      "soy-milk-matcha-san-francisco"
+    ]
   }
 ]

@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-16",
+  "updatedAt": "2026-10-21",
   "status": "draft",
-  "assetCount": 48,
+  "assetCount": 56,
   "assets": [
     {
       "guideSlug": "banana-matcha-san-francisco",
@@ -1206,6 +1206,206 @@
       "voiceover": "Three new SF stops for your matcha list. Florecita’s new Mission storefront has a tres-leches cold-foam matcha. Find it on Twenty-third Street. Kiyomi does strawberry matcha inside Lost and Found on Taraval. Check its pop-up hours before you go. And The Mess Hall at Tunnel Tops serves Matchaful lattes, listed at seven to seven-fifty. Soy isn’t confirmed at these spots. Save the guide for addresses and menus.",
       "overlayDirection": "Show text cards with each café’s exact address. Attribute Florecita’s $8.75 to the October 2 Chronicle report and Kiyomi’s $9.75 to DoorDash; counter prices may differ. Do not present delivery windows as walk-in hours. Use no fabricated café footage.",
       "endCard": "3 new SF spots for matcha · Checked Oct 16, 2026 · https://sanfranciscomatcha.com/guides/new-matcha-spots-san-francisco/"
+    },
+    {
+      "guideSlug": "matcha-soft-serve-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/matcha-soft-serve-san-francisco/",
+      "status": "draft",
+      "verifiedAt": "2026-10-20",
+      "sources": [
+        "https://cafenagomi.com/",
+        "https://yerbabuena.org/go/nagomi-cafe",
+        "https://www.matchacafe-maiko.com/eng/menu/",
+        "https://www.matchacafe-maiko.com/eng/store/index.html?country=usa&region=ca&target=ca-sanfran",
+        "https://www.sfjapantown.org/directory-jpndirectory/listing/matcha-cafe-maiko/",
+        "https://www.ubereats.com/store/kiss-of-matcha-richmond-clement/x4VL7ZEeXC6gWMS4umrpKg"
+      ],
+      "id": "matcha-soft-serve-san-francisco--carousel",
+      "type": "carousel",
+      "platform": "Instagram",
+      "slides": [
+        {
+          "number": 1,
+          "headline": "3 places to get matcha soft serve in SF",
+          "body": "A New Montgomery cup, a Japantown cone and a Clement Street stop."
+        },
+        {
+          "number": 2,
+          "headline": "Nagomi · New Montgomery",
+          "body": "Matcha soft serve made with Shizuoka matcha.\n74 New Montgomery St. Ask for today's price."
+        },
+        {
+          "number": 3,
+          "headline": "Matcha Café Maiko · Japantown",
+          "body": "The brand menu lists matcha soft serve.\n1581 Webster St, Suite 175. Confirm today's selection."
+        },
+        {
+          "number": 4,
+          "headline": "Kiss of Matcha · Clement",
+          "body": "Matcha Soft Serve in Cup: $8.49 on Uber Eats.\n750 Clement St. Counter prices may differ."
+        },
+        {
+          "number": 5,
+          "headline": "None is confirmed dairy-free",
+          "body": "Soft-serve ingredients and soy or oat swaps aren't fully published. Ask before ordering."
+        }
+      ],
+      "designDirection": "Text cards with exact menu names, addresses and price attribution. No invented food photography, taste rankings or dairy-free claims.",
+      "callToAction": "Save the guide: https://sanfranciscomatcha.com/guides/matcha-soft-serve-san-francisco/"
+    },
+    {
+      "guideSlug": "matcha-soft-serve-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/matcha-soft-serve-san-francisco/",
+      "status": "draft",
+      "verifiedAt": "2026-10-20",
+      "sources": [
+        "https://cafenagomi.com/",
+        "https://www.matchacafe-maiko.com/eng/menu/",
+        "https://www.ubereats.com/store/kiss-of-matcha-richmond-clement/x4VL7ZEeXC6gWMS4umrpKg"
+      ],
+      "id": "matcha-soft-serve-san-francisco--instagram-caption",
+      "type": "instagram-caption",
+      "platform": "Instagram",
+      "text": "Matcha soft serve in SF 🍦\n\nNagomi on New Montgomery. Matcha Café Maiko in Japantown. Kiss of Matcha on Clement, where Uber Eats lists a cup for $8.49.\n\nNone is confirmed dairy-free, so ask about the full recipe.\n\nAddresses, menus and hours: https://sanfranciscomatcha.com/guides/matcha-soft-serve-san-francisco/\nChecked October 20, 2026."
+    },
+    {
+      "guideSlug": "matcha-soft-serve-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/matcha-soft-serve-san-francisco/",
+      "status": "draft",
+      "verifiedAt": "2026-10-20",
+      "sources": [
+        "https://cafenagomi.com/",
+        "https://www.matchacafe-maiko.com/eng/menu/",
+        "https://www.ubereats.com/store/kiss-of-matcha-richmond-clement/x4VL7ZEeXC6gWMS4umrpKg"
+      ],
+      "id": "matcha-soft-serve-san-francisco--short-post",
+      "type": "short-post",
+      "platform": "Threads / X",
+      "text": "Matcha soft serve in SF: Nagomi, Matcha Café Maiko and Kiss of Matcha. None is confirmed dairy-free; check today's selection and counter price. https://sanfranciscomatcha.com/guides/matcha-soft-serve-san-francisco/"
+    },
+    {
+      "guideSlug": "matcha-soft-serve-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/matcha-soft-serve-san-francisco/",
+      "status": "draft",
+      "verifiedAt": "2026-10-20",
+      "sources": [
+        "https://cafenagomi.com/",
+        "https://yerbabuena.org/go/nagomi-cafe",
+        "https://www.matchacafe-maiko.com/eng/menu/",
+        "https://www.sfjapantown.org/directory-jpndirectory/listing/matcha-cafe-maiko/",
+        "https://www.ubereats.com/store/kiss-of-matcha-richmond-clement/x4VL7ZEeXC6gWMS4umrpKg"
+      ],
+      "id": "matcha-soft-serve-san-francisco--video-script",
+      "type": "video-script",
+      "platform": "Instagram Reels / TikTok",
+      "durationSeconds": 30,
+      "voiceover": "Looking for matcha soft serve in San Francisco? Save these three stops. Nagomi serves it on New Montgomery. Matcha Café Maiko lists matcha soft serve at its Japantown shop. Kiss of Matcha has a cup on Clement, listed at eight forty-nine on Uber Eats. Counter prices and daily selection can change. One important note: none of these is confirmed dairy-free, so ask about the full recipe before ordering.",
+      "overlayDirection": "Text cards with exact locations and menu evidence. Attribute Kiss of Matcha's price to Uber Eats. Do not use fabricated shop imagery or imply dairy-free options.",
+      "endCard": "3 places to get matcha soft serve in SF · Checked Oct 20, 2026 · https://sanfranciscomatcha.com/guides/matcha-soft-serve-san-francisco/"
+    },
+    {
+      "guideSlug": "matcha-einspanner-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/matcha-einspanner-san-francisco/",
+      "status": "draft",
+      "verifiedAt": "2026-10-21",
+      "sources": [
+        "https://www.shojisf.com/",
+        "https://www.shojisf.com/cafe-menu",
+        "https://www.ubereats.com/store/cere-tea/JK83sjtJUt6687g5r9EWzg",
+        "https://www.ceretea.com/",
+        "https://www.doordash.com/store/kiyomi-ca-phe-san-francisco-51474249",
+        "https://www.instagram.com/kiyomi_ca_phe/",
+        "https://www.ubereats.com/store/the-buoy-desserts-%26-coffee-shop/EGNbN9ByWHGf2Qk7NrBvcA"
+      ],
+      "id": "matcha-einspanner-san-francisco--carousel",
+      "type": "carousel",
+      "platform": "Instagram",
+      "slides": [
+        {
+          "number": 1,
+          "headline": "Where to get matcha einspänner in SF",
+          "body": "Four cream-topped matchas, with prices and dairy notes."
+        },
+        {
+          "number": 2,
+          "headline": "Shoji · New Montgomery",
+          "body": "Ceremonial matcha + lightly sweetened whipped cream.\n140 New Montgomery St. Ask for today's price."
+        },
+        {
+          "number": 3,
+          "headline": "Ceré Tea · Valencia",
+          "body": "Matcha Einspänner: $8.99 on Uber Eats.\n1186 Valencia St. Other versions: $9.49–$9.99."
+        },
+        {
+          "number": 4,
+          "headline": "Kiyomi · Taraval",
+          "body": "Condensed milk + salted cream foam: $9.75 on DoorDash.\n1439 Taraval St. Check pop-up hours."
+        },
+        {
+          "number": 5,
+          "headline": "The Buoy · Franklin",
+          "body": "Uber Eats lists dairy cream: $7.50.\n22 Franklin St. Confirm ingredients for allergen needs."
+        },
+        {
+          "number": 6,
+          "headline": "Cream means check every layer",
+          "body": "None is confirmed dairy-free. App prices can differ from the counter."
+        }
+      ],
+      "designDirection": "Text cards with exact menu names, addresses and app-price attribution. No taste ranking, fabricated drink imagery or dairy-free claim.",
+      "callToAction": "Save the guide: https://sanfranciscomatcha.com/guides/matcha-einspanner-san-francisco/"
+    },
+    {
+      "guideSlug": "matcha-einspanner-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/matcha-einspanner-san-francisco/",
+      "status": "draft",
+      "verifiedAt": "2026-10-21",
+      "sources": [
+        "https://www.shojisf.com/",
+        "https://www.ubereats.com/store/cere-tea/JK83sjtJUt6687g5r9EWzg",
+        "https://www.doordash.com/store/kiyomi-ca-phe-san-francisco-51474249",
+        "https://www.ubereats.com/store/the-buoy-desserts-%26-coffee-shop/EGNbN9ByWHGf2Qk7NrBvcA"
+      ],
+      "id": "matcha-einspanner-san-francisco--instagram-caption",
+      "type": "instagram-caption",
+      "platform": "Instagram",
+      "text": "Matcha einspänner in SF ☁️\n\nShoji: ceremonial matcha + whipped cream.\nCeré Tea: $8.99 on Uber Eats.\nKiyomi: $9.75 on DoorDash, with condensed milk + salted cream foam.\nThe Buoy: Uber Eats lists dairy cream and a $7.50 price.\n\nNone is confirmed dairy-free.\n\nAddresses and hours: https://sanfranciscomatcha.com/guides/matcha-einspanner-san-francisco/\nChecked October 21, 2026."
+    },
+    {
+      "guideSlug": "matcha-einspanner-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/matcha-einspanner-san-francisco/",
+      "status": "draft",
+      "verifiedAt": "2026-10-21",
+      "sources": [
+        "https://www.shojisf.com/",
+        "https://www.ubereats.com/store/cere-tea/JK83sjtJUt6687g5r9EWzg",
+        "https://www.doordash.com/store/kiyomi-ca-phe-san-francisco-51474249",
+        "https://www.ubereats.com/store/the-buoy-desserts-%26-coffee-shop/EGNbN9ByWHGf2Qk7NrBvcA"
+      ],
+      "id": "matcha-einspanner-san-francisco--short-post",
+      "type": "short-post",
+      "platform": "Threads / X",
+      "text": "Matcha einspänner in SF: Shoji, Ceré Tea, Kiyomi and The Buoy. We checked current menu names, prices and dairy notes; none is confirmed dairy-free. https://sanfranciscomatcha.com/guides/matcha-einspanner-san-francisco/"
+    },
+    {
+      "guideSlug": "matcha-einspanner-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/matcha-einspanner-san-francisco/",
+      "status": "draft",
+      "verifiedAt": "2026-10-21",
+      "sources": [
+        "https://www.shojisf.com/",
+        "https://www.ubereats.com/store/cere-tea/JK83sjtJUt6687g5r9EWzg",
+        "https://www.doordash.com/store/kiyomi-ca-phe-san-francisco-51474249",
+        "https://www.instagram.com/kiyomi_ca_phe/",
+        "https://www.ubereats.com/store/the-buoy-desserts-%26-coffee-shop/EGNbN9ByWHGf2Qk7NrBvcA"
+      ],
+      "id": "matcha-einspanner-san-francisco--video-script",
+      "type": "video-script",
+      "platform": "Instagram Reels / TikTok",
+      "durationSeconds": 35,
+      "voiceover": "Four places for matcha einspänner in San Francisco. Shoji serves ceremonial matcha under lightly sweetened whipped cream. Ceré Tea lists the classic for eight ninety-nine on Uber Eats, plus flavored versions. Kiyomi's weekday pop-up has matcha with condensed milk and salted cream foam for nine seventy-five on DoorDash. Uber Eats lists The Buoy's version with dairy cream for seven fifty. None is confirmed dairy-free. Save the guide for addresses and current hours.",
+      "overlayDirection": "Use text cards with each exact address. Attribute delivery prices to the apps and tell viewers to check Kiyomi's pop-up hours. No fabricated café footage or taste claims.",
+      "endCard": "Where to get matcha einspänner in SF · Checked Oct 21, 2026 · https://sanfranciscomatcha.com/guides/matcha-einspanner-san-francisco/"
     }
   ]
 }

@@ -1,6 +1,6 @@
 # SF Matcha carousel exports
 
-[Download the slides](https://sanfranciscomatcha.com/social/): **twelve carousel sets, 61 PNGs**. All are ready to export; none have been posted.
+[Download the slides](https://sanfranciscomatcha.com/social/): **fourteen carousel sets, 72 PNGs**. All are ready to export; none have been posted.
 
 | Topic | Slides | Menu check |
 |---|---:|---|
@@ -16,8 +16,10 @@
 | Pistachio matcha | 4 | October 14, 2026 |
 | Black sesame matcha | 4 | October 15, 2026 |
 | New SF matcha spots | 5 | October 16, 2026 |
+| Matcha soft serve | 5 | October 20, 2026 |
+| Matcha einspänner | 6 | October 21, 2026 |
 
-These are rendered versions of twelve carousel drafts in the **48-draft** launch package. They do not add twelve more assets to that count. The companion captions, short posts and video scripts remain text drafts; no videos or published reach are claimed.
+These are rendered versions of fourteen carousel drafts in the **56-draft** launch package. They do not add fourteen more assets to that count. The companion captions, short posts and video scripts remain text drafts; no videos or published reach are claimed.
 
 The October 12 refresh uses the concise published guide headlines and shorter copy. Original menu-check dates remain visible. Recheck menu links before posting, particularly seasonal drinks, launch-menu items and delivery prices.
 
@@ -32,11 +34,12 @@ python3 scripts/render-social-assets.py
 ## Content and visual checks
 
 - 1080 × 1080 RGB PNGs; numeric filenames give slide order.
-- The original 56 slides were visually checked in earlier releases; the newest five-slide recent-openings set was checked at full resolution. Headlines, body copy, date/source footers and guide links fit their allotted areas. Original 56 PNG bytes and earlier manifest receipts are unchanged.
+- The original 61 slides were visually checked in earlier releases. The five-slide soft-serve set and six-slide einspänner set were checked at full resolution. Headlines, body copy, date/source footers and guide links fit their allotted areas. Original 61 PNG bytes and earlier manifest receipts are unchanged.
 - Text and simple geometric illustrations only; no invented café or drink photos.
 - Every set has a closing guide link. No tasting ranking, quality award, partnership or approved discount is implied.
 - Kumo's banana and London Fog drinks retain their dairy warnings. Binge's ube cold foam contains dairy even with a milk swap. Other undisclosed topping ingredients remain uncertain.
 - Under-$7 prices exclude tax, tip and extras. Delivery prices can include markup; Le Mil's launch-menu affogato requires an availability check.
 - The recent-openings set attributes Florecita's $8.75 to the October 2 report and Kiyomi's $9.75 to DoorDash; it does not turn delivery hours into walk-in hours or promise soy/dairy-free foam.
+- The soft-serve set does not claim that any listed item is dairy-free. The einspänner set attributes app prices to their platforms and explicitly says none of its four drinks is confirmed dairy-free.
 
 Upload each directory in numerical filename order with its companion caption. Put the guide URL in the platform's supported profile or story link where caption links are unavailable. Posting still requires a connected publishing destination and authorization.

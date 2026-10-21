@@ -1,15 +1,15 @@
 {
   "generatedFrom": "content/social-launch.json",
-  "sourceUpdatedAt": "2026-10-16",
+  "sourceUpdatedAt": "2026-10-21",
   "status": "ready-to-export; not posted",
-  "carouselSetCount": 12,
-  "individualSlideCount": 61,
+  "carouselSetCount": 14,
+  "individualSlideCount": 72,
   "format": "PNG",
   "dimensions": {
     "width": 1080,
     "height": 1080
   },
-  "totalBytes": 4006886,
+  "totalBytes": 4777878,
   "qa": {
     "allSlidesVerifiedAsPng": true,
     "allSlides1080Square": true,
@@ -1000,6 +1000,193 @@
             "instagram.com",
             "messhallpresidio.com",
             "presidio.gov"
+          ]
+        }
+      ]
+    },
+    {
+      "guideSlug": "matcha-soft-serve-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/matcha-soft-serve-san-francisco/",
+      "verifiedAt": "2026-10-20",
+      "sourceUrls": [
+        "https://cafenagomi.com/",
+        "https://yerbabuena.org/go/nagomi-cafe",
+        "https://www.matchacafe-maiko.com/eng/menu/",
+        "https://www.matchacafe-maiko.com/eng/store/index.html?country=usa&region=ca&target=ca-sanfran",
+        "https://www.sfjapantown.org/directory-jpndirectory/listing/matcha-cafe-maiko/",
+        "https://www.ubereats.com/store/kiss-of-matcha-richmond-clement/x4VL7ZEeXC6gWMS4umrpKg"
+      ],
+      "slideCount": 5,
+      "slides": [
+        {
+          "file": "social/matcha-soft-serve-san-francisco/slide-01.png",
+          "slide": 1,
+          "headline": "3 places to get matcha soft serve in SF",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 80068,
+          "sha256": "b5a2b8874d597d3684335618d555c8ba68ae8658ab1951699fce9f0db7d0db2c",
+          "sourceDomains": [
+            "cafenagomi.com",
+            "yerbabuena.org",
+            "matchacafe-maiko.com",
+            "sfjapantown.org",
+            "ubereats.com"
+          ]
+        },
+        {
+          "file": "social/matcha-soft-serve-san-francisco/slide-02.png",
+          "slide": 2,
+          "headline": "Nagomi · New Montgomery",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 72776,
+          "sha256": "5fe4a82ce7e38f46a79a44f9a2747f56857601ea9a313b705377d553c6eb3f16",
+          "sourceDomains": [
+            "cafenagomi.com"
+          ]
+        },
+        {
+          "file": "social/matcha-soft-serve-san-francisco/slide-03.png",
+          "slide": 3,
+          "headline": "Matcha Café Maiko · Japantown",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 76687,
+          "sha256": "54dd3d5e56ce1976c3926bbbb10ff21c670eb4e684ea01c8d35420c93311ccc0",
+          "sourceDomains": [
+            "cafenagomi.com",
+            "yerbabuena.org",
+            "matchacafe-maiko.com",
+            "sfjapantown.org",
+            "ubereats.com"
+          ]
+        },
+        {
+          "file": "social/matcha-soft-serve-san-francisco/slide-04.png",
+          "slide": 4,
+          "headline": "Kiss of Matcha · Clement",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 71144,
+          "sha256": "578fe75322968862da34f7381f280a00060b900552722061300b3cbc70002058",
+          "sourceDomains": [
+            "ubereats.com"
+          ]
+        },
+        {
+          "file": "social/matcha-soft-serve-san-francisco/slide-05.png",
+          "slide": 5,
+          "headline": "None is confirmed dairy-free",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 71523,
+          "sha256": "bede70a88e3885bd3c0615a60f770fba231725a36d5e5e12398167768b3a0bd5",
+          "sourceDomains": [
+            "cafenagomi.com",
+            "yerbabuena.org",
+            "matchacafe-maiko.com",
+            "sfjapantown.org",
+            "ubereats.com"
+          ]
+        }
+      ]
+    },
+    {
+      "guideSlug": "matcha-einspanner-san-francisco",
+      "guideUrl": "https://sanfranciscomatcha.com/guides/matcha-einspanner-san-francisco/",
+      "verifiedAt": "2026-10-21",
+      "sourceUrls": [
+        "https://www.shojisf.com/",
+        "https://www.shojisf.com/cafe-menu",
+        "https://www.ubereats.com/store/cere-tea/JK83sjtJUt6687g5r9EWzg",
+        "https://www.ceretea.com/",
+        "https://www.doordash.com/store/kiyomi-ca-phe-san-francisco-51474249",
+        "https://www.instagram.com/kiyomi_ca_phe/",
+        "https://www.ubereats.com/store/the-buoy-desserts-%26-coffee-shop/EGNbN9ByWHGf2Qk7NrBvcA"
+      ],
+      "slideCount": 6,
+      "slides": [
+        {
+          "file": "social/matcha-einspanner-san-francisco/slide-01.png",
+          "slide": 1,
+          "headline": "Where to get matcha einspänner in SF",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 68484,
+          "sha256": "349fee4f504ea8f03f985d53d5cba12863bd857a4d9f84b2e0eb2a4ac205a92d",
+          "sourceDomains": [
+            "shojisf.com",
+            "ubereats.com",
+            "ceretea.com",
+            "doordash.com",
+            "instagram.com"
+          ]
+        },
+        {
+          "file": "social/matcha-einspanner-san-francisco/slide-02.png",
+          "slide": 2,
+          "headline": "Shoji · New Montgomery",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 76743,
+          "sha256": "4b969febe40a5db87116a989cd6a9a978efc7c230a9dc217846e956ab466b05a",
+          "sourceDomains": [
+            "shojisf.com"
+          ]
+        },
+        {
+          "file": "social/matcha-einspanner-san-francisco/slide-03.png",
+          "slide": 3,
+          "headline": "Ceré Tea · Valencia",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 63919,
+          "sha256": "01b53df848c8950037ab9a678da8577bacc0941a0b2bd78f17810f49828951dd",
+          "sourceDomains": [
+            "ubereats.com",
+            "ceretea.com"
+          ]
+        },
+        {
+          "file": "social/matcha-einspanner-san-francisco/slide-04.png",
+          "slide": 4,
+          "headline": "Kiyomi · Taraval",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 63304,
+          "sha256": "29bedf6ff021fda94fe69b539a536ed04b41991888a6a6c6bfb7f7f7165188d1",
+          "sourceDomains": [
+            "doordash.com",
+            "instagram.com"
+          ]
+        },
+        {
+          "file": "social/matcha-einspanner-san-francisco/slide-05.png",
+          "slide": 5,
+          "headline": "The Buoy · Franklin",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 62232,
+          "sha256": "53f5c6e8db7299e15843166d11dc0ee15be4f80d69eef73bbc85165a38c4aa61",
+          "sourceDomains": [
+            "ubereats.com"
+          ]
+        },
+        {
+          "file": "social/matcha-einspanner-san-francisco/slide-06.png",
+          "slide": 6,
+          "headline": "Cream means check every layer",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 64112,
+          "sha256": "62ea24ffb7e3a8cb1f6b174c01bd43dc6eb429ad841462112e47d0ba5d9ee76e",
+          "sourceDomains": [
+            "shojisf.com",
+            "ubereats.com",
+            "ceretea.com",
+            "doordash.com",
+            "instagram.com"
           ]
         }
       ]

@@ -12,6 +12,7 @@ import html
 import json
 import math
 import os
+import re
 import unicodedata
 from datetime import datetime
 from pathlib import Path
@@ -38,6 +39,12 @@ FONT_MONO = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
 FONT_MONO_BOLD = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf"
 
 GUIDE_STYLE = {
+    "matcha-einspanner-san-francisco": {
+        "label": "MATCHA EINSPÄNNER", "accent": "#D5B895", "pale": "#F4E8D8", "motif": "cloud",
+    },
+    "matcha-soft-serve-san-francisco": {
+        "label": "MATCHA SOFT SERVE", "accent": "#A7C982", "pale": "#EAF2DD", "motif": "cloud",
+    },
     "new-matcha-spots-san-francisco": {
         "label": "NEW MATCHA SPOTS", "accent": "#73B4A4", "pale": "#DDF3EC", "motif": "bowl",
     },
@@ -98,6 +105,12 @@ GUIDE_STYLE = {
 }
 
 DOMAIN_KEYS = {
+    "matcha einspanner:": "ubereats.com",
+    "the buoy ·": "ubereats.com",
+    "shoji": "shojisf.com",
+    "the buoy": "ubereats.com",
+    "matcha café maiko": "matchacafe-maiko.com",
+    "kiss of matcha": "ubereats.com",
     "florecita": "florecitapanaderia.com",
     "florecita ·": "sfchronicle.com",
     "kiyomi": "doordash.com",
@@ -187,7 +200,7 @@ def slide_domains(slide: dict, all_domains: list[str]) -> list[str]:
     )
     matches: list[str] = []
     for key, domain in DOMAIN_KEYS.items():
-        if key in haystack and domain in all_domains and domain not in matches:
+        if re.search(rf"(?<![a-z0-9]){re.escape(key)}(?![a-z0-9])", haystack) and domain in all_domains and domain not in matches:
             matches.append(domain)
     if slide["number"] == 1 or not matches:
         return all_domains
