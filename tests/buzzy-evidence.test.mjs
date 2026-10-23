@@ -15,9 +15,9 @@ vm.runInNewContext(fs.readFileSync(path.join(root, "data.jsx"), "utf8"), context
 test("only source-backed, unexpired Buzzy labels are active", () => {
   const byShop = validateBuzzyEvidence(records, context.window.SHOPS);
   assert.equal(byShop.size, records.length);
-  assert.equal(records.length, 12);
+  assert.equal(records.length, 11);
   const now = Date.parse("2026-10-09T12:00:00Z");
-  assert.equal(context.window.SHOPS.filter(shop => isBuzzyCurrent(shop, byShop, now)).length, 12);
+  assert.equal(context.window.SHOPS.filter(shop => isBuzzyCurrent(shop, byShop, now)).length, 11);
   assert.equal(isBuzzyCurrent(context.window.SHOPS.find(shop => shop.id === "thaicocoa-japantown"), byShop, now), false);
   assert.equal(isBuzzyCurrent(context.window.SHOPS.find(shop => shop.id === "kumo-matcha-divisadero-market"), byShop, Date.parse("2026-11-09T00:00:00Z")), false);
 });
