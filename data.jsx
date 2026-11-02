@@ -1716,6 +1716,23 @@ const SHOPS = [
     price: "—",
     hours: "Planned; opening date and hours not announced",
   },
+  {
+    id: "mari-matcha",
+    name: "Mari Matcha",
+    address: "2291 3rd St",
+    hood: "Dogpatch",
+    status: "call",
+    topPick: false,
+    buzzy: true,
+    emoji: "🍵",
+    note: "Announced specialty matcha and tea shop hiring its opening team, with matcha lattes, refreshing teas, and creative specialty drinks planned.",
+    soyNote: "Soy availability is not listed for the planned drinks.",
+    source: "https://www.comingsoonproject.com/project/mari-matcha-san-francisco-327800/",
+    lat: 37.7606776, lng: -122.3887466,
+    x: 64.9, y: 52.8,
+    price: "—",
+    hours: "Planned; opening date and hours not announced",
+  },
 ];
 
 const STATUS_META = {
