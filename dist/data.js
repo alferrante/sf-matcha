@@ -1336,19 +1336,19 @@
       name: "Tadaima - FiDi",
       address: "113 Sacramento St",
       hood: "FiDi / Embarcadero",
-      status: "call",
+      status: "none",
       topPick: true,
       buzzy: true,
       emoji: "🍙",
-      note: "Announced fourth Tadaima location bringing the viral Japanese sando-and-matcha cafe downtown.",
-      soyNote: "Soy availability is not listed because this location has not opened yet.",
-      source: "https://www.bizjournals.com/sanfrancisco/news/2026/07/21/tadaima-sando-matcha-new-fidi-japanese-cafe.html",
+      note: "Fourth Tadaima location, now open downtown with matcha lattes, matcha cream drinks, and Japanese sandos.",
+      soyNote: "Soy is not listed; oat and almond milk are available.",
+      source: "https://tadaimasf.com/san-francisco-suite-b-tadaima-sf-locations",
       lat: 37.794501,
       lng: -122.39716,
       x: 61.4,
       y: 34.4,
       price: "$$",
-      hours: "Coming soon"
+      hours: "Daily 11am–5:30pm"
     },
     {
       id: "pixlcat-coffee",
@@ -1587,15 +1587,15 @@
       topPick: true,
       buzzy: true,
       emoji: "☁️",
-      note: "Announced tea-focused second Q location with in-house stone mills for freshly ground matcha and the brand's matcha-cloud drinks.",
-      soyNote: "Soy availability for the planned downtown shop is not listed; oat milk is available at Q's original cafe.",
-      source: "https://sfstandard.com/2026/09/18/q-specialty-coffee-tea-downtown/",
+      note: "Tea-focused second Q location, soft-opened November 3 with freshly milled matcha and a downtown-only Matcha Coconut Cloud.",
+      soyNote: "Soy availability at the downtown shop is not listed; Q's original cafe offers soy.",
+      source: "https://www.thebayareabrief.com/articles/q-specialty-coffee-second-location-405-howard-street-soma-matcha-soft-open-nov-3",
       lat: 37.7891288,
       lng: -122.3951829,
       x: 62.2,
       y: 37.3,
       price: "$$",
-      hours: "Opening at the end of October 2026; daily hours not announced"
+      hours: "Soft-opened November 3; daily hours not published"
     },
     {
       id: "wrecking-ball-potrero-hill",
@@ -1976,6 +1976,25 @@
       y: 47.4,
       price: "$$",
       hours: "Daily 9am–4:45pm (Nov–Feb); 9am–5:45pm (Mar–Oct). Last matcha order 30 minutes before closing"
+    },
+    {
+      id: "yoma-cafe",
+      name: "Yoma Cafe",
+      address: "1518 Irving St",
+      hood: "Inner Sunset",
+      status: "none",
+      topPick: false,
+      buzzy: false,
+      emoji: "🍱",
+      note: "Japanese cafe with six $5 matcha drinks, including Uji, strawberry, mango, peach, taro, and coffee matcha.",
+      soyNote: "Soy milk is not listed; whole and oat milk are offered for matcha drinks.",
+      source: "https://order.toasttab.com/online/yoma-cafe-1518-irving-street",
+      lat: 37.763938004,
+      lng: -122.474298031,
+      x: 29.5,
+      y: 50.9,
+      price: "$",
+      hours: "Sun 9am–10pm; Mon 9am–5pm; Tue–Thu 9am–10pm; Fri–Sat 9am–11pm"
     }
   ];
   var STATUS_META = {
