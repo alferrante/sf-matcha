@@ -2033,6 +2033,44 @@
       y: 39.7,
       price: "$$",
       hours: "Mon–Fri 7am–4pm; Sat–Sun closed"
+    },
+    {
+      id: "jandii-cafe-castro",
+      name: "Jandii Cafe - Castro",
+      address: "3499 16th St",
+      hood: "Castro",
+      status: "none",
+      topPick: false,
+      buzzy: true,
+      emoji: "🍵",
+      note: "Japanese matcha lattes, matcha einspanner, and raspberry matcha alongside freshly baked scones at Jandii's second cafe.",
+      soyNote: "Soy is not listed; whole, oat, and almond milk are available.",
+      source: "https://www.instagram.com/jandii.official/",
+      lat: 37.764225,
+      lng: -122.4306961,
+      x: 47.9,
+      y: 51.5,
+      price: "$$",
+      hours: "Mon–Fri 7:30am–2:30pm; Sat–Sun 9am–4pm; Nov 25 & 27: 9am–4pm; Nov 26: closed"
+    },
+    {
+      id: "ritual-coffee-fidi",
+      name: "Ritual Coffee Roasters - FiDi",
+      address: "259 California St",
+      hood: "Financial District",
+      status: "call",
+      topPick: false,
+      buzzy: true,
+      emoji: "🍵",
+      note: "A dedicated matcha menu pairs hot or iced matcha lattes with sparkling matcha soda at Ritual's California Street cafe.",
+      soyNote: "Soy availability for matcha is unclear.",
+      source: "https://www.google.com/maps/place/Ritual+Coffee+Roasters/@37.7929686,-122.3995136,17z/data=!3m1!4b1!4m6!3m5!1s0x8085810055cdd3d1:0xa5d0a7d25b45e593!8m2!3d37.7929686!4d-122.3995136!16s%2Fg%2F11z3mn0f0z",
+      lat: 37.7929686,
+      lng: -122.3995136,
+      x: 60.4,
+      y: 35.1,
+      price: "$$",
+      hours: "Daily 8am–3pm; Nov 26: closed"
     }
   ];
   var STATUS_META = {
